@@ -1,6 +1,6 @@
 # Előgyűlés
 
-## 2021.02.12. ; kezdet: 17:00
+## 2021.02.12. ; kezdet: 17:00 ; vége 18:41
 
 Ezen a meetingen beszéltük meg az alapvető dolgokat, mint a csapatnév és a stratégia.
 Részletesen:
