@@ -10,3 +10,4 @@ Részletesen:
 * Eldöntöttük, hogy a játékot modulárisan fogjuk létrehozni.
 * Létrehoztuk a GitHub csoportot
 * Én (Ádám) lettem a meetingek jegyzője
+* Mikor fogunk hetente gyűlni: Szerda 10 és Szombat 14
