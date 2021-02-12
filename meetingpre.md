@@ -11,3 +11,4 @@ Részletesen:
 * Létrehoztuk a GitHub csoportot
 * Én (Ádám) lettem a meetingek jegyzője
 * Mikor fogunk hetente gyűlni: Szerda 10 és Szombat 14
+* Ajánlott szoftver, amit használni fogunk: *GitKraken*
