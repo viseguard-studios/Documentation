@@ -1,0 +1,415 @@
+\documentclass[]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[magyar]{babel}
+\usepackage[hidelinks]{hyperref} 
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{amsthm}
+\usepackage{MnSymbol}
+\usepackage{wasysym}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{xcolor}
+\usepackage{algorithmicx}
+\usepackage{verbatim}
+\usepackage{listings}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+\lstset{
+    language = [LaTeX]{TeX},
+    moretexcs    = {diagram, naplotag, subsection, test, ertekelestag, ertekelestagk, testOK, testFAIL, classitem, fajl, tervitem, szotaritem, baseclass },
+    backgroundcolor=\color{backcolour},   
+    keywordstyle=\color{codegreen},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    literate=%
+        {á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+        {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+        {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+        {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+        {ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+        {Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+        {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+        {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+        {Ã}{{\~A}}1 {ã}{{\~a}}1 {Õ}{{\~O}}1 {õ}{{\~o}}1
+        {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+        {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+        {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+        {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+        {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1
+}
+\newenvironment{metaverbatim}{\verbatim}{\endverbatim}
+
+\title{Dokumentáció a projekt laborítórium \LaTeX$ $ sablonjaihoz. }
+
+\begin{document}
+\maketitle
+\input{../definitions.tex}
+
+\clearpage
+A következő fejezetekben a $definitions$ fájlban található környezet és parancs definíciók kerülnek leírásra. Ahol beépített \LaTeX elemet említek külön jelzem.  
+
+\section{Általános környezetek és parancsok}
+
+Egyszerű képek beszúrására alkalmas a \textit{diagram} parancs, ami számozza a beszúrt képeket és mindig középre igazítja. 3 paraméterrel rendelkezik: 
+\begin{enumerate}
+	\item A kép elérési útja és neve, kiterjesztést nem kell megadni. Az elérésiút, mindig a fő dokumentum mappájából kiindulva adható meg.
+	\item A képhez tartozó leírás megadására szolgál.
+	\item A kép átméretezésére szolgáló paraméter: cm/px/in... mértékegységgel megadva.
+\end{enumerate} 
+Egy példaparancs és eredménye:
+\begin{lstlisting}
+\diagram{../docs/img/BMElogo}{Példa kép}{3cm}
+\end{lstlisting}
+\diagram{../docs/img/BMElogo}{Példa kép}{3cm}
+
+A dokumentumban számozott definíciók és rövidítések megadására szolgálnak a következő környezetek, példaprogrammal:
+\begin{lstlisting}
+\begin{defi}
+    Első definíció ...
+\end{defi}
+\begin{rov}
+    Első rövidítés
+\end{rov}
+\end{lstlisting}
+\begin{defi}
+	Első definíció ...
+\end{defi}
+\begin{rov}
+	Első rövidítés
+\end{rov}
+
+
+\section{Napló használata}
+Minden egyes beadandónál le kell adni, az abban a szakaszban elkészített dokumentációkról és programról egy naplót. Ezt a $naplo$ környezet segítségével adhatjuk meg, a napló bejegyzéseit a $naplotag$ parancs szimbolizálja, mely 4 paramétert vár a napló fejlécének megfelelő sorredben, azaz a feladat elkezdésének időpontja, a feladat időtartama, a feladatban résztvevők, valamint leírás megadása. A leírás oszlopban, azaz az utolsó paraméterben lehetőségünk van a sorok tördelésére a $newline$ segítségével.
+\begin{lstlisting}
+\begin{naplo}
+    \naplotag{feb. 18. 16h }{ 1 óra }{ Csapat }{ Értekezlet a tagok között \newline 
+    Döntés: Segédeszközök kiválasztása (git, trello, drive)}
+    \naplotag{feb. 19. 16h }{ 1.5 óra }{ Teszt János }{ Funkciók megtervezése}
+\end{naplo}
+\end{lstlisting}
+    \begin{naplo}
+        \naplotag{feb. 18. 16h }{ 1 óra }{ Csapat }{ Értekezlet a tagok között \newline Döntés: Segédeszközök kiválasztása (git, trello, drive)}
+        \naplotag{feb. 19. 16h }{ 1.5 óra }{ Teszt János }{ Funkciók megtervezése}
+    \end{naplo}
+
+\section{Követelménydokumentálás}
+Általános követelménynek leírására a $kovetelmeny$ környezet szolgál, megadási módja:
+A környezet első paramétere a követelmény azonosítója, majd sorrendben a piorítás, forrás, ellenőrzés és leírás. Ezeket minden esetben meg kell adni paraméterként, azaz \{\} között. Opcionálisan a paraméterek után szabadon megadhatunk megjegyzést.
+\begin{lstlisting}
+\begin{kovetelmeny}
+    {R31}
+    {Alapvető}
+    {Feladatkiadó}
+    {bemutatás}
+    {A játék futtatásához tetszőleges operációs rendszer alkalmas, amin elérhet...}
+    Természetesen elvárás, hogy olyan illesztőprogramok telepítve legyenek, amik ...
+\end{kovetelmeny}
+\end{lstlisting}
+\begin{kovetelmeny}
+    %Azonosító
+    {R31}
+    %Prioritás
+    {Alapvető}
+    %Forrás
+    {Feladatkiadó}
+    %Ellenőrzés
+    {bemutatás}
+    %Leírás
+    {A játék futtatásához tetszőleges operációs rendszer alkalmas, amin elérhető a Java Runtime Environment (JRE, legalább JRE 8-as verzió) , más szoftver nem szükséges.}
+    Természetesen elvárás, hogy olyan illesztőprogramok telepítve legyenek, amik lehetővé teszik azon perifériák kezelését, amik a játékhoz kellenek (R33).
+\end{kovetelmeny}
+
+Funkcionális követelményekhez a $funkovetelmeny$ környezet való, használata részben megegyezik az előző környezettel. Rendre a következő paraméterek megadása szükséges: azonosító, pioritás, forrás, use-case neve, ellenőrzés, leírás és opcionálisan megjegyzés.
+
+\begin{lstlisting}
+\begin{funkovetelmeny}
+    {R26}
+    {Fontos}
+    {Feladatkiírás}
+    {Játék megtekintése, Jelzőrakéta építés}
+    {Bemutatás}
+    {Egy egységnyi munkával összeszerelhető és elsüthető a jelzőrakéta, ami...}
+\end{funkovetelmeny}
+\end{lstlisting}
+
+\begin{funkovetelmeny}
+    %Azonosító
+    {R26}
+    %Prioritás
+    {Fontos}
+    %Forrás
+    {Feladatkiírás}
+    %Use case
+    {Játék megtekintése, Jelzőrakéta építés}
+    %Ellenőrzés
+    {Bemutatás}
+    %Leírás
+    {Egy egységnyi munkával összeszerelhető és elsüthető a jelzőrakéta, ami a játék megnyerését jelenti.}
+\end{funkovetelmeny} 
+
+\section{Használati esetek, use-case-ek megadása}
+Használati eset leírására a $use-case$ környezet használható, mely sorrendben a következő paramétereket várja: használati eset neve, rövid leírása és a use-case-ben résztvevő aktorok. A környezet főtörzsébe a forgatóköny tetszőleges formázással megadható. A forgatókönyvnél az alternatívákat egy új sor beszúrásával, a korábban említett $newline$ paranccsal valamint kiemeléssel ($textbf$ parancs) szemléltetjük. 
+\begin{lstlisting}
+\begin{use-case}
+    {Képesség használat}
+    {A játékos a szereplő specifikus képességeit használhatja.}
+    {Player}
+    A játékos kijátssza a képességet. \newline
+       \textbf{1.A.1} A sarkkutató játékos megnézheti, hogy egy adott szomszédos vagy a
+       saját mezőjén hány játékos állhat. \newline
+       \textbf{1.B.1} Az eszkimó játékos iglut építhet a kiválasztott mezőre.	
+\end{use-case}
+\end{lstlisting}
+\begin{use-case}
+    %név
+    {Képesség használat}
+    %rövid leírás
+    {A játékos a szereplő specifikus képességeit használhatja.}
+    %aktorok
+    {Player}
+    %forgatókönyv
+    A játékos kijátssza a képességet. \newline
+        \textbf{1.A.1} A sarkkutató játékos megnézheti, hogy egy adott szomszédos vagy a saját mezőjén hány játékos állhat. \newline
+        \textbf{1.B.1} Az eszkimó játékos iglut építhet a kiválasztott mezőre.	
+\end{use-case}
+
+\section{Osztályok, interfészek dokumentálása}
+Az osztály vagy interfész elemeinek megadására különböző környezeteket használhatunk: 
+\begin{itemize}
+    \item $class-template-responsibility$ Az osztály felelősségének leírására szolgáló környezet
+    \item $class-template-baseclass$ Az ősosztályok felsorolására használható, az öröklés reprezentálása a $baseclass$ paranccsal történik.
+    \item $class-template-interface$ A megvalósított interfészek felsorolására
+    \item $class-template-attribute$ Az osztályban található attribútumok felsorolása és leírása. A felsoroláshoz a $classitem$ parancs használható, mely két paramétert vár: az adattag típusa, neve, megkötések... valamint a hozzá tartozó leírást
+    \item $class-template-method$ Az osztályban megvalósuló függvények leírása, felsoroláshoz itt is a $classitem$ parancs kell.
+    \item $class-template-statechart$ Ha szükséges, állapotgépek leírásához.
+\end{itemize}
+Egy példa néhány osztálykörnyezet és a $classitem$ parancs használatára
+\begin{lstlisting}
+\subsection*{DivingSuit}
+\begin{class-template-responsibility}
+    Absztrakt búvárruha osztály.
+\end{class-template-responsibility}
+\begin{class-template-baseclass}		
+    Item \baseclass AutomaticItem
+\end{class-template-baseclass}
+\begin{class-template-method}
+    \classitem{+fallInWater(p: Player): void}{Absztrakt, felülírható metódus, a ... }
+\end{class-template-method}
+\end{lstlisting}
+\subsection*{DivingSuit}
+\begin{class-template-responsibility}
+    Absztrakt búvárruha osztály.
+\end{class-template-responsibility}
+\begin{class-template-baseclass}		
+    Item \baseclass AutomaticItem
+\end{class-template-baseclass}
+\begin{class-template-method}
+    \classitem{+fallInWater(p: Player): void}{Absztrakt, felülírható metódus, a játékos vízbe esésénél van szerepe.}
+\end{class-template-method}
+
+Lehetőség van felsorolás típus leírására is a $enum-template$ környezet segítségével, mely két paramétert vár: leírás és a literálok felsorolása.
+
+\section{Tesztek leírása}
+Tesztek összefoglaló leírására a $test$ parancs használható, mely a következő paramétereket várja: a teszt-eset neve, a teszt rövid leírása és a teszt célja.
+\begin{lstlisting}
+\test{A játék szimulálás}{A start automated parancs tesztesete}
+{A parancs hatására a játék elindul, az egyes aktorok lépnek, léphetnek.}
+\end{lstlisting}
+\test{A játék szimulálás}{A start automated parancs tesztesete}{A parancs hatására a játék elindul, az egyes aktorok lépnek, léphetnek.}
+\vspace{15px}
+
+A tesztek részletes leírására a következő környezetek használhatók: 
+\begin{itemize}
+    \item $test-case-description$ a teszt leírása
+    \item $test-case-function$ ellenőrzött funkciók, várható hibák
+    \item $test-case-input$ a teszthez tartozó bement
+    \item $test-case-output$ a teszt elvárt kimenete és eredménye
+\end{itemize}
+A teszt bemenetének és elvárt kimenetének megadására használandó a beépített $verbatim$ környezet, ami a szöveget mindenféle formázás nélkül, úgy jeleníti meg, ahogy beleírták (a tabokat nem jeleníti meg, helyette szóköz javasolt).
+
+\begin{lstlisting}
+\subsection*{A játékvilág létrehozása}
+\begin{test-case-description}
+    A teszteset célja az \texttt{init world} parancs lefutásának ellenőrzése.
+\end{test-case-description}
+\begin{test-case-function}
+    A teszt alatt leellenőrizzük, hogy ...
+\end{test-case-function}
+\begin{test-case-input}
+   \begin{verbatim}
+        init world
+        0: S 3
+        ...
+        print
+    \end{verbatim}
+\end{test-case-input}
+\begin{test-case-output}
+    A \texttt{print} parancs hatására a következő kell megjelenjen a kimeneten:
+    \begin{verbatim}
+        worlddata
+        ...
+        creatures 0
+    \end{verbatim}
+\end{test-case-output}
+\end{lstlisting}
+
+\subsection*{A játékvilág létrehozása}
+\begin{test-case-description}
+    A teszteset célja az \texttt{init world} parancs lefutásának ellenőrzése.
+\end{test-case-description}
+\begin{test-case-function}
+    A teszt alatt leellenőrizzük, hogy ...
+\end{test-case-function}
+\begin{test-case-input}
+    \begin{verbatim}
+    init world
+    0: S 3
+    ...
+    print
+    \end{verbatim}
+\end{test-case-input}
+\begin{test-case-output}
+    A \texttt{print} parancs hatására a következő kell megjelenjen a kimeneten:
+    \begin{verbatim}
+    worlddata
+    ...
+    creatures 0
+    \end{verbatim}
+\end{test-case-output}
+A teszteket eredményük szempontjából egyszerűen két csoportba oszthatók: a teszt sikeresen lefutott, vagy valamin elhasalt (most lényegtelen, hogy ezt mi okozta). Előbbi esetén a $testOK$ parancs míg utóbbi esetén a $testFAIL$ parancs használandó. Helyes teszt esetén a két paraméter a tesztelő neve és a teszt időpontja, míg rossz teszteset esetén ez a teszt hibás eredményével, a hibaokok és a változtatások leírásával bővül a paraméterlista.
+\begin{lstlisting}
+\subsection*{Ásás törékeny ásóval}
+\testFAIL{LaTex}{Ápr. 25. 13:50}{A törött ásó hátralevő használatai ...}
+    {Akkor is csökkenti a BrokenShovel use-ja a use\_num-ját, ha már el van törve.}
+    {Csak akkor csökken a use\_num, ha nagyobb, mint 0.}
+\testOK{LaTex}{Ápr. 25. 14:00}
+\end{lstlisting}
+\subsection*{Ásás törékeny ásóval}
+\testFAIL{LaTex}{Ápr. 25. 13:50}{A törött ásó hátralevő használatai negatívba megy, ha próbáljuk használni, miután eltörött.}{Akkor is csökkenti a BrokenShovel use-ja a use\_num-ját, ha már el van törve.}{Csak akkor csökken a use\_num, ha nagyobb, mint 0.}
+\testOK{LaTex}{Ápr. 25. 14:00}
+
+\section{Adminisztratív információk megjelenítése}
+Ütemtervek vagy határidőnapló beszúrására a $terv$ környezet és a $tervitem$ parancs együtt használandó. A meglenített táblázatban a következők szerepelnek: feladat határideje, a feladat leírása és a szakasz felelőse, rendre ezen paramétereket várja a $tervitem$ parancs is:
+\begin{lstlisting}
+\begin{terv}
+    \tervitem{ápr. 4}{Grafika 1. hf leadása}{ ?????? }
+    \tervitem{ápr. 25}{Grafika 2. hf leadása}{ ?????? }
+\end{terv}
+\end{lstlisting}
+\begin{terv}
+    \tervitem{ápr. 4}{Grafika 1. hf leadása}{ ?????? }
+    \tervitem{ápr. 25}{Grafika 2. hf leadása}{ ?????? }
+\end{terv}
+Szótárak, vagy kulcs-érték párok felsorolására a $szotar$ környezet és $szotaritem$ parancs együtt használandó. A parancs 2 paramétert vár: kulcs és érték.
+\begin{lstlisting}
+\begin{szotar}
+    \szotaritem{Kulcs 1 }{Érték 1}
+    \szotaritem{Hóásás }{Egy réteg hó eltakarítása, azaz törlése az adott...}
+\end{szotar}
+\end{lstlisting}
+\begin{szotar}
+    \szotaritem{Kulcs 1 }{Érték 1}
+    \szotaritem{Hóásás }{Egy réteg hó eltakarítása, azaz törlése az adott jégtábláról. Egy egység munkába kerül.}
+\end{szotar}
+Fájlok beadása esetén a $fajllista$ környezet és $fajl$ parancs használandó. A parancsnak rendre a következő 4 paramétere van: fájl neve, mérete, keletkezés ideje, leírás.
+\begin{lstlisting}
+\begin{fajllista}
+    \fajl{AutomaticItem.java}   {353 byte} {2020.03.26~21:05} {AutomaticItem osztály}
+    \fajl{BasicDivingSuit.java} {797 byte} {2020.03.26~20:12} {BasicDivingSuit osztály}
+\end{fajllista}
+\end{lstlisting}
+\begin{fajllista}
+    \fajl{AutomaticItem.java}   {353 byte} {2020.03.26~21:05} {AutomaticItem osztály}
+    \fajl{BasicDivingSuit.java} {797 byte} {2020.03.26~20:12} {BasicDivingSuit osztály}
+\end{fajllista}
+A szakaszonkénti teljesítményértékelések megadásához az $ertekeles$ környezet és $ertekelestag$ parancs használandó:
+\begin{lstlisting}
+\begin{ertekeles}
+    \ertekelestag{LaTex Zoltán}{??????}{20\%}
+    \ertekelestag{Git Attila}{??????}{20\%}
+\end{ertekeles}
+\end{lstlisting}
+\begin{ertekeles}
+    \ertekelestag{LaTex Zoltán}{??????}{20\%}
+    \ertekelestag{Git Attila}{??????}{20\%}
+\end{ertekeles}
+A végső beadásnál az elvégzett munka összefoglalására az $ertekelesOra$ környezet használandó az előzőleg már alkalmazott $ertekelestag$ parancs felhasználásával:
+\begin{lstlisting}
+\begin{ertekelesOra}
+    \ertekelestag{Teszt Tamás}{??????}{41}
+    \ertekelestag{Java Dániel}{??????}{40}
+\end{ertekelesOra}
+\end{lstlisting}
+\begin{ertekelesOra}
+    \ertekelestag{Teszt Tamás}{??????}{41}
+    \ertekelestag{Java Dániel}{??????}{40}
+\end{ertekelesOra}
+A végső beadásnál az beadott munkák összefoglalására az $ertekelesKod$ környezet használandó az $ertekelestagk$ parancs felhasználásával:
+\begin{lstlisting}
+\begin{ertekelesKod}
+    \ertekelestagk{Szkeleton}{853}
+    \ertekelestagk{Prototípus}{1357}
+    \ertekelestagk{Grafikus változat}{2605}
+    \ertekelestagk{Összesen}{4815}
+\end{ertekelesKod}
+\end{lstlisting}
+\begin{ertekelesKod}
+    \ertekelestagk{Szkeleton}{853}
+    \ertekelestagk{Prototípus}{1357}
+    \ertekelestagk{Grafikus változat}{2605}
+    \ertekelestagk{Összesen}{4815}
+\end{ertekelesKod}
+
+\section{További hasznos parancsok}
+\begin{itemize}
+    \item \verb|\clearpage| egy új oldal megkezdése (beépített parancs)
+    \item \verb|\urlref{url cím}{leírás}| hivatkozás beszúrása
+    \item \verb|\newline|  új sor kezdése (beépített parancs)
+    \item \verb|\textbf{szoveg}| félkövér szöveg (beépített parancs)
+    \item \verb|\textit{szove}| dölt betűk (beépített parancs)
+    \item \verb|\comment{szoveg}| piros, jobbra igazított szöveg beszúrása
+    \item \verb|\setcounter{chapter}{-1}| A fejezetek számozásának átállítására (mindig a megadott számtól folytatódik a számozás, itt 0-tól) (beépített parancs)
+    \item \verb|\setcounter{section}{-1}| A szakaszok számozásának átállítására (mindig a megadott számtól folytatódik a számozás, itt 0-tól) (beépített parancs)
+    \item \verb|\tableofcontents| Tartalomjegyzék megjelenítése a végső beadásnál (beépített parancs)
+    \item \verb|\input{fájl}| Egyes szakaszok nagyon nagy méreteket ölthetnek, így érdemes külön fájlba rakni, ennek behúzására alkalmas a parancs. (beépített parancs)
+\end{itemize}
+
+\section{Scriptek}
+\subsection{Szótár generálás fájlból}
+A $szotar.sh$ bash script alkalmas egy szöveges fájlból, amiben a kulcs-érték párok külön-külön sorban vannak és egy speciális karakterrel el vannak választva, abc-sorrendbe rakni és a már említett szintaktikát létrehozni a $szotar$ környezet számára. Vagyis a konzolon megjelent szöveget a \verb| \begin{szotar} \end{szotar}| közé kell beilleszteni, ugyanakkor érdemes külső fájlba rakni, és az $input$ parancsot használni. 
+
+Alapértelmezetten a $\#$ karakter mentén történik a szétválasztás, de a 2. paraméterben megadhatunk eltérő karaktert is, így excel kompatibilis is lehet. Windows esetén PowerShell-el tudjuk a programot futtatni. Példák:
+\begin{verbatim}
+    ./szotar.sh szotar.txt
+    ./szotar.sh szotar.txt "-"
+    ./szotar.sh szotar.txt "|" > out.txt
+\end{verbatim}
+\subsection{Fájllista generálása}
+Az aktuális mappában kiadva következő parancsot, a konzolra kiíródik a $fajllista$ környezetbe beillesztendő formázott lista: 
+\begin{verbatim}
+    stat -c "\fajl{%n}{%s byte}{%.16y}{...}" *
+\end{verbatim}
+Az output átirányítása fájlba:
+\begin{verbatim}
+    stat -c "\fajl{%n}{%s byte}{%.16y}{...}" * > fajllista.txt
+\end{verbatim}
+
+Sajnos egyes rendszereken a $POSIX$ szabvány miatt, nem a támogatja a fájlrendszer a létrehozási időpont tárolását. Ezért itt a $\%.16y$ az utólsó módosítást adja meg, ha a rendszer támogatja a létrehozási időpontot, akkor a $\%.16w$ paraméterrel lehetne lekérdezni.
+\end{document}

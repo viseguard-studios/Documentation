@@ -1,0 +1,128 @@
+%--------------------------------------------------------------------------------------
+% ÁLTALÁNOS ALAPSABLON A (RÉSZ)BEADANDÓKHOZ
+%--------------------------------------------------------------------------------------
+\documentclass[12pt, a4paper]{book}
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[magyar]{babel}
+\usepackage[hidelinks]{hyperref} 
+\usepackage{graphicx}
+\usepackage{comment}
+\usepackage{amsthm}
+\usepackage{MnSymbol}
+\usepackage{wasysym}
+\usepackage{fancyhdr}
+\usepackage{longtable}
+\usepackage{changepage}
+\usepackage{xcolor}
+\usepackage{algorithmicx}
+\usepackage{listings}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[RE,LO]{\leftmark}
+%kitöltendő
+\fancyfoot[CE,CO]{Csapatsorszám - Viseguard Studios}
+
+\title{Szoftver projekt labor beadandó} 
+%kitöltendő
+\author{Karsa Zoltán, Killin Attila, Jakab Dániel, Kacsó Péter, Imets Tamás} 
+
+\setcounter{secnumdepth}{4}
+
+\begin{document}
+\begin{titlepage} 
+	\begin{center}
+		\includegraphics[width=5cm]{docs/img/BMElogo}\\ 
+		\vspace{1cm}
+		\LARGE{\bfseries{Szoftver projekt laboratórium}}\\
+		\vspace{0.5cm}
+		%kitöltendő
+		\Large\textsc{X. Összesített dokumentum}\\
+		\vspace{1cm}
+		\small{Csapat}\\
+		%kitöltendő
+		\Large{\bfseries{Csapatsorszám - Viseguard Studios}}\\
+		\vspace{1cm}
+		\small{Konzulens}\\
+		%kitöltendő
+		\Large{Dr. Goldschmidt Balázs}
+	\end{center}
+	\begin{flushleft}
+		\vspace*{6cm}
+		Csapattagok\\
+		\vspace{-0.3cm}
+		\rule{14cm}{0.5pt}\\
+		\vspace{0.2cm}
+		\begin{tabular}{l l l} %kitöltendő
+			Sike Ádám & E8Z277 & molteneq.official@gmail.com \\
+			Dömötör Péter & G2Y5TI & javadaniel@iit.bme.hu \\
+			Projlab Péter & ?????? & projlabpeter@iit.bme.hu \\
+			LaTex Zoltán  & ?????? & latexzoltan@iit.bme.hu \\
+			Git Attila & ?????? & gitattila@iit.bme.hu \\
+		\end{tabular}
+	\end{flushleft}
+	\begin{flushright}
+		\vspace*{2cm}
+		\today   %vagy saját dátum megadása, manuálisan
+	\end{flushright}
+\end{titlepage}
+\input{definitions}
+\sloppy
+
+%-----------------------------------------------------------------------------------------
+
+%Végső beadáshoz tartalomjegyzék:
+%\tableofcontents
+
+%A fejezetek számozásának átállítására (mindig a megadott számtól folytatódik a számozás):
+%\setcounter{chapter}{-1}
+
+
+\setcounter{chapter}{1}
+\input{docs/bead02/02doc}
+\clearpage
+\input{docs/bead02/02naplo}
+
+\input{docs/bead03/03doc}
+\clearpage
+\input{docs/bead03/03naplo}
+
+\input{docs/bead04/04doc}
+\clearpage
+\input{docs/bead04/04naplo}
+
+\input{docs/bead05/05doc}
+\clearpage
+\input{docs/bead05/05naplo}
+
+\input{docs/bead06/06doc}
+\clearpage
+\input{docs/bead06/06naplo}
+
+\input{docs/bead07/07doc}
+\clearpage
+\input{docs/bead07/07naplo}
+
+\input{docs/bead08/08doc}
+\clearpage
+\input{docs/bead08/08naplo}
+
+\setcounter{chapter}{9}
+\input{docs/bead10/10doc}
+\clearpage
+\input{docs/bead10/10naplo}
+
+\input{docs/bead11/11doc}
+\clearpage
+\input{docs/bead11/11naplo}
+
+\setcounter{chapter}{12}
+\input{docs/bead13/13doc}
+\clearpage
+\input{docs/bead13/13naplo}
+
+\input{docs/bead14/14doc}
+
+\end{document}
