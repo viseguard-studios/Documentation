@@ -15,6 +15,7 @@ jobs:
       uses: xu-cheng/latex-action@v2
       with:
         root_file: "projlab.tex"
+        latexmk_shell_escape: true
         
     - name: Compile 1 milestone
       uses: dante-ev/latex-action@master
