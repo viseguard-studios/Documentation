@@ -3,6 +3,13 @@
 
 \ifSubfilesClassLoaded{
 	\coverpage{1. Leadás}
+	\pagestyle{fancy}
+	\fancyhf{}
+	\fancyhead[LE,RO]{\thepage}
+	\fancyhead[RE,LO]{\leftmark}
+	%kitöltendő
+	\fancyfoot[CE,CO]{Csapatsorszám - Viseguard Studios}
+
 }{}
 
 
@@ -13,10 +20,7 @@
 
 \subsection{Cél}
 %\comment{A dokumentum célja.}
-
-
 \markdownInput[shiftHeadings=3]{\subfix{goal.md}}
-%\subfix{goal.md}
 
 \subsection{Szakterület}
 \comment{A kialakítandó szoftver milyen területen használható, milyen célra.}
@@ -124,18 +128,13 @@
 \end{use-case}
 
 \subsection{Use-case diagram}
-%\markdownInput[shiftHeadings=3]{\subfix{use-case.md}}
-%\input{\subfix{use-case.latex}}
-%\diagram{docs/img/BMElogo}{Demó}{4cm}
-
-\begin{figure}[h!]
-	%\input{\subfix{use-case.latex}}
+\begin{figure}[H]
 	\includegraphics[width=1\textwidth]{\subfix{use-case.eps}}
 	\centering
 \end{figure}
 
 \section{Szótár}
-\comment{A szótár a követelmények alapján készítendő fejezet. Egy szótári bejegyzés definiálásához csak más szótári bejegyzések és köznapi – a feladattól független – fogalmak használhatók fel. A szótár mérete kb. 1-2 oldal legyen. A bejegyzések legyenek ABC sorrendben!}
+%\comment{A szótár a követelmények alapján készítendő fejezet. Egy szótári bejegyzés definiálásához csak más szótári bejegyzések és köznapi – a feladattól független – fogalmak használhatók fel. A szótár mérete kb. 1-2 oldal legyen. A bejegyzések legyenek ABC sorrendben!}
 
 %szotar.sh script, lsd. a dokumentációt!!!
 \begin{szotar}
@@ -143,23 +142,27 @@
     \szotaritem{Hóásás }{Egy réteg hó eltakarítása, azaz törlése az adott jégtábláról. Egy egység munkába kerül.}
 \end{szotar}
 
+%\newpage
 \section{Projekt terv}
-\comment{Tartalmaznia kell a projekt végrehajtásának lépéseit, a lépések, eredmények határidejét, az egyes feladatok elvégzéséért felelős személyek nevét és beosztását, a szükséges erőforrásokat, stb. Meg kell adni a csoportmunkát támogató eszközöket, a választott technikákat! Definiálni kell, hogy hogyan történik a dokumentumok és a forráskód megosztása!}
+%\comment{Tartalmaznia kell a projekt végrehajtásának lépéseit, a lépések, eredmények határidejét, az egyes feladatok elvégzéséért felelős személyek nevét és beosztását, a szükséges erőforrásokat, stb. Meg kell adni a csoportmunkát támogató eszközöket, a választott technikákat! Definiálni kell, hogy hogyan történik a dokumentumok és a forráskód megosztása!}
 
 
 \subsection{Projektütemterv}
-\begin{terv}
-		\tervitem{febr. 4.}  {Követelmény, projekt, funkcionalitás}{ ?????? }
-        \tervitem{márc. 2. } { Analízis modell kidolgozása 1. - beadás }{ ?????? } 
-        \tervitem{márc. 9. } { Analízis modell kidolgozása 2. - beadás }{ ?????? }
-        \tervitem{márc. 16. }{ Skeleton tervezése - beadás }{ ?????? }
-        \tervitem{márc. 23. }{ Skeleton - beadás és a forráskód herculesre való feltöltése }{ ?????? }
-        \tervitem{márc. 30. }{ Prototípus koncepciója - beadás }{ ?????? }
-        \tervitem{ápr. 6. }{ Részletes tervek - beadás }{ ?????? }
-        \tervitem{ápr. 27. }{ Prototípus - beadás és a forráskód, a tesztbemenetek és az elvárt kimenetek herculesre való feltöltése }{ ?????? }
-        \tervitem{ máj. 4. }{ Grafikus felület specifikációja - beadás }{ ?????? }
-        \tervitem{ máj. 18. }{ Grafikus változat és Összefoglalás - beadás és a forráskód herculesre való feltöltése }{ ?????? } 
-\end{terv}
+
+\begin{center}
+	\begin{terv_v2}
+			\tervitem{febr. 4.}  {Követelmény, projekt, funkcionalitás}{ ?????? }
+			\tervitem{márc. 2. } { Analízis modell kidolgozása 1. - beadás }{ ?????? } 
+			\tervitem{márc. 9. } { Analízis modell kidolgozása 2. - beadás }{ ?????? }
+			\tervitem{márc. 16. }{ Skeleton tervezése - beadás }{ ?????? }
+			\tervitem{márc. 23. }{ Skeleton - beadás és a forráskód herculesre való feltöltése }{ ?????? }
+			\tervitem{márc. 30. }{ Prototípus koncepciója - beadás }{ ?????? }
+			\tervitem{ápr. 6. }{ Részletes tervek - beadás }{ ?????? }
+			\tervitem{ápr. 27. }{ Prototípus - beadás és a forráskód, a tesztbemenetek és az elvárt kimenetek herculesre való feltöltése }{ ?????? }
+			\tervitem{ máj. 4. }{ Grafikus felület specifikációja - beadás }{ ?????? }
+			\tervitem{ máj. 18. }{ Grafikus változat és Összefoglalás - beadás és a forráskód herculesre való feltöltése }{ ?????? } 
+	\end{terv_v2}
+\end{center}
 
 \subsection{Erőforrások, eszközök}
 A fejlesztés során felhasznált segédeszközök:
