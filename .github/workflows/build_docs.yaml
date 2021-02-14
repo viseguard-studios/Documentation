@@ -3,14 +3,52 @@ name: Build Docs
 on: [push]
 
 jobs:
-  build:
-
+  gen-uml:
     runs-on: ubuntu-latest
+    env:
+        UML_FILES: ".puml"
+    steps:
+      - name: Checkout Source 
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Get changed UML files
+        id: getfile
+        run: |
+          echo "::set-output name=files::$(git diff-tree -r --no-commit-id --name-only ${{ github.sha }} | grep ${{ env.UML_FILES }} | xargs)"
+
+      - name: UML files considered echo output
+        run: |
+          echo ${{ steps.getfile.outputs.files }}
+
+      - name: Generate eps Diagrams
+        uses: cloudbees/plantuml-github-action@master
+        with:
+            args: -v -teps ${{ steps.getfile.outputs.files }}
+
+      - name: Pesist the UML diagrams
+        uses: actions/upload-artifact@v2
+        with:
+          name: uml-eps
+          path: |
+            ./**/*.eps
+
+
+
+  build-pdfs:
+    runs-on: ubuntu-latest
+    needs: gen-uml
 
     steps:
-    - name: Checkout
+    - name: Checkout Source
       uses: actions/checkout@v2.3.4
     
+    - name: Download uml results
+      uses: actions/download-artifact@v2
+      with:
+        name: uml-eps
+
     - name: Compile Main docs
       uses: dante-ev/latex-action@master
       with:

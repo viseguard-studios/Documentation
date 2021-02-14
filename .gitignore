@@ -33,3 +33,7 @@ projlab.synctex.gz
 /**/_markdown_Project_desc/
 
 *.synctex.gz
+
+build/**/*
+
+/**/build/**/*
