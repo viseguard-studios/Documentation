@@ -50,13 +50,13 @@ jobs:
         name: uml-eps
 
     - name: Compile Main docs
-      uses: dante-ev/latex-action@master
+      uses: jheubuch/latex-action@v2.2.1
       with:
         root_file: "projlab.tex"
         args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
         
     - name: Compile 1 milestone
-      uses: dante-ev/latex-action@master
+      uses: jheubuch/latex-action@v2.2.1
       with:
         working_directory: ./docs/1_Project
         root_file: Project_desc.tex

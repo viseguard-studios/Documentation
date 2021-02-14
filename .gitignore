@@ -37,3 +37,7 @@ projlab.synctex.gz
 build/**/*
 
 /**/build/**/*
+
+*.gz
+
+*.eps
