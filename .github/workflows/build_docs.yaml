@@ -31,6 +31,7 @@ jobs:
 
       - name: Generate eps Diagrams
         uses: cloudbees/plantuml-github-action@master
+        continue-on-error: true
         with:
             args: -v -teps ${{ steps.getfile.outputs.files }}
 
