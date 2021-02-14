@@ -13,6 +13,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Cache multiple paths
+        uses: actions/cache@v2
+        with:
+          path: |
+            ./**/*.eps
+          key: ${{ runner.os }}-${{ hashFiles('./**/*.eps') }}
+
       - name: Get changed UML files
         id: getfile
         run: |
@@ -28,6 +35,7 @@ jobs:
             args: -v -teps ${{ steps.getfile.outputs.files }}
 
       - name: Pesist the UML diagrams
+        if: always()
         uses: actions/upload-artifact@v2
         with:
           name: uml-eps
