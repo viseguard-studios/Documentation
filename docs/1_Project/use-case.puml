@@ -20,6 +20,6 @@ p --> UC4
 
 usecase "Controll robots" as UC5
 c --> UC5
-UC4 ..> UC5 : <<Includes>>
+UC4 ..> UC5 : << Includes >>
 
 @enduml
