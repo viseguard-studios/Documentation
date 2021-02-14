@@ -1,17 +1,22 @@
 %---------------------------------------------------------------
 %\\\\\\\\\\\\\\\\\\\\\\\\NE MÓDOSÍTSD///////////////////////////
 
-\newenvironment{naplo}{\begin{longtable}{|l|l|p{2.5cm}|p{7.5cm}|}
-        \hline
-        \hline \multicolumn{1}{|c|}{\textbf{Kezdet}} & \multicolumn{1}{c|}{\textbf{Időtartam}} & \multicolumn{1}{c|}{\textbf{Résztvevők}} & \multicolumn{1}{c|}{\textbf{Leírás}}  \\ \hline 
-        \endfirsthead
+\newenvironment{naplo}
+{
+    \begin{longtable}{|l|l|p{2.5cm}|p{7.5cm}|}
+    \hline
+    \hline \multicolumn{1}{|c|}{\textbf{Kezdet}} & \multicolumn{1}{c|}{\textbf{Időtartam}} & \multicolumn{1}{c|}{\textbf{Résztvevők}} & \multicolumn{1}{c|}{\textbf{Leírás}}  \\ \hline 
+    \endfirsthead
         
-        \multicolumn{3}{c}%
-        {{\bfseries}} \\
-        \hline \multicolumn{1}{|c|}{\textbf{Kezdet}} & \multicolumn{1}{c|}{\textbf{Időtartam}} & \multicolumn{1}{c|}{\textbf{Résztvevők}} & \multicolumn{1}{c|}{\textbf{Leírás}}  \\ \hline 
-        \endhead
+    \multicolumn{3}{c}%
+    {{\bfseries}} \\
+    \hline \multicolumn{1}{|c|}{\textbf{Kezdet}} & \multicolumn{1}{c|}{\textbf{Időtartam}} & \multicolumn{1}{c|}{\textbf{Résztvevők}} & \multicolumn{1}{c|}{\textbf{Leírás}}  \\ \hline 
+    \endhead
         
-}{\end{longtable}}
+}
+{
+    \end{longtable}
+}
 
 \newcommand{\naplotag}[4]{#1 & #2 & #3 & #4 \\
     \hline}
@@ -28,10 +33,12 @@
 		\caption{#2}
 	\end{figure}}
 
-\renewcommand{\comment}[1]{\begin{flushright}
-		\color{red} 
-		#1
-\end{flushright} }
+\renewcommand{\comment}[1]{
+    \begin{flushright}
+	\color{red} 
+	#1
+    \end{flushright} 
+}
 
 \newenvironment{class-template}[5]
 { 
@@ -55,7 +62,7 @@
     \hspace*{0.4em} $\blacksquare $ \large Literálok \\[5px]  \normalsize #2 \\[12px]
 }{}	
 
-{\vspace*{-1cm}}
+%{\vspace*{-1cm}}
 \newcommand{\classitem}[2]{
     \hspace*{25px}\parbox{0.9\linewidth}{$\Diamond $ \textit{#1} - #2}
 }

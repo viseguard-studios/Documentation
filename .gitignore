@@ -18,3 +18,16 @@ projlab.aux
 _markdown_projlab/
 
 projlab.synctex.gz
+
+*.log
+*.fls
+*.fdb_latexmk
+*.aux
+*.err
+*.lua
+*.out
+*.pdf
+
+/**/_markdown_Project_desc/
+
+*.synctex.gz
