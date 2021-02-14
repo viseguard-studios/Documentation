@@ -1,8 +1,8 @@
-#### A projek célja
+# A projek célja
 
 A projekt és dokumentum célja az hogy a feladatkiírásban szereplő projektet a lehető legjobban megvalósítsuk. Fontos a tervezéskor figyelembe venni, hogy a feladat bármikor változhat megjelenhetnek új funkciók is akár.
 
-#### Az eredeti feladat kiírás
+# Az eredeti feladat kiírás
 
 **Aszteroidabányászat**
 
