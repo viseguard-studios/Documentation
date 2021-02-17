@@ -1,25 +1,61 @@
 @startuml
-skinparam handwritten true
-
 left to right direction
+
 actor Player as p
 
 actor Controller as c << Internal >>
 
-usecase "Move human" as UC1
-p --> UC1
+usecase "Action" as Action
+p --> Action
 
-usecase "Mine with human" as UC2
-p --> UC2
+usecase "Move" as UC1
+Action --|> UC1
 
-usecase "Drill with Human" as UC3
-p --> UC3
+usecase "Use gate" as UC14
+UC14 <|-- UC1
+
+usecase "Hide" as UC15
+Action --|> UC15
+
+usecase "Mine" as UC2
+Action --|> UC2
+
+usecase "Drill" as UC3
+Action --|> UC3
+
+
+
+usecase "Direct robot" as Direct
+Action --|> Direct
+
+usecase "Craft" as Craft
+Action --|> Craft
+
+usecase "Build robot" as Build_Bot
+Craft --|> Build_Bot
+
+usecase "Build gate" as UC7
+Craft --|> UC7
+
+usecase "Place gate" as UC8
+Action --|> UC8
 
 usecase "View map" as UC4
 p --> UC4
 
+usecase "View inventory" as UC12
+p --> UC12
+
 usecase "Controll robots" as UC5
 c --> UC5
-UC4 ..> UC5 : << Includes >>
+
+usecase "Solar flare" as UC10
+c --> UC10
+
+usecase "Asteroid movement" as UC11
+c --> UC11
+
+usecase "Check win condition" as UC13
+c --> UC13
 
 @enduml
