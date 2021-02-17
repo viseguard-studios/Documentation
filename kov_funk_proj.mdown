@@ -1,12 +1,12 @@
 # Követelmények, funkciók, projekt
 
 ##Megírandók:
-	* Bevezetés	-> Bea segít, valószínűleg Titusz?
+	* Bevezetés
 		** Cél	-> Péter vállalta
-		** Szakterület
-		** Definíciók
-		** Hivatkozások
-		** Összefoglalás
+		** Szakterület	-> Titusz vállalta
+		** Definíciók	-> Közösen a 02.20.-ai meetingben
+		** Hivatkozások	-> Titusz vállalta
+		** Összefoglalás	-> Titusz vállalta
 		
 	* Áttekintés	-> Bea vállalta + segít Ádám
 		** Ált. áttekintés

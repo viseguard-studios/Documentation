@@ -1,6 +1,6 @@
 # Konzi alatti gyűlés 1
 
-## 2021.02.17. ; kezdet: 10:15 ; vége
+## 2021.02.17. ; kezdet: 10:15 ; vége: 13:03
 
 Mindenki jelen volt, Titusz később jött egy *picit*
 
@@ -19,3 +19,8 @@ Mindenki jelen volt, Titusz később jött egy *picit*
 	* Döntés: egy aszterioda körül legfeljebb 5 kapu lehet
 	* Döntés: *Nem* lehet kapukat mozgatni vagy törölni, ha már lehelyeztük őket
 	* Megbeszéltük, hogy Bea mit fog megkérdezni
+	* Titusz késett, ő is beosztatta magát az első feladatba
+	* Mindenki a 1_projektbe rakja be a kész munkát
+	* Döntés: egy kör egy *óra*
+	* Döntés: a telepesek egymáshoz közel, de nem egy aszteroidán kezdenek
+	* Döntés: a pálya globálisan mozog a Nap körül
