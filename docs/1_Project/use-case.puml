@@ -1,3 +1,5 @@
+
+
 @startuml
 left to right direction
 
@@ -8,25 +10,37 @@ actor Controller as c << Internal >>
 usecase "Action" as Action
 p --> Action
 
-usecase "Move" as UC1
-Action --|> UC1
+usecase "View map" as UC4
+p --> UC4
 
-usecase "Use gate" as UC14
-UC14 <|-- UC1
-
-usecase "Hide" as UC15
-Action --|> UC15
-
-usecase "Mine" as UC2
-Action --|> UC2
-
-usecase "Drill" as UC3
-Action --|> UC3
+usecase "View inventory" as UC12
+p --> UC12
 
 
+usecase "Move" as Move
+Action --|> Move
 
-usecase "Direct robot" as Direct
-Action --|> Direct
+usecase "Use gate" as Use_Gate
+Move --|> Use_Gate
+
+
+usecase "Hide" as Hide
+Action --|> Hide
+
+usecase "Mine" as Mine
+Action --|> Mine
+
+usecase "Drill" as Drill
+Action --|> Drill
+
+usecase "Place gate" as Place_Gate
+Action --|> Place_Gate
+
+usecase "Place resource" as Place_Resource
+Action --|> Place_Resource
+
+usecase "Direct robot" as Direct_Robot
+Action --|> Direct_Robot
 
 usecase "Craft" as Craft
 Action --|> Craft
@@ -34,28 +48,28 @@ Action --|> Craft
 usecase "Build robot" as Build_Bot
 Craft --|> Build_Bot
 
-usecase "Build gate" as UC7
-Craft --|> UC7
+usecase "Build gate" as Build_Gate
+Craft --|> Build_Gate
 
-usecase "Place gate" as UC8
-Action --|> UC8
+usecase "Build station" as Build_Station
+Craft --|> Build_Station
 
-usecase "View map" as UC4
-p --> UC4
 
-usecase "View inventory" as UC12
-p --> UC12
+
+
 
 usecase "Controll robots" as UC5
 c --> UC5
+UC5 ..> Direct_Robot <<Depends>>
 
-usecase "Solar flare" as UC10
-c --> UC10
+usecase "Solar flare" as Solar_Flare
+c --> Solar_Flare
 
-usecase "Asteroid movement" as UC11
-c --> UC11
+usecase "Move asteroid belt" as Move_Belt
+c --> Move_Belt
 
-usecase "Check win condition" as UC13
-c --> UC13
+usecase "Check end condition" as End_condition
+c --> End_condition
+Build_Station ..> End_condition : <<Includes>>
 
 @enduml
