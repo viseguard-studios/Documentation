@@ -1,6 +1,8 @@
+A dokumentum (fejezet) célja a projekt követelményeit tisztázni, hogy azok minden tag számára egyértelműek legyenek. A dokumentum összegyűjti a megbeszéléseken megállapított kunkcionális és nem funkcionális kövelelményeket valamink a legfontosabb paramétereit az elkészítendő programnak. Ez a dokument (fejezet) nem tér ki a technikai megvalósításra így csak a végfelhasználó számára nyújtott funkcionalitásokkal foglalkozik.
+
 # A projekt célja
 
-A projekt és dokumentum célja az hogy a feladatkiírásban szereplő projektet a lehető legjobban megvalósítsuk. Fontos a tervezéskor figyelembe venni, hogy a feladat bármikor változhat megjelenhetnek új funkciók is akár.
+A projekt célja az hogy a feladatkiírásban szereplő szoftvert a lehető legjobban megvalósítsuk, az a megrandelő igényeinek megfelelhet. Fontos kiemelni, hogy ezek a köveltelmények a projekt során bármikor megváltozhatnak.
 
 # Az eredeti feladat kiírás
 
