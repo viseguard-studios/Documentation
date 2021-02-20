@@ -1,4 +1,5 @@
 # Szombati gyűlés 1
+\label{appendix:meeting2}
 
 ## 2021.02.20. ; kezdet: 14:00 ; vége: 17:55
 

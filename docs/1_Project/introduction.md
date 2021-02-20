@@ -1,10 +1,10 @@
 # Cél
 
-A dokumentum (fejezet) célja a projekt követelményeit tisztázni, hogy azok minden tag számára egyértelműek legyenek. A dokumentum összegyűjti a megbeszéléseken megállapított kunkcionális és nem funkcionális kövelelményeket valamink a legfontosabb paramétereit az elkészítendő programnak. Ez a dokument (fejezet) nem tér ki a technikai megvalósításra így csak a végfelhasználó számára nyújtott funkcionalitásokkal foglalkozik.
+A dokumentum (fejezet) célja a projekt követelményeit tisztázni és rögzíteni, hogy azok minden tag és konzulens számára egyértelműek legyenek. A dokumentum összegyűjti a megbeszéléseken megállapított funkcionális és nem funkcionális kövelelményeket valamint a legfontosabb paramétereit az elkészítendő programnak. Ez a dokument (fejezet) nem tér ki a technikai megvalósításra így csak a végfelhasználó számára nyújtott funkcionalitásokkal foglalkozik.
 
 ## A projekt célja
 
-A projekt célja az hogy a feladatkiírásban szereplő szoftvert a lehető legjobban megvalósítsuk, az a megrandelő igényeinek megfelelhet. Fontos kiemelni, hogy ezek a köveltelmények a projekt során bármikor megváltozhatnak.
+A projekt célja az hogy a feladatkiírásban szereplő szoftvert a lehető legjobban megvalósítsuk, az a megrandelő igényeinek megfelelően. Fontos kiemelni, hogy ezek a köveltelmények a projekt során bármikor megváltozhatnak.
 
 ## Az eredeti feladat kiírás
 
@@ -27,12 +27,24 @@ Két egység vas, egy egység vízjég és egy egység urán felhasználásával
 A játék kétféleképpen érhet véget. Ha minden telepes meghalt, akkor a játékosok veszítettek. Ha azonban sikerült minden fajta nyersanyagból legalább három egységet kibányászni és egy közös aszteroidára összegyűjteni, akkor a telepesek felépíthetik a bázist és megnyerik a játékot.
 
 # Szakterület
-A kialakítandó szoftver egy játékszoftver.
+A kialakítandó szoftver egy játékszoftver, így a 
 
 # Hivatkozások
 A tárgyhonlapon kívül nem használtunk külső forrást a dokumentum elkészítéséhez.
 
 # Definíciók, rövidítések
+\begin{defi} 
+	Példa defi: egy demó a defi használatára
+\end{defi}
+\begin{defi} 
+	Üreges asteroida: egy asteroidát akkor tekintünk üregesnek ha abban nicsen nyersanyag
+\end{defi}
+\begin{defi} 
+	Azsteroida mező: Az összes aszteroida eggyütt
+\end{defi}
+\begin{rov}
+    PR: példa rövidítés
+\end{rov}
 
 # Összefoglalás
 A dokumentum tartalmazza a készülő szoftver részletes leírását, követelményeket és korlátozásokat a futtatásához kapcsolódóan. Leírja, hogy hogyan fogjuk megvalósítani a projektet lépésről lépésre és egy beszámolót nyújt az eddigi munkánkról.
