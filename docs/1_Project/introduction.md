@@ -1,10 +1,12 @@
+# Cél
+
 A dokumentum (fejezet) célja a projekt követelményeit tisztázni, hogy azok minden tag számára egyértelműek legyenek. A dokumentum összegyűjti a megbeszéléseken megállapított kunkcionális és nem funkcionális kövelelményeket valamink a legfontosabb paramétereit az elkészítendő programnak. Ez a dokument (fejezet) nem tér ki a technikai megvalósításra így csak a végfelhasználó számára nyújtott funkcionalitásokkal foglalkozik.
 
-# A projekt célja
+## A projekt célja
 
 A projekt célja az hogy a feladatkiírásban szereplő szoftvert a lehető legjobban megvalósítsuk, az a megrandelő igényeinek megfelelhet. Fontos kiemelni, hogy ezek a köveltelmények a projekt során bármikor megváltozhatnak.
 
-# Az eredeti feladat kiírás
+## Az eredeti feladat kiírás
 
 **Aszteroidabányászat**
 
@@ -23,3 +25,14 @@ A telepeseket egy egységnyi vas, egy egységnyi szén és egy egységnyi urán 
 Két egység vas, egy egység vízjég és egy egység urán felhasználásával teleportkapu-párt lehet készíteni. Az egyes kapukat az űrhajós később az éppen meglátogatott aszteroida szomszédságában tudja pályára állítani. A kapupár két tagja összeköttetésben van, az egyikbe belépve a másikban találja magát az utazó (űrhajós, robot stb.). A frissen legyártott kapukat az űrhajós magával tudja vinni,  de egy űrhajósnál egyidőben legfeljebb két kapu lehet.
 
 A játék kétféleképpen érhet véget. Ha minden telepes meghalt, akkor a játékosok veszítettek. Ha azonban sikerült minden fajta nyersanyagból legalább három egységet kibányászni és egy közös aszteroidára összegyűjteni, akkor a telepesek felépíthetik a bázist és megnyerik a játékot.
+
+# Szakterület
+A kialakítandó szoftver egy játékszoftver.
+
+# Hivatkozások
+A tárgyhonlapon kívül nem használtunk külső forrást a dokumentum elkészítéséhez.
+
+# Definíciók, rövidítések
+
+# Összefoglalás
+A dokumentum tartalmazza a készülő szoftver részletes leírását, követelményeket és korlátozásokat a futtatásához kapcsolódóan. Leírja, hogy hogyan fogjuk megvalósítani a projektet lépésről lépésre és egy beszámolót nyújt az eddigi munkánkról.
