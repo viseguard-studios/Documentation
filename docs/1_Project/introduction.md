@@ -30,7 +30,6 @@ A játék kétféleképpen érhet véget. Ha minden telepes meghalt, akkor a já
 A kialakítandó szoftver Java nyelven fog elkészülni. A kész projekt szórakoztatóiparban felhasználható játék lesz. 
 
 # Hivatkozások
-https://www.iit.bme.hu/targyak/BMEVIIIAB02
 
 A tárgyhonlapon kívül nem használtunk külső forrást a dokumentum elkészítéséhez.
 \begin{itemize}
