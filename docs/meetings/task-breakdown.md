@@ -3,26 +3,26 @@
 
 ## Megírandók:
 ### Bevezetés
-  - Cél	-> Péter vállalta
-  - Szakterület	-> Titusz vállalta
+  - Cél	-> Dömötör Péter vállalta
+  - Szakterület	-> Tatai Titusz vállalta
   - Definíciók	-> Közösen a 02.20.-ai meetingben
-  - Hivatkozások	-> Titusz vállalta
-  - Összefoglalás	-> Titusz vállalta
+  - Hivatkozások	-> Tatai Titusz vállalta
+  - Összefoglalás	-> Tatai Titusz vállalta
   
-### Áttekintés	-> Bea vállalta + segít Ádám
+### Áttekintés	-> Nagy Beáta vállalta + segít Sike Ádám
   - Ált. áttekintés
-  - Funkciók	-> Ádám vállalta
+  - Funkciók	-> Sike Ádám vállalta
   - Felhasználók
   - Korlátozások
   - Feltételezések, kapcsolatok
   
-### Követelmények	-> Gao vállalta
+### Követelmények	-> Gao Tong vállalta
   - Funkcionális követelmények
-  - Erőforrásokkal kapcsolatos követelmények	-> Péter vállalta
-  - Átadással kapcsolatos követelmények	-> Péter vállalta
+  - Erőforrásokkal kapcsolatos követelmények	-> Dömötör Péter vállalta
+  - Átadással kapcsolatos követelmények	-> Dömötör Péter vállalta
   - Egyéb nem funkcionális követelmények
   
-### Lényeges use-case-ek	-> Gao vállalta
+### Lényeges use-case-ek	-> Gao Tong vállalta
   - Use-case leírások
   - Use-case diagram	-> Közösen a 02.17.-ai meetingben
   
