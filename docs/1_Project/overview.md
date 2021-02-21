@@ -30,16 +30,18 @@ magjában egy egységgel kevesebb nyersanyag lesz (ha több volt) vagy kiürül 
 abból a nyersanyagból. 
 Ha a telepes már nem tud több anyagot hordani, akkor nem tud bányászni, amíg nem csökkenti valahogyan a nála lévő nyersanyagok számát. A játékos bármikor megnézheti a telepesei tárhelyét.
 
-Az aszteroidák véletlenszerűen helyezkednek el egymáshoz képest. A telepesek kell felderítsék, hogy hol vannak az aszteroidák. Ha egy telepes egy még meglátogatlan aszteroidára megy, akkor felfedi az összes közvetlen szomszédját.
+Az aszteroidák véletlenszerűen helyezkednek el egymáshoz képest. A telepeseknek kell  felderíteniük, hogy hol vannak az aszteroidák. Ha egy telepes egy még meg nem látogatott
+aszteroidára megy, akkor felfedi az összes közvetlen szomszédját.
 
 Amennyiben egy aszteroida magjában már nem található több nyersanyag, az üregessé válik.
-A telepeseknek amennyiben szeretnének már kinyert nyersanyagot eltárolni, azt egy üreges aszteroidában elhelyezhetik; ezáltal az üreges aszteroidában tárolhatók a már kinyert nyersanyagok. Ezt egy egységentként egy kör alatt tudják megtenni.
+A telepeseknek amennyiben szeretnék a már kinyert nyersanyagot eltárolni, azt egy üreges aszteroidában elhelyezhetik; ezáltal az üreges aszteroidában tárolhatók a már kinyert nyersanyagok. Ezt egy egységentként egy kör alatt tudják megtenni.
 
 Az aszteroidák tartalmát nem lehet előre tudni, az csak a kéreg átfúrása után lehetséges.
 
 Minden játékos meg tudja nézni egy térképben a telepesek által felfedezett aszteroidákat, és tartalmukat is, amennyiben azok ismertek.
 
-Az aszteroidák a Nap körüli keringésük során néha közelebb vannak hozzá, mint máskor. Az egész mező gyüttesen mozog a Nap körül, ezért periodikusan napközeli helyzetbe kerül.
+Az aszteroidák a Nap körüli keringésük során néha közelebb vannak hozzá, mint máskor. Az egész mező együttesen mozog a Nap körül, ezért periodikusan napközeli
+helyzetbe kerül.
 
 Ez kockázatot jelent a telepesek számára, mert amennyiben napközelben egy olyan radioaktív aszteroida van, aminek a kérge teljesen át lett fúrva, akkor a mag felhevül és felrobban az aszteroidával együtt. Ha egy telepes szerencsétlen módon pont ekkor tartózkodna az aszteroidánál, akkor megsemmisül.
 
