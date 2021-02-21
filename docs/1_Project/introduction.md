@@ -31,6 +31,7 @@ A kialakítandó szoftver Java nyelven fog elkészülni. A kész projekt szórak
 
 # Hivatkozások
 https://www.iit.bme.hu/targyak/BMEVIIIAB02
+
 A tárgyhonlapon kívül nem használtunk külső forrást a dokumentum elkészítéséhez.
 
 # Definíciók, rövidítések
