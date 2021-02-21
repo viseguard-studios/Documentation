@@ -18,9 +18,9 @@ A játék köralapú, egy kör az egy órának felel meg. Minden telepes a kör�
 
 Amennyiben két aszteroida egymáshoz szomszédos, abban az esetben lehetséges a kettő közötti mozgás. Egy telepes ekkor egy kör alatt
 Az aszteroidáknak sok típusa van, de mindegyiknek van valamilyen vastag kérge. Mielőtt a telepesek hozzá tudnának férni a bennük található nyersanyagokhoz, előbb ezen a kérgen át kell fúrni. Minél vastagabb egy kéreg, annál több kör kell, hogy átfúrják.
-Miután ez megtörtént, a telepesek hozzáférnek a maghoz. Az aszteroida típusától függően sokféle magja lehet: üreges, vízjég, szén, urán, vas .stb. A mag mindig csak egyféle nyersanyagot tartalmaz, az adott típusnak megfelelőt – kivéve az üreges aszteroidát, amelyben nem található semmilyen nyersanyag.
+Miután ez megtörtént, a telepesek hozzáférnek a maghoz. Az aszteroida típusától függően sokféle magja lehet: üreges, vízjég, szén, urán, vas stb. A mag mindig csak egyféle nyersanyagot tartalmaz, az adott típusnak megfelelőt – kivéve az üreges aszteroidát, amelyben nem található semmilyen nyersanyag.
 
-Az aszteroidák a Nap körüli keringésük során néha közelebb vannak hozzá, mint máskor. Együttesen mozognak a nap körül, ezért periodikusan napközeli helyzetbe kerülnek.
+Az aszteroidák a Nap körüli keringésük során néha közelebb vannak hozzá, mint máskor. Együttesen mozognak a Nap körül, ezért periodikusan napközeli helyzetbe kerülnek.
 
 Ez kockázatot jelent a telepesek számára, mert amennyiben napközelben egy olyan uránmagú aszteroida van, aminek a kérge teljesen át lett fúrva, akkor a mag felhevül és felrobban az aszteroidával együtt. Ha egy telepes szerencsétlen módon pont ekkor tartózkodna az aszteroidánál, akkor megsemmisül.
 
@@ -28,7 +28,8 @@ Hasonlóan a vízjég tartalmú aszteroidák is reagálnak napközelben, amennyi
 
 Amennyiben egy aszteroida magjában már nem található több nyersanyag, az üregessé válik.
 A telepeseknek nincs végtelen tárolókapacitása, amennyiben szeretnének már kinyert nyersanyagot eltárolni, azt egy üreges aszteroidában elhelyezhetik; ezáltal az üreges aszteroidában tárolhatók a már kinyert nyersanyagok. Ez egy körbe kerül a telepeseknek.
-A telepesekre a robbanásokon kívül más veszély is leselkedik. A Nap véletlen időközönként napkitöréseket produkál, amelyek megsütik az elektromos felszereléseket. Észleléstől számítva párkörön belül eléri az aszteroidákat. Ezek elől el lehet bújni egy üreges aszteroidában, ha át van fúrva a kéreg. Amennyiben egy telepes nem tudott elbújni, és eléri a napkitörés, megsemmisül.
+
+A telepesekre a robbanásokon kívül más veszély is leselkedik. A Nap véletlen időközönként napkitöréseket produkál, amelyek megsütik az elektromos felszereléseket. Észleléstől számítva pár körön belül eléri az aszteroidákat. Ezek elől el lehet bújni egy üreges aszteroidában, ha át van fúrva a kéreg. Amennyiben egy telepes nem tudott elbújni, és eléri a napkitörés, megsemmisül.
 
 A telepesek rendelkezésére áll pár eszköz, amelyek segítenek a küldetésük elérésében.
 
@@ -45,7 +46,7 @@ Amennyiben egy aszteroidán rendelkezésre áll legalább három egység kinyert
 # Felhasználók
 
 A felhasználók a játékunk játékosai. A szoftvert elindítva több játékos tud egyszerre játszani lokálisan. 
-Egy adott számú telepesekből és robotokból álló csoporttal kezelnek. Kiválasztják, milyen tevékenységeket végezzenek a telepesek egy adott időpillanatban. Emellett a fent említett módon (lásd: funkciók) delegálhatnak a robotoknak feladatokat. 
+Egy adott számú telepesekből és robotokból álló csoporttal kezelnek. Kiválasztják, milyen tevékenységeket végezzenek a telepesek egy adott időpillanatban. Emellett a fent említett módon (lásd: Funkciók) delegálhatnak a robotoknak feladatokat. 
 A játék köralapú (turn-based), tehát a játékosokon keresztül a telepesek és robotok egy-egy atomi tevékenységet végezhetnek el egy kör alatt (egy időpillanatban).
 
 # Korlátozások
@@ -55,4 +56,4 @@ Habár van lehetőség multiplayer játékra, ezt lokálisan fogjuk megvalósít
 
 # Feltételezések, kapcsolatok
 
-A tárgy honlapja tartalmazza a játék pontos leírását, ezt alapul véve dolgoztunk. Az itt megtalálható dolgokat változtatás nélkül átemeltük a projektbe. A csapat megbeszélései során értelmeztük a leírásban szerepelteket, és saját értelmezésünk alapján további részleteket, korlátozásokat adtunk hozzá a játék elemeihez (lásd: Funkciók rész). 
+A tárgy honlapja tartalmazza a játék pontos leírását, ezt alapul véve dolgoztunk. Az itt megtalálható dolgokat változtatás nélkül átemeltük a projektbe. A csapat megbeszélései során értelmeztük a leírásban szerepelteket, és saját értelmezésünk alapján további részleteket, korlátozásokat adtunk hozzá a játék elemeihez (lásd: Funkciók). 
