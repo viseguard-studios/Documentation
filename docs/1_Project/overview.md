@@ -24,7 +24,10 @@ Az aszteroidáknak sok típusa van, de mindegyiknek van valamilyen vastag kérge
 Miután ez megtörtént, a telepesek hozzáférnek a maghoz. Az aszteroida típusától függően sokféle magja lehet: üreges, vízjég, szén, urán, vas stb. A mag  csak egyféle ki nem nyert nyersanyagot tartalmazhat, az adott típusnak megfelelőt, az üregesben nem található semmilyen nyersanyag.
 Egy aszteroida magja lehet radioaktív is. Ilyen aszteroida az uránmagú.
 
-Ha egy aszteroida kérge teljesen át lett fúrva, és van benne még ki nem nyert nyersanyag, akkor azt egy lépésként ki lehet bányászni. Ekkor az adott aszteroida magjában egy egységgel kevesebb nyersanyag lesz, a játékos pedig kap egy egységet abból a nyersanyagból.
+Ha egy aszteroida kérge teljesen át lett fúrva, és van benne még ki nem nyert
+nyersanyag, akkor abból egy egységet egy lépésben lehet kibányászni. Ekkor az adott aszteroida
+magjában egy egységgel kevesebb nyersanyag lesz (ha több volt) vagy kiürül a magja, valamint a játékos kap egy egységet
+abból a nyersanyagból. 
 Ha a telepes már nem tud több anyagot hordani, akkor nem tud bányászni, amíg nem csökkenti valahogyan a nála lévő nyersanyagok számát. A játékos bármikor megnézheti a telepesei tárhelyét.
 
 Az aszteroidák véletlenszerűen helyezkednek el egymáshoz képest. A telepesek kell felderítsék, hogy hol vannak az aszteroidák. Ha egy telepes egy még meglátogatlan aszteroidára megy, akkor felfedi az összes közvetlen szomszédját.
