@@ -175,7 +175,7 @@
 	{Feladat}
 	{Mine, Control robots}
 	{}
-	{Amennyiben napközelben egy olyan uránmagú aszteroida van, aminek a kérge teljesen át lett fúrva, akkor a mag felhevül és felrobban az aszteroidával együtt. Az aszteridán lévő telepesek meghalnak, a robok szomszédos aszteroidákra kerülnek.}
+	{Amennyiben napközelben egy olyan uránmagú aszteroida van, aminek a kérge teljesen át lett fúrva, akkor a mag felhevül és felrobban az aszteroidával együtt. Az aszteridán lévő telepesek meghalnak, a robotok szomszédos aszteroidákra kerülnek.}
     
 \end{funkovetelmeny}
 
@@ -205,7 +205,7 @@
 	{Feladat}
 	{Solar flare, Control robots}
 	{}
-	{A robot a napvihar közeledésekor magától megbújik a legközelebbi üreges aszteroida magjában aminek a kérge át van fúrva, ha nem tud elbújni, akkor a robot megsemmisül. }
+	{A robot a napvihar közeledésekor magától megbújik a legközelebbi üreges aszteroida magjában aminek a kérge át van fúrva. Ha nem tud elbújni, akkor a robot megsemmisül. }
     Még meg kell beszélni
 \end{funkovetelmeny}
 
@@ -215,7 +215,7 @@
 	{Feladat}
 	{Build station}
 	{}
-	{Ha telepesek összegyűjtenek mindegyik nyersanyagból legalább 3 egységet, és egy aszteroidában összegyűjtik, akkor egy lépésként készíthetnek egy bázist.}
+	{Ha a telepesek összegyűjtenek mindegyik nyersanyagból legalább 3 egységet, és egy aszteroidában gyűjtik össze, akkor egy lépésként készíthetnek egy bázist.}
     
 \end{funkovetelmeny}
 
@@ -255,7 +255,7 @@
 	{Feladat}
 	{-}
 	{}
-	{A játék indításkor minden telepes egymáshoz közel helyen kezdenek, a köztük levő távolság maximum 5 lépés.}
+	{A játék indításkor a telepesek egymáshoz közeli helyen kezdenek, a köztük levő távolság maximum 5 lépés.}
     
 \end{funkovetelmeny}
 
@@ -325,7 +325,7 @@
 	{Feladat}
 	{Move asteroid belt}
 	{}
-	{Az aszteroida mező mozog a nap körül a naptól való távolsága folyamatosan változik.}
+	{Az aszteroida mező mozog a Nap körül. A Naptól való távolsága folyamatosan változik.}
     
 \end{funkovetelmeny}
 
@@ -335,7 +335,7 @@
 	{Feladat}
 	{View map}
 	{}
-	{A játékosok megtekinthetik mennyire vannak messze a naptól.}
+	{A játékosok megtekinthetik mennyire vannak messze a Naptól.}
     
 \end{funkovetelmeny}
 
@@ -357,7 +357,7 @@
 	{Magas} %Prioritás
 	{University} %Forrás
 	{} %Ellenőrzés
-	{A Szoftvernek a kijelölt virtuális gépen le kell fordulnia és azon futnia is kell} %Leírás
+	{A Szoftvernek a kijelölt virtuális gépen le kell fordulnia és azon futnia is kell.} %Leírás
     Ez a VM a kari felhőben (smallville) lesz elérhető.
 \end{kovetelmeny}
 
@@ -376,7 +376,7 @@
 	{University} %Forrás
 	{} %Ellenőrzés
 	{A játék futtatásához egy darab számítógépnek ekégnek kell lennie.} %Leírás
-    Minden esetben kell tudni teszteni a játékot akár internet kapcsolat nélkül is. Ez nem vonatkozik a fejleszésre és forgításra.
+    Minden esetben kell tudni teszteni a játékot akár internetkapcsolat nélkül is. Ez nem vonatkozik a fejleszésre és fordításra.
 \end{kovetelmeny}
 
 \subsection{Átadással kapcsolatos követelmények}
@@ -386,7 +386,7 @@
     {Közepes} %Prioritás
     {Csapat} %Forrás
     {} %Ellenőrzés
-    {A kész programnak minnél kevesebb file-ból kell álnia.} %Leírás
+    {A kész programnak minél kevesebb file-ból kell állnia.} %Leírás
 
 \end{kovetelmeny}
 
@@ -441,16 +441,16 @@
 	{Drill}
 	{Az aszteroida fúrása.}
 	{Player}
-    \textbf{A.1} A telepes egy egységnyivel tud mélyebre fúrni a köpenyben, amíg az aszteroida köpenye át nincs fúrva teljesen.
+    \textbf{A.1} A telepes egy egységnyivel tud mélyebbre fúrni a köpenyben, amíg az aszteroida köpenye át nincs fúrva teljesen.
 	\newline
-	\textbf{A.2} Ha az aszteroida köpenye már teljesen átfúrva, akkor nem lehet fúrni.
+	\textbf{A.2} Ha az aszteroida köpenye már teljesen át van fúrva, akkor nem lehet fúrni.
 \end{use-case}
 
 \begin{use-case}
 	{Mine}
 	{A telepesnek bányászása.}
 	{Player}
-    \textbf{A.1} A telepes tud bányászni, ha az aszteroida köpenye már teljesen át van fúrva. Ekkor a telepes egy nyersanyagot kap és a mag tartalma eggyel csökken.
+    \textbf{A.1} A telepes akkor tud bányászni, ha az aszteroida köpenye már teljesen át van fúrva. Ekkor a telepes egy nyersanyagot kap és a mag tartalma eggyel csökken.
 	\newline
 	\textbf{A.2} A telepes nem tud bányászni, ha az aszteroida magja üreges.
 	\newline
@@ -461,37 +461,37 @@
 	{Place gate}
 	{Egy teleportkapu lehelyezése.}
 	{Player}
-    \textbf{A.1} Amennyiben kevesebb mint 5 kapu van az aszteroidán és van nála teleport kapu akkor lerakhat egyet.
+    \textbf{A.1} Amennyiben kevesebb, mint 5 kapu van az aszteroidán és a telepesnél van teleportkapu, akkor lerakhat egyet.
 	\newline
-	\textbf{A.1.a} Ha a párnak az első kapulyát helyezte le, akkor nem aktiválódik.
+	\textbf{A.1.a} Ha a párnak az első kapuját helyezte le, akkor nem aktiválódik.
 	\newline
-	\textbf{A.1.b} Ha a párnak a második kapulyát helyezte le, akkor léterejön a kapcsolat, és használhatóvá válnak a kapuk. 
+	\textbf{A.1.b} Ha a párnak a második kapuját helyezte le, akkor létrejön a kapcsolat, és használhatóvá válnak a kapuk. 
 \end{use-case}
 
 \begin{use-case}
 	{Place resource}
-	{A kinyert nyersanyag visszrakása.}
+	{A kinyert nyersanyag visszarakása.}
 	{Player}
     \textbf{A.1} Ha az aszteroida magja üres, akkor a telepes visszahelyezhet bele nyersanyagot.
 	\newline
-	\textbf{A.2} Minden aszteroidában csak annyi nyersanyag tárolható amennyi hely van benne.
+	\textbf{A.2} Minden aszteroidában csak annyi nyersanyag tárolható, amennyi hely van benne.
 \end{use-case}
 
 %TODO: talk it over
 \begin{use-case}
 	{Direct robot *}
-	{A robotokat irányítása.}
+	{A robotok irányítása.}
 	{Player}
-    \textbf{A.1} A telepes bármikor irányíthat a saját készített robotokat, vagy használ vándorlási módot, vagy a kíséretes algoritmust. 
+    \textbf{A.1} A telepes bármikor irányíthatja a saját készített robotokat, vagy használ vándorlási módot, vagy a kíséretes algoritmust. 
 	\newline
 	\textbf{A.2} A kíséretes algoritmus használat esetén kísérel a tulajdonost, és mindig abban vagy a szomszédos aszteroidán marad és fúr.
 \end{use-case}
 
 \begin{use-case}
 	{Hide}
-	{A telepesek elbújnak.}
+	{A telepes elbújása.}
 	{Player}
-    \textbf{A.1} A napvihar érkezéskor a telepes elbújhat egy üreges aszteroidába, akkor ha át van furva a köpenye.
+    \textbf{A.1} A napvihar érkezéskor a telepes elbújhat egy üreges aszteroidába, akkor, ha teljesen át van fúrva a köpenye.
 \end{use-case}
 
 %TODO: meg kepp beszélni.
@@ -504,54 +504,54 @@
 
 \begin{use-case}
 	{Build robot}
-	{A robot készítése.}
+	{Egy robot készítése.}
 	{Player}
-    \textbf{A.1} Egy egység vas, egy egység szén és egy egység urán felhasználással egy lépésként készíthet egy autonóm robotot.
+    \textbf{A.1} Egy egység vas, egy egység szén és egy egység urán felhasználásával egy lépésként készíthet a telepes egy autonóm robotot.
 	\newline
-	\textbf{A.2} A robot elkészüléskor automatikusan elhelyezi a telepes rajta lévő aszteroidán, és következő lépéstől kezdi vándorlási módon dolgozni.
+	\textbf{A.2} A robot elkészülésekor automatikusan elhelyezi a telepes rajta lévő aszteroidán, és következő lépéstől kezdi vándorlási módon dolgozni.
 \end{use-case}
 
 \begin{use-case}
 	{Build gate}
-	{A teleportkapu készítése.}
+	{Egy teleportkapu készítése.}
 	{Player}
-    \textbf{A.1} Két egység vas, egy egység vízjég és egy egység urán felhasználással egy lépésként lehet felépíteni egy teleportkapu-párt.
+    \textbf{A.1} Két egység vas, egy egység vízjég és egy egység urán felhasználásával egy lépésként lehet felépíteni egy teleportkapu-párt.
 \end{use-case}
 
 \begin{use-case}
 	{Build station}
 	{A bázis készítése.}
 	{Player}
-    \textbf{A.1} Ha telepesek összegyűjt mindenféle nyersanyagból legalább 3 egységet, és összetárol egy aszteroidában, akkor ezekkel a nyersanyag felhasználással készítheti egy bázist.
+    \textbf{A.1} Ha a telepesek összegyűjtenek minden nyersanyagból legalább 3 egységet, és tárolják ezeket egy aszteroidában, akkor a nyersanyagok felhasználásával készíthetnek egy bázist.
 	\newline
-	\textbf{A.2} A bázis elkészüléskor automatikusan elhelyezi a telepes rajta lévő aszteroidán.
+	\textbf{A.2} A bázist elkészüléskor automatikusan elhelyezi a telepes azon az aszteroidán, amin éppen tartózkodik.
 \end{use-case}
 
 \begin{use-case}
 	{View map}
 	{A térkép megtekintése.}
 	{Player}
-    \textbf{A.1} A játékos bármikor meg nézheti a már meglátogatott aszteroidákat ábrázoló térképet. Ez nem kerül lépésbe.
+    \textbf{A.1} A játékos bármikor megnézheti a már meglátogatott aszteroidákat ábrázoló térképet. Ez nem kerül lépésbe.
 \end{use-case}
 
 \begin{use-case}
 	{View inventory}
-	{A tároló nézegetése.}
+	{A tároló megtekintése.}
 	{Player}
-    \textbf{A.1} A játékos bármikor megnézheti a kiválasztott telepes rakárában lévő anyagokat (típusok és mennyiségek).
+    \textbf{A.1} A játékos bármikor megnézheti a kiválasztott telepes raktárában lévő anyagokat (típusok és mennyiségek).
 	\newline
 	\textbf{A.2} A játékos bármikor megnézheti a kiválasztott aszteroidában lévő anyagokat (típusok és mennyiségek).
 \end{use-case}
 
 \begin{use-case}
 	{Control robot}
-	{A térgép megtekintése.}
+	{A térkép megtekintése.}
 	{Controller}
-    \textbf{A.1} A mesterséges inteligencia a szerinte megfelelő lépéseket végeztet a robotokkal körönként.
+    \textbf{A.1} A mesterséges intelligencia a szerinte megfelelő lépéseket végezteti a robotokkal körönként.
 	\newline
-	Lehetséges csalekvések:
+	Lehetséges cselekvések:
 	\begin{itemize}
-		\item Mozgásás
+		\item Mozgás
 		\item Fúrás
 		\item Elbújás
 	\end{itemize}
@@ -562,23 +562,23 @@
 	{Solar flare}
 	{A napvihar vezérlése.}
 	{Controller}
-    \textbf{A.1} Vezérli a napvihart, változó időközönként történik egyszer, eléri az összes aszteroidára, megölhet telepeseket és robotokat akik nem bújtak el.
+    \textbf{A.1} Vezérli a napvihart, változó időközönként történik egyszer, elér az összes aszteroidára, megölhet telepeseket és robotokat, akik nem bújtak el.
 \end{use-case}
 
 \begin{use-case}
 	{Move asteroid field}
-	{A aszteroida öv mozgása.}
+	{A aszteroidaöv mozgása.}
 	{Controller}
-    \textbf{A.1} A Controller mozgatja a mezőt, azt naptól távolap vagy közeleb  mozgatva.
+    \textbf{A.1} A Controller mozgatja az aszteroidamezőt, azt a Naptól távolabbra vagy közelebbre mozgatja.
 	\newline
-	\textbf{A.1.a} Bizonyos naptól való távolságnál az nap közelinek számít.
+	\textbf{A.1.a} Egy bizonyos Naptól való távolságnál az napközelinek számít.
 \end{use-case}
 
 \begin{use-case}
 	{Check end condition}
-	{A megnyerés feltételt ellenőrzése.}
+	{A megnyerési feltétel ellenőrzése.}
 	{Controller}
-    \textbf{A.1} Ha legalább egy bázist le van helyezve, akkor a játékosok megnyerik a játékot.
+    \textbf{A.1} Ha legalább egy bázis le van helyezve, akkor a játékosok megnyerik a játékot.
 	\newline
 	\textbf{A.2} Ha minden telepes meghal, akkor a játékosok veszítenek, és a játék végét ér.
 \end{use-case}
@@ -601,20 +601,20 @@
 \begin{szotar}
 	
     \szotaritem{Telepes }{A játékos által irányított ember, aki űrhajóval utazik és dolgozik az aszteroidákon.}
-	\szotaritem{Aszteroida }{Az aszteroida övben lévő kőhalmaz, van köpenye és magja. A telepesek és robotok mellete állomásozni.}
-    \szotaritem{Köpeny }{Az aszteroida külső rétege, van bizonyos mélysége. A telepesek és robotok tudnak belfúrni lyukat.}
+	\szotaritem{Aszteroida }{Az aszteroidaövben lévő kőhalmaz, van köpenye és magja. A telepesek és robotok mellete állomásoznak.}
+    \szotaritem{Köpeny }{Az aszteroida külső rétege, van bizonyos mélysége. A telepesek és robotok tudnak belefúrni lyukat.}
 	\szotaritem{Mag }{Az aszteroida belseje, lehet benne természetes nyersanyagot találni, de üres is lehet.}
-	\szotaritem{Nyersanyag }{Az aszteroida magjában található természetes erőforrások, sok fajta létezik, amelyek lehet radioaktívak is.}
-	\szotaritem{Radioaktív }{A nyersanyag egy veszélyes tulajdonsága. Nap közelben felrobbanhat.}
+	\szotaritem{Nyersanyag }{Az aszteroida magjában található természetes erőforrás, sok fajta létezik, lehet radioaktív is.}
+	\szotaritem{Radioaktív }{A nyersanyag egy veszélyes tulajdonsága. Napközelben felrobbanhat.}
 
 	\szotaritem{Vas }{Egy fajta nyersanyag.}
 	\szotaritem{Vízjég }{Egy fajta nyersanyag. Napközelben elpárologhat.}
 	\szotaritem{Szén }{Egy fajta nyersanyag.}
 	\szotaritem{Urán }{Egy fajta nyersanyag, nagyon radioaktív.}
 
-	\szotaritem{Napvihar  }{Csillagban létrejött természetes periódusos jelenség, amely amikor eléri az aszteroida mezőt, megölheti a telepeseket és robotokat.}
+	\szotaritem{Napvihar  }{Csillagban létrejött természetes periódusos jelenség, amely amikor eléri az aszteroidamezőt, megölheti a telepeseket és robotokat.}
 
-	\szotaritem{Robot  }{Nyersanyagból készült autómon robot, segítséget ad a telepes munkája során. }
+	\szotaritem{Robot  }{Nyersanyagból készült autonóm robot, segítséget ad a telepes munkája során. }
 
 \end{szotar}
 
@@ -627,23 +627,23 @@
 
 \begin{center}
 	\begin{terv_v2}
-			\tervitem{febr. 4.}  {Követelmény, projekt, funkcionalitás}{ Ádám }
-			\tervitem{márc. 2. } { Analízis modell kidolgozása 1. - beadás }{ Peti } 
-			\tervitem{márc. 9. } { Analízis modell kidolgozása 2. - beadás }{ Peti }
-			\tervitem{márc. 16. }{ Skeleton tervezése - beadás }{ Titusz }
-			\tervitem{márc. 23. }{ Skeleton - beadás és a forráskód herculesre való feltöltése }{ Gao }
-			\tervitem{márc. 30. }{ Prototípus koncepciója - beadás }{ Bea }
-			\tervitem{ápr. 6. }{ Részletes tervek - beadás }{ Gao }
-			\tervitem{ápr. 27. }{ Prototípus - beadás és a forráskód, a tesztbemenetek és az elvárt kimenetek herculesre való feltöltése }{ Bea }
-			\tervitem{ máj. 4. }{ Grafikus felület specifikációja - beadás }{ Ádám }
-			\tervitem{ máj. 18. }{ Grafikus változat és Összefoglalás - beadás és a forráskód herculesre való feltöltése }{ Peti } 
+			\tervitem{febr. 4.}  {Követelmény, projekt, funkcionalitás}{ Sike Ádám }
+			\tervitem{márc. 2. } { Analízis modell kidolgozása 1. - beadás }{ Dömötör Péter } 
+			\tervitem{márc. 9. } { Analízis modell kidolgozása 2. - beadás }{ Dömötör Péter }
+			\tervitem{márc. 16. }{ Skeleton tervezése - beadás }{ Tatai Titusz Miklós }
+			\tervitem{márc. 23. }{ Skeleton - beadás és a forráskód herculesre való feltöltése }{ Gao Tong }
+			\tervitem{márc. 30. }{ Prototípus koncepciója - beadás }{ Nagy Beáta }
+			\tervitem{ápr. 6. }{ Részletes tervek - beadás }{ Gao Tong }
+			\tervitem{ápr. 27. }{ Prototípus - beadás és a forráskód, a tesztbemenetek és az elvárt kimenetek herculesre való feltöltése }{ Nagy Beáta }
+			\tervitem{ máj. 4. }{ Grafikus felület specifikációja - beadás }{ Sike Ádám }
+			\tervitem{ máj. 18. }{ Grafikus változat és Összefoglalás - beadás és a forráskód herculesre való feltöltése }{ Dömötör Péter } 
 	\end{terv_v2}
 \end{center}
 
 \subsection{Erőforrások, eszközök}
 A fejlesztés során felhasznált segédeszközök:
 \begin{itemize}
-	\item Dokumentáció: dokumentáló eszközök felsorlása
+	\item Dokumentáció: dokumentáló eszközök felsorolása
 	\item Kommunikáció: kommunikációs platformok...
 	\item Modellező eszköz: modellezési eszközök
 	\item Fejlesztő környezetek: ...
@@ -670,15 +670,15 @@ A fejlesztés során felhasznált segédeszközök:
 
 	\naplotag{2021.02.17. 14:00 }{ 5 óra }{ Gao Tong }
 	{ 
-		Funkciális követelmények
+		Funkciális követelmények (1.3.1)
 	}
 	\naplotag{2021.02.19. 19:00 }{ 4 óra }{ Gao Tong }
 	{ 
-		Funkciális követelmények, Use-case leírás
+		Funkciális követelmények , Use-case leírás (1.3.1, 1.4.1)
 	}
 	\naplotag{2021.02.20. 19:00 }{ 3 óra }{ Gao Tong }
 	{ 
-		Funkciális követelmények, Szótár
+		Funkciális követelmények, Szótár (1.3.1, 1.5)
 	}
 
 
@@ -690,19 +690,18 @@ A fejlesztés során felhasznált segédeszközök:
 
 	\naplotag{2021.02.20. 09:00 }{ 40 perc }{ Tatai Titusz Miklós }
 	{ 
-		összefoglalás, hivatkozások, szakterület, projekkterv előkészítése
+		Szakterület, hivatkozások, összefoglalás, projektterv előkészítése (1.1.2, 1.1.3, 1.1.5, 1.6)
 	}
 
 	\naplotag{2021.02.20. 11:00 }{ 1 óra }{ Nagy Beáta }
 	{ 
-		2.2 Áttekintés fejezet
-		(1.2.1, 1.2.3, 1.2.4, 1.2.5)
+		Áttekintés fejezet  (1.2.1, 1.2.3, 1.2.4, 1.2.5)
 	}
 
 	\naplotag{2021.02.20. 14:00 }{ 4 óra }{ Csapat }
 	{ 
 		Értekezlet
-		\newline A mindenki álltal elkészített szöveg egyesítése és annak esetleges javítása.
+		\newline A mindenki által elkészített szöveg egyesítése és annak esetleges javítása.
 		\ref{appendix:meeting2}
 	}
 
