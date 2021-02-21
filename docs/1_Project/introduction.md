@@ -1,12 +1,12 @@
 # Cél
 
-A dokumentum (fejezet) célja a projekt követelményeit tisztázni és rögzíteni, hogy azok minden tag és konzulens számára egyértelműek legyenek. A dokumentum összegyűjti a megbeszéléseken megállapított funkcionális és nem funkcionális kövelelményeket valamint a legfontosabb paramétereit az elkészítendő programnak. Ez a dokument (fejezet) nem tér ki a technikai megvalósításra így csak a végfelhasználó számára nyújtott funkcionalitásokkal foglalkozik.
+A dokumentum (fejezet) célja a projekt követelményeit tisztázni és rögzíteni, hogy azok minden tag és konzulens számára egyértelműek legyenek. A dokumentum összegyűjti a megbeszéléseken megállapított funkcionális és nem funkcionális kövelelményeket, valamint a legfontosabb paramétereit az elkészítendő programnak. Ez a dokumentum (fejezet) nem tér ki a technikai megvalósításra, így csak a végfelhasználó számára nyújtott funkcionalitásokkal foglalkozik.
 
 ## A projekt célja
 
-A projekt célja az hogy a feladatkiírásban szereplő szoftvert a lehető legjobban megvalósítsuk, az a megrandelő igényeinek megfelelően. Fontos kiemelni, hogy ezek a köveltelmények a projekt során bármikor megváltozhatnak.
+A projekt célja az, hogy a feladatkiírásban szereplő szoftvert a lehető legjobban megvalósítsuk, azaz a megrendelő igényeinek megfelelően. Fontos kiemelni, hogy ezek a követelmények a projekt során bármikor megváltozhatnak.
 
-## Az eredeti feladat kiírás
+## Az eredeti feladatkiírás
 
 **Aszteroidabányászat**
 
