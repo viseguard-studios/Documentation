@@ -29,13 +29,6 @@ A játék kétféleképpen érhet véget. Ha minden telepes meghalt, akkor a já
 # Szakterület
 A kialakítandó szoftver Java nyelven fog elkészülni. A kész projekt szórakoztatóiparban felhasználható játék lesz. 
 
-# Hivatkozások
-
-A tárgyhonlapon kívül nem használtunk külső forrást a dokumentum elkészítéséhez.
-\begin{itemize}
-	\item \urlref{https://www.iit.bme.hu/targyak/BMEVIIIAB02}{BME IIT - Szoftver projekt laboratórium}
-\end{itemize}
-
 # Definíciók, rövidítések
 
 \begin{defi} 
@@ -47,6 +40,10 @@ A tárgyhonlapon kívül nem használtunk külső forrást a dokumentum elkész�
 \begin{rov}
     PR: példa rövidítés
 \end{rov}
+
+# Hivatkozások
+A tárgyhonlapon kívül nem használtunk külső forrást a dokumentum elkészítéséhez.
+	\urlref{https://www.iit.bme.hu/targyak/BMEVIIIAB02}{BME IIT - Szoftver projekt laboratórium}
 
 # Összefoglalás
 A dokumentum tartalmazza a készülő szoftver részletes leírását, követelményeket és korlátozásokat a futtatásához kapcsolódóan. Leírja, hogy hogyan fogjuk megvalósítani a projektet lépésről lépésre és egy beszámolót nyújt az eddigi munkánkról.
