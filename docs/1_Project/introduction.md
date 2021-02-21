@@ -33,6 +33,9 @@ A kialakítandó szoftver Java nyelven fog elkészülni. A kész projekt szórak
 https://www.iit.bme.hu/targyak/BMEVIIIAB02
 
 A tárgyhonlapon kívül nem használtunk külső forrást a dokumentum elkészítéséhez.
+\begin{itemize}
+	\item \urlref{https://www.iit.bme.hu/targyak/BMEVIIIAB02}{BME IIT - Szoftver projekt laboratórium}
+\end{itemize}
 
 # Definíciók, rövidítések
 
