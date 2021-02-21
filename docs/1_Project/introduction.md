@@ -1,8 +1,10 @@
 # Cél
+\label{subsec:goal}
 
 A dokumentum (fejezet) célja a projekt követelményeit tisztázni és rögzíteni, hogy azok minden tag és konzulens számára egyértelműek legyenek. A dokumentum összegyűjti a megbeszéléseken megállapított funkcionális és nem funkcionális kövelelményeket, valamint a legfontosabb paramétereit az elkészítendő programnak. Ez a dokumentum (fejezet) nem tér ki a technikai megvalósításra, így csak a végfelhasználó számára nyújtott funkcionalitásokkal foglalkozik.
 
 ## A projekt célja
+\label{subsec:project goal}
 
 A projekt célja az, hogy a feladatkiírásban szereplő szoftvert a lehető legjobban megvalósítsuk, azaz a megrendelő igényeinek megfelelően. Fontos kiemelni, hogy ezek a követelmények a projekt során bármikor megváltozhatnak.
 
@@ -27,9 +29,12 @@ Két egység vas, egy egység vízjég és egy egység urán felhasználásával
 A játék kétféleképpen érhet véget. Ha minden telepes meghalt, akkor a játékosok veszítettek. Ha azonban sikerült minden fajta nyersanyagból legalább három egységet kibányászni és egy közös aszteroidára összegyűjteni, akkor a telepesek felépíthetik a bázist és megnyerik a játékot.
 
 # Szakterület
+\label{subsec:specialty}
+
 A kialakítandó szoftver Java nyelven fog elkészülni. A kész projekt szórakoztatóiparban felhasználható játék lesz. 
 
 # Definíciók, rövidítések
+\label{subsec:definitions}
 
 \begin{rov}
     	MVC = Model View Controller 
@@ -49,8 +54,12 @@ A kialakítandó szoftver Java nyelven fog elkészülni. A kész projekt szórak
 
 
 # Hivatkozások
+\label{subsec:references}
+
 A tárgyhonlapon kívül nem használtunk külső forrást a dokumentum elkészítéséhez.
 	\urlref{https://www.iit.bme.hu/targyak/BMEVIIIAB02}{BME IIT - Szoftver projekt laboratórium}
 
 # Összefoglalás
+\label{subsec:dictionary}
+
 A dokumentum tartalmazza a készülő szoftver részletes leírását, követelményeket és korlátozásokat a futtatásához kapcsolódóan. Leírja, hogy hogyan fogjuk megvalósítani a projektet lépésről lépésre és egy beszámolót nyújt az eddigi munkánkról.
