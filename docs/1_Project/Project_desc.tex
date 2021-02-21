@@ -17,6 +17,10 @@
 
 \markdownInput[shiftHeadings=2]{\subfix{introduction.md}}
 
+
+%\subsection{Hivatkozások}
+%\urlref{http://iit.bme.hu/}{BME IIT - Programozás alapjai 3. segédanyagok, Szoftvertechnikák segédanyagok, Szoftver projekt laboratórium feladatok}
+
 \section{Áttekintés}
 \markdownInput[shiftHeadings=2]{\subfix{overview.md}}
 
@@ -179,7 +183,7 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
 	{Feladat}
 	{Mine, Control robots}
 	{Bemutatás}
-	{Amennyiben napközelben egy olyan radioaktív aszteroida van, aminek a kérge teljesen át lett fúrva, akkor a mag felhevül és felrobban az aszteroidával együtt. Az aszteridán lévő telepesek meghalnak, a robotok szomszédos aszteroidákra kerülnek.}
+	{Amennyiben napközelben egy olyan radioaktív aszteroida van, aminek a kérge teljesen át lett fúrva, akkor a mag felhevül és felrobban az aszteroidával együtt. Az aszteroidán lévő telepesek meghalnak, a robotok szomszédos aszteroidákra kerülnek.}
     
 \end{funkovetelmeny}
 
@@ -299,7 +303,7 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
 	{Feladat}
 	{Control robot}
 	{Bemutatás, Kiértékelés}
-	{Napkitörés esetén a robotok minden parancsot figyelmen kívűl hagyva megpróbálnak elbújni a legközelebbi alkalmas aszteroidában.}
+	{Napkitörés esetén a robotok minden parancsot figyelmen kívül hagyva megpróbálnak elbújni a legközelebbi alkalmas aszteroidában.}
     
 \end{funkovetelmeny}
 
@@ -333,7 +337,7 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
 	{Feladat}
 	{Move asteroid belt}
 	{Bemutatás, Kiértékelés}
-	{Az aszteroida mező mozog a Nap körül. A Naptól való távolsága folyamatosan változik.}
+	{Az aszteroidamező mozog a Nap körül. A Naptól való távolsága folyamatosan változik.}
     
 \end{funkovetelmeny}
 
@@ -364,7 +368,7 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
 	{Csapat}
 	{-}
 	{Bemutatás, Kiértékelés}
-	{A játék indításakor a rendszer létrehoz egy aszteroida mezőt és elhelyezi rajta a telepeseket.}
+	{A játék indításakor a rendszer létrehoz egy aszteroidamezőt és elhelyezi rajta a telepeseket.}
 \end{funkovetelmeny}
 
 \begin{funkovetelmeny}
@@ -402,8 +406,8 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
 	{Magas} %Prioritás
 	{Egyetem} %Forrás
 	{Bemutatás} %Ellenőrzés
-	{A játék futtatásához egy darab számítógépnek ekégnek kell lennie.} %Leírás
-    Minden esetben kell tudni teszteni a játékot akár internetkapcsolat nélkül is. Ez nem vonatkozik a fejleszésre és fordításra.
+	{A játék futtatásához egy darab számítógépnek elégnek kell lennie.} %Leírás
+    Minden esetben kell tudni teszteni a játékot akár internetkapcsolat nélkül is. Ez nem vonatkozik a fejlesztésre és fordításra.
 \end{kovetelmeny}
 
 \subsection{Átadással kapcsolatos követelmények}
@@ -414,7 +418,7 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
     {Csapat} %Forrás
     {Bemutatás} %Ellenőrzés
     {A kész programnak minél kevesebb file-ból kell állnia.} %Leírás
-	A kész programnak a lehető legkevesebb file-ból kell állnia hogy a használatát ezel is segytsük.
+	A kész programnak a lehető legkevesebb file-ból kell állnia, hogy a használatát ezzel is segítsük.
 \end{kovetelmeny}
 
 \subsection{Egyéb nem funkcionális követelmények}
@@ -424,8 +428,8 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
     {Magas} %Prioritás
     {Csapat} %Forrás
     {Bemutatás} %Ellenőrzés
-    {A felhasználónak minimális előzetes imeretre legyen szüksége a program használatához.} %Leírás
-	A program felhasználásához a lehető leglevesebb előzetes ismeretre legyen szükség. Ezzel is minnél több ember számára hozzáférhetővé téve.
+    {A felhasználónak minimális előzetes ismeretre legyen szüksége a program használatához.} %Leírás
+	A program felhasználásához a lehető legkevesebb előzetes ismeretre legyen szükség, ezzel is minél több ember számára hozzáférhetővé téve.
 \end{kovetelmeny}
 
 \begin{kovetelmeny}
@@ -434,7 +438,7 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
     {Csapat} %Forrás
     {Bemutatás} %Ellenőrzés
     {A program bárki számára értelmezhető hibaüzeneteket ad.} %Leírás
-	A program a felhsználását segytő hobaüzeneteket ad vissza.
+	A program a felhasználását segítő hibaüzeneteket ad vissza.
 \end{kovetelmeny}
 
 \section{Lényeges use-case-ek}
@@ -461,7 +465,7 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
 	{Use gate}
 	{A teleportkapu használata.}
 	{Player}
-    \textbf{A.1} Egy telepes tudja használni a kaput, a rajta lévő aszteroidán, egy lépésként beléphet a kapuba, majd kijön a másik oldalon.  
+    \textbf{A.1} Egy telepes tudja használni a kaput a rajta lévő aszteroidán, egy lépésként beléphet a kapuba, majd kijön a másik oldalon.  
 \end{use-case}
 
 \begin{use-case}
@@ -475,7 +479,7 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
 
 \begin{use-case}
 	{Mine}
-	{A telepesnek bányászása.}
+	{A telepesek bányászása.}
 	{Player}
     \textbf{A.1} A telepes akkor tud bányászni, ha az aszteroida köpenye már teljesen át van fúrva. Ekkor a telepes egy nyersanyagot kap és a mag tartalma eggyel csökken.
 	\newline
@@ -523,7 +527,7 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
 %TODO: meg kepp beszélni.
 \begin{use-case}
 	{Craft}
-	{A tárgyak készítése (robot, teleport-kapu, etc.)}
+	{A tárgyak készítése (robot, teleportkapu stb.)}
 	{Player}
     \textbf{A.1} Ha a telepesnek rendelkezésére áll a raktérben vagy az aszteroidán ahol tartózkodik elegendő kinyert nyersanyag valamelyik tárgy építéséhez, akkor el tudja azt készíteni. A folyamat során a szükséges nyersanyagok elhasználódnak.
 \end{use-case}
@@ -539,7 +543,7 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
 
 \begin{use-case}
 	{Build gate}
-	{Egy teleportkapu készítése.}
+	{Egy teleportkapu-pár készítése.}
 	{Player}
     \textbf{A.1} Két egység vas, egy egység vízjég és egy egység urán felhasználásával egy lépésként lehet felépíteni egy teleportkapu-párt.
 \end{use-case}
@@ -597,7 +601,7 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
 	{Controller}
     \textbf{A.1} A Controller mozgatja az aszteroidamezőt, azt a Naptól távolabbra vagy közelebbre mozgatja.
 	\newline
-	\textbf{A.1.a} Egy bizonyos Naptól való távolságon belül az napközelinek számít.
+	\textbf{A.1.a} Egy bizonyos Naptól való távolságon belül az aszteroida napközelinek számít.
 	\newline
 	\textbf{A.1.b} Ha napközelben van egy átfúrt kérgű radioaktív aszteroida, akkor az felrobban. A robbanás az aszteroidán lévő telepeseket megöli és az ott lévő robotokat a szomszédos aszteroidákra veti.
 \end{use-case}
@@ -649,7 +653,7 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
 
 
 \section{Projekt terv}
-\comment{Tartalmaznia kell a projekt végrehajtásának lépéseit, a lépések, eredmények határidejét, az egyes feladatok elvégzéséért felelős személyek nevét és beosztását, a szükséges erőforrásokat, stb. Meg kell adni a csoportmunkát támogató eszközöket, a választott technikákat! Definiálni kell, hogy hogyan történik a dokumentumok és a forráskód megosztása!}
+%\comment{Tartalmaznia kell a projekt végrehajtásának lépéseit, a lépések, eredmények határidejét, az egyes feladatok elvégzéséért felelős személyek nevét és beosztását, a szükséges erőforrásokat, stb. Meg kell adni a csoportmunkát támogató eszközöket, a választott technikákat! Definiálni kell, hogy hogyan történik a dokumentumok és a forráskód megosztása!}
 
 
 \subsection{Projektütemterv}
@@ -681,7 +685,7 @@ A fejlesztés során felhasznált segédeszközök:
 	\item Grafikus felület tervező: Figma
 \end{itemize}
 
-\comment{Még szabadon felvehető releváns idetartozó dolgok...}
+%\comment{Még szabadon felvehető releváns idetartozó dolgok...}
 
 \clearpage
 
