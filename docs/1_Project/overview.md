@@ -3,7 +3,6 @@
 A játékot felépítő szoftvert az MVC modellt alapul véve tervezzük meg. Tehát az alkalmazás három fő komponensből áll: az adatokat reprezentáló objektumok, a vezérlés és a játék grafikus megjelenítése. 
 A felhasználó egy számítógépen keresztül fogja futtatni a programot. 
 A felhasználó a grafikus felületen keresztül, a billentyűzet adott billentyűit, illetve az egeret használva kommunikál a programmal (játszik a játékkal). Szintén a grafikus felület segítségével folyamatosan látja, hogy mi történik az adott időpillanatban a játékban. 
-Adattárolás? 
 
 # Funkciók
 
@@ -19,7 +18,7 @@ A játék köralapú, egy kör az egy órának felel meg. Minden telepes a kör�
 
 A játékosok így körbe haladnak, minden játékos minden telepese léphet egy körben. Egy játékos csak a hozzá tartozó telepeseit irányíthatja.
 
-A telepesek egy képesek az aszteroidák között mozogni. A szomszédos aszteroidák között ez közvetlenül lehetséges, míg a többi közvetve elérhető. Minden mozgás egy körbe kerül az adott telepesnek.
+A telepesek képesek az aszteroidák között mozogni. A szomszédos aszteroidák között ez közvetlenül lehetséges, míg a többi közvetve elérhető. Minden mozgás egy körbe kerül az adott telepesnek.
 
 Az aszteroidáknak sok típusa van, de mindegyiknek van valamilyen vastag kérge. Mielőtt a telepesek hozzá tudnának férni a bennük található nyersanyagokhoz, előbb ezen a kérgen át kell fúrni. Minél vastagabb egy kéreg, annál több kör kell, hogy átfúrják.
 Miután ez megtörtént, a telepesek hozzáférnek a maghoz. Az aszteroida típusától függően sokféle magja lehet: üreges, vízjég, szén, urán, vas stb. A mag mindig csak egyféle nyersanyagot tartalmaz, az adott típusnak megfelelőt – kivéve az üreges aszteroidát, amelyben nem található semmilyen nyersanyag.
@@ -41,11 +40,11 @@ Ez kockázatot jelent a telepesek számára, mert amennyiben napközelben egy ol
 Hasonlóan a vízjég tartalmú aszteroidák is reagálnak napközelben, amennyiben át van fúrva a kérgük: kezd elpárologni a vízjég, így fokozatosan csökken annak a vízjégtartalma.
 
 Amennyiben egy aszteroida magjában már nem található több nyersanyag, az üregessé válik.
-A telepeseknek nincs végtelen tárolókapacitása, amennyiben szeretnének már kinyert nyersanyagot eltárolni, azt egy üreges aszteroidában elhelyezhetik; ezáltal az üreges aszteroidában tárolhatók a már kinyert nyersanyagok. Ez egy körbe kerül a telepeseknek.
+A telepeseknek nincs végtelen tárolókapacitása, amennyiben szeretnének már kinyert nyersanyagot eltárolni, azt egy üreges aszteroidában elhelyezhetik; ezáltal az üreges aszteroidában tárolhatók a már kinyert nyersanyagok. Ezt egy egységentként egy kör alatt tudják megtenni.
 
-A telepesekre a robbanásokon kívül más veszély is leselkedik. A Nap véletlen időközönként napviharokat produkál, amelyek megsütik az elektromos felszereléseket. Észleléstől számítva pár körön belül eléri az aszteroidákat. Ezek elől el lehet bújni egy üreges aszteroidában, ha át van fúrva a kéreg. Amennyiben egy telepes nem tudott elbújni, és eléri a napvihar, megsemmisül.
+A telepesekre a robbanásokon kívül más veszély is leselkedik. A Nap véletlen időközönként napviharokat produkál, amelyek megsütik az elektromos felszereléseket. Észleléstől számítva pár körön belül eléri az aszteroida mezőt. Ezek elől el lehet bújni egy üreges aszteroidában, ha át van fúrva a kéreg. Amennyiben egy telepes nem tudott elbújni, és eléri a napvihar, megsemmisül.
 
-Ha egy telepes megsemmiüsul, akkor minden általa hordozott kinyerts nyersanyag is eleszik.
+Ha egy telepes megsemmisül, akkor minden általa hordozott kinyert nyersanyag is elveszik.
 
 A telepesek rendelkezésére áll pár eszköz, amelyek segítenek a küldetésük elérésében.
 
@@ -58,7 +57,7 @@ A robotok és kapuk elkészítése egy-egy körbe kerül. A kapuk lehelyezésév
 
 Amennyiben egy aszteroidán rendelkezésre áll legalább három egység kinyert nyersanyag minden fajtából, a telepesek megépíthetik a bázist, és ezzel megnyerhetik a játékot. Ezzel szemben, ha minden telepes életét veszti, akkor a játék megnyerhetetlenné válik, és a játékos veszít.
 
-Építkezéshez és készítéshez a telepesek csak kinyert nyersanyagot használhatnak; ezek kívül a tárhelyükben kell legyen. Ezen kívül felhasználhatók az üreges aszteroidában eltárolt, már kinyert nyersanyagok is, ha a telepes azon az aszteroidán van.
+Építkezéshez és készítéshez a telepesek csak kinyert nyersanyagot használhatnak, ez a tárhelyükben kell legyen. Ezen kívül felhasználhatók az üreges aszteroidában eltárolt, már kinyert nyersanyagok is, ha a telepes azon az aszteroidán van.
 
 # Felhasználók
 
@@ -68,7 +67,7 @@ A játék köralapú (turn-based), tehát a játékosokon keresztül a telepesek
 
 # Korlátozások
 
-Habár van lehetőség multiplayer játékra, ezt lokálisan fogjuk megvalósítani, a rendszer nem használ hálózati kapcsolatot. 
+Habár van lehetőség több személyes játékra, ezt lokálisan fogjuk megvalósítani, a rendszer nem használ hálózati kapcsolatot. 
 
 
 # Feltételezések, kapcsolatok
