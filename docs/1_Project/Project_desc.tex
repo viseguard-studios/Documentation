@@ -1,11 +1,17 @@
 \documentclass[../../projlab]{subfiles}
 \begin{document}
 
+\makeatletter
+
+\def\filePath[#1]{#1}
+
 \ifSubfilesClassLoaded{
 	\coverpage{1. Leadás}
+	%\renewcommand{\filePath}[1]{./../../ #1}
+	\def\filePath[#1]{./../../#1}
 }{}
 
-
+\makeatother
 
 \chapter{Követelmény, projekt, funkcionalitás}
 
@@ -708,11 +714,14 @@ A fejlesztés során felhasznált segédeszközök:
 \end{naplo}
 
 \begin{toappendix}
-	\markdownInput[shiftHeadings=2]{\subfix{docs/meetings/meeting_0.md}}
+	%\filePath[docs/meetings/meeting-0.md]
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-0.md]}
 
-	\markdownInput[shiftHeadings=2]{\subfix{docs/meetings/meeting_1.md}}
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-1.md]}
 
-	\markdownInput[shiftHeadings=2]{\subfix{docs/meetings/task_breakdown.md}}
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/task-breakdown.md]}
+
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-2.md]}
 \end{toappendix}
 
 \end{document}
