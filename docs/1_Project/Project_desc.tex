@@ -632,23 +632,44 @@ A projekt fejlesztése során ezek változhatnak, minden ilyen változás az ado
 
 %szotar.sh script, lsd. a dokumentációt!!!
 \begin{szotar}
-	
-    \szotaritem{Telepes }{A játékos által irányított ember, aki űrhajóval utazik és dolgozik az aszteroidákon.}
 	\szotaritem{Aszteroida }{Az aszteroidaövben lévő kőhalmaz, van köpenye és magja. A telepesek és robotok mellete állomásoznak.}
-    \szotaritem{Köpeny }{Az aszteroida külső rétege, van bizonyos mélysége. A telepesek és robotok tudnak belefúrni lyukat.}
-	\szotaritem{Mag }{Az aszteroida belseje, lehet benne természetes nyersanyagot találni, de üres is lehet.}
+	\szotaritem{Aszteroidamező }{A játékban szereplő aszteroidák összessége.}
+	\szotaritem{Aszteroidaöv }{Aszteroidák összessége, ami tartalmazza a játékunkban található aszteroidamezőt.}
+	\szotaritem{Bányászat }{A telepesek által az aszteroidán végzett elemi tevékenység, amely során egy teljesen átfúrt aszteroidának a magjából 1 egység nyersanyagot magához vesz a telepes.}
+	\szotaritem{Bázis }{A játékosok által létrehozott építmény, ami a játék megnyerésének előfeltétele. A telepesek végső célja a bázis felépítése.}
+	\szotaritem{Elbújás }{Egy telepes vagy robot leereszkedik az aktuális helyén lévő üreges aszteroida magjába, a napvihar túlélése céljából.}
+	\szotaritem{Építés }{Új játékelem létrehozása az aszteroidamezőn. Ilyen lehet például egy teleportkapu-pár, egy robot, illetve a bázis.}
+	\szotaritem{Fúrás }{A telepesek és robotok által az aszteroidán végzett elemi tevékenység, amely során az aszteroida köpenyéből egy réteg bomlik le.}
+	\szotaritem{Játékos }{A program felhasználója, aki egy adott számú telepesekből és robotokból álló csoportot irányít.}
+	\szotaritem{Kinyert nyersanyag }{Egy aszteroida magjából már kibányászott nyersanyag, amit a telepesek felhasználhatnak különböző célokra (tárgyak építése, tárolás, aszteroidába visszahelyezés stb.).}
+	\szotaritem{Kisbolygó }{}
+	\szotaritem{Köpeny }{Az aszteroida külső rétege, van bizonyos mélysége. A telepesek és robotok tudnak belefúrni lyukat.}
+	\szotaritem{Kör }{A játékos telepeseken, robotokon végzett lépéseinek összessége, amely során minden telepessel egy lépés végezhető.}
+	\szotaritem{Lépés }{Egy elemi művelet, amit egy körben egy telepes vagy robot végez.}
+	\szotaritem{Mag }{Az aszteroida legbelső rétege, amely lehet üreges, vagy tartalmazhat egy adott mennyiségű nyersanyagot.}
+	\szotaritem{Nap }{A játékban szereplő aszteroidamező központi bolygója, ettől távolodnak és ehhez közelednek az aszteroidák az idő múlásával. Az aktuális földrajzi helyzete meghatározza az aszteroidák napközeli tulajdonságát.}
+	\szotaritem{Napvihar }{Csillagban létrejött természetes periódusos jelenség, amely, amikor eléri az aszteroidamezőt, megölheti a telepeseket és robotokat.}
 	\szotaritem{Nyersanyag }{Az aszteroida magjában található természetes erőforrás, sok fajta létezik, lehet radioaktív is.}
-	\szotaritem{Radioaktív }{A nyersanyag egy veszélyes tulajdonsága. Napközelben felrobbanhat.}
-
+	\szotaritem{Párolgás }{Bizonyos nyersanyagok (például a vízjég) tartalmának csökkenése az aszteroida átfúrt és napközeli helyzetében.}
+	\szotaritem{Radioaktív }{A nyersanyag egy veszélyes tulajdonsága. Radioaktív maggal rendelkező aszteroidák napközelben felrobbanhatnak.}
+	\szotaritem{Raktár }{A telepesnél aktuálisan található nyersanyagok tárolására szolgál, a telepessel együtt mozognak ezek a nyersanyagok.}
+	\szotaritem{Robbanás }{Egy aszteroida, és minden rajta lévő telepes, illetve robot megsemmisülése.}
+	\szotaritem{Robot }{Nyersanyagból készült autonóm tárgy, segítséget ad a telepes munkája során.}
+	\szotaritem{Szén }{Egy fajta nyersanyag.}
+	\szotaritem{Szomszédos aszteroida }{Egy adott aszteroidához képest egy lépésben elérhető aszteroida.}
+	\szotaritem{Tárhely }{A raktár szinonimája.}
+   	\szotaritem{Telepes }{A játékos által irányított ember, aki űrhajóval utazik és dolgozik az aszteroidákon.}
+	\szotaritem{Teleportkapu }{Egy-egy aszteroidára felépíthető játékelem. Célja, hogy párjával együtt eredetileg nem szomszédos aszteroidák közti egy kör alatt megvalósítható átjárást biztosítson.}
+	\szotaritem{Teleportkapu-pár }{Két darab, egymással kapcsolatban álló teleportkapu. Az egyik kapuba való belépéskor a telepesek és robotok a másik kaput tartalmazó aszteroidába kerülnek.}
+	\szotaritem{Térkép }{Az aszteroidaöv eddig bejárt aszteroidáinak összessége grafikusan megjelenítve.}
+	\szotaritem{Urán }{Egy fajta radioaktív nyersanyag.}
+	\szotaritem{Utasítás }{A telepes által a robotnak kiadott parancs, amely a robot tevékenységét kontrollálja.}
+	\szotaritem{Üreges }{Egy aszteroida magjára vonatkozó tulajdonság, nem tartalmaz nyersanyagot. Aszteroidák létrejöhetnek üregesen, vagy bányászat hatására válhatnak üregessé.}
+	\szotaritem{Üres }{Az üreges szinonimája.}
+	\szotaritem{Űrhajó }{A telepesek aszteroidák közti mozgását, továbbá nyersanyagok tárolását, szállítását lehetővé tevő eszköz.}
 	\szotaritem{Vas }{Egy fajta nyersanyag.}
 	\szotaritem{Vízjég }{Egy fajta nyersanyag. Napközelben elpárologhat.}
-	\szotaritem{Szén }{Egy fajta nyersanyag.}
-	\szotaritem{Urán }{Egy fajta nyersanyag, nagyon radioaktív.}
-
-	\szotaritem{Napvihar  }{Csillagban létrejött természetes periódusos jelenség, amely amikor eléri az aszteroidamezőt, megölheti a telepeseket és robotokat.}
-
-	\szotaritem{Robot  }{Nyersanyagból készült autonóm robot, segítséget ad a telepes munkája során. }
-
+	\szotaritem{Vízjégtartalom }{Egy aszteroidában található vízjég mennyisége.}
 \end{szotar}
 
 
@@ -757,6 +778,13 @@ A fejlesztés során felhasznált segédeszközök:
 		\newline
 		Részletesen: \ref{appendix:meeting3}
 	}
+	
+	\naplotag{2021.02.21. 18:00 }{ 2 óra }{ Nagy Beáta }
+	{ 
+		A szótár illetve definíciók kiegészítése, dokumentum átnézése. 
+	}
+
+	
 
 \end{naplo}
 
