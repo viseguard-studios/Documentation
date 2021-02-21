@@ -1,4 +1,4 @@
-# Konzi alatti gyűlés 1
+# Konzultáció alatti gyűlés 1
 \label{appendix:meeting1}
 
 ## 2021.02.17. ; kezdet: 10:15 ; vége: 13:03
