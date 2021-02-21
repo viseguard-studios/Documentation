@@ -58,7 +58,7 @@ A kapuk képesek ellenállni a napviharnak, de megsemmisülnek, ha felrobban az 
 
 Egy egység vas, egy egység vízjég és egy egység urán felhasználásával automata robotokat tudunk készíttetni, amelyek képesek önállóan felfedezni az aszteroidákat, nyersanyagok után kutatva. Képesek az aszteroidákra szállva mélyíteni rajtuk a furatot, de bányászni vagy nyersanyagot cipelni nem tudnak. Ellenállóak az aszteroidák felrobbanásával szemben, de a napviharok őket is megsemmisítik. Ennek elkerülésére, a telepesekhez hasonlóan el kell bújniuk. A telepesek rádióüzenetekkel kommunikálnak a robotokkal; kérhetik, elsődlegesen milyen nyersanyag után kutassanak, vagy hogy szüneteltessék munkájukat. Ha egy robot talál egy olyan aszteroidát, aminek a magja még nem volt felfedezve és a kért nyersanyagot tartalmazza, akkor visszajelez a játékosnak.
 
-A robotok és kapuk elkészítése egy-egy körbe kerül. A robotok azonnal lehelyeződnek, a kapuk viszont a telepes tárhelyébe kerülnek. A kapuk lehelyezéséve szintén egy körbe kerül.
+A robotok és kapuk elkészítése egy-egy körbe kerül. A robotok azonnal lehelyeződnek, a kapuk viszont a telepes tárhelyébe kerülnek. A kapuk lehelyezése szintén egy körbe kerül.
 
 Amennyiben egy aszteroidán rendelkezésre áll legalább három egység kinyert nyersanyag minden fajtából, a telepesek megépíthetik a bázist, és ezzel megnyerhetik a játékot. Ezzel szemben, ha minden telepes életét veszti, akkor a játék megnyerhetetlenné válik, és a játékos veszít.
 
