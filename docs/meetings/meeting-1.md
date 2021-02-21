@@ -3,7 +3,7 @@
 
 ## 2021.02.17. ; kezdet: 10:15 ; vége: 13:03
 
-Mindenki jelen volt, Titusz később jött egy *picit*
+Mindenki jelen volt, Tatai Titusz később jött egy *picit*
 
  - Megbeszéljük az első feladatot
  - El kellett mennünk az első laboros meetingre
@@ -16,11 +16,11 @@ Mindenki jelen volt, Titusz később jött egy *picit*
  - Az első feladat beosztása a "kov_funk_proj"-ban elérhető, még módosulhat
  - Use case-ek megbeszélése
  - Döntés: a játék nézi, hogy nyerhetsz-e, és ha igen, akkor te döntesz róla (befejezed a játékot)
- - Döntés: a kapuk párokban működnek, egy aszteroidán lehet több kapu is (akár egy pár is :D)
+ - Döntés: a kapuk párokban működnek, egy aszteroidán lehet több kapu is (akár egy pár is)
  - Döntés: egy aszteroida körül legfeljebb 5 kapu lehet
  - Döntés: *Nem* lehet kapukat mozgatni vagy törölni, ha már lehelyeztük őket
- - Megbeszéltük, hogy Bea mit fog megkérdezni
- - Titusz késett, ő is beosztatta magát az első feladatba
+ - Megbeszéltük, hogy Nagy Beáta mit fog megkérdezni
+ - Tatai Titusz késett, ő is beosztatta magát az első feladatba
  - Mindenki az 1 projektbe rakja be a kész munkát
  - Döntés: egy kör egy *óra*
  - Döntés: a telepesek egymáshoz közel, de nem egy aszteroidán kezdenek
