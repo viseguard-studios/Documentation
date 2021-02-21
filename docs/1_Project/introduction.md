@@ -31,15 +31,22 @@ A kialakítandó szoftver Java nyelven fog elkészülni. A kész projekt szórak
 
 # Definíciók, rövidítések
 
-\begin{defi} 
-	Üreges aszteroida: egy aszteroidát akkor tekintünk üregesnek, ha abban nicsen nyersanyag.
-\end{defi}
-\begin{defi} 
-	Aszteroidamező: Az összes aszteroida együtt
-\end{defi}
 \begin{rov}
-    PR: példa rövidítés
+    	MVC = Model View Controller 
 \end{rov}
+\begin{defi} 
+	MVC:  Egy elterjedt tervezési minta, melynek lényege a készített alkalmazás rétegekre bontása. Az adatleíró (Model), a megjelenítés (View) és az alkalmazáslogika (Controller) szétválasztásán alapul. 
+\end{defi}
+\begin{defi} 
+	Java: Egy általános célú, objektumorientált programozási nyelv, amelyet a programunk kódjának megírásához használunk. 
+\end{defi}
+\begin{defi} 
+	Objektumorientált programozás: Kisebb modulokból (osztályokból) építi fel a programot. A program működése az osztályok példányai, vagyis az objektumok kommunikációján alapul. 
+\end{defi}
+\begin{defi} 
+	Játék: Az elkészített alkalmazás, ami a program és a felhasználók kapcsolatán alapul. A felhasználók bemeneti eszközök segítségével kommunikálnak a programmal, ami a felhasználói tevékenységeknek megfelelően grafikusan kirajzolja az alkalmazásban végbement változásokat. 
+\end{defi}
+
 
 # Hivatkozások
 A tárgyhonlapon kívül nem használtunk külső forrást a dokumentum elkészítéséhez.
