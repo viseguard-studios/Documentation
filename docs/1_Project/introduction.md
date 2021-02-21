@@ -27,18 +27,19 @@ Két egység vas, egy egység vízjég és egy egység urán felhasználásával
 A játék kétféleképpen érhet véget. Ha minden telepes meghalt, akkor a játékosok veszítettek. Ha azonban sikerült minden fajta nyersanyagból legalább három egységet kibányászni és egy közös aszteroidára összegyűjteni, akkor a telepesek felépíthetik a bázist és megnyerik a játékot.
 
 # Szakterület
-A kialakítandó szoftver Java nyelven fog elkészülni. A kész projekt szórakoztató iparban felhasználható játék lesz. 
+A kialakítandó szoftver Java nyelven fog elkészülni. A kész projekt szórakoztatóiparban felhasználható játék lesz. 
 
 # Hivatkozások
+https://www.iit.bme.hu/targyak/BMEVIIIAB02
 A tárgyhonlapon kívül nem használtunk külső forrást a dokumentum elkészítéséhez.
 
 # Definíciók, rövidítések
 
 \begin{defi} 
-	Üreges asteroida: egy asteroidát akkor tekintünk üregesnek ha abban nicsen nyersanyag
+	Üreges aszteroida: egy aszteroidát akkor tekintünk üregesnek, ha abban nicsen nyersanyag.
 \end{defi}
 \begin{defi} 
-	Azsteroida mező: Az összes aszteroida eggyütt
+	Aszteroidamező: Az összes aszteroida együtt
 \end{defi}
 \begin{rov}
     PR: példa rövidítés
