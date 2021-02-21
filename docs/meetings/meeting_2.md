@@ -12,9 +12,9 @@ Mindenki jelen volt
 	- Válasz: az üreges értelmezhető szabadon.
 		-- Követelmények átbeszélésének folytatása
 		-- Döntés: van várakozó lépés
-		-- Döntés: a drónok és telepesek nem foglalnak heylet -> elbújásra nézve
-		-- Döntés: a drónok nyersanyagok felkutatására alkalmasak
-		-- Döntés: a drónok napviharkor meg próbálnak elbújni
+		-- Döntés: a robotok és telepesek nem foglalnak heylet -> elbújásra nézve
+		-- Döntés: a robotok nyersanyagok felkutatására alkalmasak
+		-- Döntés: a robotok napviharkor meg próbálnak elbújni
 		-- Döntés: ha egy aszteroida felrobban, és van körülötte kapu, akkor a pár mindkét tagja megsemmisül.
 	- Ádám előadja az IHM 8 óra munka paródiáját :P
 		-- Kérdés: a robotok mire jók pontosan?
