@@ -58,7 +58,7 @@ Craft --|> Build_Station
 
 usecase "Controll robots" as UC5
 c --> UC5
-UC5 ..> Direct_Robot <<Depends>>
+UC5 ..> Direct_Robot : <<Depends>>
 
 usecase "Solar flare" as Solar_Flare
 c --> Solar_Flare

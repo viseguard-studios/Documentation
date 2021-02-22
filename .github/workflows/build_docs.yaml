@@ -18,7 +18,7 @@ jobs:
         with:
           path: |
             ./**/*.eps
-          key: ${{ runner.os }}-${{ hashFiles('./**/*.eps') }}
+          key: ${{ runner.os }}-${{ hashFiles('./**/*.puml') }}
 
       - name: Get changed UML files
         id: getfile
