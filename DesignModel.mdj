@@ -15825,55 +15825,6 @@
 							"headQualifiersCompartment": {
 								"$ref": "AAAAAAF349bcx20PLEM="
 							}
-						},
-						{
-							"_type": "HyperlinkView",
-							"_id": "AAAAAAF35BgjvdlkZkc=",
-							"_parent": {
-								"$ref": "AAAAAAFFxnMtnhONn6Y="
-							},
-							"model": {
-								"$ref": "AAAAAAF35BgjvNliyZw="
-							},
-							"subViews": [
-								{
-									"_type": "LabelView",
-									"_id": "AAAAAAF35Bgjvdll2L0=",
-									"_parent": {
-										"$ref": "AAAAAAF35BgjvdlkZkc="
-									},
-									"font": "Arial;13;0",
-									"left": 900.39453125,
-									"top": 187,
-									"width": 73.708984375,
-									"height": 13,
-									"text": "Components"
-								},
-								{
-									"_type": "LabelView",
-									"_id": "AAAAAAF35BgjvdlmMk8=",
-									"_parent": {
-										"$ref": "AAAAAAF35BgjvdlkZkc="
-									},
-									"font": "Arial;13;1",
-									"left": 868,
-									"top": 187,
-									"width": 23.39453125,
-									"height": 13,
-									"text": "link"
-								}
-							],
-							"font": "Arial;13;0",
-							"left": 863,
-							"top": 182,
-							"width": 117.103515625,
-							"height": 23,
-							"nameLabel": {
-								"$ref": "AAAAAAF35Bgjvdll2L0="
-							},
-							"typeLabel": {
-								"$ref": "AAAAAAF35BgjvdlmMk8="
-							}
 						}
 					]
 				},
@@ -18067,7 +18018,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF33y6cuc7XlSU="
 							},
-							"name": "result"
+							"name": "result",
+							"type": ""
 						}
 					]
 				},
