@@ -58,6 +58,10 @@ jobs:
       with:
         name: uml-eps
 
+    - name: Generate latex from mdj
+      run: |
+          ./.bin/UMLTemplater/UMLTemplater --input ./DesignModel.mdj --output ./docs/2_Project/out.tex
+
     - name: Compile Main docs
       uses: jheubuch/latex-action@2.2.1
       with:
