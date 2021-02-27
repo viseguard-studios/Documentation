@@ -1,0 +1,35 @@
+Búvárruha # Olyan eszköz, amivel a vízbe vagy lyukba esett szereplő ezt az eseményt túléli, nem hal meg. 
+Elásott tárgy # Olyan tárgy, ami jégtáblába van fagyva, azaz nem szedhetőek fel, nem használhatóak. Ha ezeket kiássa egy szereplő, a tárgy eszközként hozzá kerül. 
+Élelem # Olyan eszköz, ami 1-gyel növeli az őt felvevő szereplő testhőjét. 
+Eszközhasználat # Minden eszköz tud valamit csinálni, ez automatikusan végrehajtásra kerül szükség esetén. 
+Eszköz # Használható, funkcióval rendelkező dolog. Lásd részletesen: Lapát, kötél, búvárruha, élelem. 
+Halál # Egy szereplő halála a játék végét, veszteséget jelent. Társasjáték analógiával élve játékos kiesése. Mivel a játék kooperatív, így egy játékos kiesése a teljes csapat kiesését, és így a játék elvesztését jelenti. 
+Hó # A jégtáblákat borítja, a szereplők mozgását nem akadályozza, viszont elásott tárgy csak akkor látható meg, ha az adott jégtáblán már nincsen hó. 
+Hóásás # Egy réteg hó eltakarítása, azaz törlése az adott jégtábláról. Egy egység munkába kerül. 
+Hóréteg # Egy munkavégzéssel eltakarítható hó. Egy jégtáblán több hóréteg lehet. 
+Hóvihar # Egy véletlenszerűen bekövetkező esemény, ami néhány jégtáblát érint. Az érintett jégtáblákon álló szereplők egy testhőt veszítenek, kivéve, ha igluban vannak. Ezeken a jégtáblákon néhány réteg új hó is keletkezik. 
+Iglu # Az eszkimó, az egyik szerepkör képességeként építhető, a szereplő aktuális jégtáblára rakható módosító. Bárki, aki az adott jégtáblára lép, automatikusan az igluba kerül, ahonnan a hóviharok átvészelhetőek. 
+Instabil jégtábla # Van egy maximum létszáma, ahány szereplő állhat rajta, mielőtt a tábla átfordul, és a szereplők a vízbe esnek. 
+Játékos # A szereplőt irányító ember. 
+Játéktábla # A társasjátékokban használatos jelentést használjuk, azaz a teljes játéktér. Szinonima a jégmezőre.  
+Jégmező # A szereplők ezen mozoghatnak. Társasjáték analógiával élve játéktábla. 
+Jégtábla # A jégmező egy darabja. Társasjáték analógiával élve a tábla egy mezője. 
+Jelzőfény # Jelzőrakéta alkatrész, eszköz. 
+Jelzőrakéta # Pisztoly, jelzőfény, és patron egy jégtáblára hordásával, és szereplőnként egy egységnyi munkával összerakható eszköz. Ennek összerakása a játék végét és megnyerését jelenti. 
+Képességhasználat # Mindegyik szerepkör végre tud hajtani egy speciális dolgot, ami valamilyen módon segíti a szereplőket. Ezeknek a használata munkavégzés, így nem automatikus, a játékos dönthet úgy, hogy ezt használja. 
+Kör # A játék menetének egysége. Egy körben minden játékos sorra kerül, egymás után, egyesével. 
+Kötél # Olyan eszköz, amivel lyukba vagy vízbe esett szereplő kimenthető, ekkor a kimentett szereplő arra a jégtáblára kerül, amelyen az a szereplő állt, aki a kötéllel kimentette a másikat. 
+Lapát # Olyan eszköz, amivel hóásásnál egy egység munkával két réteg havat is el lehet takarítani. 
+Mező # A társasjátékokban használatos jelentést használjuk, azaz a játéktábla egy része. Szinonima a jégtáblára. 
+Mozgás # A szereplő egyik jégtábláról egy másik jégtáblára való átlépése. Társasjáték analógiával élve bábu lépése. 
+Munkaegység # A munkavégzés költsége. 
+Munkavégzés # Egységekben végezhető tevékenység. Ilyen a mozgás, hóásás, eszközhasználat, és a képességhasználat. 
+Patron # Jelzőrakéta alkatrész, eszköz. 
+Pisztoly # Jelzőrakéta alkatrész, eszköz. 
+Stabil jégtábla # Bárhány szereplő állhat rajta. 
+Szereplő # Irányítható figura. Társasjáték analógiával élve bábu. 
+Tenger # A játéktábla határait jelöli ki, nem lehet belemenni. 
+Testhő # Videojáték analógiával életpont. Egy egyszerű számláló. Mindegyik szereplő adott értékkel kezd, bizonyos események ezt növelik, mások pedig csökkentik. Ha a számláló leér 0-ra, a szereplő meghal. 
+Mozog # Azon folyamat amikor a szereplő a pályán egy szomszédos jégtáblára lép.
+Vízbe/lyukba esés # ha a jégtábla lyukas vagy a kapacitása már nem elég, a játékos(ok) vízbe kerülnek.
+Képességhasználat # A szereplő a tulajdonságainak megfelelő adottságot használja.

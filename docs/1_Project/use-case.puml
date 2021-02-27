@@ -1,0 +1,73 @@
+@startuml use-case
+left to right direction
+
+actor Player as p
+
+actor Controller as c << Internal >>
+
+usecase "Action" as Action
+p --> Action
+
+usecase "View map" as UC4
+p --> UC4
+
+usecase "View inventory" as UC12
+p --> UC12
+
+
+usecase "Move" as Move
+Action --|> Move
+
+usecase "Use gate" as Use_Gate
+Move --|> Use_Gate
+
+
+usecase "Hide" as Hide
+Action --|> Hide
+
+usecase "Mine" as Mine
+Action --|> Mine
+
+usecase "Drill" as Drill
+Action --|> Drill
+
+usecase "Place gate" as Place_Gate
+Action --|> Place_Gate
+
+usecase "Place resource" as Place_Resource
+Action --|> Place_Resource
+
+usecase "Direct robot" as Direct_Robot
+Action --|> Direct_Robot
+
+usecase "Craft" as Craft
+Action --|> Craft
+
+usecase "Build robot" as Build_Bot
+Craft --|> Build_Bot
+
+usecase "Build gate" as Build_Gate
+Craft --|> Build_Gate
+
+usecase "Build station" as Build_Station
+Craft --|> Build_Station
+
+
+
+
+
+usecase "Controll robots" as UC5
+c --> UC5
+UC5 ..> Direct_Robot : <<Depends>>
+
+usecase "Solar flare" as Solar_Flare
+c --> Solar_Flare
+
+usecase "Move asteroid field" as Move_Belt
+c --> Move_Belt
+
+usecase "Check end condition" as End_condition
+c --> End_condition
+Build_Station ..> End_condition : <<Includes>>
+
+@enduml
