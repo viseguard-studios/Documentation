@@ -30629,14 +30629,6 @@
 				},
 				{
 					"_type": "UMLClass",
-					"_id": "AAAAAAF30PNI6UtQ2tc=",
-					"_parent": {
-						"$ref": "AAAAAAFFxnI9/BN2hrc="
-					},
-					"name": "Class1"
-				},
-				{
-					"_type": "UMLClass",
 					"_id": "AAAAAAF30PkkAkuTpWs=",
 					"_parent": {
 						"$ref": "AAAAAAFFxnI9/BN2hrc="
@@ -33472,30 +33464,6 @@
 							"name": "amount"
 						}
 					]
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAF33yL94DUYQaU=",
-					"_parent": {
-						"$ref": "AAAAAAFFxnI9/BN2hrc="
-					},
-					"name": "Class3"
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAF33yPezzaaBGg=",
-					"_parent": {
-						"$ref": "AAAAAAFFxnI9/BN2hrc="
-					},
-					"name": "Class4"
-				},
-				{
-					"_type": "UMLClass",
-					"_id": "AAAAAAF33yPjfzgcQfQ=",
-					"_parent": {
-						"$ref": "AAAAAAFFxnI9/BN2hrc="
-					},
-					"name": "Class5"
 				},
 				{
 					"_type": "UMLClass",

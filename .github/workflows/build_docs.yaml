@@ -64,12 +64,19 @@ jobs:
         root_file: "projlab.tex"
         args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
         
-    - name: Compile 1 milestone
+    - name: Compile 1. milestone
       uses: jheubuch/latex-action@2.2.1
       with:
         working_directory: ./docs/1_Project
         root_file: Project_desc.tex
         args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
+
+    - name: Compile 2. milestone
+      uses: jheubuch/latex-action@2.2.1
+      with:
+        working_directory: ./docs/2_Project
+        root_file: 03doc.tex
+        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape        
 
     - uses: actions/upload-artifact@v2
       with:

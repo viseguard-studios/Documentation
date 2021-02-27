@@ -1,3 +1,16 @@
+\documentclass[../../projlab]{subfiles}
+\begin{document}
+
+\makeatletter
+
+\ifSubfilesClassLoaded{
+	\coverpage{1. Leadás}
+	%\renewcommand{\filePath}[1]{./../../ #1}
+	\def\filePath[#1]{./../../#1}
+}{}
+
+\makeatother
+
 \chapter{Analízis modell kidolgozása 1.}
 
 \section{Objektum katalógus}
@@ -58,3 +71,30 @@
 
 \section{State-chartok}
 \comment{Csak azokhoz az osztályokhoz, ahol van értelme. Egyetlen állapotból álló state-chartok ne szerepeljenek. A játék működését bemutató state-chart-ot készíteni tilos.}
+
+
+\section{Napló}
+
+\begin{naplo}
+    \naplotag{2021.02.24. 10:00 }{ 2 óra }{ Csapat }
+	{ 
+		Konzultációs időpontban csapatmegbeszélés.
+        Részletesen: \ref{appendix:meeting4}
+	}
+
+    \naplotag{2021.02.26. 17:00 }{ 1 óra }{ Csapat }
+	{ 
+		Konzultációs időpontban csapatmegbeszélés.
+        Részletesen: \ref{appendix:meeting5}
+	}
+\end{naplo}
+
+\begin{toappendix}
+
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-4.md]}
+
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-5.md]}
+	
+\end{toappendix}
+
+\end{document}
