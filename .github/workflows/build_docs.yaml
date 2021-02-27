@@ -60,6 +60,7 @@ jobs:
 
     - name: Generate latex from mdj
       run: |
+          chmod +x ./.bin/UMLTemplater/UMLTemplater
           ./.bin/UMLTemplater/UMLTemplater --input ./DesignModel.mdj --output ./docs/2_Project/out.tex
 
     - name: Compile Main docs
