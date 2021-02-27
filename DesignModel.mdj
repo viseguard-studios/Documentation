@@ -13125,7 +13125,7 @@
 											"top": 1630,
 											"width": 108.11962890625,
 											"height": 13,
-											"text": "+result: Entity",
+											"text": "+result",
 											"horizontalAlignment": 0
 										}
 									],
@@ -15774,6 +15774,55 @@
 							"headQualifiersCompartment": {
 								"$ref": "AAAAAAF349bcx20PLEM="
 							}
+						},
+						{
+							"_type": "HyperlinkView",
+							"_id": "AAAAAAF35BgjvdlkZkc=",
+							"_parent": {
+								"$ref": "AAAAAAFFxnMtnhONn6Y="
+							},
+							"model": {
+								"$ref": "AAAAAAF35BgjvNliyZw="
+							},
+							"subViews": [
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF35Bgjvdll2L0=",
+									"_parent": {
+										"$ref": "AAAAAAF35BgjvdlkZkc="
+									},
+									"font": "Arial;13;0",
+									"left": 900.39453125,
+									"top": 187,
+									"width": 73.708984375,
+									"height": 13,
+									"text": "Components"
+								},
+								{
+									"_type": "LabelView",
+									"_id": "AAAAAAF35BgjvdlmMk8=",
+									"_parent": {
+										"$ref": "AAAAAAF35BgjvdlkZkc="
+									},
+									"font": "Arial;13;1",
+									"left": 868,
+									"top": 187,
+									"width": 23.39453125,
+									"height": 13,
+									"text": "link"
+								}
+							],
+							"font": "Arial;13;0",
+							"left": 863,
+							"top": 182,
+							"width": 117.103515625,
+							"height": 23,
+							"nameLabel": {
+								"$ref": "AAAAAAF35Bgjvdll2L0="
+							},
+							"typeLabel": {
+								"$ref": "AAAAAAF35BgjvdlmMk8="
+							}
 						}
 					]
 				},
@@ -17160,7 +17209,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF304s8BwRn68Q="
 							},
-							"name": "sunDistance"
+							"name": "sunDistance",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -17280,7 +17330,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF3049rXynEqe4="
 							},
-							"name": "isHidden"
+							"name": "isHidden",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -17558,7 +17609,8 @@
 								"$ref": "AAAAAAF306hXbRtVEt4="
 							},
 							"name": "vapour_amount",
-							"documentation": "Azt jelöli, hogy körönként hány egységgel csökken"
+							"documentation": "Azt jelöli, hogy körönként hány egységgel csökken",
+							"type": ""
 						}
 					],
 					"operations": [
@@ -17905,10 +17957,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF33y6cuc7XlSU="
 							},
-							"name": "result",
-							"type": {
-								"$ref": "AAAAAAFFwLR8CF8G68k="
-							}
+							"name": "result"
 						}
 					]
 				},
@@ -18107,9 +18156,9 @@
 														"$ref": "AAAAAAF349vzTtxhNvs="
 													},
 													"font": "Arial;13;0",
-													"left": 190.97900390625,
+													"left": 142.55908203125,
 													"top": 13,
-													"width": 74.70263671875,
+													"width": 66.34912109375,
 													"height": 13,
 													"text": "Vessel move"
 												},
@@ -18122,9 +18171,9 @@
 													"font": "Arial;13;1",
 													"left": 125,
 													"top": 13,
-													"width": 60.97900390625,
+													"width": 12.55908203125,
 													"height": 13,
-													"text": "interaction"
+													"text": "sd"
 												}
 											],
 											"font": "Arial;13;0",
@@ -19852,6 +19901,17 @@
 							}
 						}
 					]
+				},
+				{
+					"_type": "Hyperlink",
+					"_id": "AAAAAAF35BgjvNliyZw=",
+					"_parent": {
+						"$ref": "AAAAAAFFxnI9/BN2hrc="
+					},
+					"name": "Hyperlink1",
+					"reference": {
+						"$ref": "AAAAAAFFxnNrvhOQeXk="
+					}
 				}
 			]
 		},
