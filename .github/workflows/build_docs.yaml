@@ -61,7 +61,7 @@ jobs:
       #run: |
       # echo "::set-output name=files::$(git diff-tree -r --no-commit-id --name-only ${{ github.sha }} | grep ${{ env.UML_FILES }} | xargs)"
       run: |
-        echo "::set-output name=files::$(ls -A -R | grep ${{ env.UML_FILES }} | xargs)"
+        echo "::set-output name=files::$(find . | grep ${{ env.UML_FILES }} | xargs)"
 
     - name: UML files considered echo output
       run: |
