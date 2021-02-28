@@ -915,13 +915,30 @@
 											"height": 13,
 											"text": "-icon",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF36meYrNdQD+I=",
+											"_parent": {
+												"$ref": "AAAAAAF30PMwoEstOp0="
+											},
+											"model": {
+												"$ref": "AAAAAAF36meYoddNtGM="
+											},
+											"font": "Arial;13;0",
+											"left": 101,
+											"top": 1292,
+											"width": 81.29443359375,
+											"height": 13,
+											"text": "-id: int",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 96,
 									"top": 1257,
 									"width": 91.29443359375,
-									"height": 38
+									"height": 53
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -934,7 +951,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 96,
-									"top": 1295,
+									"top": 1310,
 									"width": 91.29443359375,
 									"height": 10
 								},
@@ -1543,7 +1560,7 @@
 											"top": 806,
 											"width": 206.298828125,
 											"height": 13,
-											"text": "-name",
+											"text": "-name: string",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2368,7 +2385,7 @@
 											"top": 1069,
 											"width": 140.53173828125,
 											"height": 13,
-											"text": "-item_data: list",
+											"text": "-item_data",
 											"horizontalAlignment": 0
 										}
 									],
@@ -2983,7 +3000,7 @@
 											"font": "Arial;13;1",
 											"left": 53,
 											"top": 38,
-											"width": 647,
+											"width": 503,
 											"height": 13,
 											"text": "Engine"
 										},
@@ -3018,7 +3035,7 @@
 									"font": "Arial;13;0",
 									"left": 48,
 									"top": 31,
-									"width": 657,
+									"width": 513,
 									"height": 25,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF30QZIol++l2k="
@@ -3052,7 +3069,7 @@
 							"containerChangeable": true,
 							"left": 48,
 							"top": 16,
-							"width": 657,
+							"width": 513,
 							"height": 449,
 							"nameCompartment": {
 								"$ref": "AAAAAAF30QZIol+9Kk4="
@@ -9401,8 +9418,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1119,
-									"top": 129,
+									"left": 1120,
+									"top": 132,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -9422,8 +9439,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1125,
-									"top": 115,
+									"left": 1126,
+									"top": 118,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -9443,8 +9460,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1108,
-									"top": 156,
+									"left": 1107,
+									"top": 159,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -9462,7 +9479,7 @@
 								"$ref": "AAAAAAF305xenlBxaIg="
 							},
 							"lineStyle": 1,
-							"points": "1061:127;1167:171",
+							"points": "1061:129;1167:176",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF307JOy8ju/zk="
@@ -9496,7 +9513,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1354,
-									"top": 144,
+									"top": 147,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -9516,8 +9533,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1360,
-									"top": 158,
+									"left": 1361,
+									"top": 160,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -9538,7 +9555,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1341,
-									"top": 117,
+									"top": 120,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -9556,7 +9573,7 @@
 								"$ref": "AAAAAAF307IS7cKQCig="
 							},
 							"lineStyle": 1,
-							"points": "1415:106;1282:168",
+							"points": "1415:107;1282:173",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF307JdEcnvH3Y="
@@ -9773,7 +9790,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1382,
-									"top": 171,
+									"top": 174,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -9793,8 +9810,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1382,
-									"top": 156,
+									"left": 1381,
+									"top": 159,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -9815,7 +9832,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 1383,
-									"top": 200,
+									"top": 203,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -9833,7 +9850,7 @@
 								"$ref": "AAAAAAF307pMTSX1FqU="
 							},
 							"lineStyle": 1,
-							"points": "1282:196;1485.674072265625:189.0592595880682",
+							"points": "1282:202;1485.674072265625:189.23086455374053",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF307N2UeLJC/U="
@@ -10470,13 +10487,30 @@
 											"height": 13,
 											"text": "-name: string",
 											"horizontalAlignment": 0
+										},
+										{
+											"_type": "UMLAttributeView",
+											"_id": "AAAAAAF36mdCyNCyXDk=",
+											"_parent": {
+												"$ref": "AAAAAAF307pMTiX7BuM="
+											},
+											"model": {
+												"$ref": "AAAAAAF36mdCmtCFjXY="
+											},
+											"font": "Arial;13;0",
+											"left": 1173,
+											"top": 205,
+											"width": 103.68896484375,
+											"height": 13,
+											"text": "-id: int",
+											"horizontalAlignment": 0
 										}
 									],
 									"font": "Arial;13;0",
 									"left": 1168,
 									"top": 185,
 									"width": 113.68896484375,
-									"height": 23
+									"height": 38
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -10499,7 +10533,7 @@
 											},
 											"font": "Arial;13;2",
 											"left": 1173,
-											"top": 213,
+											"top": 228,
 											"width": 103.68896484375,
 											"height": 13,
 											"text": "+GetRoutes()",
@@ -10508,7 +10542,7 @@
 									],
 									"font": "Arial;13;0",
 									"left": 1168,
-									"top": 208,
+									"top": 223,
 									"width": 113.68896484375,
 									"height": 23
 								},
@@ -10550,7 +10584,7 @@
 							"left": 1168,
 							"top": 160,
 							"width": 113.68896484375,
-							"height": 71,
+							"height": 86,
 							"nameCompartment": {
 								"$ref": "AAAAAAF307pMTSX2MWw="
 							},
@@ -12486,8 +12520,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1238,
-									"top": 260,
+									"left": 1239,
+									"top": 267,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -12507,8 +12541,8 @@
 									},
 									"visible": null,
 									"font": "Arial;13;0",
-									"left": 1253,
-									"top": 260,
+									"left": 1254,
+									"top": 267,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -12528,8 +12562,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1209,
-									"top": 261,
+									"left": 1210,
+									"top": 268,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -12549,7 +12583,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 1230,
-									"top": 244,
+									"top": 260,
 									"width": 32.16357421875,
 									"height": 13,
 									"alpha": 0.821217212138183,
@@ -12571,8 +12605,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1252,
-									"top": 252,
+									"left": 1253,
+									"top": 268,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -12591,8 +12625,8 @@
 										"$ref": "AAAAAAF33ztcF4ncRZI="
 									},
 									"font": "Arial;13;0",
-									"left": 1208,
-									"top": 246,
+									"left": 1209,
+									"top": 261,
 									"width": 7.22998046875,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -12614,8 +12648,8 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1239,
-									"top": 270,
+									"left": 1240,
+									"top": 271,
 									"height": 13,
 									"alpha": -0.5235987755982988,
 									"distance": 30,
@@ -12634,7 +12668,7 @@
 									},
 									"visible": false,
 									"font": "Arial;13;0",
-									"left": 1252,
+									"left": 1253,
 									"top": 268,
 									"height": 13,
 									"alpha": -0.7853981633974483,
@@ -12704,7 +12738,7 @@
 								"$ref": "AAAAAAF307pMTSX1FqU="
 							},
 							"lineStyle": 1,
-							"points": "1224:231;1225:303",
+							"points": "1225:246;1225:303",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF33ztcGIngyHM="
@@ -13982,6 +14016,7 @@
 										"$ref": "AAAAAAF349PSeikYI8c="
 									},
 									"visible": false,
+									"fillColor": "#a3e0ff",
 									"font": "Arial;13;0",
 									"top": -8,
 									"width": 10,
@@ -13997,12 +14032,14 @@
 										"$ref": "AAAAAAF349PSeikZDhI="
 									},
 									"visible": false,
+									"fillColor": "#a3e0ff",
 									"font": "Arial;13;0",
 									"top": -8,
 									"width": 10,
 									"height": 10
 								}
 							],
+							"fillColor": "#a3e0ff",
 							"font": "Arial;13;0",
 							"head": {
 								"$ref": "AAAAAAF30Ow8KUrM28A="
@@ -15167,6 +15204,7 @@
 									"$ref": "AAAAAAF306H/JptbgYg="
 								},
 								"name": "type",
+								"documentation": "A nyersanyag típusát tárolja. ",
 								"reference": {
 									"$ref": "AAAAAAF30Ow8KUrKM70="
 								},
@@ -15175,7 +15213,7 @@
 							}
 						}
 					],
-					"documentation": "Egy adag konkrét típusú nyersanyag",
+					"documentation": "Egy adott aszteroidában tárolt egy fajta (egy konkrét típusú), adott számú egységgel rendelkező, bányászással kinyerhető nyersanyagkészletért felel. ",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -15184,7 +15222,7 @@
 								"$ref": "AAAAAAF30OvB8kqghDU="
 							},
 							"name": "amount",
-							"documentation": "Mennyi nyersanyag van ebben a nyersanyagban......",
+							"documentation": "A játék adott pillanatában ennyi egységnyi nyersanyag bányászható még ki az aszteroidából. ",
 							"visibility": "private",
 							"type": "int"
 						}
@@ -15197,6 +15235,7 @@
 								"$ref": "AAAAAAF30OvB8kqghDU="
 							},
 							"name": "Mine",
+							"documentation": "Egy egység nyersanyag kinyerése bányászattal, amennyiben ez lehetséges (rendelkezésre áll elég nyersanyag). Ekkor egy kibányászott megfelelő elemmel tér vissza.",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15218,6 +15257,7 @@
 								"$ref": "AAAAAAF30OvB8kqghDU="
 							},
 							"name": "NearSun",
+							"documentation": "Napközelben a nyersanyag típusának megfelelő műveletet hajt végre. Különleges képességekkel nem rendelkező nyersanyagok esetén nem hajt végre műveletet.  ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15256,6 +15296,7 @@
 									"$ref": "AAAAAAF306VJgd0Z4GM="
 								},
 								"name": "resources",
+								"documentation": "A különböző nyersanyagtípusok tárolója. ",
 								"reference": {
 									"$ref": "AAAAAAF30Ow8KUrKM70="
 								},
@@ -15275,7 +15316,7 @@
 							}
 						}
 					],
-					"documentation": "Egy nyersanyag típus.",
+					"documentation": "Egy adott nyersanyagtípusra való közös tulajdonságokat összegyűjtő osztály. ",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -15284,6 +15325,7 @@
 								"$ref": "AAAAAAF30Ow8KUrKM70="
 							},
 							"name": "name",
+							"documentation": "Egy adott nyersanyagtípus neve. ",
 							"visibility": "private",
 							"type": "string"
 						},
@@ -15294,6 +15336,7 @@
 								"$ref": "AAAAAAF30Ow8KUrKM70="
 							},
 							"name": "id",
+							"documentation": "Egy adott nyersanyagtípus azonosítója. ",
 							"visibility": "private",
 							"type": "int"
 						}
@@ -15306,6 +15349,7 @@
 								"$ref": "AAAAAAF30Ow8KUrKM70="
 							},
 							"name": "NearSun",
+							"documentation": "Absztrakt metódus, ami nyersanyagtípustól függően más műveletet hajt végre az adott aszteroidán, illetve nyersanyagkészleten. A legtöbb nyersanyag esetén, alapértelmezetten a függvény törzse üres, de a leszármazott osztályok viselkedésüktől függően felüldefiniálhatják ezt. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15339,6 +15383,7 @@
 								"$ref": "AAAAAAF30Ow8KUrKM70="
 							},
 							"name": "Mine",
+							"documentation": "Egy getter függvény, visszaadja, hogy az adott nyersanyagtípus bányászata esetén milyen elemet fog magához venni a telepes.",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15376,6 +15421,7 @@
 									"$ref": "AAAAAAF30Pmo5EwWMp0="
 								},
 								"name": "inventory",
+								"documentation": "Az aszteroida raktára, ami a magba belehelyezett és jelenleg ott tárolt elemeket tartalmazza. ",
 								"reference": {
 									"$ref": "AAAAAAF30PL8qEr6yn8="
 								},
@@ -15408,6 +15454,7 @@
 									"$ref": "AAAAAAF30Pm200xy1A4="
 								},
 								"name": "inventory",
+								"documentation": "A telepes által folyamatosan hordozott raktár. ",
 								"reference": {
 									"$ref": "AAAAAAF30PL8qEr6yn8="
 								},
@@ -15428,6 +15475,7 @@
 							}
 						}
 					],
+					"documentation": "Egy aszteroidán vagy telepesnél található kinyert nyersanyagok (elemek) tárolója. Lehet egy telepes által hordozott raktár vagy aszteroida üres vagy elemeket tartalmazó, nem teli magja. ",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -15436,6 +15484,7 @@
 								"$ref": "AAAAAAF30PL8qEr6yn8="
 							},
 							"name": "size",
+							"documentation": "A tároló kapacitása. ",
 							"visibility": "private",
 							"type": "int"
 						}
@@ -15448,6 +15497,7 @@
 								"$ref": "AAAAAAF30PL8qEr6yn8="
 							},
 							"name": "InsertItem",
+							"documentation": "Új elem hozzáadása a tárolóhoz, amennyiben van benne szabad hely (kapacitás).  Sikeres művelet esetén igaz, sikertelen művelet esetén hamis visszatérési értéke van. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15478,6 +15528,7 @@
 								"$ref": "AAAAAAF30PL8qEr6yn8="
 							},
 							"name": "RemoveItem",
+							"documentation": "Elem eltávolítása a tárolóból. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15499,6 +15550,7 @@
 								"$ref": "AAAAAAF30PL8qEr6yn8="
 							},
 							"name": "TryInsertItem",
+							"documentation": "Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15545,6 +15597,7 @@
 									"$ref": "AAAAAAF348Ahylzdjok="
 								},
 								"name": "result_item",
+								"documentation": "A nyersanyagtípus kibányászásakor ilyen típusú, hordozható formájú elem keletkezik",
 								"reference": {
 									"$ref": "AAAAAAF30PMwoEslqCM="
 								},
@@ -15614,6 +15667,16 @@
 							"name": "icon",
 							"visibility": "private",
 							"type": ""
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF36meYoddNtGM=",
+							"_parent": {
+								"$ref": "AAAAAAF30PMwoEslqCM="
+							},
+							"name": "id",
+							"visibility": "private",
+							"type": "int"
 						}
 					]
 				},
@@ -15661,6 +15724,7 @@
 									"$ref": "AAAAAAF304c9yeXOjRY="
 								},
 								"name": "neighbours",
+								"documentation": "A szomszédos aszteroidák tárolója.",
 								"reference": {
 									"$ref": "AAAAAAF30PkkAkuTpWs="
 								},
@@ -15692,6 +15756,7 @@
 									"$ref": "AAAAAAF306GTkpVgqjU="
 								},
 								"name": "resource",
+								"documentation": "Az aszteroida magjában lévő nyersanyagkészlet. ",
 								"reference": {
 									"$ref": "AAAAAAF30OvB8kqghDU="
 								},
@@ -15727,6 +15792,7 @@
 							}
 						}
 					],
+					"documentation": "Egy adott aszteroida tulajdonságainak, rajta végezhető műveleteknek tárolására alkalmas osztály. ",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -15735,6 +15801,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "coreSize",
+							"documentation": "Az aszteroida magjának mérete, ennyi egységnyi nyersanyag bányászható ki belőle a játék elején, és bányászat után ennyi egységnyi elem helyezhető vissza bele. ",
 							"visibility": "private",
 							"type": "int"
 						},
@@ -15745,6 +15812,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "exploded",
+							"documentation": "Igaz, ha felrobbant már az aszteroida, hamis, ha nem. ",
 							"visibility": "private",
 							"type": "bool"
 						},
@@ -15755,6 +15823,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "maxHidingSpace",
+							"documentation": "Maximum ennyi telepes számára van az adott időpillanatban hely az aszteroidában elbújni. Minden telepes sikeres elbújása után csökken ez a szám. ",
 							"visibility": "private",
 							"type": "int"
 						},
@@ -15765,6 +15834,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "holeSize",
+							"documentation": "Az aszteroida köpenyének mélysége. Ennyi egységet kell még fúrni benne jelenleg, hogy teljesen átfúrt legyen. Minden fúrás után csökken ez a szám. ",
 							"visibility": "private",
 							"type": "int"
 						},
@@ -15775,6 +15845,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "revealed",
+							"documentation": "Igaz, ha az aszteroida már „fel van fedve” a térképen, tehát rajta vagy bármelyik szomszédján már járt telepes vagy robot. Ellenkező esetben hamis.",
 							"visibility": "private",
 							"type": "bool"
 						},
@@ -15785,6 +15856,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "visited",
+							"documentation": "Igaz, ha az aszteroidán már járt telepes vagy robot, ellenkező esetben hamis.",
 							"visibility": "private",
 							"type": "bool"
 						},
@@ -15795,6 +15867,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "hidingVessel",
+							"documentation": "Ha az aszteroidában jelenleg megbújik egy telepes, akkor eltárolja, melyik telepesről van szó. Ha nem bújik benne senki, null értéket tárol.",
 							"visibility": "private",
 							"type": {
 								"$ref": "AAAAAAF3049rXynEqe4="
@@ -15808,7 +15881,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
-							"name": "Explode"
+							"name": "Explode",
+							"documentation": "Felrobban az aszteroida. Felrobbantja az összes rajta tartózkodó járművet, hozzáférhetetlenné teszi a raktárat és a rajta lévő épületeket, értesíti a szomszédos aszteroidákat a robbanásról. "
 						},
 						{
 							"_type": "UMLOperation",
@@ -15817,6 +15891,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "ReachableAsteroids",
+							"documentation": "Tárolja, hogy melyik aszteroidák elérhetőek jelenleg az adott aszteroidából. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15839,6 +15914,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "NeighbourExploded",
+							"documentation": "Felrobban egy szomszédja az aszteroidának, ekkor a szomszédok listájából eltávolítja azt. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15860,6 +15936,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "GetResourceType",
+							"documentation": "Visszaadja az aszteroida magjában található nyersanyag típusát. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15881,6 +15958,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "Depart",
+							"documentation": "Egy adott jármű elhagyja az aszteroidát, törlődik az ott tartózkodók közül. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15902,6 +15980,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "Arrive",
+							"documentation": "Egy adott jármű érkezik az aszteroidára, regisztrálja az ott tartózkodók közé.",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15923,6 +16002,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "GetAvailableHidingSpace",
+							"documentation": "Visszaadja, hogy hány telepes számára van még hely elbújásra jelenleg az aszteroidában, attól függően, hogy jelentleg elbújt-e telepes az aszteroidában. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15941,7 +16021,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
-							"name": "Reveal"
+							"name": "Reveal",
+							"documentation": "Aszteroida felfedése a térképen, amennyiben még nem volt felfedve.  "
 						}
 					]
 				},
@@ -15997,6 +16078,7 @@
 							}
 						}
 					],
+					"documentation": "A telepesekért felelős osztály.",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -16005,8 +16087,9 @@
 								"$ref": "AAAAAAF30PlOGEvnvCA="
 							},
 							"name": "name",
+							"documentation": "A telepes nevét tárolja. ",
 							"visibility": "private",
-							"type": ""
+							"type": "string"
 						}
 					],
 					"operations": [
@@ -16017,6 +16100,7 @@
 								"$ref": "AAAAAAF30PlOGEvnvCA="
 							},
 							"name": "GetHidingSpaceRequirement",
+							"documentation": "A telepesek által az aszteroida magjában elfoglalt hely nagyságát adja vissza. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -16035,7 +16119,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF30PlOGEvnvCA="
 							},
-							"name": "Mine"
+							"name": "Mine",
+							"documentation": "Teljesen átfúrt, nem üres magú aszteroidán való tartózkodás esetén a telepes egy egységet kibányászik az ott található nyersanyagból. Az így keletkező elem a telepes raktárába kerül.  Ha sikertelen a művelet (nem teljesülnek a feltételek), nem történik művelet. "
 						},
 						{
 							"_type": "UMLOperation",
@@ -16044,6 +16129,7 @@
 								"$ref": "AAAAAAF30PlOGEvnvCA="
 							},
 							"name": "Craft",
+							"documentation": "A telepes az aktuálisan rendelkezésére álló elemekből egy \"receptet\" készít.  A felhasznált elemek elhasználódnak, törlődnek a raktárból. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -16092,6 +16178,7 @@
 									"$ref": "AAAAAAF30P2TNFRjXTY="
 								},
 								"name": "type",
+								"documentation": "Az elem típusát tárolja. ",
 								"reference": {
 									"$ref": "AAAAAAF30PMwoEslqCM="
 								},
@@ -16112,6 +16199,7 @@
 									"$ref": "AAAAAAF307vF4WZXWwk="
 								},
 								"name": "items",
+								"documentation": "A tárolóban aktuálisan tárolt elemek. ",
 								"reference": {
 									"$ref": "AAAAAAF30P100FPlSEE="
 								},
@@ -16163,6 +16251,7 @@
 							}
 						}
 					],
+					"documentation": "A már kibányászott nyersanyagok hordozható elemekké válnak, ebben a formában tárolja őket az osztály. Egy típusú, adott mennyiségű azonos elemet, illetve hordozható épületet (pl. teleportkapu-pár) tárol.",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -16171,6 +16260,7 @@
 								"$ref": "AAAAAAF30P100FPlSEE="
 							},
 							"name": "amount",
+							"documentation": "Az elem darabszámát tárolja. ",
 							"visibility": "private",
 							"type": "int"
 						},
@@ -16181,8 +16271,8 @@
 								"$ref": "AAAAAAF30P100FPlSEE="
 							},
 							"name": "item_data",
-							"visibility": "private",
-							"type": "list"
+							"documentation": "Adattároló, ami a különböző példányok specifikus adatait tárolja csoportosítva (pl. teleportkapuk párjainak azonosítója). ",
+							"visibility": "private"
 						}
 					]
 				},
@@ -16532,6 +16622,7 @@
 							}
 						}
 					],
+					"documentation": "Egy speciális jármű, a robot tevékenységeit, tulajdonságait tartalmazza.",
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -16540,6 +16631,7 @@
 								"$ref": "AAAAAAF302HWgsK8f98="
 							},
 							"name": "GetHidingSpaceRequirement",
+							"documentation": "A robotok által az aszteroida magjában elfoglalt hely nagyságát adja vissza. Korlátlan mennyiségű robot elfér, tehát 0 az értéke. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -16686,6 +16778,7 @@
 									"$ref": "AAAAAAF305vdB0twRhI="
 								},
 								"name": "stationed",
+								"documentation": "Az aszteroidán jelenleg állomásozó járművek tárolója. ",
 								"reference": {
 									"$ref": "AAAAAAF3049rXynEqe4="
 								},
@@ -16699,6 +16792,7 @@
 									"$ref": "AAAAAAF305vdB0twRhI="
 								},
 								"name": "currentAsteroid",
+								"documentation": "Az aktuális tartózkodási helyének (aszteroida) tárolására szolgál. ",
 								"reference": {
 									"$ref": "AAAAAAF30PkkAkuTpWs="
 								},
@@ -16729,6 +16823,7 @@
 									"$ref": "AAAAAAF349bcx20AszI="
 								},
 								"name": "owner",
+								"documentation": "Tárolja, hogy melyik játékos irányítja az járművet.",
 								"reference": {
 									"$ref": "AAAAAAF332DavqKBois="
 								},
@@ -16737,6 +16832,7 @@
 							}
 						}
 					],
+					"documentation": "Egy-egy járműért (pl. telepes vagy robot) felelős osztály. ",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -16754,6 +16850,7 @@
 								"$ref": "AAAAAAF3049rXynEqe4="
 							},
 							"name": "isHidden",
+							"documentation": "Ha jelenleg el van bújva az aszteroidájában, igaz, ellenkező esetben hamis. ",
 							"visibility": "private",
 							"type": "bool"
 						}
@@ -16765,7 +16862,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF3049rXynEqe4="
 							},
-							"name": "Hide"
+							"name": "Hide",
+							"documentation": "Belebújik az adott aszteroidába, ha van benne elegendő hely. Ha nincsen, az aszteroida felszínén marad. "
 						},
 						{
 							"_type": "UMLOperation",
@@ -16773,7 +16871,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF3049rXynEqe4="
 							},
-							"name": "Drill"
+							"name": "Drill",
+							"documentation": "Fúr egy egységnyit az aszteroida köpenyéből, ha még nincs teljesen átfúrva. Ha át van fúrva, nem történik művelet."
 						},
 						{
 							"_type": "UMLOperation",
@@ -16782,6 +16881,7 @@
 								"$ref": "AAAAAAF3049rXynEqe4="
 							},
 							"name": "Move",
+							"documentation": "Az jármű átlép egy szomszédos aszteroidára. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -16803,6 +16903,7 @@
 								"$ref": "AAAAAAF3049rXynEqe4="
 							},
 							"name": "GetHidingSpaceRequirement",
+							"documentation": "Absztrakt metódus, leszármazottól függően más értéket ad vissza. Meghatározza, hogy ha az adott jármű el szeretne bújni egy aszteroidában, mennyi helyre van hozzá szüksége. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -16822,7 +16923,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF3049rXynEqe4="
 							},
-							"name": "Explode"
+							"name": "Explode",
+							"documentation": "Felrobban  a jármű (egy aszteroida robbanásának hatására). "
 						},
 						{
 							"_type": "UMLOperation",
@@ -16830,7 +16932,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF3049rXynEqe4="
 							},
-							"name": "ExitHiding"
+							"name": "ExitHiding",
+							"documentation": "A jármű kibújik az aszteroida magjából, ha el volt bújva benne. Ha nem, nem történik művelet. "
 						}
 					]
 				},
@@ -16855,6 +16958,7 @@
 									"$ref": "AAAAAAF305yYCFNq0r8="
 								},
 								"name": "buildings",
+								"documentation": "Az aszteroidára épített (véglegesen elhelyezett) építmények tárolója. ",
 								"reference": {
 									"$ref": "AAAAAAF307H0TcC0ouQ="
 								},
@@ -16965,6 +17069,7 @@
 						"$ref": "AAAAAAFFxnI9/BN2hrc="
 					},
 					"name": "ResourceRegistry",
+					"documentation": "Egy listában tárolja a játékban megjelenő összes nyersanyagtípust.",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -17000,6 +17105,7 @@
 							}
 						}
 					],
+					"documentation": "Speciális, radioaktív nyersanyagtípusok tulajdonságait tárolja. ",
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -17008,6 +17114,7 @@
 								"$ref": "AAAAAAF306cPJQSUeU0="
 							},
 							"name": "NearSun",
+							"documentation": "Ha az adott aszteroida magja teljesen át van fúrva, napközelben van, és van még benne radioaktív kibányászható nyersanyag, akkor az aszteroida felrobban, meghívja az ennek megfelelő függvényét. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -17057,6 +17164,7 @@
 							}
 						}
 					],
+					"documentation": "Speciális, napközelben párolgó nyersanyagtípus tulajdonságait tárolja.",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -17065,7 +17173,7 @@
 								"$ref": "AAAAAAF306hXbRtVEt4="
 							},
 							"name": "vapour_amount",
-							"documentation": "Azt jelöli, hogy körönként hány egységgel csökken",
+							"documentation": "Egy adott körben ennyi egységgel csökken a nyersanyagkészlet (ennyi egység párolog el belőle) . ",
 							"visibility": "private",
 							"type": "int"
 						}
@@ -17078,6 +17186,7 @@
 								"$ref": "AAAAAAF306hXbRtVEt4="
 							},
 							"name": "NearSun",
+							"documentation": "Ha az adott aszteroida magja teljesen át van fúrva, napközelben van, és van még benne kibányászható nyersanyag, akkor a nyersanyag mennyisége a vapour_amount attribútum értékének megfelelő ütemben csökken. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -17298,6 +17407,16 @@
 							"name": "name",
 							"visibility": "private",
 							"type": "string"
+						},
+						{
+							"_type": "UMLAttribute",
+							"_id": "AAAAAAF36mdCmtCFjXY=",
+							"_parent": {
+								"$ref": "AAAAAAF307pMTSXz6dU="
+							},
+							"name": "id",
+							"visibility": "private",
+							"type": "int"
 						}
 					],
 					"operations": [
@@ -17569,6 +17688,7 @@
 									"$ref": "AAAAAAF349PSeikXCcQ="
 								},
 								"name": "searching_resource",
+								"documentation": "Tárolja, hogy az adott játékos milyen nyersanyag után szeretne kutatni. Az általa irányított robotok ezt a nyersanyagtípust fogják keresni, ha éppen megadott ilyet, és a saját belső logikájuk szerint működni, ha nincs ilyen nyersanyagtípus. ",
 								"reference": {
 									"$ref": "AAAAAAF30Ow8KUrKM70="
 								},
@@ -17578,6 +17698,7 @@
 							"visibility": "private"
 						}
 					],
+					"documentation": "Egy adott játékos reprezentációja. ",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -17598,6 +17719,7 @@
 								"$ref": "AAAAAAF332DavqKBois="
 							},
 							"name": "name",
+							"documentation": "A játékos neve.",
 							"visibility": "private",
 							"type": "string"
 						}
@@ -17652,9 +17774,9 @@
 														"$ref": "AAAAAAF349vzTtxhNvs="
 													},
 													"font": "Arial;13;0",
-													"left": 144.72998046875,
+													"left": 142.55908203125,
 													"top": 13,
-													"width": 74.70263671875,
+													"width": 66.34912109375,
 													"height": 13,
 													"text": "Vessel move"
 												},
@@ -17667,7 +17789,7 @@
 													"font": "Arial;13;1",
 													"left": 125,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
