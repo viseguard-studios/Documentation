@@ -1,4 +1,4 @@
-@startuml use-case-diagram
+@startuml use-case
 left to right direction
 
 actor Player as p
