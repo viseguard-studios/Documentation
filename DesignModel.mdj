@@ -16466,6 +16466,7 @@
 							},
 							"name": "amount",
 							"visibility": "private",
+							"documentation": "Mennyi nyersanyag van ebben a nyersanyagban......",
 							"type": "int"
 						}
 					],
@@ -18955,7 +18956,7 @@
 														"$ref": "AAAAAAF349vzTtxhNvs="
 													},
 													"font": "Arial;13;0",
-													"left": 142.55908203125,
+													"left": 186.58642578125,
 													"top": 13,
 													"width": 66.34912109375,
 													"height": 13,
@@ -18970,9 +18971,9 @@
 													"font": "Arial;13;1",
 													"left": 125,
 													"top": 13,
-													"width": 12.55908203125,
+													"width": 56.58642578125,
 													"height": 13,
-													"text": "sd"
+													"text": "interaction"
 												}
 											],
 											"font": "Arial;13;0",
