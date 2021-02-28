@@ -3,60 +3,36 @@ name: Build Docs
 on: [push]
 
 jobs:
-  gen-uml:
-    runs-on: ubuntu-latest
-    env:
-        UML_FILES: ".puml"
-    steps:
-      - name: Checkout Source 
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-
-      - name: Cache multiple paths
-        uses: actions/cache@v2
-        with:
-          path: |
-            ./**/*.eps
-          key: ${{ runner.os }}-${{ hashFiles('./**/*.puml') }}
-
-      - name: Get changed UML files
-        id: getfile
-        run: |
-          echo "::set-output name=files::$(git diff-tree -r --no-commit-id --name-only ${{ github.sha }} | grep ${{ env.UML_FILES }} | xargs)"
-
-      - name: UML files considered echo output
-        run: |
-          echo ${{ steps.getfile.outputs.files }}
-
-      - name: Generate eps Diagrams
-        uses: cloudbees/plantuml-github-action@master
-        continue-on-error: true
-        with:
-            args: -v -teps ${{ steps.getfile.outputs.files }}
-
-      - name: Pesist the UML diagrams
-        if: always()
-        uses: actions/upload-artifact@v2
-        with:
-          name: uml-eps
-          path: |
-            ./**/*.eps
-
-
-
   build-pdfs:
     runs-on: ubuntu-latest
-    needs: gen-uml
-
+    #needs: gen-uml
+    env:
+        UML_FILES: ".puml"
     steps:
     - name: Checkout Source
       uses: actions/checkout@v2.3.4
     
-    - name: Download uml results
-      uses: actions/download-artifact@v2
+    - name: Get changed UML files
+      id: getfile
+      #run: |
+      # echo "::set-output name=files::$(git diff-tree -r --no-commit-id --name-only ${{ github.sha }} | grep ${{ env.UML_FILES }} | xargs)"
+      run: |
+        echo "::set-output name=files::$(find . | grep ${{ env.UML_FILES }} | xargs)"
+
+    - name: UML files considered echo output
+      run: |
+        echo ${{ steps.getfile.outputs.files }}
+
+    - name: Generate eps Diagrams
+      uses: cloudbees/plantuml-github-action@master
+      continue-on-error: true
       with:
-        name: uml-eps
+          args: -v -teps ${{ steps.getfile.outputs.files }}
+
+    - name: Generate latex from mdj
+      run: |
+          chmod +x ./.bin/UMLTemplater/UMLTemplater
+          ./.bin/UMLTemplater/UMLTemplater --input ./DesignModel.mdj --output ./docs/2_Project/out.tex
 
     - name: Compile Main docs
       uses: jheubuch/latex-action@2.2.1
@@ -75,7 +51,7 @@ jobs:
       uses: jheubuch/latex-action@2.2.1
       with:
         working_directory: ./docs/2_Project
-        root_file: 03doc.tex
+        root_file: Models.tex
         args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape        
 
     - uses: actions/upload-artifact@v2
