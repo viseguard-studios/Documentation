@@ -1,7 +1,7 @@
 # Objektum katalógus
 
 ## Aszteroida
-Egy olyan objektum, ahol lehetnek telepesek, robotok, épületek (mint például teleportkapuk, vagy bázisok), továbbá lehet a magjukban nyersanyag. Van kérgük, amin át kell fúrni. Lehet a magjukban nyersanyag, amit ki lehet bányászni, ha át van fúrva a kéreg. El lehet benne bújni egy telepesnek és akárhány robotnak, ha át van fúrva a kéreg és üreges a mag. El lehet rejtve a nyersanyagtartalom és az egész aszteroida is. Legfeljebb öt teleportkapu lehet rajta. Felrobbanhat, ha radioaktív nyersanyag van a magban és napközelven van vagy napviharban van, megsemmisítve a telepeseket, teleportkapukat és önmagát. Felrobbanás után csak meglátogatni lehet. Ismeri a közvetlen szomszédjait, és a kapukon keresztül elérhetőket.
+Egy olyan objektum, ahol lehetnek telepesek, robotok, épületek (mint például teleportkapuk, vagy bázisok), továbbá lehet a magjukban nyersanyag. Van kérgük, amin át kell fúrni. Lehet a magjukban nyersanyag, amit ki lehet bányászni, ha át van fúrva a kéreg. El lehet benne bújni egy telepesnek és akárhány robotnak, ha át van fúrva a kéreg és üreges a mag. El lehet rejtve a nyersanyagtartalom és az egész aszteroida is. Legfeljebb öt teleportkapu lehet rajta. Felrobbanhat, ha radioaktív nyersanyag van a magban és napközelben van vagy napviharban van, megsemmisítve a telepeseket, teleportkapukat és önmagát. Felrobbanás után csak meglátogatni lehet. Ismeri a közvetlen szomszédjait, és a kapukon keresztül elérhetőket.
 
 ## Aszteroiadamező
 Ebben az objektumban vannak az aszteroidák, a játékosok telepesei, robotjai és épületei. Napvihar érheti. Napközelbe kerülhet. A játékmenet itt megy végbe.

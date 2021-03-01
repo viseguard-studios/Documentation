@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="628" height="484">
+  <defs />
+  <g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 8 8 L 616 8 L 616 472 L 8 472 L 8 8" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 8 8 L 8 30 L 141.78076171875 30 L 152.78076171875 19 L 152.78076171875 8 L 8 8" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 8 8 L 8 30 L 141.78076171875 30 L 152.78076171875 19 L 152.78076171875 8 L 8 8 L 8 8" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="78.97900390625" y="25.5">SunStorm</text>
+      </g>
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="13" y="25.5">interaction</text>
+      </g>
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="31" y="47" width="169.26806640625" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="24" y="40" width="169.26806640625" height="39" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 24 40 L 193.26806640625 40 L 193.26806640625 79 L 24 79 L 24 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="58.052734375" y="59.5">g: GameManager</text>
+      </g>
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 109.5 80 L 109.5 455" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="327" y="47" width="146.1435546875" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="320" y="40" width="146.1435546875" height="39" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 320 40 L 466.1435546875 40 L 466.1435546875 79 L 320 79 L 320 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="367.05908203125" y="59.5">s: Vessel</text>
+      </g>
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 394.5 80 L 394.5 455" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 109 152 L 387 152" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 376.83732514237585 156.209517756016 L 387 152 L 376.83732514237585 147.790482243984" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 376.83732514237585 156.209517756016 L 387 152 L 376.83732514237585 147.790482243984 L 376.83732514237585 156.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="203.5" y="148.5">1 : RoundEnd()</text>
+      </g>
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="387" y="152" width="13" height="280" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 387 152 L 400 152 L 400 432 L 387 432 L 387 152 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 400 336 L 430 336 L 430 356 L 407 356" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 417.16267485762415 351.790482243984 L 407 356 L 417.16267485762415 360.209517756016" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 417.16267485762415 351.790482243984 L 407 356 L 417.16267485762415 360.209517756016 L 417.16267485762415 351.790482243984" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="440.6708984375" y="348.5">2 : Explode()</text>
+      </g>
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="394" y="356" width="13" height="28" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 394 356 L 407 356 L 407 384 L 394 384 L 394 356 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 387 423 L 109 423" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 119.16267485762415 418.790482243984 L 109 423 L 119.16267485762415 427.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="220.5" y="439.5">3 : return</text>
+      </g>
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 152 168 L 576 168 L 576 408 L 152 408 L 152 168" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 152 168 L 152 190 L 253.26171875 190 L 264.26171875 179 L 264.26171875 168 L 152 168" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 152 168 L 152 190 L 253.26171875 190 L 264.26171875 179 L 264.26171875 168 L 152 168 L 152 168" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="181.07177734375" y="185.5">if solar flare</text>
+      </g>
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="157" y="185.5">opt</text>
+      </g>
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="171.5" y="218.5">[If solar flare]</text>
+      </g>
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 168 248 L 559 248 L 559 391 L 168 391 L 168 248" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 168 248 L 168 270 L 247.60986328125 270 L 258.60986328125 259 L 258.60986328125 248 L 168 248" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 168 248 L 168 270 L 247.60986328125 270 L 258.60986328125 259 L 258.60986328125 248 L 168 248 L 168 248" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="197.07177734375" y="265.5">explode</text>
+      </g>
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="173" y="265.5">opt</text>
+      </g>
+    </g>
+    <g transform="translate(2,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="187.5" y="298.5">[if not hidden]</text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -49,11 +49,28 @@
     \hspace*{0.4em} $\blacksquare $ \large Metódusok \\  \normalsize #5 ~\\[12px]
 }{}
 
-\newenvironment{class-template-responsibility}{\hspace*{0.4em} $\blacksquare $ \large Felelősség \\[5px]  \normalsize}{~\\[12px]}
+\newenvironment{class-template-responsibility}
+{
+    \hspace*{0.4em} $\blacksquare $ \large Felelősség \\[5px]  \normalsize
+}
+{~\\[12px]}
+
 \newenvironment{class-template-baseclass}{\hspace*{0.4em} $\blacksquare $ \large Ősosztály \\[5px]  \normalsize}{~\\[12px]}
 \newenvironment{class-template-interface}{\hspace*{0.4em} $\blacksquare $ \large Interfészek \\[5px]  \normalsize}{~\\[12px]}
-\newenvironment{class-template-method}{\hspace*{0.4em} $\blacksquare $ \large Metódusok \\[5px]  \normalsize}{~\\[12px]}
-\newenvironment{class-template-attribute}{\hspace*{0.4em} $\blacksquare $ \large Attribútumok \\[5px]  \normalsize}{~\\[12px]}
+\newenvironment{class-template-method}
+{
+    \hspace*{0.4em} $\blacksquare $ \large Metódusok \normalsize
+    \begin{itemize}
+}
+{\end{itemize}}
+
+\newenvironment{class-template-attribute}
+{
+    \hspace*{0.4em} $\blacksquare $ \large Attribútumok \normalsize
+    \begin{itemize}
+}
+{\end{itemize}}
+
 \newenvironment{class-template-statechart}{\hspace*{0.4em} $\blacksquare$ \large Állapotgép \\[5px] \normalsize}{~\\[12px]}
 
 \newenvironment{enum-template}[2]
@@ -64,8 +81,9 @@
 
 %{\vspace*{-1cm}}
 \newcommand{\classitem}[2]{
-    \hspace*{25px}\parbox{0.9\linewidth}{$\Diamond $ \textit{#1 ~} - #2}
+    \item[$\Diamond $]{\textit{#1 ~} - #2}
 }
+
 
 \newcommand{\baseclass}{ $\rightarrow$ }
 
