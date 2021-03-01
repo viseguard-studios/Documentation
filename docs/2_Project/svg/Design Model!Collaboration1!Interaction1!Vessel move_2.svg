@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="834" height="572">
+  <defs />
+  <g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 120 8 L 830 8 L 830 560 L 120 560 L 120 8" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 120 8 L 120 30 L 269.681640625 30 L 280.681640625 19 L 280.681640625 8 L 120 8" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 120 8 L 120 30 L 269.681640625 30 L 280.681640625 19 L 280.681640625 8 L 120 8 L 120 8" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="190.97900390625" y="25.5">Vessel move</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="125" y="25.5">interaction</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="263" y="47" width="120.16259765625" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="256" y="40" width="120.16259765625" height="39" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 256 40 L 376.16259765625 40 L 376.16259765625 79 L 256 79 L 256 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="290.068603515625" y="59.5">v: Vessel</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 317.5 80 L 317.5 534" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 58.86314541903409 47.3 C 58.86314541903409 43.82060576 61.74154714121591 41 65.292236328125 41 C 68.8429255150341 41 71.7213272372159 43.82060576 71.7213272372159 47.3 C 71.7213272372159 50.779394239999995 68.8429255150341 53.6 65.292236328125 53.6 C 61.74154714121591 53.6 58.86314541903409 50.779394239999995 58.86314541903409 47.3 Z" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 58.86314541903409 47.3 C 58.86314541903409 43.82060576 61.74154714121591 41 65.292236328125 41 C 68.8429255150341 41 71.7213272372159 43.82060576 71.7213272372159 47.3 C 71.7213272372159 50.779394239999995 68.8429255150341 53.6 65.292236328125 53.6 C 61.74154714121591 53.6 58.86314541903409 50.779394239999995 58.86314541903409 47.3 Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 65.292236328125 53.6 L 65.292236328125 66.4" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 58.484963600852275 58.4 L 72.09950905539773 58.4" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 65.292236328125 66.4 L 55.83769087357955 79" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 65.292236328125 66.4 L 74.74678178267045 79" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="23.74365234375" y="99.5">Lifeline2: User</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 66.5 105 L 66.5 518" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="447" y="47" width="177.18994140625" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="440" y="40" width="177.18994140625" height="39" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 440 40 L 617.18994140625 40 L 617.18994140625 79 L 440 79 L 440 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="457.063232421875" y="59.5">currentAsteroid: Asteroid</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 529.5 80 L 529.5 308" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="673" y="47" width="132.4072265625" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="666" y="40" width="132.4072265625" height="39" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 666 40 L 798.4072265625 40 L 798.4072265625 79 L 666 79 L 666 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="701.1318359375" y="59.5">a: Asteroid</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 733.5 80 L 733.5 386" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 66 120 L 310 120" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 299.83732514237585 124.20951775601598 L 310 120 L 299.83732514237585 115.79048224398402" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 299.83732514237585 124.20951775601598 L 310 120 L 299.83732514237585 115.79048224398402 L 299.83732514237585 124.20951775601598" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="127.5" y="116.5">1 : Move(a: Asteroid)</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="310" y="120" width="13" height="392" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 310 120 L 323 120 L 323 512 L 310 512 L 310 120 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 323 128 L 522 128" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 511.83732514237585 132.209517756016 L 522 128 L 511.83732514237585 123.79048224398402" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 511.83732514237585 132.209517756016 L 522 128 L 511.83732514237585 123.79048224398402 L 511.83732514237585 132.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="350.5" y="124.5">2 : ReachableAsteroids()</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="522" y="128" width="13" height="54" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 522 128 L 535 128 L 535 182 L 522 182 L 522 128 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 522 176 L 323 176" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 333.16267485762415 171.790482243984 L 323 176 L 333.16267485762415 180.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="360.594970703125" y="192.5">3 : neigbours = result</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 323 240 L 522 240" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 511.83732514237585 244.209517756016 L 522 240 L 511.83732514237585 235.790482243984" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 511.83732514237585 244.209517756016 L 522 240 L 511.83732514237585 235.790482243984 L 511.83732514237585 244.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="386.138916015625" y="236.5">4 : Depart(v)</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="522" y="240" width="13" height="28" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 522 240 L 535 240 L 535 268 L 522 268 L 522 240 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 522 260 L 323 260" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 333.16267485762415 255.790482243984 L 323 260 L 333.16267485762415 264.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="381.5" y="276.5">5 : Message4</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 323 336 L 726 336" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 715.8373251423759 340.209517756016 L 726 336 L 715.8373251423758 331.790482243984" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 715.8373251423759 340.209517756016 L 726 336 L 715.8373251423758 331.790482243984 L 715.8373251423759 340.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="485.2626953125" y="331.5">6 : Arrive(v)</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="726" y="336" width="13" height="28" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 726 336 L 739 336 L 739 364 L 726 364 L 726 336 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 726 356 L 323 356" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 333.16267485762415 351.790482243984 L 323 356 L 333.16267485762415 360.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="483.5" y="372.5">7 : Message6</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 323 384 L 353 384 L 353 404 L 330 404" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 340.16267485762415 399.790482243984 L 330 404 L 340.16267485762415 408.209517756016" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 340.16267485762415 399.790482243984 L 330 404 L 340.16267485762415 408.209517756016 L 340.16267485762415 399.790482243984" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="359.5" y="399.5">8 : v.curentAsteroid = a</text>
+      </g>
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="317" y="404" width="13" height="28" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 317 404 L 330 404 L 330 432 L 317 432 L 317 404 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 310 504 L 66 504" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 76.16267485762415 499.790482243984 L 66 504 L 76.16267485762415 508.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-6,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="177.489501953125" y="520.5">9 : </text>
+      </g>
+    </g>
+  </g>
+</svg>

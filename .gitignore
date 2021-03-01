@@ -43,3 +43,7 @@ build/**/*
 *.eps
 
 *.synctex(busy)
+
+svg-inkscape/
+
+docs/2_Project/out.tex

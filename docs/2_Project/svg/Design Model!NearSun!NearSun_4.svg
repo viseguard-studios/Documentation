@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="965" height="125">
+  <defs />
+  <g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="#C0C0C0" stroke="none" d="M 303 544.5 C 303 539.2532944 307.2532944 535 312.5 535 C 317.7467056 535 322 539.2532944 322 544.5 C 322 549.7467056 317.7467056 554 312.5 554 C 307.2532944 554 303 549.7467056 303 544.5 Z" opacity="0.2" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 296 537.5 C 296 532.2532944 300.2532944 528 305.5 528 C 310.7467056 528 315 532.2532944 315 537.5 C 315 542.7467056 310.7467056 547 305.5 547 C 300.2532944 547 296 542.7467056 296 537.5 Z" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="#C0C0C0" stroke="none" d="M 513 519 L 621 519 Q 631 519 631 529 L 631 557 Q 631 567 621 567 L 513 567 Q 503 567 503 557 L 503 529 Q 503 519 513 519 Z" opacity="0.2" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 506 512 L 614 512 Q 624 512 624 522 L 624 550 Q 624 560 614 560 L 506 560 Q 496 560 496 550 L 496 522 Q 496 512 506 512 Z" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 506 512 L 614 512 Q 624 512 624 522 L 624 550 Q 624 560 614 560 L 506 560 Q 496 560 496 550 L 496 522 Q 496 512 506 512 Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="520.619140625" y="531.5">Not Near Sun</text>
+      </g>
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 316 537 L 495 536" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 484.86100021926677 540.2662259019293 L 495 536 L 484.8139672352668 531.8473217659225" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="#C0C0C0" stroke="none" d="M 969 511 L 1093 511 Q 1103 511 1103 521 L 1103 549 Q 1103 559 1093 559 L 969 559 Q 959 559 959 549 L 959 521 Q 959 511 969 511 Z" opacity="0.2" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 962 504 L 1086 504 Q 1096 504 1096 514 L 1096 542 Q 1096 552 1086 552 L 962 552 Q 952 552 952 542 L 952 514 Q 952 504 962 504 Z" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 962 504 L 1086 504 Q 1096 504 1096 514 L 1096 542 Q 1096 552 1086 552 L 962 552 Q 952 552 952 542 L 952 514 Q 952 504 962 504 Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="996.5400390625" y="523.5">Near Sun</text>
+      </g>
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="#C0C0C0" stroke="none" d="M 1223 531.5 C 1223 524.59644 1228.59644 519 1235.5 519 C 1242.40356 519 1248 524.59644 1248 531.5 C 1248 538.40356 1242.40356 544 1235.5 544 C 1228.59644 544 1223 538.40356 1223 531.5 Z" opacity="0.2" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 1216 524.5 C 1216 517.59644 1221.59644 512 1228.5 512 C 1235.40356 512 1241 517.59644 1241 524.5 C 1241 531.40356 1235.40356 537 1228.5 537 C 1221.59644 537 1216 531.40356 1216 524.5 Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 1221 524.5 C 1221 520.357864 1224.357864 517 1228.5 517 C 1232.642136 517 1236 520.357864 1236 524.5 C 1236 528.642136 1232.642136 532 1228.5 532 C 1224.357864 532 1221 528.642136 1221 524.5 Z" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 1097 527 L 1215 524" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 1204.9475950217688 528.4664475988905 L 1215 524 L 1204.7336208876695 520.0501316576492" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="1111.732666015625" y="505.5">explode</text>
+      </g>
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 625 550 L 740 576 L 951 540" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 941.6900700351985 545.8587715479007 L 951 540 L 940.2741082985737 537.5596624804605" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="715.5" y="556.5">TakeTurn [sunDistance&lt;x]</text>
+      </g>
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 951 520 L 728 496 L 625 521" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 633.8830318146352 514.5121848222858 L 625 521 L 635.8688301408711 522.6936739263776" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-286,-462) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="723.7236328125" y="484.5">TakeTurn [sunDistance&gt;x]</text>
+      </g>
+    </g>
+  </g>
+</svg>

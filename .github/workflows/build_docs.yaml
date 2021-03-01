@@ -5,7 +5,6 @@ on: [push]
 jobs:
   build-pdfs:
     runs-on: ubuntu-latest
-    #needs: gen-uml
     env:
         UML_FILES: ".puml"
     steps:
@@ -14,8 +13,6 @@ jobs:
     
     - name: Get changed UML files
       id: getfile
-      #run: |
-      # echo "::set-output name=files::$(git diff-tree -r --no-commit-id --name-only ${{ github.sha }} | grep ${{ env.UML_FILES }} | xargs)"
       run: |
         echo "::set-output name=files::$(find . | grep ${{ env.UML_FILES }} | xargs)"
 
