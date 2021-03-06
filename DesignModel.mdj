@@ -7295,25 +7295,6 @@
 									"model": {
 										"$ref": "AAAAAAF33y7zp9b1yfU="
 									},
-									"subViews": [
-										{
-											"_type": "UMLAttributeView",
-											"_id": "AAAAAAF33y+lTewBZ5U=",
-											"_parent": {
-												"$ref": "AAAAAAF33y7zp9b9Xvc="
-											},
-											"model": {
-												"$ref": "AAAAAAF33y+lJOu5XJ4="
-											},
-											"font": "Arial;13;0",
-											"left": 1501,
-											"top": 1366,
-											"width": 216.72509765625,
-											"height": 13,
-											"text": "-result: BuildingType",
-											"horizontalAlignment": 0
-										}
-									],
 									"font": "Arial;13;0",
 									"left": 1496,
 									"top": 1361,
@@ -16161,22 +16142,7 @@
 							}
 						}
 					],
-					"documentation": "Aszteroidákra elhelyezhető épületek receptjeiért felelős osztály. ",
-					"attributes": [
-						{
-							"_type": "UMLAttribute",
-							"_id": "AAAAAAF33y+lJOu5XJ4=",
-							"_parent": {
-								"$ref": "AAAAAAF33y7zp9b1yfU="
-							},
-							"name": "result",
-							"documentation": "A sikeres készítés után ilyen típusú épülethez lehet hozzájutni. ",
-							"visibility": "private",
-							"type": {
-								"$ref": "AAAAAAF307pMTSXz6dU="
-							}
-						}
-					]
+					"documentation": "Aszteroidákra elhelyezhető épületek receptjeiért felelős osztály. "
 				},
 				{
 					"_type": "UMLClass",
