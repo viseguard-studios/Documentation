@@ -1,3 +1,15 @@
+\documentclass[../../projlab]{subfiles}
+\begin{document}
+
+\makeatletter
+
+\ifSubfilesClassLoaded{
+	\coverpage{3. Leadás}
+	\def\filePath[#1]{./../../#1}
+}{}
+
+\makeatother
+
 \chapter{Analízis modell kidolgozása 2.}
 
 \section{Objektum katalógus}
@@ -20,32 +32,9 @@
 \section{Osztályok leírása}
 \comment{Az előző alfejezetben tárgyalt objektumok felelősségének formalizálása attribútumokká, metódusokká. Csak publikus metódusok szerepelhetnek. Ebben az alfejezetben megjelennek az interfészek, az öröklés, az absztrakt osztályok. Segédosztályokra még mindig nincs szükség. Az osztályok ABC sorrendben kövessék egymást. Interfészek esetén az Interfészek, Attribútumok pontok kimaradnak.}
 
-\subsection{Osztály1}
-\begin{class-template-responsibility}
-    Felelősség leírása
-\end{class-template-responsibility}
-\begin{class-template-interface}
-    Megvalósított interfészek felsorolása
-\end{class-template-interface}
-\begin{class-template-baseclass}
-    Ős-Ősosztály \baseclass Ősosztály... 
-\end{class-template-baseclass}
-\begin{class-template-attribute}
-    \classitem{+A [0..*]}{adattag A}
-\end{class-template-attribute}
-\comment{Milyen publikus, protected és privát  metódusokkal rendelkezik. Metódusonként egy-három mondat arról, hogy mit csinál.}
-\begin{class-template-method}
-    \classitem{+B(A a) : void}{metódus B}
-\end{class-template-method}
+\input{\filePath[docs/3_Project/out.tex]}
 
-\subsection{Osztály2}
-\begin{class-template-responsibility}
-    Felelősség leírása
-\end{class-template-responsibility}
-\begin{class-template-statechart}
-    A belső működéshez tartozó állapotgép
-    \diagram{docs/img/BMElogo}{Az osztály állapotváltozásai}{3cm}
-\end{class-template-statechart}
+\input{\filePath[docs/3_Project/diagrams.tex]}
 
 \section{Statikus struktúra diagramok}
 \comment{Az előző alfejezet osztályainak kapcsolatait és publikus metódusait bemutató osztálydiagram(ok). Tipikus hibalehetőségek: csillag-topológia, szigetek.}
@@ -58,3 +47,52 @@
 
 \section{State-chartok}
 \comment{Csak azokhoz az osztályokhoz, ahol van értelme. Egyetlen állapotból álló state-chartok ne szerepeljenek. A játék működését bemutató state-chart-ot készíteni tilos.}
+
+\section{Napló}
+
+\begin{naplo}
+    \naplotag{2021.02.24. 10:00 }{ 2 óra }{ Csapat }
+	{ 
+		Konzultációs időpontban csapatmegbeszélés.
+        Részletesen: \ref{appendix:meeting4}
+	}
+
+    \naplotag{2021.02.26. 17:00 }{ 1 óra }{ Csapat }
+	{ 
+		Konzultációs időpontban csapatmegbeszélés.
+        Részletesen: \ref{appendix:meeting5}
+	}
+	\naplotag{2021.02.27. 14:00 }{ 3 óra }{ Gao Tong }
+	{ 
+		Szekvenciák készítése és kisebb javítások a modellben.
+        
+	}
+    \naplotag{2021.02.28. 12:00 }{ 5 óra }{ Nagy Beáta }
+	{ 
+		Osztálydiagram dokumentáció elkészítése, kérdéses pontok összeírása, megbeszélése a többiekkel.
+        
+	}
+	\naplotag{2021.03.01. 07:00 }{ 3 óra }{ Tatai Titusz }
+	{ 
+		Szekvenciák készítése és kisebb javítások a modellben.
+        
+	}
+    \naplotag{2021.02.28. 14:00 }{ 2 óra }{ Sike Ádám }
+	{ 
+		Obkjektum katalógus, és aszteroida sekvencia diagrammok-ban segítség.   
+	}
+
+    \naplotag{2021.03.01. 10:00 }{ 4 óra }{ Dömötör Péter }
+	{ 
+		Dokumentumok összefésülése, Hibák javítása, Osztálydiagram befejezése.   
+	}
+
+\end{naplo}
+
+\begin{toappendix}
+
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-4.md]}
+
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-5.md]}
+	
+\end{toappendix}

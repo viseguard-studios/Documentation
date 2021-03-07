@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1004" height="588">
+  <defs />
+  <g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 72 8 L 1008 8 L 1008 576 L 72 576 L 72 8" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 72 8 L 72 30 L 214.470703125 30 L 225.470703125 19 L 225.470703125 8 L 72 8" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 72 8 L 72 30 L 214.470703125 30 L 225.470703125 19 L 225.470703125 8 L 72 8 L 72 8" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="142.97900390625" y="25.5">Vessel hide</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="77" y="25.5">interaction</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="215" y="47" width="120.16259765625" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="208" y="40" width="120.16259765625" height="39" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 208 40 L 328.16259765625 40 L 328.16259765625 79 L 208 79 L 208 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="242.068603515625" y="59.5">v: Vessel</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 269.5 80 L 269.5 560" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="559" y="47" width="185.47998046875" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="552" y="40" width="185.47998046875" height="39" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 552 40 L 737.47998046875 40 L 737.47998046875 79 L 552 79 L 552 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="573.208251953125" y="59.5">currentAsteroid: Asteroid</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 645.5 80 L 645.5 560" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="831" y="47" width="146.89892578125" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="824" y="40" width="146.89892578125" height="39" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 824 40 L 970.89892578125 40 L 970.89892578125 79 L 824 79 L 824 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="838.187744140625" y="59.5">hidingVessel: Vessel</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 898.5 80 L 898.5 322" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 24 116.5 C 24 112.6340064 27.1340064 109.5 31 109.5 C 34.8659936 109.5 38 112.6340064 38 116.5 C 38 120.3659936 34.8659936 123.5 31 123.5 C 27.1340064 123.5 24 120.3659936 24 116.5 Z" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 24 527.5 C 24 523.6340064 27.1340064 520.5 31 520.5 C 34.8659936 520.5 38 523.6340064 38 527.5 C 38 531.3659936 34.8659936 534.5 31 534.5 C 27.1340064 534.5 24 531.3659936 24 527.5 Z" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 38 117 L 262 117" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 251.83732514237585 121.20951775601598 L 262 117 L 251.83732514237585 112.79048224398402" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 251.83732514237585 121.20951775601598 L 262 117 L 251.83732514237585 112.79048224398402 L 251.83732514237585 121.20951775601598" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="122.792236328125" y="113.5">1 : Hide()</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="262" y="117" width="13" height="419" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 262 117 L 275 117 L 275 536 L 262 536 L 262 117 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 275 176 L 638 176" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 627.8373251423759 180.209517756016 L 638 176 L 627.8373251423758 171.790482243984" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 627.8373251423759 180.209517756016 L 638 176 L 627.8373251423758 171.790482243984 L 627.8373251423759 180.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="426.121337890625" y="172.5">2 : Hide(v)</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="638" y="176" width="13" height="248" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 638 176 L 651 176 L 651 424 L 638 424 L 638 176 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 651 248 L 891 248" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 880.8373251423759 252.209517756016 L 891 248 L 880.8373251423758 243.790482243984" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 880.8373251423759 252.209517756016 L 891 248 L 880.8373251423758 243.790482243984 L 880.8373251423759 252.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="673.5" y="244.5">3 : GetHidingSpaceRequirement()</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="891" y="248" width="13" height="52" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 891 248 L 904 248 L 904 300 L 891 300 L 891 248 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 891 296 L 651 296" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 661.1626748576241 291.790482243984 L 651 296 L 661.1626748576241 300.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="705.8291015625" y="287.5">4 : usedSpace = result</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 638 312 L 282 312" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 292.16267485762415 307.790482243984 L 282 312 L 292.16267485762415 316.209517756016" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 292.16267485762415 307.790482243984 L 282 312 L 292.16267485762415 316.209517756016 L 292.16267485762415 307.790482243984" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="361.5" y="328.5">5 : GetHidingSpaceRequirement()</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="269" y="312" width="13" height="28" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 269 312 L 282 312 L 282 340 L 269 340 L 269 312 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 282 336 L 638 336" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 627.8373251423759 340.209517756016 L 638 336 L 627.8373251423758 331.790482243984" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="387.594970703125" y="355.5">6 : neededSpace = result</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 638 416 L 275 416" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 285.16267485762415 411.790482243984 L 275 416 L 285.16267485762415 420.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="419.262939453125" y="432.5">7 : can_hide</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 275 440 L 305 440 L 305 460 L 282 460" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 292.16267485762415 455.790482243984 L 282 460 L 292.16267485762415 464.209517756016" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 292.16267485762415 455.790482243984 L 282 460 L 292.16267485762415 464.209517756016 L 292.16267485762415 455.790482243984" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="310.5" y="455.5">8 : isHidden = can_hide</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="269" y="460" width="13" height="28" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 269 460 L 282 460 L 282 488 L 269 488 L 269 460 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 262 528 L 38 528" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 48.162674857624154 523.790482243984 L 38 528 L 48.162674857624154 532.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="140.1044921875" y="544.5">9 : </text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 128 144 L 976 144 L 976 504 L 128 504 L 128 144" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 128 144 L 128 166 L 201.0908203125 166 L 212.0908203125 155 L 212.0908203125 144 L 128 144" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 128 144 L 128 166 L 201.0908203125 166 L 212.0908203125 155 L 212.0908203125 144 L 128 144 L 128 144" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="157.07177734375" y="161.5">Motion</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="133" y="161.5">opt</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="147.5" y="194.5">[isHidden  is false]</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 336 192 L 952 192 L 952 384 L 336 384 L 336 192" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 336 192 L 336 214 L 417.05078125 214 L 428.05078125 203 L 428.05078125 192 L 336 192" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 336 192 L 336 214 L 417.05078125 214 L 428.05078125 203 L 428.05078125 192 L 336 192 L 336 192" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="365.07177734375" y="209.5">Explode</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="341" y="209.5">opt</text>
+      </g>
+    </g>
+    <g transform="translate(-14,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="355.5" y="242.5">[is not exploded &amp;&amp; core empty]</text>
+      </g>
+    </g>
+  </g>
+</svg>
