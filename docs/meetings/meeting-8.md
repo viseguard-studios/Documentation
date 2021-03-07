@@ -5,13 +5,13 @@
 
 	- a tegnapi nem hivatalos meetingen:
 		-  összefésültük az általunk készített szekvenciadiagrammokat
-		-  átbeszéltük az osztálydiagrammot
+		-  átbeszéltük az osztálydiagramot
 		-  megbeszéltük, hogy hogyan kezdődik a játék (inicializálás)
-		-  kijavítottunk pár hibát a diagrammokban
-	- diagramm ellenőrzése: tárgy lehelyezése
+		-  kijavítottunk pár hibát a diagramokban
+	- diagram ellenőrzése: tárgy lehelyezése
 	- napközeli helyzet ellenőrzése, nyersanyagokra való hatása
 	- Titusz megjön
-	- Userek helyett bogyók a szekvenciadiagrammokon
+	- Userek helyett bogyók a szekvenciadiagramokon
 	- Létrehozása a dolgoknak - hogyan?
 	- Tárgyak kivétele a tárhelyekből
 	- Épületek lehelyezése
