@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="492" height="287">
+  <defs />
+  <g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 80 5 L 512 5 L 512 272 L 80 272 L 80 5" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 80 5 L 80 27 L 218.83984375 27 L 229.83984375 16 L 229.83984375 5 L 80 5" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 80 5 L 80 27 L 218.83984375 27 L 229.83984375 16 L 229.83984375 5 L 80 5 L 80 5" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="150.97900390625" y="22.5">Ice melting</text>
+      </g>
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="85" y="22.5">interaction</text>
+      </g>
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="199" y="47" width="159.181640625" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="192" y="40" width="159.181640625" height="39" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 192 40 L 351.181640625 40 L 351.181640625 79 L 192 79 L 192 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="206.200439453125" y="59.5">resource: IceResource</text>
+      </g>
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 272.5 80 L 272.5 222" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 40 110.5 C 40 106.6340064 43.1340064 103.5 47 103.5 C 50.8659936 103.5 54 106.6340064 54 110.5 C 54 114.3659936 50.8659936 117.5 47 117.5 C 43.1340064 117.5 40 114.3659936 40 110.5 Z" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 40 191.5 C 40 187.6340064 43.1340064 184.5 47 184.5 C 50.8659936 184.5 54 187.6340064 54 191.5 C 54 195.3659936 50.8659936 198.5 47 198.5 C 43.1340064 198.5 40 195.3659936 40 191.5 Z" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 54 111 L 265 111" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 254.83732514237585 115.20951775601598 L 265 111 L 254.83732514237585 106.79048224398402" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 254.83732514237585 115.20951775601598 L 265 111 L 254.83732514237585 106.79048224398402 L 254.83732514237585 115.20951775601598" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="119.57177734375" y="107.5">1 : NearSun()</text>
+      </g>
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="265" y="111" width="13" height="89" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 265 111 L 278 111 L 278 200 L 265 200 L 265 111 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 278 128 L 308 128 L 308 148 L 285 148" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 295.16267485762415 143.790482243984 L 285 148 L 295.16267485762415 152.209517756016" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 295.16267485762415 143.790482243984 L 285 148 L 295.16267485762415 152.209517756016 L 295.16267485762415 143.790482243984" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="325.307373046875" y="143.5">2 : amount = amount - 1</text>
+      </g>
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="272" y="148" width="13" height="28" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 272 148 L 285 148 L 285 176 L 272 176 L 272 148 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 265 192 L 54 192" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 64.16267485762415 187.790482243984 L 54 192 L 64.16267485762415 196.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,5) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="148.489501953125" y="208.5">3 : </text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -4,7 +4,11 @@
 ## 2021.03.06. ; kezdet: 14:15 ; vége: 16:25
 
 	- a tegnapi nem hivatalos meetingen:
+<<<<<<< HEAD
 		-  összefésültük az általunk készített szekvenciadiagrammokat
+=======
+		-  összefésültük az általunk készített szekvenciadiagramokat
+>>>>>>> main
 		-  átbeszéltük az osztálydiagramot
 		-  megbeszéltük, hogy hogyan kezdődik a játék (inicializálás)
 		-  kijavítottunk pár hibát a diagramokban
