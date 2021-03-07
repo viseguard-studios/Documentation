@@ -1,6 +1,6 @@
 \subsection{Asteroid}
 \begin{class-template-responsibility}
-Egy aszteroidát jelöl. Minden példányának létrejöttekor beállítódnak a generátor álltal a tulajdonságai.
+Egy aszteroidát jelöl. Minden példányának létrejöttekor beállítódnak a generátor által a tulajdonságai.
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -23,28 +23,28 @@ Entity
 \classitem{-buildings:Building[0..*]}{Az aszteroidára épített (véglegesen elhelyezett) építmények tárolója. }
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Asteroid(r:Resource):Asteroid}{}
+\classitem{+Asteroid(r:Resource):Asteroid}{Az osztály konstruktora.}
 \classitem{+Explode()}{Felrobban az aszteroida. Felrobbantja az összes rajta tartózkodó járművet, hozzáférhetetlenné teszi a raktárat és a rajta lévő épületeket, értesíti a szomszédos aszteroidákat a robbanásról. }
 \classitem{+ReachableAsteroids():Asteroid}{Tárolja, hogy melyik aszteroidák elérhetőek jelenleg az adott aszteroidából. }
-\classitem{+GetResourceType():}{Visszaadja az aszteroida magjában található nyersanyag típusát. }
 \classitem{+Depart(v:Vessel)}{Egy adott jármű elhagyja az aszteroidát, törlődik az ott tartózkodók közül. }
 \classitem{+Arrive(v:Vessel)}{Egy adott jármű érkezik az aszteroidára, regisztrálja az ott tartózkodók közé.}
 \classitem{+GetAvailableHidingSpace():int}{Visszaadja, hogy hány telepes számára van még hely elbújásra jelenleg az aszteroidában, attól függően, hogy jelentleg elbújt-e telepes az aszteroidában. }
 \classitem{+Reveal()}{Aszteroida felfedése a térképen, amennyiben még nem volt felfedve.  }
-\classitem{+Drill()}{Akkor hívódik meg amikor az aszteroida kérgén lévő jukat akarják mélyíteni.}
-\classitem{+Mine():Item}{Akkor hívódik meg amikor az aszteroidából akarnak nyersanyagok kibányászni.}
-\classitem{+Hide(v:Vessel):bool}{Az aszteroidában megpróbál elbújni egy jámű. Igazat ad vissza ha el tud bújni, hamisat ha nem.}
-\classitem{+Exit(v:Vessel)}{Az adott jámű előbújik az aszteroidából.}
+\classitem{+Drill()}{Akkor hívódik meg amikor az aszteroida kérgén lévő lyukat akarják mélyíteni.}
+\classitem{+Mine():Item}{Akkor hívódik meg amikor az aszteroidából akarnak nyersanyagot kibányászni.}
+\classitem{+Hide(v:Vessel):bool}{Az aszteroidában megpróbál elbújni egy jármű. Igazat ad vissza ha el tud bújni, hamisat ha nem.}
+\classitem{+Exit(v:Vessel)}{Az adott jármű előbújik az aszteroidából.}
 \classitem{+AddBuilding(b:Building)}{Hozzáad egy új épületet az aszteroidához.}
 \classitem{+PlaceItem(i:Item):bool}{Elem belehelyezése a raktárba. Sikeres behelyezés után igazzal tér vissza, sikertelen művelet után hamissal tér vissza. }
-\classitem{+AddNeigbour()}{}
-\classitem{+GetInventory():return:Inventory}{}
+\classitem{+AddNeigbour(a:Asteroid)}{Új szomszéd hozzáadása. }
+\classitem{+GetInventory():return:Inventory}{Visszaadja az aszteroida raktárát. }
+\classitem{+SolarFlare()}{}
 \end{class-template-method}
 
 
 \subsection{Building}
 \begin{class-template-responsibility}
-Egy adott konkrét épületet reprezentál, a type mezőben tárolja el, hogy mejik konkrét épület típus.
+Az épülettípusok közös ősosztálya. 
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -53,19 +53,19 @@ $\emptyset$
 $\emptyset$
 \end{class-template-baseclass}
 \begin{class-template-attribute}
-\classitem{-asteroid:Asteroid[1]}{}
-\classitem{-position:BuildingPlace}{Azt jelöli hogy az épület hol helyezkedik el az aszteroidán.}
+\classitem{-asteroid:Asteroid[1]}{Az épület lerakási helye (aszteroida).}
+\classitem{-position:BuildingPlace}{Azt jelöli,hogy az épület hol helyezkedik el az aszteroidán.}
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Explode()}{akkor hívódik meg ha valamijen okból az épület megsemmisül.}
+\classitem{+Explode()}{Akkor hívódik meg, ha valamilyen okból az épület megsemmisül.}
 \classitem{+GetRoutes():Asteroid}{Az ebből az épületből elérhető extra aszteroidákat adja vissza.}
-\classitem{+Building(a:Asteroid):Building}{}
+\classitem{+Building(a:Asteroid):Building}{Az osztály konstruktora, beállítja az aktuális tartózkodási helyet. }
 \end{class-template-method}
 
 
 \subsection{Coal}
 \begin{class-template-responsibility}
-
+A szén reprezentálására szolgál az Inventory-ban.
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -77,13 +77,13 @@ Item
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Satisfies(i:Item):bool}{}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett.}
 \end{class-template-method}
 
 
 \subsection{CoalResource}
 \begin{class-template-responsibility}
-
+Egy adott aszteroidában tárolt szén, adott számú egységgel rendelkező, bányászással kinyerhető nyersanyagkészletért felel. 
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -95,7 +95,7 @@ Resource
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Satisfies(r:Resource):bool}{}
+\classitem{+Satisfies(r:Resource):bool}{Meghatározza, hogy az átadott Resource használható-e a szén helyett.}
 \end{class-template-method}
 
 
@@ -121,7 +121,7 @@ $\emptyset$
 
 \subsection{Entity}
 \begin{class-template-responsibility}
-Egy adott entitás (pozícióval, vizuális megjelenítéssel rendelkező játékelem) osztálya. 
+Egy adott entitás ( vizuális megjelenítéssel rendelkező játékelem) osztálya. 
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -130,14 +130,12 @@ $\emptyset$
 $\emptyset$
 \end{class-template-baseclass}
 \begin{class-template-attribute}
-\classitem{-position:}{Az aktuális pozíció, csak belülről állítható.}
-\classitem{Not definedscene:Scene[1]}{A játékban szereplő összes entitás tárolója. }
+\classitem{Not definedscene:Scene[1]}{A játéktér tárolója. }
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Update()}{}
-\classitem{+RoundEnd()}{Akkor hívódik meg a az adott körben már minden játékos lépett. A robotot ezt haszmálják például a mozgásra.}
-\classitem{+SetPosition()}{}
-\classitem{+GetScene():Scene}{}
+\classitem{+RoundEnd()}{Akkor hívódik meg, ha az adott körben már minden játékos lépett. A robotok ezt használják például a mozgásra.}
+\classitem{+GetScene():Scene}{A játéktér getter-e. }
+\classitem{+SolarFlare()}{Napviharról értesíti az egységet.}
 \end{class-template-method}
 
 
@@ -156,28 +154,28 @@ $\emptyset$
 \classitem{-selectedVessel:Vessel}{Az aktuálisan irányítható jármű (akit a soron lévő játékos jelenleg irányít). }
 \classitem{-sunDistance:int}{A Naptól való aktuális távolság. }
 \classitem{-allPlayers:Player[1..*]}{A játék játékosainak listája. }
-\classitem{-asteroids:Asteroid[1..*]}{}
-\classitem{-gameEnded:bool}{}
+\classitem{-asteroids:Asteroid[1..*]}{A játékban szereplő aszteroidák listája. }
+\classitem{-gameEnded:bool}{Jelzi, hogy a játék befejeződött-e már.}
 \classitem{-settlers:SpaceShip}{A játék telepeseinek tárolója. }
 \classitem{-currentPlayer:Player[1]}{A jelenleg aktív játékos, aki éppen tudja mozgatni a telepesit.}
-\classitem{-scene:Scene}{}
+\classitem{-scene:Scene}{Az adott játékhoz tartozó játéktér. }
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+InitGame()}{}
-\classitem{+AddPlayer(p:Player)}{}
-\classitem{+StartGame()}{Új játék indítása, a játékosok listájának felvétele, járművek pozíciójának és a Naptól való távolságnak az inicializálása. }
+\classitem{+InitGame()}{A játékmenet inicializálásáért felel. }
+\classitem{+AddPlayer(p:Player)}{Új játékos hozzáadása. }
+\classitem{+StartGame()}{Új játék indításáért felel. }
 \classitem{+TakeTurn()}{Egy játékos aktuális köre - ekkor van lehetősége irányítani a járműveit egyesével. }
 \classitem{+EndGame()}{Aktuális játék befejezése. }
-\classitem{-GenerateScene()}{}
-\classitem{-GenerateNewResource():Resource}{}
-\classitem{-GenerateAsteroids()}{}
-\classitem{+IsSunStormActive()}{}
+\classitem{-GenerateScene()}{Játék inicializálás során a játéktér elemeinek inicializálása.}
+\classitem{-GenerateNewResource():Resource}{Új nyersanyag generálása, inicializálás folyamata során használjuk fel. }
+\classitem{-GenerateAsteroids()}{Az aszteroidamező inicializálása, játék inicializálás során hozzuk létre.}
+\classitem{+IsSunStormActive():bool}{Visszaadja, hogy jelenleg napviharban van-e az aszteroidamező. }
 \end{class-template-method}
 
 
 \subsection{Ice}
 \begin{class-template-responsibility}
-
+A jég reprezentálására szolgál az Inventory-ban.
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -189,13 +187,13 @@ Item
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Satisfies(i:Item):bool}{}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett.}
 \end{class-template-method}
 
 
 \subsection{IceResource}
 \begin{class-template-responsibility}
-
+Egy adott aszteroidában tárolt jég, adott számú egységgel rendelkező, bányászással kinyerhető nyersanyagkészletért felel. 
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -207,8 +205,8 @@ Resource
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Satisfies(r:Resource):bool}{}
-\classitem{+NearSun()}{}
+\classitem{+Satisfies(r:Resource):bool}{Meghatározza, hogy az átadott Resource használható-e a jég helyett.}
+\classitem{+NearSun()}{Napközelben a nyersanyag típusának megfelelő műveletet hajt végre.  A jég körönként 1 egységnyi sebességgel párolog.}
 \end{class-template-method}
 
 
@@ -231,12 +229,13 @@ $\emptyset$
 \classitem{+InsertItem(item:Item):bool}{Új elem hozzáadása a tárolóhoz, amennyiben van benne szabad hely (kapacitás).  Sikeres művelet esetén igaz, sikertelen művelet esetén hamis visszatérési értéke van. }
 \classitem{+RemoveItem(item:Item)}{Elem eltávolítása a tárolóból. }
 \classitem{+TryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. }
+\classitem{+getItems():Item}{Visszatér az inventory-ban találtahó item-ek listájával.}
 \end{class-template-method}
 
 
 \subsection{Iron}
 \begin{class-template-responsibility}
-
+ A Vas reprezentálására szolgál az Inventory-ban.
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -248,13 +247,13 @@ Item
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Satisfies(i:Item):bool}{}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett.}
 \end{class-template-method}
 
 
 \subsection{IronResource}
 \begin{class-template-responsibility}
-
+Egy adott aszteroidában tárolt vas, adott számú egységgel rendelkező, bányászással kinyerhető nyersanyagkészletért felel. 
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -266,7 +265,7 @@ Resource
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Satisfies(r:Resource):bool}{}
+\classitem{+Satisfies(r:Resource):bool}{Meghatározza, hogy az átadott Resource használható-e a vas helyett.}
 \end{class-template-method}
 
 
@@ -284,8 +283,9 @@ $\emptyset$
 \classitem{-amount:int}{Az elem darabszámát tárolja. }
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Satisfies(i:Item):bool}{}
-\classitem{+Reduce(a:int)}{}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett.
+}
+\classitem{+Reduce(a:int)}{A megadott számmal csökkenti az adott Item méretét (számosságát), amennyiben ez lehetséges.}
 \end{class-template-method}
 
 
@@ -324,7 +324,7 @@ $\emptyset$
 \begin{class-template-method}
 \classitem{+CanCraft(inv:Inventory, a:Asteroid):bool}{Meghatározza, hogy egy adott raktárban és aszteroidán lévő kibányászott nyersanyagkészlet elegendő-e az adott recept elkészítéséhez. }
 \classitem{+Craft(inv:Inventory, a:Asteroid)}{Akkor hívódik meg ha ténylegesen le akarjuk gyártani ezt a receptet.}
-\classitem{Not definedMakeResult(inv:Inventory, a:Asteroid)}{}
+\classitem{Not definedMakeResult(inv:Inventory, a:Asteroid)}{Létrehozza a kívánt terméket a receptből.}
 \end{class-template-method}
 
 
@@ -344,7 +344,7 @@ $\emptyset$
 \begin{class-template-method}
 \classitem{+Mine():Item}{Egy egység nyersanyag kinyerése bányászattal, amennyiben ez lehetséges (rendelkezésre áll elég nyersanyag). Ekkor egy kibányászott megfelelő elemmel tér vissza.}
 \classitem{+NearSun()}{Napközelben a nyersanyag típusának megfelelő műveletet hajt végre. Különleges képességekkel nem rendelkező nyersanyagok esetén nem hajt végre műveletet.  }
-\classitem{+Satisfies(r:Resource):bool}{}
+\classitem{+Satisfies(r:Resource):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett.}
 \end{class-template-method}
 
 
@@ -362,7 +362,7 @@ Entity \baseclass Vessel
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Robot(p:Player, a:Asteroid):Robot}{}
+\classitem{+Robot(p:Player, a:Asteroid):Robot}{Az osztály konstruktora, beállítja az őt kezelő játékost illetve aszteroidát. }
 \classitem{+GetHidingSpaceRequirement():int}{A robotok által az aszteroida magjában elfoglalt hely nagyságát adja vissza. Korlátlan mennyiségű robot elfér, tehát 0 az értéke. }
 \end{class-template-method}
 
@@ -387,7 +387,7 @@ Recipe
 
 \subsection{Scene}
 \begin{class-template-responsibility}
-Az aktuális játék típusától független, játékmenetért felelős osztály. 
+Az entitások összességének összefogásáért felelős osztály. 
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -396,13 +396,14 @@ $\emptyset$
 $\emptyset$
 \end{class-template-baseclass}
 \begin{class-template-attribute}
-\classitem{Not definedentities:Entity[1..*]}{}
-\classitem{-manager:GameManager}{}
+\classitem{Not definedentities:Entity[1..*]}{A játékban szereplő összes entitás tárolója. }
+\classitem{-manager:GameManager}{Az aktuális játékmenet. }
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+AddEntity(e:Entity)}{}
-\classitem{+RoundEnded()}{}
-\classitem{+GetManager():GameManager}{}
+\classitem{+AddEntity(e:Entity)}{Új entitás hozzáadása a játékmenethez.}
+\classitem{+RoundEnded()}{Az összes entitás RoundEnd() metódusát meghívja, befejezi az adott kört. }
+\classitem{+GetManager():GameManager}{A manager attribútum getter-e. }
+\classitem{+SolarFlare()}{A napviharról szóló értesítést továbbítja az Entity felé}
 \end{class-template-method}
 
 
@@ -420,7 +421,7 @@ Entity \baseclass Vessel
 \classitem{-inventory:Inventory[1]}{A telepes által folyamatosan hordozott raktár. }
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+SpaceShip(p:Player, a:Asteroid):SpaceShip}{}
+\classitem{+SpaceShip(p:Player, a:Asteroid):SpaceShip}{Az osztály konstruktora, beállítja az őt kezelő játékost illetve aszteroidát. }
 \classitem{+GetHidingSpaceRequirement():int}{A telepesek által az aszteroida magjában elfoglalt hely nagyságát adja vissza. }
 \classitem{+Mine()}{Teljesen átfúrt, nem üres magú aszteroidán való tartózkodás esetén a telepes egy egységet kibányászik az ott található nyersanyagból. Az így keletkező elem a telepes raktárába kerül.  Ha sikertelen a művelet (nem teljesülnek a feltételek), nem történik művelet. }
 \classitem{+Craft(recipe:Recipe)}{A telepes az aktuálisan rendelkezésére álló elemekből egy "receptet" készít.  A felhasznált elemek elhasználódnak, törlődnek a raktárból. }
@@ -430,7 +431,7 @@ Entity \baseclass Vessel
 
 \subsection{SpaceStation}
 \begin{class-template-responsibility}
-A játékosok álltal megépítendő űrálomás épület típust jelöli. Speciális tulajdonsága hogy amikor megépül akkor a játék befejeződik.
+A játékosok által megépítendő űrállomás épület típust jelöli. Speciális tulajdonsága, hogy amikor megépül akkor a játék befejeződik.
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -442,9 +443,9 @@ Building
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+SpaceStation(a:Asteroid):SpaceStation}{meghívódik ha az adott aszteroidán egy űrállomás épült. Akkor a játék befejeződik.}
-\classitem{+Explode(a:Asteroid)}{}
-\classitem{+GetRoutes():Asteroid}{}
+\classitem{+SpaceStation(a:Asteroid):SpaceStation}{Meghívódik ha az adott aszteroidán egy űrállomás épült. Ekkor a játék befejeződik.}
+\classitem{+Explode(a:Asteroid)}{Az űrállomás felrobbanásakor hívódik meg.  Ez gyakorlatban sosem fog megtörténni, hiszen amint felépül az űrállomás, a játékot megnyerik. }
+\classitem{+GetRoutes():Asteroid}{Az ebből az épületből elérhető extra aszteroidákat adja vissza.}
 \end{class-template-method}
 
 
@@ -468,7 +469,7 @@ Recipe
 
 \subsection{TeleportGate}
 \begin{class-template-responsibility}
-A teleport kapukat reprezentáló osztály.
+A teleportkapukat reprezentáló osztály.
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -480,16 +481,16 @@ Building
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+GetRoutes():Asteroid}{Visszadja az ebből a kapuból elérhető aszteroidákat.
+\classitem{+GetRoutes():Asteroid}{Visszaadja az ebből a kapuból elérhető extra aszteroidákat.
 }
-\classitem{+PairDestroyed()}{Akkor hívódik meg ha a párja megsemmisül és ezéltal ez az oldal deaktiválódik.}
+\classitem{+PairDestroyed()}{Akkor hívódik meg ha a párja megsemmisül és ezáltal ez az oldal deaktiválódik.}
 \classitem{+Explode(a:Asteroid)}{Akkor hívódik meg ha az épület felrobban. Ekkor szól a szomszédjának is a PairDestroyed() fügvénnyel.}
 \end{class-template-method}
 
 
 \subsection{TeleportGateItem}
 \begin{class-template-responsibility}
-
+Teleport kapu amikor még a telepesnél van.
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -501,7 +502,7 @@ Item
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Satisfies(i:Item):bool}{}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett.}
 \end{class-template-method}
 
 
@@ -526,7 +527,7 @@ Recipe
 
 \subsection{Titan}
 \begin{class-template-responsibility}
-
+A titán reprezentálására szolgál az Inventory-ban
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -538,13 +539,13 @@ Item
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Satisfies(i:Item):bool}{}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett.}
 \end{class-template-method}
 
 
 \subsection{TitaniumResource}
 \begin{class-template-responsibility}
-
+Egy adott aszteroidában tárolt titán, adott számú egységgel rendelkező, bányászással kinyerhető nyersanyagkészletért felel. 
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -556,13 +557,13 @@ Resource
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Satisfies(r:Resource):bool}{}
+\classitem{+Satisfies(r:Resource):bool}{Meghatározza, hogy az átadott Resource használható-e a titán helyett.}
 \end{class-template-method}
 
 
 \subsection{Uranium}
 \begin{class-template-responsibility}
-
+Az uránium reprezentálására szolgál az Inventory-ban.
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -574,13 +575,13 @@ Item
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Satisfies(i:Item):bool}{}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett.}
 \end{class-template-method}
 
 
 \subsection{UraniumResource}
 \begin{class-template-responsibility}
-
+Egy adott aszteroidában tárolt urán, adott számú egységgel rendelkező, bányászással kinyerhető nyersanyagkészletért felel. 
 \end{class-template-responsibility}
 \begin{class-template-interface}
 $\emptyset$
@@ -592,8 +593,8 @@ Resource
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Satisfies(r:Resource):bool}{}
-\classitem{+NearSun()}{}
+\classitem{+Satisfies(r:Resource):bool}{Meghatározza, hogy az átadott Resource használható-e uránium helyett.}
+\classitem{+NearSun()}{Napközelben a nyersanyag típusának megfelelő műveletet hajt végre.  Az uránium, ha megfúrt aszteroidában van, akkor felrobban.}
 \end{class-template-method}
 
 
@@ -613,14 +614,15 @@ Entity
 \classitem{-owner:Player[1]}{Tárolja, hogy melyik játékos irányítja az járművet.}
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+Vessel(p:Player, a:Asteroid):Vessel}{}
+\classitem{+Vessel(p:Player, a:Asteroid):Vessel}{Az osztály konstruktora, beállítja az őt kezelő játékost illetve aszteroidát. }
 \classitem{+Hide()}{Belebújik az adott aszteroidába, ha van benne elegendő hely. Ha nincsen, az aszteroida felszínén marad. }
 \classitem{+Drill()}{Fúr egy egységnyit az aszteroida köpenyéből, ha még nincs teljesen átfúrva. Ha át van fúrva, nem történik művelet.}
 \classitem{+Move(a:Asteroid)}{Az jármű átlép egy szomszédos aszteroidára. }
 \classitem{+GetHidingSpaceRequirement():int}{Absztrakt metódus, leszármazottól függően más értéket ad vissza. Meghatározza, hogy ha az adott jármű el szeretne bújni egy aszteroidában, mennyi helyre van hozzá szüksége. }
 \classitem{+Explode()}{Felrobban  a jármű (egy aszteroida robbanásának hatására). }
 \classitem{+ExitHiding()}{A jármű kibújik az aszteroida magjából, ha el volt bújva benne. Ha nem, nem történik művelet. }
-\classitem{+AsteroidExploded()}{}
+\classitem{+AsteroidExploded()}{A jelenlegi aszeroida ezen keresztül szól a telep/robot-nak, hogy felrobbant.}
+\classitem{+SolarFlare()}{}
 \end{class-template-method}
 
 
