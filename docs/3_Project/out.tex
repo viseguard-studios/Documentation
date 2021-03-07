@@ -38,7 +38,7 @@ Entity
 \classitem{+PlaceItem(i:Item):bool}{Elem belehelyezése a raktárba. Sikeres behelyezés után igazzal tér vissza, sikertelen művelet után hamissal tér vissza. }
 \classitem{+AddNeigbour(a:Asteroid)}{Új szomszéd hozzáadása. }
 \classitem{+GetInventory():return:Inventory}{Visszaadja az aszteroida raktárát. }
-\classitem{+SolarFlare()}{}
+\classitem{+SolarFlare()}{Napvihar esetén hívódik meg minden entitáson, az aszteroidákon nem történik művelet ilyenkor.}
 \end{class-template-method}
 
 
@@ -286,6 +286,7 @@ $\emptyset$
 \classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett.
 }
 \classitem{+Reduce(a:int)}{A megadott számmal csökkenti az adott Item méretét (számosságát), amennyiben ez lehetséges.}
+\classitem{+Activate(s:SpaceShip)}{Aktiválható tárgyaknál( pl.Teleport kapu) használt függvény. Alapból nem csinál semmit.}
 \end{class-template-method}
 
 
@@ -418,6 +419,7 @@ $\emptyset$
 Entity \baseclass Vessel
 \end{class-template-baseclass}
 \begin{class-template-attribute}
+\classitem{-lastPlacedGate:TeleportGate}{Az utoljára lehelyezett kapu referenciája. Arra használjuk hogy a telepes által lerakott kapu párokat össze lehessen kötni.}
 \classitem{-inventory:Inventory[1]}{A telepes által folyamatosan hordozott raktár. }
 \end{class-template-attribute}
 \begin{class-template-method}
@@ -426,6 +428,7 @@ Entity \baseclass Vessel
 \classitem{+Mine()}{Teljesen átfúrt, nem üres magú aszteroidán való tartózkodás esetén a telepes egy egységet kibányászik az ott található nyersanyagból. Az így keletkező elem a telepes raktárába kerül.  Ha sikertelen a művelet (nem teljesülnek a feltételek), nem történik művelet. }
 \classitem{+Craft(recipe:Recipe)}{A telepes az aktuálisan rendelkezésére álló elemekből egy "receptet" készít.  A felhasznált elemek elhasználódnak, törlődnek a raktárból. }
 \classitem{+PlaceItem(i:Item):bool}{Elem belehelyezése az aktuális aszteroidába, amin tartózkodik. Sikeres behelyezés után igazzal tér vissza, a saját raktárból eltávolítja az elemet. Sikertelen művelet után hamissal tér vissza. }
+\classitem{+ActivateItem(i:Item)}{A megadott tárgyon hív egy Activate()-et}
 \end{class-template-method}
 
 
@@ -503,6 +506,7 @@ Item
 \end{class-template-attribute}
 \begin{class-template-method}
 \classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett.}
+\classitem{+Activate(s:SpaceShip)}{A teleportkapuk lehelyezését végző függvény.}
 \end{class-template-method}
 
 

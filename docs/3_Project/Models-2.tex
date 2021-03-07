@@ -38,12 +38,68 @@
 	\centering
 \end{figure}
 
+\section{Megjegyzések}
+
+Az átláthatóság kedvéért néhány getter, illetve setter függvényt nem jelöltünk az osztálydiagramon. A szekvenciadiagramon felhasználtunk néhányat az értékek állítására, lekérdezésére. Ezek természetesen az osztályok részei, szerepelni fognak a kódban, csak a diagramon nem tüntettük fel az összeset.
+
+A szekvenciadiagramokon a kötelező elemeken túl néhány helyen attribútumok értékadásait is jelöltük. Ezeket az átláthatóság, a folyamatok jobb megértése miatt adtuk hozzá a diagramokhoz. 
+
+\subsection{Craft Anything}
+A diagramon a receptért felelős osztály, a Recipe egy absztrakt ősosztályt jelöl. Az osztály nem példányosítható, viszont a Craft() függvént a leszármazottak ne írják felül, csak a recept típusa, illetve a hozzávalói változnak. Emiatt egy közös szekvenciadiagramon jelöltük ennek a műküdését.
+
+
 \section{Napló}
 
 \begin{naplo}
+
+	\naplotag{2021.03.03. 10:00 }{ 2 óra }{ Csapat }
+	{ 
+		Konzultáció és előző heti munkánk értékelése, feladatok kiosztása   
+	}
+
+    \naplotag{2021.03.04. 16:00 }{ 2 óra }{ Sike Ádám }
+	{ 
+		Szekvencia diagrammok. (Vessel Move, Place item, Game initialization, Generate world)
+	}
+
+	\naplotag{2021.03.05. 16:00 }{ 2 óra }{ Csapat }
+	{ 
+		Osztálydiagramok átalakítása, szekvenciadiagramok kiegészítése
+	}
+	
+	\naplotag{2021.03.06. 09:00 }{ 2 óra }{ Nagy Beáta }
+	{ 
+		Szekvencia diagrammok. (Craft Robot, Place item, Teleport gate destroyed)
+	}
+
+	\naplotag{2021.03.06. 14:00 }{ 2 óra }{ Csapat }
+	{ 
+		Szekvenciadiagramok átnézése   
+	}
+
+	\naplotag{2021.03.06. 21:00 }{ 1 óra }{ Gao Tong }
+	{ 
+		Szekvencia diagrammok.   
+	}
+
+	\naplotag{2021.03.07. 16:00 }{ 3 óra }{ Tatai Titusz Miklós }
+	{ 
+		Szekvencia diagrammok. (CanCraft és Receptek)
+	}
+
     \naplotag{2021.03.07. 11:00 }{ 4 óra }{ Dömötör Péter }
 	{ 
 		Dokumentumok összefésülése, Hibák javítása, Osztálydiagram befejezése.   
+	}
+
+	\naplotag{2021.03.07. 11:00 }{ 4 óra }{ Dömötör Péter }
+	{ 
+		Dokumentumok összefésülése, Hibák javítása, Osztálydiagram befejezése.   
+	}
+
+	\naplotag{2021.03.07. 19:30 }{ 3 óra }{ Csapat }
+	{ 
+		Diagramok véglegesítése, dokumentáció befejezése   
 	}
 
 \end{naplo}
