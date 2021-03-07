@@ -8,30 +8,42 @@
 	\def\filePath[#1]{./../../#1}
 }{}
 
-
 \makeatother
 
-\chapter{Analízis modell kidolgozása 2.}
+\chapter{Analízis modell kidolgozása 1.}
 
 \markdownInput[shiftHeadings=1]{\subfix{Object-catalog.md}}
 
 \section{Osztályok leírása}
 
-\input{\filePath[docs/3_Project/out.tex]}
-
-\input{\filePath[docs/3_Project/diagrams.tex]}
+\input{docs/3_Project/out.tex}
 
 \section{Statikus struktúra diagramok}
-\comment{Az előző alfejezet osztályainak kapcsolatait és publikus metódusait bemutató osztálydiagram(ok). Tipikus hibalehetőségek: csillag-topológia, szigetek.}
-\diagram{docs/img/BMElogo}{osztálydiagram}{3cm}
 
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{docs/2_Project/svg/Design Model!Classes_1.png}
+	\centering
+\end{figure}
 
-\section{Szekvencia diagramok}
-\comment{Inicializálásra, use-case-ekre, belső működésre. Konzisztens kell legyen az előző alfejezettel. Minden metódus, ami ott szerepel, fel kell tűnjön valamelyik szekvenciában. Minden metódusnak, ami szekvenciában szerepel, szereplnie kell a valamelyik osztálydiagramon.}
-\diagram{docs/img/BMElogo}{Szekvencia1}{3cm}
+\input{docs/3_Project/diagrams.tex}
 
 \section{State-chartok}
-\comment{Csak azokhoz az osztályokhoz, ahol van értelme. Egyetlen állapotból álló state-chartok ne szerepeljenek. A játék működését bemutató state-chart-ot készíteni tilos.}
+
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{docs/2_Project/svg/Design Model!NearSun!NearSun_3.png}
+	\centering
+\end{figure}
+
+
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{docs/2_Project/svg/Design Model!RobotActivities!RobotActivities_4.png}
+	\centering
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{docs/2_Project/svg/Design Model!Spaceship Hide!Spaceship Hide_5.png}
+	\centering
+\end{figure}
 
 \section{Napló}
 
@@ -45,5 +57,12 @@
 
 \begin{toappendix}
 
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-6.md]}
+
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-7.md]}
+
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-8.md]}
 	
 \end{toappendix}
+
+\end{document}
