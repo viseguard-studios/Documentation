@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1037.12451171875" height="572">
+  <defs />
+  <g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 216 8 L 1184 8 L 1184 560 L 216 560 L 216 8" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 216 8 L 216 30 L 353.392578125 30 L 364.392578125 19 L 364.392578125 8 L 216 8" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 216 8 L 216 30 L 353.392578125 30 L 364.392578125 19 L 364.392578125 8 L 216 8 L 216 8" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="286.97900390625" y="25.5">Craft robot</text>
+      </g>
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="221" y="25.5">interaction</text>
+      </g>
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="319" y="47" width="126.630859375" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="312" y="40" width="126.630859375" height="39" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 312 40 L 438.630859375 40 L 438.630859375 79 L 312 79 L 312 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="325.095947265625" y="59.5">rec: RobotRecipe</text>
+      </g>
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 376.5 80 L 376.5 536" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 168 119.5 C 168 115.6340064 171.1340064 112.5 175 112.5 C 178.8659936 112.5 182 115.6340064 182 119.5 C 182 123.3659936 178.8659936 126.5 175 126.5 C 171.1340064 126.5 168 123.3659936 168 119.5 Z" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="759" y="47" width="89.0654296875" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="752" y="40" width="89.0654296875" height="39" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 752 40 L 841.0654296875 40 L 841.0654296875 79 L 752 79 L 752 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="764.740478515625" y="59.5">i: Inventory</text>
+      </g>
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 797.5 80 L 797.5 313" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="839" y="47" width="86.90087890625" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="832" y="40" width="86.90087890625" height="39" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 832 40 L 918.90087890625 40 L 918.90087890625 79 L 832 79 L 832 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="844.378662109375" y="59.5">a: Asteroid</text>
+      </g>
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 876.5 80 L 876.5 544" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="1111" y="47" width="81.12451171875" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="1104" y="40" width="81.12451171875" height="39" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 1104 40 L 1185.12451171875 40 L 1185.12451171875 79 L 1104 79 L 1104 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="1115.658203125" y="59.5">coal: Coal</text>
+      </g>
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 1145.5 80 L 1145.5 544" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="1031" y="47" width="76.04638671875" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="1024" y="40" width="76.04638671875" height="39" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 1024 40 L 1100.04638671875 40 L 1100.04638671875 79 L 1024 79 L 1024 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="1036.372314453125" y="59.5">iron: Iron</text>
+      </g>
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 1063.5 80 L 1063.5 544" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="935" y="47" width="92.6708984375" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="928" y="40" width="92.6708984375" height="39" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 928 40 L 1020.6708984375 40 L 1020.6708984375 79 L 928 79 L 928 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="940.3818359375" y="59.5">ur: Uranium</text>
+      </g>
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 975.5 80 L 975.5 544" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="631" y="147" width="71.736328125" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="624" y="140" width="71.736328125" height="39" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 624 140 L 695.736328125 140 L 695.736328125 179 L 624 179 L 624 140 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="636.746826171875" y="159.5">r: Robot</text>
+      </g>
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 660.5 180 L 660.5 360" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 168 476.5 C 168 472.6340064 171.1340064 469.5 175 469.5 C 178.8659936 469.5 182 472.6340064 182 476.5 C 182 480.3659936 178.8659936 483.5 175 483.5 C 171.1340064 483.5 168 480.3659936 168 476.5 Z" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 182 120 L 369 120" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 358.83732514237585 124.20951775601598 L 369 120 L 358.83732514237585 115.79048224398402" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 358.83732514237585 124.20951775601598 L 369 120 L 358.83732514237585 115.79048224398402 L 358.83732514237585 124.20951775601598" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="233.645263671875" y="116.5">1 : MakeResult(i,a)</text>
+      </g>
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="369" y="120" width="13" height="368" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 369 120 L 382 120 L 382 488 L 369 488 L 369 120 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 382 160 L 624 160" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 613.8373251423759 164.209517756016 L 624 160 L 613.8373251423758 155.790482243984" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="449.7099609375" y="156.5">2 : Robot(player,a)</text>
+      </g>
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="477.5" y="141.5">«create»</text>
+      </g>
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 369 477 L 182 477" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 192.16267485762415 472.790482243984 L 182 477 L 192.16267485762415 481.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-158,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="265.114990234375" y="493.5">3 : </text>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="652" height="412">
+  <defs />
+  <g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 104 8 L 672 8 L 672 400 L 104 400 L 104 8" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 104 8 L 104 30 L 286.20068359375 30 L 297.20068359375 19 L 297.20068359375 8 L 104 8" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 104 8 L 104 30 L 286.20068359375 30 L 297.20068359375 19 L 297.20068359375 8 L 104 8 L 104 8" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="174.97900390625" y="25.5">Near Sun Asteroid</text>
+      </g>
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="109" y="25.5">interaction</text>
+      </g>
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 40 103.5 C 40 99.6340064 43.1340064 96.5 47 96.5 C 50.8659936 96.5 54 99.6340064 54 103.5 C 54 107.3659936 50.8659936 110.5 47 110.5 C 43.1340064 110.5 40 107.3659936 40 103.5 Z" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="295" y="47" width="132.4072265625" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="288" y="40" width="132.4072265625" height="39" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 288 40 L 420.4072265625 40 L 420.4072265625 79 L 288 79 L 288 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="303.622314453125" y="59.5">asteroid: Asteroid</text>
+      </g>
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 355.5 80 L 355.5 384" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <rect fill="#C0C0C0" stroke="none" x="487" y="47" width="141.10986328125" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="480" y="40" width="141.10986328125" height="39" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 480 40 L 621.10986328125 40 L 621.10986328125 79 L 480 79 L 480 40 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="493.83544921875" y="59.5">resource: Resource</text>
+      </g>
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 551.5 80 L 551.5 302" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 40 351.5 C 40 347.6340064 43.1340064 344.5 47 344.5 C 50.8659936 344.5 54 347.6340064 54 351.5 C 54 355.3659936 50.8659936 358.5 47 358.5 C 43.1340064 358.5 40 355.3659936 40 351.5 Z" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 54 104 L 348 104" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 337.83732514237585 108.20951775601598 L 348 104 L 337.83732514237585 99.79048224398402" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 337.83732514237585 108.20951775601598 L 348 104 L 337.83732514237585 99.79048224398402 L 337.83732514237585 108.20951775601598" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="152.5" y="94.5">1 : RoundEnd()</text>
+      </g>
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="348" y="104" width="13" height="256" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 348 104 L 361 104 L 361 360 L 348 360 L 348 104 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 361 160 L 544 160" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="#000000" stroke="none" d="M 533.8373251423759 164.209517756016 L 544 160 L 533.8373251423758 155.790482243984" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 533.8373251423759 164.209517756016 L 544 160 L 533.8373251423758 155.790482243984 L 533.8373251423759 164.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="412.57177734375" y="156.5">2 : NearSun()</text>
+      </g>
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <rect fill="#ffffff" stroke="none" x="544" y="160" width="13" height="120" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 544 160 L 557 160 L 557 280 L 544 280 L 544 160 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 544 272 L 361 272" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 371.16267485762415 267.790482243984 L 361 272 L 371.16267485762415 276.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="441.489501953125" y="288.5">3 : </text>
+      </g>
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 348 352 L 54 352" stroke-miterlimit="10" stroke-dasharray="3" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 64.16267485762415 347.790482243984 L 54 352 L 64.16267485762415 356.209517756016" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="190.489501953125" y="368.5">4 : </text>
+      </g>
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 128 120 L 648 120 L 648 312 L 128 312 L 128 120" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="#ffffff" stroke="none" d="M 128 120 L 128 142 L 277.6943359375 142 L 288.6943359375 131 L 288.6943359375 120 L 128 120" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 128 120 L 128 142 L 277.6943359375 142 L 288.6943359375 131 L 288.6943359375 120 L 128 120 L 128 120" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="157.07177734375" y="137.5">Check Sun distance</text>
+      </g>
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="133" y="137.5">opt</text>
+      </g>
+    </g>
+    <g transform="translate(-30,2) scale(1,1)">
+      <g>
+        <path fill="none" stroke="none" />
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="147.5" y="170.5">[if near sun]</text>
+      </g>
+    </g>
+  </g>
+</svg>

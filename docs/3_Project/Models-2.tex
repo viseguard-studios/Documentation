@@ -1,0 +1,68 @@
+\documentclass[../../projlab]{subfiles}
+\begin{document}
+
+\makeatletter
+
+\ifSubfilesClassLoaded{
+	\coverpage{3. Leadás}
+	\def\filePath[#1]{./../../#1}
+}{}
+
+\makeatother
+
+\chapter{Analízis modell kidolgozása 1.}
+
+\markdownInput[shiftHeadings=1]{\subfix{Object-catalog.md}}
+
+\section{Osztályok leírása}
+
+\input{docs/3_Project/out.tex}
+
+\section{Statikus struktúra diagramok}
+
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{docs/2_Project/svg/Design Model!Classes_1.png}
+	\centering
+\end{figure}
+
+\input{docs/3_Project/diagrams.tex}
+
+\section{State-chartok}
+
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{docs/2_Project/svg/Design Model!NearSun!NearSun_3.png}
+	\centering
+\end{figure}
+
+
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{docs/2_Project/svg/Design Model!RobotActivities!RobotActivities_4.png}
+	\centering
+\end{figure}
+
+\begin{figure}[H]
+	\includegraphics[width=1\textwidth]{docs/2_Project/svg/Design Model!Spaceship Hide!Spaceship Hide_5.png}
+	\centering
+\end{figure}
+
+\section{Napló}
+
+\begin{naplo}
+    \naplotag{2021.03.07. 11:00 }{ 4 óra }{ Dömötör Péter }
+	{ 
+		Dokumentumok összefésülése, Hibák javítása, Osztálydiagram befejezése.   
+	}
+
+\end{naplo}
+
+\begin{toappendix}
+
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-6.md]}
+
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-7.md]}
+
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-8.md]}
+	
+\end{toappendix}
+
+\end{document}
