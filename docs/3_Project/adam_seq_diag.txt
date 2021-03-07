@@ -1,0 +1,71 @@
+Asteroid is near sun
+Egy aszteroidának jelezzük a kör végén, hogy napközelben van.
+
+Explosive resouce is near sun
+Ha napközelben van az aszteroida átfúrt kéreggel, akkor a radioaktív nyersanyag reagálni fog, az aszteroida felrobban.
+
+Teleport gate is destroyed
+Ha felrobban az aszteroida amin a teleportkapu van, akkor az értesíti a párját is a robbanásról, így mindkettő megsemmisül.
+
+Asteroid explodes
+Ha felrobban az aszteroida, akkor értesítjük az összes épületet és űrjárművet a robbanásról.
+
+Ice melts
+Ha napközelben van az aszteroida átfúrt kéreggel, akkor a szublimáló nyersanyag reagálni fog és körönként csökken a mennyisége.
+
+Vessel arrives
+Amikor az úrjűrmű megérkezik egy aszteroidára, akkor az felfedi a szomszédos aszteroidákat is, ha nem lettek volna már felfedve.
+
+Vessel drills
+Csak akkor tudunk mélyíteni a kérgen, ha nem robbant fel már az aszteroida és ha nem fúrtunk már át a lérgen.
+
+Vessel hides
+Egy űrjármű elbújik. A telepesek helyet foglalnak az aszteroidában, amikor elbújnak, ezért csak korlátozott számú telepes bújhat el.
+
+Vessel exits hiding
+Egy űrjármű kijön a rejtekhelyéről.
+
+Spaceship succeeds with mining
+A telepesek csak akkor tudnak bányászni a nyersanyagból, ha átfúrták a kérget, illetve, ha van mit.
+
+Spaceship failed to mine
+Ha nincs nem kinyert nyersanyag az aszteroidában, akkor nem lehet nyersanyagot kibányászni belőle.
+
+Vessel moves
+Egy űrjármű mozogni szeretne. Ezt csak akkor tudja megtenni, ha a célpont szomszdédos, illetve ha nincs elbújva a jármű.
+
+Solar storm
+...
+
+Craft anything
+A telepes szeretne létrehozni valamit a kibányászott nyerssanyagokkal.
+
+Craft teleport gate
+Hogyan jön létre egy új teleportkapu-pár.
+
+Craft station
+Ha a telepesek megcsinálnak egy bázist, akkor megnyerik a játékot.
+
+Craft robot
+A robot létrehozása azonnal lehelyezi a robotot.
+
+Craft general
+A recept levonja a nyersanyagokat, ha el tudjuk készíteni a tárgyat.
+
+Place item
+Lehelyezünk egy tárgyat az átfúrt kérgű, üreges aszteroidába.
+
+Game initialization
+A játék indítása hogyan megy végbe.
+
+Generate world
+A játék indításának az a része, ahol létrejönnek az aszteroidák, és ahol lehelyezzük a telepeseket.
+
+Generate asteroids
+Az aszteroidák létrehozásának folyamata. Itt telítjük meg őket nyersanyaggal (ha nem üregesek) és itt jön lére a szomszédság is.
+
+Game play
+A játék lefutásának felső szintje.
+
+Remove item
+Az adott tárgyhelyből eltűnik egy vagy több egységnyi egy tárgyból.
