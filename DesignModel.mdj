@@ -857,23 +857,6 @@
 										},
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAF3473oUzdR9P0=",
-											"_parent": {
-												"$ref": "AAAAAAF30PkkA0ucrd4="
-											},
-											"model": {
-												"$ref": "AAAAAAF3473oKzdOmrE="
-											},
-											"font": "Arial;13;0",
-											"left": 1037,
-											"top": 668,
-											"width": 222.92333984375,
-											"height": 13,
-											"text": "+GetResourceType(): null",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAF348dz9e3zYDw=",
 											"_parent": {
 												"$ref": "AAAAAAF30PkkA0ucrd4="
@@ -883,7 +866,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1037,
-											"top": 683,
+											"top": 668,
 											"width": 222.92333984375,
 											"height": 13,
 											"text": "+Depart(v: Vessel)",
@@ -900,7 +883,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1037,
-											"top": 698,
+											"top": 683,
 											"width": 222.92333984375,
 											"height": 13,
 											"text": "+Arrive(v: Vessel)",
@@ -917,7 +900,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1037,
-											"top": 713,
+											"top": 698,
 											"width": 222.92333984375,
 											"height": 13,
 											"text": "+GetAvailableHidingSpace(): int",
@@ -934,7 +917,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1037,
-											"top": 728,
+											"top": 713,
 											"width": 222.92333984375,
 											"height": 13,
 											"text": "+Reveal()",
@@ -951,7 +934,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1037,
-											"top": 743,
+											"top": 728,
 											"width": 222.92333984375,
 											"height": 13,
 											"text": "+Drill()",
@@ -968,7 +951,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1037,
-											"top": 758,
+											"top": 743,
 											"width": 222.92333984375,
 											"height": 13,
 											"text": "+Mine(): Item",
@@ -985,7 +968,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1037,
-											"top": 773,
+											"top": 758,
 											"width": 222.92333984375,
 											"height": 13,
 											"text": "+Hide(v: Vessel): bool",
@@ -1002,7 +985,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1037,
-											"top": 788,
+											"top": 773,
 											"width": 222.92333984375,
 											"height": 13,
 											"text": "+Exit(v: Vessel)",
@@ -1019,7 +1002,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1037,
-											"top": 803,
+											"top": 788,
 											"width": 222.92333984375,
 											"height": 13,
 											"text": "+AddBuilding(b: Building)",
@@ -1036,7 +1019,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1037,
-											"top": 818,
+											"top": 803,
 											"width": 222.92333984375,
 											"height": 13,
 											"text": "+PlaceItem(i: Item): bool",
@@ -1053,10 +1036,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1037,
-											"top": 833,
+											"top": 818,
 											"width": 222.92333984375,
 											"height": 13,
-											"text": "+AddNeigbour()",
+											"text": "+AddNeigbour(a: Asteroid)",
 											"horizontalAlignment": 0
 										},
 										{
@@ -1070,7 +1053,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 1037,
-											"top": 848,
+											"top": 833,
 											"width": 222.92333984375,
 											"height": 13,
 											"text": "+GetInventory(): Inventory",
@@ -1081,7 +1064,7 @@
 									"left": 1032,
 									"top": 618,
 									"width": 232.92333984375,
-									"height": 248
+									"height": 233
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -3466,7 +3449,7 @@
 											"top": 595,
 											"width": 218.1943359375,
 											"height": 13,
-											"text": "+IsSunStormActive()",
+											"text": "+IsSunStormActive(): bool",
 											"horizontalAlignment": 0
 										}
 									],
@@ -12073,30 +12056,11 @@
 									"model": {
 										"$ref": "AAAAAAF30Pk9kUu9Wbo="
 									},
-									"subViews": [
-										{
-											"_type": "UMLAttributeView",
-											"_id": "AAAAAAF4A5BCtBpiDR8=",
-											"_parent": {
-												"$ref": "AAAAAAF4A5BCjhoFIog="
-											},
-											"model": {
-												"$ref": "AAAAAAF304RdRM1F2tk="
-											},
-											"font": "Arial;13;0",
-											"left": 501,
-											"top": 286,
-											"width": 118.14892578125,
-											"height": 13,
-											"text": "-position",
-											"horizontalAlignment": 0
-										}
-									],
 									"font": "Arial;13;0",
 									"left": 496,
 									"top": 281,
 									"width": 128.14892578125,
-									"height": 23
+									"height": 10
 								},
 								{
 									"_type": "UMLOperationCompartmentView",
@@ -12110,23 +12074,6 @@
 									"subViews": [
 										{
 											"_type": "UMLOperationView",
-											"_id": "AAAAAAF4A5BCtBpoaMM=",
-											"_parent": {
-												"$ref": "AAAAAAF4A5BCjhoGWrA="
-											},
-											"model": {
-												"$ref": "AAAAAAF34/bnTPpsVhw="
-											},
-											"font": "Arial;13;0",
-											"left": 501,
-											"top": 309,
-											"width": 118.14892578125,
-											"height": 13,
-											"text": "+Update()",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
 											"_id": "AAAAAAF4A5BCtRpr4+w=",
 											"_parent": {
 												"$ref": "AAAAAAF4A5BCjhoGWrA="
@@ -12136,27 +12083,10 @@
 											},
 											"font": "Arial;13;0",
 											"left": 501,
-											"top": 324,
+											"top": 296,
 											"width": 118.14892578125,
 											"height": 13,
 											"text": "+RoundEnd()",
-											"horizontalAlignment": 0
-										},
-										{
-											"_type": "UMLOperationView",
-											"_id": "AAAAAAF4A8Lj58PvI24=",
-											"_parent": {
-												"$ref": "AAAAAAF4A5BCjhoGWrA="
-											},
-											"model": {
-												"$ref": "AAAAAAF4A8LjucPFcKI="
-											},
-											"font": "Arial;13;0",
-											"left": 501,
-											"top": 339,
-											"width": 118.14892578125,
-											"height": 13,
-											"text": "+SetPosition()",
 											"horizontalAlignment": 0
 										},
 										{
@@ -12170,7 +12100,7 @@
 											},
 											"font": "Arial;13;0",
 											"left": 501,
-											"top": 354,
+											"top": 311,
 											"width": 118.14892578125,
 											"height": 13,
 											"text": "+GetScene(): Scene",
@@ -12179,9 +12109,9 @@
 									],
 									"font": "Arial;13;0",
 									"left": 496,
-									"top": 304,
+									"top": 291,
 									"width": 128.14892578125,
-									"height": 68
+									"height": 38
 								},
 								{
 									"_type": "UMLReceptionCompartmentView",
@@ -12221,7 +12151,7 @@
 							"left": 496,
 							"top": 256,
 							"width": 128.14892578125,
-							"height": 116,
+							"height": 105,
 							"nameCompartment": {
 								"$ref": "AAAAAAF4A5BCjRoAXdE="
 							},
@@ -12260,7 +12190,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 819,
-									"top": 483,
+									"top": 480,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -12281,7 +12211,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 811,
-									"top": 496,
+									"top": 493,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -12302,7 +12232,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 834,
-									"top": 458,
+									"top": 455,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -12320,7 +12250,7 @@
 								"$ref": "AAAAAAF30PkkA0uVy88="
 							},
 							"lineStyle": 1,
-							"points": "1031:601;624:353",
+							"points": "1031:600;624:348",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF4A5BCjhoKUks="
@@ -12354,7 +12284,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 588,
-									"top": 447,
+									"top": 442,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -12375,7 +12305,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 574,
-									"top": 452,
+									"top": 447,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -12396,7 +12326,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 617,
-									"top": 438,
+									"top": 433,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -12414,7 +12344,7 @@
 								"$ref": "AAAAAAF3049rYCnGCE4="
 							},
 							"lineStyle": 1,
-							"points": "629:527;578:372",
+							"points": "630:527;576:361",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF4A5BCjxoO53g="
@@ -12677,7 +12607,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 422,
-									"top": 279,
+									"top": 276,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 15,
@@ -12698,7 +12628,7 @@
 									"visible": null,
 									"font": "Arial;13;0",
 									"left": 418,
-									"top": 293,
+									"top": 290,
 									"height": 13,
 									"alpha": 1.5707963267948966,
 									"distance": 30,
@@ -12719,7 +12649,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 431,
-									"top": 250,
+									"top": 247,
 									"height": 13,
 									"alpha": -1.5707963267948966,
 									"distance": 15,
@@ -12739,7 +12669,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 441,
-									"top": 293,
+									"top": 289,
 									"width": 48.419921875,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -12762,7 +12692,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 459,
-									"top": 305,
+									"top": 301,
 									"height": 13,
 									"alpha": 0.7853981633974483,
 									"distance": 40,
@@ -12781,8 +12711,8 @@
 										"$ref": "AAAAAAF30Qgho2dw5Mk="
 									},
 									"font": "Arial;13;0",
-									"left": 469,
-									"top": 268,
+									"left": 468,
+									"top": 264,
 									"width": 19.5126953125,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -12804,7 +12734,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 357,
-									"top": 266,
+									"top": 263,
 									"width": 46.9599609375,
 									"height": 13,
 									"alpha": -0.5235987755982988,
@@ -12826,7 +12756,7 @@
 									"visible": false,
 									"font": "Arial;13;0",
 									"left": 378,
-									"top": 279,
+									"top": 277,
 									"height": 13,
 									"alpha": -0.7853981633974483,
 									"distance": 40,
@@ -12845,7 +12775,7 @@
 									},
 									"font": "Arial;13;0",
 									"left": 375,
-									"top": 238,
+									"top": 236,
 									"width": 19.5126953125,
 									"height": 13,
 									"alpha": 0.5235987755982988,
@@ -12892,7 +12822,7 @@
 								"$ref": "AAAAAAF4A5BCjRn/uSw="
 							},
 							"lineStyle": 1,
-							"points": "495:293;360:250",
+							"points": "495:289;360:248",
 							"showVisibility": true,
 							"nameLabel": {
 								"$ref": "AAAAAAF4A5BKNRr1jrI="
@@ -14337,7 +14267,7 @@
 							}
 						}
 					],
-					"documentation": "Egy aszteroidát jelöl. Minden példányának létrejöttekor beállítódnak a generátor álltal a tulajdonságai.",
+					"documentation": "Egy aszteroidát jelöl. Minden példányának létrejöttekor beállítódnak a generátor által a tulajdonságai.",
 					"attributes": [
 						{
 							"_type": "UMLAttribute",
@@ -14427,6 +14357,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "Asteroid",
+							"documentation": "Az osztály konstruktora.",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -14480,26 +14411,6 @@
 										"$ref": "AAAAAAF30PkkAkuTpWs="
 									},
 									"multiplicity": "1..*",
-									"direction": "return"
-								}
-							]
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAF3473oKzdOmrE=",
-							"_parent": {
-								"$ref": "AAAAAAF30PkkAkuTpWs="
-							},
-							"name": "GetResourceType",
-							"documentation": "Visszaadja az aszteroida magjában található nyersanyag típusát. ",
-							"parameters": [
-								{
-									"_type": "UMLParameter",
-									"_id": "AAAAAAF3474aSzjMgYg=",
-									"_parent": {
-										"$ref": "AAAAAAF3473oKzdOmrE="
-									},
-									"type": "",
 									"direction": "return"
 								}
 							]
@@ -14584,7 +14495,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "Drill",
-							"documentation": "Akkor hívódik meg amikor az aszteroida kérgén lévő jukat akarják mélyíteni."
+							"documentation": "Akkor hívódik meg amikor az aszteroida kérgén lévő lyukat akarják mélyíteni."
 						},
 						{
 							"_type": "UMLOperation",
@@ -14593,7 +14504,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "Mine",
-							"documentation": "Akkor hívódik meg amikor az aszteroidából akarnak nyersanyagok kibányászni.",
+							"documentation": "Akkor hívódik meg amikor az aszteroidából akarnak nyersanyagot kibányászni.",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -14615,7 +14526,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "Hide",
-							"documentation": "Az aszteroidában megpróbál elbújni egy jámű. Igazat ad vissza ha el tud bújni, hamisat ha nem.",
+							"documentation": "Az aszteroidában megpróbál elbújni egy jármű. Igazat ad vissza ha el tud bújni, hamisat ha nem.",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -14646,7 +14557,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "Exit",
-							"documentation": "Az adott jámű előbújik az aszteroidából.",
+							"documentation": "Az adott jármű előbújik az aszteroidából.",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -14720,7 +14631,21 @@
 							"_parent": {
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
-							"name": "AddNeigbour"
+							"name": "AddNeigbour",
+							"documentation": "Új szomszéd hozzáadása. ",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4DhckSjdd5lE=",
+									"_parent": {
+										"$ref": "AAAAAAF4A7pfxq25J0s="
+									},
+									"name": "a",
+									"type": {
+										"$ref": "AAAAAAF30PkkAkuTpWs="
+									}
+								}
+							]
 						},
 						{
 							"_type": "UMLOperation",
@@ -14729,6 +14654,7 @@
 								"$ref": "AAAAAAF30PkkAkuTpWs="
 							},
 							"name": "GetInventory",
+							"documentation": "Visszaadja az aszteroida raktárát. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -14808,6 +14734,7 @@
 								"$ref": "AAAAAAF30PlOGEvnvCA="
 							},
 							"name": "SpaceShip",
+							"documentation": "Az osztály konstruktora, beállítja az őt kezelő játékost illetve aszteroidát. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15222,6 +15149,7 @@
 								"$ref": "AAAAAAF302HWgsK8f98="
 							},
 							"name": "Robot",
+							"documentation": "Az osztály konstruktora, beállítja az őt kezelő játékost illetve aszteroidát. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15345,6 +15273,7 @@
 								"$ref": "AAAAAAF304s8BwRn68Q="
 							},
 							"name": "asteroids",
+							"documentation": "A játékban szereplő aszteroidák listája. ",
 							"visibility": "private",
 							"type": {
 								"$ref": "AAAAAAF30PkkAkuTpWs="
@@ -15358,6 +15287,7 @@
 								"$ref": "AAAAAAF304s8BwRn68Q="
 							},
 							"name": "gameEnded",
+							"documentation": "Jelzi, hogy a játék befejeződött-e már.",
 							"visibility": "private",
 							"type": "bool"
 						}
@@ -15369,7 +15299,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF304s8BwRn68Q="
 							},
-							"name": "InitGame"
+							"name": "InitGame",
+							"documentation": "A játékmenet inicializálásáért felel. "
 						},
 						{
 							"_type": "UMLOperation",
@@ -15378,6 +15309,7 @@
 								"$ref": "AAAAAAF304s8BwRn68Q="
 							},
 							"name": "AddPlayer",
+							"documentation": "Új játékos hozzáadása. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15399,7 +15331,7 @@
 								"$ref": "AAAAAAF304s8BwRn68Q="
 							},
 							"name": "StartGame",
-							"documentation": "Új játék indítása, a játékosok listájának felvétele, járművek pozíciójának és a Naptól való távolságnak az inicializálása. "
+							"documentation": "Új játék indításáért felel. "
 						},
 						{
 							"_type": "UMLOperation",
@@ -15426,6 +15358,7 @@
 								"$ref": "AAAAAAF304s8BwRn68Q="
 							},
 							"name": "GenerateScene",
+							"documentation": "Játék inicializálás során a játéktér elemeinek inicializálása.",
 							"visibility": "private"
 						},
 						{
@@ -15435,6 +15368,7 @@
 								"$ref": "AAAAAAF304s8BwRn68Q="
 							},
 							"name": "GenerateNewResource",
+							"documentation": "Új nyersanyag generálása, inicializálás folyamata során használjuk fel. ",
 							"visibility": "private",
 							"parameters": [
 								{
@@ -15457,6 +15391,7 @@
 								"$ref": "AAAAAAF304s8BwRn68Q="
 							},
 							"name": "GenerateAsteroids",
+							"documentation": "Az aszteroidamező inicializálása, játék inicializálás során hozzuk létre.",
 							"visibility": "private"
 						},
 						{
@@ -15465,7 +15400,19 @@
 							"_parent": {
 								"$ref": "AAAAAAF304s8BwRn68Q="
 							},
-							"name": "IsSunStormActive"
+							"name": "IsSunStormActive",
+							"documentation": "Visszaadja, hogy jelenleg napviharban van-e az aszteroidamező. ",
+							"parameters": [
+								{
+									"_type": "UMLParameter",
+									"_id": "AAAAAAF4DilTlIwjqbk=",
+									"_parent": {
+										"$ref": "AAAAAAF4B9WA8KHt3Ag="
+									},
+									"type": "bool",
+									"direction": "return"
+								}
+							]
 						}
 					]
 				},
@@ -15579,6 +15526,7 @@
 								"$ref": "AAAAAAF3049rXynEqe4="
 							},
 							"name": "Vessel",
+							"documentation": "Az osztály konstruktora, beállítja az őt kezelő játékost illetve aszteroidát. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15740,6 +15688,7 @@
 									"$ref": "AAAAAAF305yYCFNq0r8="
 								},
 								"name": "asteroid",
+								"documentation": "Az épület lerakási helye (aszteroida).",
 								"reference": {
 									"$ref": "AAAAAAF30PkkAkuTpWs="
 								},
@@ -15774,6 +15723,7 @@
 									"$ref": "AAAAAAF4B3GYiywTqpo="
 								},
 								"name": "pair",
+								"documentation": "Az aszteroida párja. ",
 								"reference": {
 									"$ref": "AAAAAAF305xenlBv7pY="
 								},
@@ -15791,7 +15741,7 @@
 							}
 						}
 					],
-					"documentation": "A teleport kapukat reprezentáló osztály.",
+					"documentation": "A teleportkapukat reprezentáló osztály.",
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -15800,7 +15750,7 @@
 								"$ref": "AAAAAAF305xenlBv7pY="
 							},
 							"name": "GetRoutes",
-							"documentation": "Visszadja az ebből a kapuból elérhető aszteroidákat.\n",
+							"documentation": "Visszaadja az ebből a kapuból elérhető extra aszteroidákat.\n",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15823,7 +15773,7 @@
 								"$ref": "AAAAAAF305xenlBv7pY="
 							},
 							"name": "PairDestroyed",
-							"documentation": "Akkor hívódik meg ha a párja megsemmisül és ezéltal ez az oldal deaktiválódik."
+							"documentation": "Akkor hívódik meg ha a párja megsemmisül és ezáltal ez az oldal deaktiválódik."
 						},
 						{
 							"_type": "UMLOperation",
@@ -15856,7 +15806,7 @@
 						"$ref": "AAAAAAFFxnI9/BN2hrc="
 					},
 					"name": "Building",
-					"documentation": "Egy adott konkrét épületet reprezentál, a type mezőben tárolja el, hogy mejik konkrét épület típus.",
+					"documentation": "Az épülettípusok közös ősosztálya. ",
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -15865,7 +15815,7 @@
 								"$ref": "AAAAAAF307H0TcC0ouQ="
 							},
 							"name": "Explode",
-							"documentation": "akkor hívódik meg ha valamijen okból az épület megsemmisül."
+							"documentation": "Akkor hívódik meg, ha valamilyen okból az épület megsemmisül."
 						},
 						{
 							"_type": "UMLOperation",
@@ -15897,6 +15847,7 @@
 								"$ref": "AAAAAAF307H0TcC0ouQ="
 							},
 							"name": "Building",
+							"documentation": "Az osztály konstruktora, beállítja az aktuális tartózkodási helyet. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15947,7 +15898,7 @@
 							}
 						}
 					],
-					"documentation": "A játékosok álltal megépítendő űrálomás épület típust jelöli. Speciális tulajdonsága hogy amikor megépül akkor a játék befejeződik.",
+					"documentation": "A játékosok által megépítendő űrállomás épület típust jelöli. Speciális tulajdonsága, hogy amikor megépül akkor a játék befejeződik.",
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -15956,7 +15907,7 @@
 								"$ref": "AAAAAAF307IS7cKO+Z0="
 							},
 							"name": "SpaceStation",
-							"documentation": "meghívódik ha az adott aszteroidán egy űrállomás épült. Akkor a játék befejeződik.",
+							"documentation": "Meghívódik ha az adott aszteroidán egy űrállomás épült. Ekkor a játék befejeződik.",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -15989,6 +15940,7 @@
 								"$ref": "AAAAAAF307IS7cKO+Z0="
 							},
 							"name": "Explode",
+							"documentation": "Az űrállomás felrobbanásakor hívódik meg.  Ez gyakorlatban sosem fog megtörténni, hiszen amint felépül az űrállomás, a játékot megnyerik. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -16010,6 +15962,7 @@
 								"$ref": "AAAAAAF307IS7cKO+Z0="
 							},
 							"name": "GetRoutes",
+							"documentation": "Az ebből az épületből elérhető extra aszteroidákat adja vissza.",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -16048,7 +16001,7 @@
 									"$ref": "AAAAAAF307h5CRj3yfc="
 								},
 								"name": "position",
-								"documentation": "Azt jelöli hogy az épület hol helyezkedik el az aszteroidán.",
+								"documentation": "Azt jelöli,hogy az épület hol helyezkedik el az aszteroidán.",
 								"reference": {
 									"$ref": "AAAAAAF307gfzxMbrL0="
 								},
@@ -17241,7 +17194,7 @@
 												"$ref": "AAAAAAF4Al1A+p3JUW4="
 											},
 											"font": "Arial;13;0",
-											"left": 223.94091796875,
+											"left": 221.78271484375,
 											"top": 301,
 											"width": 94.107421875,
 											"height": 13,
@@ -17256,7 +17209,7 @@
 											"font": "Arial;13;1",
 											"left": 197,
 											"top": 301,
-											"width": 21.94091796875,
+											"width": 19.78271484375,
 											"height": 13,
 											"text": "stm"
 										}
@@ -18245,7 +18198,7 @@
 												"$ref": "AAAAAAF4Al+8aZ4zaCY="
 											},
 											"font": "Arial;13;0",
-											"left": 375.94091796875,
+											"left": 373.78271484375,
 											"top": 429,
 											"width": 97.75732421875,
 											"height": 13,
@@ -18260,7 +18213,7 @@
 											"font": "Arial;13;1",
 											"left": 349,
 											"top": 429,
-											"width": 21.94091796875,
+											"width": 19.78271484375,
 											"height": 13,
 											"text": "stm"
 										}
@@ -19447,7 +19400,7 @@
 												"$ref": "AAAAAAF4AmK1RJ6KjNI="
 											},
 											"font": "Arial;13;0",
-											"left": 223.94091796875,
+											"left": 221.78271484375,
 											"top": 305,
 											"width": 83.3291015625,
 											"height": 13,
@@ -19462,7 +19415,7 @@
 											"font": "Arial;13;1",
 											"left": 197,
 											"top": 305,
-											"width": 21.94091796875,
+											"width": 19.78271484375,
 											"height": 13,
 											"text": "stm"
 										}
@@ -20454,7 +20407,7 @@
 												"$ref": "AAAAAAF4AmOcsJ6dBtY="
 											},
 											"font": "Arial;13;0",
-											"left": 451.94091796875,
+											"left": 449.78271484375,
 											"top": 397,
 											"width": 82.23095703125,
 											"height": 13,
@@ -20469,7 +20422,7 @@
 											"font": "Arial;13;1",
 											"left": 425,
 											"top": 397,
-											"width": 21.94091796875,
+											"width": 19.78271484375,
 											"height": 13,
 											"text": "stm"
 										}
@@ -20658,7 +20611,7 @@
 														"$ref": "AAAAAAF36nNnZ2KJQRY="
 													},
 													"font": "Arial;13;0",
-													"left": 128.72998046875,
+													"left": 126.55908203125,
 													"top": 13,
 													"width": 97.75732421875,
 													"height": 13,
@@ -20673,7 +20626,7 @@
 													"font": "Arial;13;1",
 													"left": 109,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -21665,7 +21618,7 @@
 														"$ref": "AAAAAAF36nkvD2QbyiI="
 													},
 													"font": "Arial;13;0",
-													"left": 104.72998046875,
+													"left": 102.55908203125,
 													"top": 13,
 													"width": 147.19921875,
 													"height": 13,
@@ -21680,7 +21633,7 @@
 													"font": "Arial;13;1",
 													"left": 85,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -22548,7 +22501,7 @@
 														"$ref": "AAAAAAF4B3LekzR42iQ="
 													},
 													"font": "Arial;13;0",
-													"left": 120.72998046875,
+													"left": 118.55908203125,
 													"top": 13,
 													"width": 122.81787109375,
 													"height": 13,
@@ -22563,7 +22516,7 @@
 													"font": "Arial;13;1",
 													"left": 101,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -23817,7 +23770,7 @@
 														"$ref": "AAAAAAF4B8bzXUlVjWc="
 													},
 													"font": "Arial;13;0",
-													"left": 136.72998046875,
+													"left": 134.55908203125,
 													"top": 13,
 													"width": 99.57275390625,
 													"height": 13,
@@ -23832,7 +23785,7 @@
 													"font": "Arial;13;1",
 													"left": 117,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -25328,7 +25281,7 @@
 														"$ref": "AAAAAAF4B8y6TGIhseU="
 													},
 													"font": "Arial;13;0",
-													"left": 104.72998046875,
+													"left": 102.55908203125,
 													"top": 10,
 													"width": 59.83642578125,
 													"height": 13,
@@ -25343,7 +25296,7 @@
 													"font": "Arial;13;1",
 													"left": 85,
 													"top": 10,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -26117,7 +26070,7 @@
 														"$ref": "AAAAAAF36n7zK2pyyAM="
 													},
 													"font": "Arial;13;0",
-													"left": 136.72998046875,
+													"left": 134.55908203125,
 													"top": 13,
 													"width": 67.77734375,
 													"height": 13,
@@ -26132,7 +26085,7 @@
 													"font": "Arial;13;1",
 													"left": 117,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -27493,7 +27446,7 @@
 														"$ref": "AAAAAAF36n7zLGqzwhM="
 													},
 													"font": "Arial;13;0",
-													"left": 160.72998046875,
+													"left": 158.55908203125,
 													"top": 13,
 													"width": 59.1318359375,
 													"height": 13,
@@ -27508,7 +27461,7 @@
 													"font": "Arial;13;1",
 													"left": 141,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -28754,7 +28707,7 @@
 														"$ref": "AAAAAAF36n7zLWr+tFE="
 													},
 													"font": "Arial;13;0",
-													"left": 96.72998046875,
+													"left": 94.55908203125,
 													"top": 13,
 													"width": 59.84912109375,
 													"height": 13,
@@ -28769,7 +28722,7 @@
 													"font": "Arial;13;1",
 													"left": 77,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -30659,7 +30612,7 @@
 														"$ref": "AAAAAAF36n7zLmuEu0Y="
 													},
 													"font": "Arial;13;0",
-													"left": 192.72998046875,
+													"left": 190.55908203125,
 													"top": 29,
 													"width": 93.07275390625,
 													"height": 13,
@@ -30674,7 +30627,7 @@
 													"font": "Arial;13;1",
 													"left": 173,
 													"top": 29,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -32050,7 +32003,7 @@
 														"$ref": "AAAAAAF36n7zL2venpc="
 													},
 													"font": "Arial;13;0",
-													"left": 152.72998046875,
+													"left": 150.55908203125,
 													"top": 13,
 													"width": 129.5146484375,
 													"height": 13,
@@ -32065,7 +32018,7 @@
 													"font": "Arial;13;1",
 													"left": 133,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -33957,7 +33910,7 @@
 														"$ref": "AAAAAAF36n7zMGxZ/8I="
 													},
 													"font": "Arial;13;0",
-													"left": 192.72998046875,
+													"left": 190.55908203125,
 													"top": 13,
 													"width": 105.6982421875,
 													"height": 13,
@@ -33972,7 +33925,7 @@
 													"font": "Arial;13;1",
 													"left": 173,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -34959,7 +34912,7 @@
 														"$ref": "AAAAAAF4A4rfYgMJGho="
 													},
 													"font": "Arial;13;0",
-													"left": 136.72998046875,
+													"left": 134.55908203125,
 													"top": 13,
 													"width": 66.34912109375,
 													"height": 13,
@@ -34974,7 +34927,7 @@
 													"font": "Arial;13;1",
 													"left": 117,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -37501,7 +37454,7 @@
 														"$ref": "AAAAAAF37bBiu/7XpLo="
 													},
 													"font": "Arial;13;0",
-													"left": 152.72998046875,
+													"left": 150.55908203125,
 													"top": 13,
 													"width": 53.0126953125,
 													"height": 13,
@@ -37516,7 +37469,7 @@
 													"font": "Arial;13;1",
 													"left": 133,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -39200,7 +39153,7 @@
 														"$ref": "AAAAAAF37bJc9wBXwTM="
 													},
 													"font": "Arial;13;0",
-													"left": 112.72998046875,
+													"left": 110.55908203125,
 													"top": 13,
 													"width": 76.82275390625,
 													"height": 13,
@@ -39215,7 +39168,7 @@
 													"font": "Arial;13;1",
 													"left": 93,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -40748,7 +40701,7 @@
 														"$ref": "AAAAAAF37brN9T9adjI="
 													},
 													"font": "Arial;13;0",
-													"left": 80.72998046875,
+													"left": 78.55908203125,
 													"top": 13,
 													"width": 95.5673828125,
 													"height": 13,
@@ -40763,7 +40716,7 @@
 													"font": "Arial;13;1",
 													"left": 61,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -41889,7 +41842,7 @@
 														"$ref": "AAAAAAF37bzlbkCGJx8="
 													},
 													"font": "Arial;13;0",
-													"left": 112.72998046875,
+													"left": 110.55908203125,
 													"top": 13,
 													"width": 64.54638671875,
 													"height": 13,
@@ -41904,7 +41857,7 @@
 													"font": "Arial;13;1",
 													"left": 93,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -44572,7 +44525,7 @@
 														"$ref": "AAAAAAF4AqQPL72CPqs="
 													},
 													"font": "Arial;13;0",
-													"left": 240.72998046875,
+													"left": 238.55908203125,
 													"top": 13,
 													"width": 58.40185546875,
 													"height": 13,
@@ -44587,7 +44540,7 @@
 													"font": "Arial;13;1",
 													"left": 221,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -45974,9 +45927,9 @@
 														"$ref": "AAAAAAF4B+XqXOU/cjk="
 													},
 													"font": "Arial;13;0",
-													"left": 88.72998046875,
+													"left": 86.55908203125,
 													"top": 21,
-													"width": 76.14990234375,
+													"width": 69.2119140625,
 													"height": 13,
 													"text": "Craft general"
 												},
@@ -45989,7 +45942,7 @@
 													"font": "Arial;13;1",
 													"left": 69,
 													"top": 21,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -46381,9 +46334,9 @@
 														"$ref": "AAAAAAF4B+dOReXkf5M="
 													},
 													"font": "Arial;13;0",
-													"left": 115.578125,
+													"left": 114.11181640625,
 													"top": 125,
-													"width": 123.1162109375,
+													"width": 111.4873046875,
 													"height": 13,
 													"text": "CombinedFragment1"
 												},
@@ -46396,7 +46349,7 @@
 													"font": "Arial;13;1",
 													"left": 85,
 													"top": 125,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -46429,7 +46382,7 @@
 																	"font": "Arial;13;0",
 																	"left": 100,
 																	"top": 158,
-																	"width": 78.0380859375,
+																	"width": 77.263671875,
 																	"height": 13,
 																	"text": "[for i in input ]"
 																}
@@ -47506,9 +47459,9 @@
 														"$ref": "AAAAAAF4B/cB9RYYVPE="
 													},
 													"font": "Arial;13;0",
-													"left": 109.07177734375,
+													"left": 107.61181640625,
 													"top": 309,
-													"width": 123.1162109375,
+													"width": 111.4873046875,
 													"height": 13,
 													"text": "CombinedFragment2"
 												},
@@ -47521,7 +47474,7 @@
 													"font": "Arial;13;1",
 													"left": 85,
 													"top": 309,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -47554,7 +47507,7 @@
 																	"font": "Arial;13;0",
 																	"left": 100,
 																	"top": 342,
-																	"width": 76.59716796875,
+																	"width": 71.8427734375,
 																	"height": 13,
 																	"text": "[not satisfied]"
 																}
@@ -47840,9 +47793,9 @@
 														"$ref": "AAAAAAF4B/q0tBbU5hQ="
 													},
 													"font": "Arial;13;0",
-													"left": 131.578125,
+													"left": 130.11181640625,
 													"top": 421,
-													"width": 123.1162109375,
+													"width": 111.4873046875,
 													"height": 13,
 													"text": "CombinedFragment3"
 												},
@@ -47855,7 +47808,7 @@
 													"font": "Arial;13;1",
 													"left": 101,
 													"top": 421,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -47888,7 +47841,7 @@
 																	"font": "Arial;13;0",
 																	"left": 116,
 																	"top": 454,
-																	"width": 142.3525390625,
+																	"width": 133.5546875,
 																	"height": 13,
 																	"text": "[for each i2 in remaining]"
 																}
@@ -48471,7 +48424,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF37bJc9wBUdTc="
 							},
-							"name": "Role12"
+							"name": "Role12",
+							"type": ""
 						},
 						{
 							"_type": "UMLAttribute",
@@ -49437,7 +49391,7 @@
 														"$ref": "AAAAAAF4AoRwgmcEZZI="
 													},
 													"font": "Arial;13;0",
-													"left": 144.72998046875,
+													"left": 142.55908203125,
 													"top": 13,
 													"width": 55.50732421875,
 													"height": 13,
@@ -49452,7 +49406,7 @@
 													"font": "Arial;13;1",
 													"left": 125,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -51556,6 +51510,7 @@
 									"$ref": "AAAAAAF30QghomdvB4w="
 								},
 								"name": "entities",
+								"documentation": "A játékban szereplő összes entitás tárolója. ",
 								"reference": {
 									"$ref": "AAAAAAF30Pk9kUu9Wbo="
 								},
@@ -51569,7 +51524,7 @@
 									"$ref": "AAAAAAF30QghomdvB4w="
 								},
 								"name": "scene",
-								"documentation": "A játékban szereplő összes entitás tárolója. ",
+								"documentation": "A játéktér tárolója. ",
 								"reference": {
 									"$ref": "AAAAAAF30PpH+U5YwRU="
 								},
@@ -51579,29 +51534,8 @@
 							}
 						}
 					],
-					"documentation": "Egy adott entitás (pozícióval, vizuális megjelenítéssel rendelkező játékelem) osztálya. ",
-					"attributes": [
-						{
-							"_type": "UMLAttribute",
-							"_id": "AAAAAAF304RdRM1F2tk=",
-							"_parent": {
-								"$ref": "AAAAAAF30Pk9kUu9Wbo="
-							},
-							"name": "position",
-							"documentation": "Az aktuális pozíció, csak belülről állítható.",
-							"visibility": "private",
-							"type": ""
-						}
-					],
+					"documentation": "Egy adott entitás ( vizuális megjelenítéssel rendelkező játékelem) osztálya. ",
 					"operations": [
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAF34/bnTPpsVhw=",
-							"_parent": {
-								"$ref": "AAAAAAF30Pk9kUu9Wbo="
-							},
-							"name": "Update"
-						},
 						{
 							"_type": "UMLOperation",
 							"_id": "AAAAAAF37ThUijEfqPY=",
@@ -51609,15 +51543,7 @@
 								"$ref": "AAAAAAF30Pk9kUu9Wbo="
 							},
 							"name": "RoundEnd",
-							"documentation": "Akkor hívódik meg a az adott körben már minden játékos lépett. A robotot ezt haszmálják például a mozgásra."
-						},
-						{
-							"_type": "UMLOperation",
-							"_id": "AAAAAAF4A8LjucPFcKI=",
-							"_parent": {
-								"$ref": "AAAAAAF30Pk9kUu9Wbo="
-							},
-							"name": "SetPosition"
+							"documentation": "Akkor hívódik meg, ha az adott körben már minden játékos lépett. A robotok ezt használják például a mozgásra."
 						},
 						{
 							"_type": "UMLOperation",
@@ -51626,6 +51552,7 @@
 								"$ref": "AAAAAAF30Pk9kUu9Wbo="
 							},
 							"name": "GetScene",
+							"documentation": "A játéktér getter-e. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -51691,6 +51618,7 @@
 									"$ref": "AAAAAAF4A9J+vdn40hA="
 								},
 								"name": "scene",
+								"documentation": "Az adott játékhoz tartozó játéktér. ",
 								"reference": {
 									"$ref": "AAAAAAF30PpH+U5YwRU="
 								},
@@ -51703,6 +51631,7 @@
 									"$ref": "AAAAAAF4A9J+vdn40hA="
 								},
 								"name": "manager",
+								"documentation": "Az aktuális játékmenet. ",
 								"reference": {
 									"$ref": "AAAAAAF304s8BwRn68Q="
 								},
@@ -51711,7 +51640,7 @@
 							}
 						}
 					],
-					"documentation": "Az aktuális játék típusától független, játékmenetért felelős osztály. ",
+					"documentation": "Az entitások összességének összefogásáért felelős osztály. ",
 					"operations": [
 						{
 							"_type": "UMLOperation",
@@ -51720,6 +51649,7 @@
 								"$ref": "AAAAAAF30PpH+U5YwRU="
 							},
 							"name": "AddEntity",
+							"documentation": "Új entitás hozzáadása a játékmenethez.",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -51740,7 +51670,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF30PpH+U5YwRU="
 							},
-							"name": "RoundEnded"
+							"name": "RoundEnded",
+							"documentation": "Az összes entitás RoundEnd() metódusát meghívja, befejezi az adott kört. "
 						},
 						{
 							"_type": "UMLOperation",
@@ -51749,6 +51680,7 @@
 								"$ref": "AAAAAAF30PpH+U5YwRU="
 							},
 							"name": "GetManager",
+							"documentation": "A manager attribútum getter-e. ",
 							"parameters": [
 								{
 									"_type": "UMLParameter",
@@ -51846,7 +51778,7 @@
 													"font": "Arial;13;0",
 													"left": 112.72998046875,
 													"top": 13,
-													"width": 100.99462890625,
+													"width": 107.21533203125,
 													"height": 13,
 													"text": "Game initialization"
 												},
@@ -52937,9 +52869,9 @@
 														"$ref": "AAAAAAF4A6ugtaQ9v1A="
 													},
 													"font": "Arial;13;0",
-													"left": 130.11181640625,
+													"left": 131.578125,
 													"top": 197,
-													"width": 60.56005859375,
+													"width": 68.208984375,
 													"height": 13,
 													"text": "add players"
 												},
@@ -52952,7 +52884,7 @@
 													"font": "Arial;13;1",
 													"left": 101,
 													"top": 197,
-													"width": 24.11181640625,
+													"width": 25.578125,
 													"height": 13,
 													"text": "loop"
 												},
@@ -52985,7 +52917,7 @@
 																	"font": "Arial;13;0",
 																	"left": 116,
 																	"top": 230,
-																	"width": 86.607421875,
+																	"width": 93.21533203125,
 																	"height": 13,
 																	"text": "[for each player]"
 																}
@@ -53615,7 +53547,7 @@
 													"font": "Arial;13;0",
 													"left": 96.72998046875,
 													"top": 5,
-													"width": 81.48828125,
+													"width": 89.8798828125,
 													"height": 13,
 													"text": "Generate world"
 												},
@@ -54147,9 +54079,9 @@
 														"$ref": "AAAAAAF4A6ZXEJqjfUk="
 													},
 													"font": "Arial;13;0",
-													"left": 122.11181640625,
+													"left": 123.578125,
 													"top": 269,
-													"width": 39.27001953125,
+													"width": 44.34814453125,
 													"height": 13,
 													"text": "Players"
 												},
@@ -54162,7 +54094,7 @@
 													"font": "Arial;13;1",
 													"left": 93,
 													"top": 269,
-													"width": 24.11181640625,
+													"width": 25.578125,
 													"height": 13,
 													"text": "loop"
 												},
@@ -54195,7 +54127,7 @@
 																	"font": "Arial;13;0",
 																	"left": 108,
 																	"top": 302,
-																	"width": 140.75927734375,
+																	"width": 152.46435546875,
 																	"height": 13,
 																	"text": "[for each player in players]"
 																}
@@ -54249,9 +54181,9 @@
 														"$ref": "AAAAAAF4A6Z4t5q6k2c="
 													},
 													"font": "Arial;13;0",
-													"left": 138.11181640625,
+													"left": 139.578125,
 													"top": 333,
-													"width": 39.99365234375,
+													"width": 45.07177734375,
 													"height": 13,
 													"text": "Settlers"
 												},
@@ -54264,7 +54196,7 @@
 													"font": "Arial;13;1",
 													"left": 109,
 													"top": 333,
-													"width": 24.11181640625,
+													"width": 25.578125,
 													"height": 13,
 													"text": "loop"
 												},
@@ -54297,7 +54229,7 @@
 																	"font": "Arial;13;0",
 																	"left": 124,
 																	"top": 366,
-																	"width": 90.9619140625,
+																	"width": 96.82080078125,
 																	"height": 13,
 																	"text": "[for settler count]"
 																}
@@ -55386,7 +55318,7 @@
 													"font": "Arial;13;0",
 													"left": 104.72998046875,
 													"top": 10,
-													"width": 97.3701171875,
+													"width": 111.5634765625,
 													"height": 13,
 													"text": "Generate asteroids"
 												},
@@ -55675,9 +55607,9 @@
 														"$ref": "AAAAAAF4A7QDOaj9Mfo="
 													},
 													"font": "Arial;13;0",
-													"left": 138.11181640625,
+													"left": 139.578125,
 													"top": 157,
-													"width": 78.61279296875,
+													"width": 89.8798828125,
 													"height": 13,
 													"text": "Place asteroids"
 												},
@@ -55690,7 +55622,7 @@
 													"font": "Arial;13;1",
 													"left": 109,
 													"top": 157,
-													"width": 24.11181640625,
+													"width": 25.578125,
 													"height": 13,
 													"text": "loop"
 												},
@@ -55723,7 +55655,7 @@
 																	"font": "Arial;13;0",
 																	"left": 124,
 																	"top": 190,
-																	"width": 95.2783203125,
+																	"width": 104.05712890625,
 																	"height": 13,
 																	"text": "[for each asteroid]"
 																}
@@ -56456,9 +56388,9 @@
 														"$ref": "AAAAAAF4A7dUEKovx10="
 													},
 													"font": "Arial;13;0",
-													"left": 138.11181640625,
+													"left": 139.578125,
 													"top": 469,
-													"width": 98.8427734375,
+													"width": 110.12890625,
 													"height": 13,
 													"text": "Connect neigbours"
 												},
@@ -56471,7 +56403,7 @@
 													"font": "Arial;13;1",
 													"left": 109,
 													"top": 469,
-													"width": 24.11181640625,
+													"width": 25.578125,
 													"height": 13,
 													"text": "loop"
 												},
@@ -56504,7 +56436,7 @@
 																	"font": "Arial;13;0",
 																	"left": 124,
 																	"top": 502,
-																	"width": 158.10107421875,
+																	"width": 174.14794921875,
 																	"height": 13,
 																	"text": "[for each asteroid in asteroids]"
 																}
@@ -56678,9 +56610,9 @@
 														"$ref": "AAAAAAF4A7oaoa2j/4M="
 													},
 													"font": "Arial;13;0",
-													"left": 551,
+													"left": 524,
 													"top": 544,
-													"width": 110.20166015625,
+													"width": 164.75341796875,
 													"height": 13,
 													"alpha": 0.13992465112265184,
 													"distance": 71.7007670809734,
@@ -56688,7 +56620,7 @@
 														"$ref": "AAAAAAF4A7oaoa2kBdw="
 													},
 													"edgePosition": 1,
-													"text": "6 : AddNeigbour()"
+													"text": "6 : AddNeigbour(a: Asteroid)"
 												},
 												{
 													"_type": "EdgeLabelView",
@@ -57396,7 +57328,7 @@
 														"$ref": "AAAAAAF4A8g3fM9egIE="
 													},
 													"font": "Arial;13;0",
-													"left": 80.72998046875,
+													"left": 78.55908203125,
 													"top": 10,
 													"width": 58.40185546875,
 													"height": 13,
@@ -57411,7 +57343,7 @@
 													"font": "Arial;13;1",
 													"left": 61,
 													"top": 10,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -58973,7 +58905,7 @@
 														"$ref": "AAAAAAF4B/wgwxcIeOo="
 													},
 													"font": "Arial;13;0",
-													"left": 80.72998046875,
+													"left": 78.55908203125,
 													"top": 13,
 													"width": 70.67822265625,
 													"height": 13,
@@ -58988,7 +58920,7 @@
 													"font": "Arial;13;1",
 													"left": 61,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -60695,9 +60627,9 @@
 														"$ref": "AAAAAAF4DYaIEup6sI0="
 													},
 													"font": "Arial;13;0",
-													"left": 104.72998046875,
+													"left": 102.55908203125,
 													"top": 29,
-													"width": 53.01904296875,
+													"width": 48.65185546875,
 													"height": 13,
 													"text": "CanCraft"
 												},
@@ -60710,7 +60642,7 @@
 													"font": "Arial;13;1",
 													"left": 85,
 													"top": 29,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -61557,9 +61489,9 @@
 														"$ref": "AAAAAAF4DYzgzf8hX2k="
 													},
 													"font": "Arial;13;0",
-													"left": 219.578125,
+													"left": 218.11181640625,
 													"top": 389,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -61572,7 +61504,7 @@
 													"font": "Arial;13;1",
 													"left": 189,
 													"top": 389,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -61605,7 +61537,7 @@
 																	"font": "Arial;13;0",
 																	"left": 204,
 																	"top": 422,
-																	"width": 130.76806640625,
+																	"width": 122.00830078125,
 																	"height": 13,
 																	"text": "[for each item in items]"
 																}
@@ -61659,9 +61591,9 @@
 														"$ref": "AAAAAAF4DY6PJ/9YdRw="
 													},
 													"font": "Arial;13;0",
-													"left": 163.578125,
+													"left": 162.11181640625,
 													"top": 317,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -61674,7 +61606,7 @@
 													"font": "Arial;13;1",
 													"left": 133,
 													"top": 317,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -61707,7 +61639,7 @@
 																	"font": "Arial;13;0",
 																	"left": 148,
 																	"top": 350,
-																	"width": 106.22802734375,
+																	"width": 101.07373046875,
 																	"height": 13,
 																	"text": "[for each i in input]"
 																}
@@ -62885,9 +62817,9 @@
 														"$ref": "AAAAAAF4DZ493xHsgfc="
 													},
 													"font": "Arial;13;0",
-													"left": 215.9599609375,
+													"left": 212.3291015625,
 													"top": 517,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -62900,7 +62832,7 @@
 													"font": "Arial;13;1",
 													"left": 189,
 													"top": 517,
-													"width": 21.9599609375,
+													"width": 18.3291015625,
 													"height": 13,
 													"text": "seq"
 												},
@@ -62933,7 +62865,7 @@
 																	"font": "Arial;13;0",
 																	"left": 204,
 																	"top": 550,
-																	"width": 146.67529296875,
+																	"width": 134.98291015625,
 																	"height": 13,
 																	"text": "[for each aItem in aItems]"
 																}
@@ -62987,9 +62919,9 @@
 														"$ref": "AAAAAAF4DaAn4hIT1lk="
 													},
 													"font": "Arial;13;0",
-													"left": 197.07177734375,
+													"left": 195.61181640625,
 													"top": 661,
-													"width": 48.68994140625,
+													"width": 45.763671875,
 													"height": 13,
 													"text": "interrupt"
 												},
@@ -63002,7 +62934,7 @@
 													"font": "Arial;13;1",
 													"left": 173,
 													"top": 661,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -63035,7 +62967,7 @@
 																	"font": "Arial;13;0",
 																	"left": 188,
 																	"top": 694,
-																	"width": 211.70703125,
+																	"width": 197.0947265625,
 																	"height": 13,
 																	"text": "[if cant find item that Satisfies recipe]"
 																}
