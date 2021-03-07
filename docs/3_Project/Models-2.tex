@@ -8,29 +8,14 @@
 	\def\filePath[#1]{./../../#1}
 }{}
 
+
 \makeatother
 
 \chapter{Analízis modell kidolgozása 2.}
 
-\section{Objektum katalógus}
-
-\comment{Minden, a feladatban szereplő objektum rövid, egy-két bekezdés hosszú ismertetése. Meg kell jelenjen minden objektumhoz, hogy mi a felelőssége. Informális leírás, ezért nem kell foglalkozni az örökléssel, az interfészekkel, az absztrakt osztályokkal, a segédosztályokkal.}
-
-\subsection{Objektum1}
-\comment{Felelősség informális leírása}
-
-\subsection{Objektum2}
-\comment{Felelősség informális leírása}
-
-\comment{Az objektumkatalógus alapján kiindulva kell megalkotni az objektumorientált analízis modellt. A 3.2, 3.3, 3.4, 3.5 alfejezetek ugyanannak a modellnek a különböző nézetei, ezért egyidőben, egymással összefüggésben készülnek.Megtörténik az objektumkatalógusbantárgyalt objektumok felelősségének formalizálásaosztályokká,attribútumokká, metódusokká. Csak publikus metódusok szerepelhetnek. Megjelennek az interfészek, az öröklés, az absztrakt osztályok. Segédosztályokra még nincs szükség.}
-
-\section{Statikus struktúra diagramok}
-\comment{Az előző alfejezet osztályainak kapcsolatait és publikus metódusait bemutató osztálydiagram(ok). Tipikus hibalehetőségek: csillag-topológia, szigetek.}
-
-\diagram{docs/img/BMElogo}{Demó}{3cm}
+\markdownInput[shiftHeadings=1]{\subfix{Object-catalog.md}}
 
 \section{Osztályok leírása}
-\comment{Az előző alfejezetben tárgyalt objektumok felelősségének formalizálása attribútumokká, metódusokká. Csak publikus metódusok szerepelhetnek. Ebben az alfejezetben megjelennek az interfészek, az öröklés, az absztrakt osztályok. Segédosztályokra még mindig nincs szükség. Az osztályok ABC sorrendben kövessék egymást. Interfészek esetén az Interfészek, Attribútumok pontok kimaradnak.}
 
 \input{\filePath[docs/3_Project/out.tex]}
 
