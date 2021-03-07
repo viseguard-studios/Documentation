@@ -17196,7 +17196,7 @@
 											"font": "Arial;13;0",
 											"left": 221.78271484375,
 											"top": 301,
-											"width": 95.40869140625,
+											"width": 94.107421875,
 											"height": 13,
 											"text": "AsteroidVisibility"
 										},
@@ -18200,7 +18200,7 @@
 											"font": "Arial;13;0",
 											"left": 373.78271484375,
 											"top": 429,
-											"width": 107.2216796875,
+											"width": 97.75732421875,
 											"height": 13,
 											"text": "Asteroid Near Sun"
 										},
@@ -19402,7 +19402,7 @@
 											"font": "Arial;13;0",
 											"left": 221.78271484375,
 											"top": 305,
-											"width": 86.97900390625,
+											"width": 83.3291015625,
 											"height": 13,
 											"text": "RobotActivities"
 										},
@@ -20409,7 +20409,7 @@
 											"font": "Arial;13;0",
 											"left": 449.78271484375,
 											"top": 397,
-											"width": 92.05712890625,
+											"width": 82.23095703125,
 											"height": 13,
 											"text": "Spaceship Hide"
 										},
@@ -20592,7 +20592,7 @@
 										"$ref": "AAAAAAF36nNnZmKH31Q="
 									},
 									"name": "Near Sun Asteroid",
-									"documentation": "HI docs!!",
+									"documentation": "Egy aszteroidának jelezzük a kör végén, hogy napközelben van.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -20613,7 +20613,7 @@
 													"font": "Arial;13;0",
 													"left": 126.55908203125,
 													"top": 13,
-													"width": 107.2216796875,
+													"width": 97.75732421875,
 													"height": 13,
 													"text": "Near Sun Asteroid"
 												},
@@ -20902,9 +20902,9 @@
 														"$ref": "AAAAAAF36nRIt2Mg/zI="
 													},
 													"font": "Arial;13;0",
-													"left": 157.07177734375,
+													"left": 155.61181640625,
 													"top": 125,
-													"width": 116.62255859375,
+													"width": 103.53369140625,
 													"height": 13,
 													"text": "Check Sun distance"
 												},
@@ -20917,7 +20917,7 @@
 													"font": "Arial;13;1",
 													"left": 133,
 													"top": 125,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -20950,7 +20950,7 @@
 																	"font": "Arial;13;0",
 																	"left": 148,
 																	"top": 158,
-																	"width": 67.92626953125,
+																	"width": 63.52734375,
 																	"height": 13,
 																	"text": "[if near sun]"
 																}
@@ -21456,6 +21456,7 @@
 									]
 								}
 							],
+							"documentation": "Egy aszteroidának jelezzük a kör végén, hogy napközelben van.",
 							"messages": [
 								{
 									"_type": "UMLMessage",
@@ -21600,6 +21601,7 @@
 										"$ref": "AAAAAAF36nkvD2QZ1GQ="
 									},
 									"name": "Explosive resource near sun",
+									"documentation": "Ha napközelben van az aszteroida átfúrt kéreggel, akkor a radioaktív nyersanyag reagálni fog, az aszteroida felrobban.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -21620,7 +21622,7 @@
 													"font": "Arial;13;0",
 													"left": 102.55908203125,
 													"top": 13,
-													"width": 165.02978515625,
+													"width": 147.19921875,
 													"height": 13,
 													"text": "Explosive resource near sun"
 												},
@@ -22483,6 +22485,7 @@
 										"$ref": "AAAAAAF4B3LekjR2dAE="
 									},
 									"name": "Teleport gate destroyed",
+									"documentation": "Ha felrobban az aszteroida amin a teleportkapu van, akkor az értesíti a párját is a robbanásról, így mindkettő megsemmisül.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -22503,7 +22506,7 @@
 													"font": "Arial;13;0",
 													"left": 118.55908203125,
 													"top": 13,
-													"width": 136.865234375,
+													"width": 122.81787109375,
 													"height": 13,
 													"text": "Teleport gate destroyed"
 												},
@@ -23622,6 +23625,7 @@
 										"$ref": "AAAAAAF4B8bzXUlTqds="
 									},
 									"name": "Asteroid explosion",
+									"documentation": "Ha felrobban az aszteroida, akkor értesítjük az összes épületet és űrjárművet a robbanásról.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -23642,7 +23646,7 @@
 													"font": "Arial;13;0",
 													"left": 134.55908203125,
 													"top": 13,
-													"width": 107.22802734375,
+													"width": 99.57275390625,
 													"height": 13,
 													"text": "Asteroid explosion"
 												},
@@ -24163,9 +24167,9 @@
 														"$ref": "AAAAAAF4B8iWOkoVgCs="
 													},
 													"font": "Arial;13;0",
-													"left": 163.578125,
+													"left": 162.11181640625,
 													"top": 133,
-													"width": 94.93896484375,
+													"width": 84.40185546875,
 													"height": 13,
 													"text": "Explode vessels"
 												},
@@ -24178,7 +24182,7 @@
 													"font": "Arial;13;1",
 													"left": 133,
 													"top": 133,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -24211,7 +24215,7 @@
 																	"font": "Arial;13;0",
 																	"left": 148,
 																	"top": 166,
-																	"width": 164.759765625,
+																	"width": 149.44287109375,
 																	"height": 13,
 																	"text": "[for each vessel in stationed]"
 																}
@@ -24488,9 +24492,9 @@
 														"$ref": "AAAAAAF4B8mRKVRa3IE="
 													},
 													"font": "Arial;13;0",
-													"left": 163.578125,
+													"left": 162.11181640625,
 													"top": 285,
-													"width": 102.9052734375,
+													"width": 95.96728515625,
 													"height": 13,
 													"text": "Explode buildings"
 												},
@@ -24503,7 +24507,7 @@
 													"font": "Arial;13;1",
 													"left": 133,
 													"top": 285,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -24536,7 +24540,7 @@
 																	"font": "Arial;13;0",
 																	"left": 148,
 																	"top": 318,
-																	"width": 171.27880859375,
+																	"width": 162.46826171875,
 																	"height": 13,
 																	"text": "[for each building in buildings]"
 																}
@@ -25133,6 +25137,7 @@
 										"$ref": "AAAAAAF4B8y6TGIfKCA="
 									},
 									"name": "Ice melting",
+									"documentation": "Ha napközelben van az aszteroida átfúrt kéreggel, akkor a szublimáló nyersanyag reagálni fog és körönként csökken a mennyisége.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -25153,7 +25158,7 @@
 													"font": "Arial;13;0",
 													"left": 102.55908203125,
 													"top": 10,
-													"width": 63.86083984375,
+													"width": 59.83642578125,
 													"height": 13,
 													"text": "Ice melting"
 												},
@@ -25922,6 +25927,7 @@
 										"$ref": "AAAAAAF36n7zK2pwCIE="
 									},
 									"name": "Vessel arrive",
+									"documentation": "Amikor az úrjűrmű megérkezik egy aszteroidára, akkor az felfedi a szomszédos aszteroidákat is, ha nem lettek volna már felfedve.",
 									"ownedViews": [
 										{
 											"_type": "UMLCombinedFragmentView",
@@ -27546,6 +27552,7 @@
 										"$ref": "AAAAAAF36n7zLGqxtxU="
 									},
 									"name": "Vessel drill",
+									"documentation": "Csak akkor tudunk mélyíteni a kérgen, ha nem robbant fel már az aszteroida és ha nem fúrtunk már át a lérgen.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -27566,7 +27573,7 @@
 													"font": "Arial;13;0",
 													"left": 158.55908203125,
 													"top": 13,
-													"width": 63.13720703125,
+													"width": 59.1318359375,
 													"height": 13,
 													"text": "Vessel drill"
 												},
@@ -28184,9 +28191,9 @@
 														"$ref": "AAAAAAF36n7zLWrkRN4="
 													},
 													"font": "Arial;13;0",
-													"left": 477.07177734375,
+													"left": 475.61181640625,
 													"top": 213,
-													"width": 40.72998046875,
+													"width": 42.16455078125,
 													"height": 13,
 													"text": "Drilling"
 												},
@@ -28199,7 +28206,7 @@
 													"font": "Arial;13;1",
 													"left": 453,
 													"top": 213,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -28232,7 +28239,7 @@
 																	"font": "Arial;13;0",
 																	"left": 468,
 																	"top": 246,
-																	"width": 106.208984375,
+																	"width": 97.8427734375,
 																	"height": 13,
 																	"text": "[crustSize is not 0]"
 																}
@@ -28286,9 +28293,9 @@
 														"$ref": "AAAAAAF36n7zLWrqIGY="
 													},
 													"font": "Arial;13;0",
-													"left": 421.07177734375,
+													"left": 419.61181640625,
 													"top": 141,
-													"width": 47.97900390625,
+													"width": 44.32275390625,
 													"height": 13,
 													"text": "Explode"
 												},
@@ -28301,7 +28308,7 @@
 													"font": "Arial;13;1",
 													"left": 397,
 													"top": 141,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -28334,7 +28341,7 @@
 																	"font": "Arial;13;0",
 																	"left": 412,
 																	"top": 174,
-																	"width": 94.67529296875,
+																	"width": 88.0927734375,
 																	"height": 13,
 																	"text": "[is not exploded]"
 																}
@@ -28807,6 +28814,7 @@
 										"$ref": "AAAAAAF36n7zLWr8Xnw="
 									},
 									"name": "Vessel hide",
+									"documentation": "Egy űrjármű elbújik. A telepesek helyet foglalnak az aszteroidában, amikor elbújnak, ezért csak korlátozott számú telepes bújhat el.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -28827,7 +28835,7 @@
 													"font": "Arial;13;0",
 													"left": 94.55908203125,
 													"top": 13,
-													"width": 67.49169921875,
+													"width": 59.84912109375,
 													"height": 13,
 													"text": "Vessel hide"
 												},
@@ -29112,9 +29120,9 @@
 														"$ref": "AAAAAAF36n7zLWsbRbM="
 													},
 													"font": "Arial;13;0",
-													"left": 157.07177734375,
+													"left": 155.61181640625,
 													"top": 149,
-													"width": 40.01904296875,
+													"width": 39.28271484375,
 													"height": 13,
 													"text": "Motion"
 												},
@@ -29127,7 +29135,7 @@
 													"font": "Arial;13;1",
 													"left": 133,
 													"top": 149,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -29160,7 +29168,7 @@
 																	"font": "Arial;13;0",
 																	"left": 148,
 																	"top": 182,
-																	"width": 105.49169921875,
+																	"width": 98.56005859375,
 																	"height": 13,
 																	"text": "[isHidden  is false]"
 																}
@@ -29771,9 +29779,9 @@
 														"$ref": "AAAAAAF36n7zLmtYiQ4="
 													},
 													"font": "Arial;13;0",
-													"left": 365.07177734375,
+													"left": 363.61181640625,
 													"top": 197,
-													"width": 47.97900390625,
+													"width": 44.32275390625,
 													"height": 13,
 													"text": "Explode"
 												},
@@ -29786,7 +29794,7 @@
 													"font": "Arial;13;1",
 													"left": 341,
 													"top": 197,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -29819,7 +29827,7 @@
 																	"font": "Arial;13;0",
 																	"left": 356,
 																	"top": 230,
-																	"width": 183.54248046875,
+																	"width": 172.92919921875,
 																	"height": 13,
 																	"text": "[is not exploded && core empty]"
 																}
@@ -30712,6 +30720,7 @@
 										"$ref": "AAAAAAF36n7zLmuCCo4="
 									},
 									"name": "Vessel exitHiding",
+									"documentation": "Egy űrjármű kijön a rejtekhelyéről.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -30732,7 +30741,7 @@
 													"font": "Arial;13;0",
 													"left": 190.55908203125,
 													"top": 29,
-													"width": 99.998046875,
+													"width": 93.07275390625,
 													"height": 13,
 													"text": "Vessel exitHiding"
 												},
@@ -31017,9 +31026,9 @@
 														"$ref": "AAAAAAF36n7zLmuh86E="
 													},
 													"font": "Arial;13;0",
-													"left": 245.07177734375,
+													"left": 243.61181640625,
 													"top": 157,
-													"width": 40.01904296875,
+													"width": 39.28271484375,
 													"height": 13,
 													"text": "Motion"
 												},
@@ -31032,7 +31041,7 @@
 													"font": "Arial;13;1",
 													"left": 221,
 													"top": 157,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -31065,7 +31074,7 @@
 																	"font": "Arial;13;0",
 																	"left": 236,
 																	"top": 190,
-																	"width": 100.4326171875,
+																	"width": 94.23095703125,
 																	"height": 13,
 																	"text": "[isHidden  is true]"
 																}
@@ -31818,9 +31827,9 @@
 														"$ref": "AAAAAAF4A/FGJRKK704="
 													},
 													"font": "Arial;13;0",
-													"left": 461.07177734375,
+													"left": 459.61181640625,
 													"top": 245,
-													"width": 79.76171875,
+													"width": 70.67822265625,
 													"height": 13,
 													"text": "Check Vessel"
 												},
@@ -31833,7 +31842,7 @@
 													"font": "Arial;13;1",
 													"left": 437,
 													"top": 245,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -31866,7 +31875,7 @@
 																	"font": "Arial;13;0",
 																	"left": 452,
 																	"top": 278,
-																	"width": 109.12890625,
+																	"width": 102.76220703125,
 																	"height": 13,
 																	"text": "[v == hidingVessel]"
 																}
@@ -32103,6 +32112,7 @@
 										"$ref": "AAAAAAF36n7zL2vc7A8="
 									},
 									"name": "SpaceShip mine succeed",
+									"documentation": "A telepesek csak akkor tudnak bányászni a nyersanyagból, ha átfúrták a kérget, illetve, ha van mit.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -33310,9 +33320,9 @@
 														"$ref": "AAAAAAF37ae/df4TgR4="
 													},
 													"font": "Arial;13;0",
-													"left": 181.07177734375,
+													"left": 179.61181640625,
 													"top": 125,
-													"width": 92.04443359375,
+													"width": 85.10009765625,
 													"height": 13,
 													"text": "Inventory check"
 												},
@@ -33325,7 +33335,7 @@
 													"font": "Arial;13;1",
 													"left": 157,
 													"top": 125,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -33358,7 +33368,7 @@
 																	"font": "Arial;13;0",
 																	"left": 172,
 																	"top": 158,
-																	"width": 114.88623046875,
+																	"width": 111.56640625,
 																	"height": 13,
 																	"text": "[inventory is not full]"
 																}
@@ -33412,9 +33422,9 @@
 														"$ref": "AAAAAAF37aj4l/5CmNM="
 													},
 													"font": "Arial;13;0",
-													"left": 429.07177734375,
+													"left": 427.61181640625,
 													"top": 221,
-													"width": 94.93896484375,
+													"width": 87.28369140625,
 													"height": 13,
 													"text": "Explosion check"
 												},
@@ -33427,7 +33437,7 @@
 													"font": "Arial;13;1",
 													"left": 405,
 													"top": 221,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -33460,7 +33470,7 @@
 																	"font": "Arial;13;0",
 																	"left": 420,
 																	"top": 254,
-																	"width": 270.98779296875,
+																	"width": 257.28955078125,
 																	"height": 13,
 																	"text": "[not exploded && not empty && crustSize == 0]"
 																}
@@ -34012,6 +34022,7 @@
 										"$ref": "AAAAAAF36n7zMGxXOuQ="
 									},
 									"name": "SpaceShip mine fail",
+									"documentation": "Ha nincs nem kinyert nyersanyag az aszteroidában, akkor nem lehet nyersanyagot kibányászni belőle.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -34032,7 +34043,7 @@
 													"font": "Arial;13;0",
 													"left": 190.55908203125,
 													"top": 13,
-													"width": 115.89892578125,
+													"width": 105.6982421875,
 													"height": 13,
 													"text": "SpaceShip mine fail"
 												},
@@ -34639,9 +34650,9 @@
 														"$ref": "AAAAAAF36n7zMWyFVl8="
 													},
 													"font": "Arial;13;0",
-													"left": 453.07177734375,
+													"left": 451.61181640625,
 													"top": 165,
-													"width": 39.29541015625,
+													"width": 39.28271484375,
 													"height": 13,
 													"text": "Mining"
 												},
@@ -34654,7 +34665,7 @@
 													"font": "Arial;13;1",
 													"left": 429,
 													"top": 165,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -34687,7 +34698,7 @@
 																	"font": "Arial;13;0",
 																	"left": 444,
 																	"top": 198,
-																	"width": 55.62451171875,
+																	"width": 53.07275390625,
 																	"height": 13,
 																	"text": "[is empty]"
 																}
@@ -35014,6 +35025,7 @@
 										"$ref": "AAAAAAF4A4rfYgMHC+o="
 									},
 									"name": "Vessel move",
+									"documentation": "Egy űrjármű mozogni szeretne. Ezt csak akkor tudja megtenni, ha a célpont szomszdédos, illetve ha nincs elbújva a jármű.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -35034,7 +35046,7 @@
 													"font": "Arial;13;0",
 													"left": 134.55908203125,
 													"top": 13,
-													"width": 74.70263671875,
+													"width": 66.34912109375,
 													"height": 13,
 													"text": "Vessel move"
 												},
@@ -35651,9 +35663,9 @@
 														"$ref": "AAAAAAF4A4rfZANGdBE="
 													},
 													"font": "Arial;13;0",
-													"left": 157.07177734375,
+													"left": 155.61181640625,
 													"top": 125,
-													"width": 57.3671875,
+													"width": 52.98095703125,
 													"height": 13,
 													"text": "Moveable"
 												},
@@ -35666,7 +35678,7 @@
 													"font": "Arial;13;1",
 													"left": 133,
 													"top": 125,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -35699,7 +35711,7 @@
 																	"font": "Arial;13;0",
 																	"left": 148,
 																	"top": 158,
-																	"width": 105.49169921875,
+																	"width": 98.56005859375,
 																	"height": 13,
 																	"text": "[isHidden is false ]"
 																}
@@ -35753,9 +35765,9 @@
 														"$ref": "AAAAAAF4A4rfZANMw7o="
 													},
 													"font": "Arial;13;0",
-													"left": 173.07177734375,
+													"left": 171.61181640625,
 													"top": 429,
-													"width": 96.39892578125,
+													"width": 87.27099609375,
 													"height": 13,
 													"text": "neighbour check"
 												},
@@ -35768,7 +35780,7 @@
 													"font": "Arial;13;1",
 													"left": 149,
 													"top": 429,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -35801,7 +35813,7 @@
 																	"font": "Arial;13;0",
 																	"left": 164,
 																	"top": 462,
-																	"width": 109.84619140625,
+																	"width": 100.71826171875,
 																	"height": 13,
 																	"text": "[if neigbours has a]"
 																}
@@ -35855,9 +35867,9 @@
 														"$ref": "AAAAAAF4A4rfZQNZXo0="
 													},
 													"font": "Arial;13;0",
-													"left": 371.578125,
+													"left": 370.11181640625,
 													"top": 189,
-													"width": 188.916015625,
+													"width": 173.9482421875,
 													"height": 13,
 													"text": "get building provided neighbours"
 												},
@@ -35870,7 +35882,7 @@
 													"font": "Arial;13;1",
 													"left": 341,
 													"top": 189,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -35903,7 +35915,7 @@
 																	"font": "Arial;13;0",
 																	"left": 356,
 																	"top": 222,
-																	"width": 174.890625,
+																	"width": 165.71826171875,
 																	"height": 13,
 																	"text": "[for each  building in buildings]"
 																}
@@ -37556,6 +37568,7 @@
 										"$ref": "AAAAAAF37bBiu/7V5qQ="
 									},
 									"name": "SunStorm",
+									"documentation": "...",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -37576,7 +37589,7 @@
 													"font": "Arial;13;0",
 													"left": 150.55908203125,
 													"top": 13,
-													"width": 58.8017578125,
+													"width": 53.0126953125,
 													"height": 13,
 													"text": "SunStorm"
 												},
@@ -37739,9 +37752,9 @@
 														"$ref": "AAAAAAF37bUUfAWwdWM="
 													},
 													"font": "Arial;13;0",
-													"left": 205.07177734375,
+													"left": 203.61181640625,
 													"top": 365,
-													"width": 46.5380859375,
+													"width": 42.15185546875,
 													"height": 13,
 													"text": "explode"
 												},
@@ -37754,7 +37767,7 @@
 													"font": "Arial;13;1",
 													"left": 181,
 													"top": 365,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -37787,7 +37800,7 @@
 																	"font": "Arial;13;0",
 																	"left": 196,
 																	"top": 398,
-																	"width": 78.05712890625,
+																	"width": 75.0927734375,
 																	"height": 13,
 																	"text": "[if not hidden]"
 																}
@@ -38756,9 +38769,9 @@
 														"$ref": "AAAAAAF4B9h6uaUc6Gw="
 													},
 													"font": "Arial;13;0",
-													"left": 173.07177734375,
+													"left": 171.61181640625,
 													"top": 301,
-													"width": 45.79541015625,
+													"width": 43.94189453125,
 													"height": 13,
 													"text": "If active"
 												},
@@ -38771,7 +38784,7 @@
 													"font": "Arial;13;1",
 													"left": 149,
 													"top": 301,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -38804,7 +38817,7 @@
 																	"font": "Arial;13;0",
 																	"left": 164,
 																	"top": 334,
-																	"width": 41.18359375,
+																	"width": 39.69189453125,
 																	"height": 13,
 																	"text": "[active]"
 																}
@@ -39255,6 +39268,7 @@
 										"$ref": "AAAAAAF37bJc9wBVNgc="
 									},
 									"name": "CraftAnything",
+									"documentation": "A telepes szeretne létrehozni valamit a kibányászott nyerssanyagokkal.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -39275,7 +39289,7 @@
 													"font": "Arial;13;0",
 													"left": 110.55908203125,
 													"top": 13,
-													"width": 79.76171875,
+													"width": 76.82275390625,
 													"height": 13,
 													"text": "CraftAnything"
 												},
@@ -39802,9 +39816,9 @@
 														"$ref": "AAAAAAF37bho3j8KPJc="
 													},
 													"font": "Arial;13;0",
-													"left": 141.07177734375,
+													"left": 139.61181640625,
 													"top": 213,
-													"width": 58.80810546875,
+													"width": 54.802734375,
 													"height": 13,
 													"text": "if possible"
 												},
@@ -39817,7 +39831,7 @@
 													"font": "Arial;13;1",
 													"left": 117,
 													"top": 213,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -39850,7 +39864,7 @@
 																	"font": "Arial;13;0",
 																	"left": 132,
 																	"top": 246,
-																	"width": 65.03173828125,
+																	"width": 62.4609375,
 																	"height": 13,
 																	"text": "[if possible]"
 																}
@@ -40803,6 +40817,7 @@
 										"$ref": "AAAAAAF37brN9T9Yr9I="
 									},
 									"name": "Craft teleport gate",
+									"documentation": "Hogyan jön létre egy új teleportkapu-pár.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -40823,7 +40838,7 @@
 													"font": "Arial;13;0",
 													"left": 78.55908203125,
 													"top": 13,
-													"width": 105.05712890625,
+													"width": 95.5673828125,
 													"height": 13,
 													"text": "Craft teleport gate"
 												},
@@ -41944,6 +41959,7 @@
 										"$ref": "AAAAAAF37bzlbUCEYjk="
 									},
 									"name": "CraftStation",
+									"documentation": "Ha a telepesek megcsinálnak egy bázist, akkor megnyerik a játékot.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -41964,7 +41980,7 @@
 													"font": "Arial;13;0",
 													"left": 110.55908203125,
 													"top": 13,
-													"width": 69.6435546875,
+													"width": 64.54638671875,
 													"height": 13,
 													"text": "CraftStation"
 												},
@@ -44627,6 +44643,7 @@
 										"$ref": "AAAAAAF4AqQPLr2AHgQ="
 									},
 									"name": "Craft robot",
+									"documentation": "A robot létrehozása azonnal lehelyezi a robotot.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -44647,7 +44664,7 @@
 													"font": "Arial;13;0",
 													"left": 238.55908203125,
 													"top": 13,
-													"width": 62.41357421875,
+													"width": 58.40185546875,
 													"height": 13,
 													"text": "Craft robot"
 												},
@@ -46029,6 +46046,7 @@
 										"$ref": "AAAAAAF4B+XqXOU9gBw="
 									},
 									"name": "Craft general",
+									"documentation": "A recept levonja a nyersanyagokat, ha el tudjuk készíteni a tárgyat.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -49493,6 +49511,7 @@
 										"$ref": "AAAAAAF4AoRwgGcCTic="
 									},
 									"name": "Place item",
+									"documentation": "Lehelyezünk egy tárgyat az átfúrt kérgű, üreges aszteroidába.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -49513,7 +49532,7 @@
 													"font": "Arial;13;0",
 													"left": 142.55908203125,
 													"top": 13,
-													"width": 61.68994140625,
+													"width": 55.50732421875,
 													"height": 13,
 													"text": "Place item"
 												},
@@ -51062,9 +51081,9 @@
 														"$ref": "AAAAAAF4B7XhJzQIckA="
 													},
 													"font": "Arial;13;0",
-													"left": 365.07177734375,
+													"left": 363.61181640625,
 													"top": 173,
-													"width": 60.2490234375,
+													"width": 54.07275390625,
 													"height": 13,
 													"text": "Can insert"
 												},
@@ -51077,7 +51096,7 @@
 													"font": "Arial;13;1",
 													"left": 341,
 													"top": 173,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -51110,7 +51129,7 @@
 																	"font": "Arial;13;0",
 																	"left": 356,
 																	"top": 206,
-																	"width": 150.287109375,
+																	"width": 143.1904296875,
 																	"height": 13,
 																	"text": "[crustSize == 0 && empty]"
 																}
@@ -51164,9 +51183,9 @@
 														"$ref": "AAAAAAF4B7fwNz+gqvM="
 													},
 													"font": "Arial;13;0",
-													"left": 157.07177734375,
+													"left": 155.61181640625,
 													"top": 389,
-													"width": 110.0908203125,
+													"width": 97.7509765625,
 													"height": 13,
 													"text": "Remove if success"
 												},
@@ -51179,7 +51198,7 @@
 													"font": "Arial;13;1",
 													"left": 133,
 													"top": 389,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -51212,7 +51231,7 @@
 																	"font": "Arial;13;0",
 																	"left": 148,
 																	"top": 422,
-																	"width": 98.99169921875,
+																	"width": 89.01953125,
 																	"height": 13,
 																	"text": "[success == true]"
 																}
@@ -51878,6 +51897,7 @@
 										"$ref": "AAAAAAF4A5SfB3q7EOk="
 									},
 									"name": "Game initialization",
+									"documentation": "A játék indítása hogyan megy végbe.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -51896,9 +51916,9 @@
 														"$ref": "AAAAAAF4A5SfB3q9/0k="
 													},
 													"font": "Arial;13;0",
-													"left": 158.97900390625,
+													"left": 154.58642578125,
 													"top": 13,
-													"width": 107.21533203125,
+													"width": 100.99462890625,
 													"height": 13,
 													"text": "Game initialization"
 												},
@@ -51911,7 +51931,7 @@
 													"font": "Arial;13;1",
 													"left": 93,
 													"top": 13,
-													"width": 60.97900390625,
+													"width": 56.58642578125,
 													"height": 13,
 													"text": "interaction"
 												}
@@ -52989,9 +53009,9 @@
 														"$ref": "AAAAAAF4A6ugtaQ9v1A="
 													},
 													"font": "Arial;13;0",
-													"left": 131.578125,
+													"left": 130.11181640625,
 													"top": 197,
-													"width": 68.208984375,
+													"width": 60.56005859375,
 													"height": 13,
 													"text": "add players"
 												},
@@ -53004,7 +53024,7 @@
 													"font": "Arial;13;1",
 													"left": 101,
 													"top": 197,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -53037,7 +53057,7 @@
 																	"font": "Arial;13;0",
 																	"left": 116,
 																	"top": 230,
-																	"width": 93.21533203125,
+																	"width": 86.607421875,
 																	"height": 13,
 																	"text": "[for each player]"
 																}
@@ -53647,6 +53667,7 @@
 										"$ref": "AAAAAAF4A5yVjoKlLkw="
 									},
 									"name": "Generate world",
+									"documentation": "A játék indításának az a része, ahol létrejönnek az aszteroidák, és ahol lehelyezzük a telepeseket.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -53665,9 +53686,9 @@
 														"$ref": "AAAAAAF4A5yVjoKn32o="
 													},
 													"font": "Arial;13;0",
-													"left": 142.97900390625,
+													"left": 138.58642578125,
 													"top": 5,
-													"width": 89.8798828125,
+													"width": 81.48828125,
 													"height": 13,
 													"text": "Generate world"
 												},
@@ -53680,7 +53701,7 @@
 													"font": "Arial;13;1",
 													"left": 77,
 													"top": 5,
-													"width": 60.97900390625,
+													"width": 56.58642578125,
 													"height": 13,
 													"text": "interaction"
 												}
@@ -54199,9 +54220,9 @@
 														"$ref": "AAAAAAF4A6ZXEJqjfUk="
 													},
 													"font": "Arial;13;0",
-													"left": 123.578125,
+													"left": 122.11181640625,
 													"top": 269,
-													"width": 44.34814453125,
+													"width": 39.27001953125,
 													"height": 13,
 													"text": "Players"
 												},
@@ -54214,7 +54235,7 @@
 													"font": "Arial;13;1",
 													"left": 93,
 													"top": 269,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -54247,7 +54268,7 @@
 																	"font": "Arial;13;0",
 																	"left": 108,
 																	"top": 302,
-																	"width": 152.46435546875,
+																	"width": 140.75927734375,
 																	"height": 13,
 																	"text": "[for each player in players]"
 																}
@@ -54301,9 +54322,9 @@
 														"$ref": "AAAAAAF4A6Z4t5q6k2c="
 													},
 													"font": "Arial;13;0",
-													"left": 139.578125,
+													"left": 138.11181640625,
 													"top": 333,
-													"width": 45.07177734375,
+													"width": 39.99365234375,
 													"height": 13,
 													"text": "Settlers"
 												},
@@ -54316,7 +54337,7 @@
 													"font": "Arial;13;1",
 													"left": 109,
 													"top": 333,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -54349,7 +54370,7 @@
 																	"font": "Arial;13;0",
 																	"left": 124,
 																	"top": 366,
-																	"width": 96.82080078125,
+																	"width": 90.9619140625,
 																	"height": 13,
 																	"text": "[for settler count]"
 																}
@@ -55418,6 +55439,7 @@
 										"$ref": "AAAAAAF4A7LvjKh+XZE="
 									},
 									"name": "Generate asteroids",
+									"documentation": "Az aszteroidák létrehozásának folyamata. Itt telítjük meg őket nyersanyaggal (ha nem üregesek) és itt jön lére a szomszédság is.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -55436,9 +55458,9 @@
 														"$ref": "AAAAAAF4A7LvjaiAnW4="
 													},
 													"font": "Arial;13;0",
-													"left": 150.97900390625,
+													"left": 146.58642578125,
 													"top": 10,
-													"width": 111.5634765625,
+													"width": 97.3701171875,
 													"height": 13,
 													"text": "Generate asteroids"
 												},
@@ -55451,7 +55473,7 @@
 													"font": "Arial;13;1",
 													"left": 85,
 													"top": 10,
-													"width": 60.97900390625,
+													"width": 56.58642578125,
 													"height": 13,
 													"text": "interaction"
 												}
@@ -55727,9 +55749,9 @@
 														"$ref": "AAAAAAF4A7QDOaj9Mfo="
 													},
 													"font": "Arial;13;0",
-													"left": 139.578125,
+													"left": 138.11181640625,
 													"top": 157,
-													"width": 89.8798828125,
+													"width": 78.61279296875,
 													"height": 13,
 													"text": "Place asteroids"
 												},
@@ -55742,7 +55764,7 @@
 													"font": "Arial;13;1",
 													"left": 109,
 													"top": 157,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -55775,7 +55797,7 @@
 																	"font": "Arial;13;0",
 																	"left": 124,
 																	"top": 190,
-																	"width": 104.05712890625,
+																	"width": 95.2783203125,
 																	"height": 13,
 																	"text": "[for each asteroid]"
 																}
@@ -56508,9 +56530,9 @@
 														"$ref": "AAAAAAF4A7dUEKovx10="
 													},
 													"font": "Arial;13;0",
-													"left": 139.578125,
+													"left": 138.11181640625,
 													"top": 469,
-													"width": 110.12890625,
+													"width": 98.8427734375,
 													"height": 13,
 													"text": "Connect neigbours"
 												},
@@ -56523,7 +56545,7 @@
 													"font": "Arial;13;1",
 													"left": 109,
 													"top": 469,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -56556,7 +56578,7 @@
 																	"font": "Arial;13;0",
 																	"left": 124,
 																	"top": 502,
-																	"width": 174.14794921875,
+																	"width": 158.10107421875,
 																	"height": 13,
 																	"text": "[for each asteroid in asteroids]"
 																}
@@ -57430,6 +57452,7 @@
 										"$ref": "AAAAAAF4A8g3fM9cF78="
 									},
 									"name": "Game Play",
+									"documentation": "A játék lefutásának felső szintje.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -57450,7 +57473,7 @@
 													"font": "Arial;13;0",
 													"left": 78.55908203125,
 													"top": 10,
-													"width": 65.3017578125,
+													"width": 58.40185546875,
 													"height": 13,
 													"text": "Game Play"
 												},
@@ -57739,9 +57762,9 @@
 														"$ref": "AAAAAAF4A8jXVtAEO+o="
 													},
 													"font": "Arial;13;0",
-													"left": 99.578125,
+													"left": 98.11181640625,
 													"top": 133,
-													"width": 147.70068359375,
+													"width": 132.41552734375,
 													"height": 13,
 													"text": "Run while the game ends"
 												},
@@ -57754,7 +57777,7 @@
 													"font": "Arial;13;1",
 													"left": 69,
 													"top": 133,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -57787,7 +57810,7 @@
 																	"font": "Arial;13;0",
 																	"left": 84,
 																	"top": 166,
-																	"width": 147.42431640625,
+																	"width": 135.0146484375,
 																	"height": 13,
 																	"text": "[while game is not ended]"
 																}
@@ -57841,9 +57864,9 @@
 														"$ref": "AAAAAAF4A8lYPdAhmNQ="
 													},
 													"font": "Arial;13;0",
-													"left": 115.578125,
+													"left": 114.11181640625,
 													"top": 205,
-													"width": 130.34619140625,
+													"width": 116.86376953125,
 													"height": 13,
 													"text": "Each player takes turn"
 												},
@@ -57856,7 +57879,7 @@
 													"font": "Arial;13;1",
 													"left": 85,
 													"top": 205,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -57889,7 +57912,7 @@
 																	"font": "Arial;13;0",
 																	"left": 100,
 																	"top": 238,
-																	"width": 152.46435546875,
+																	"width": 140.75927734375,
 																	"height": 13,
 																	"text": "[for each player in players]"
 																}
@@ -58998,7 +59021,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF4B/wgwhcFePQ="
 							},
-							"name": "Interaction1",
+							"name": "Remove Item",
 							"ownedElements": [
 								{
 									"_type": "UMLSequenceDiagram",
@@ -59006,7 +59029,8 @@
 									"_parent": {
 										"$ref": "AAAAAAF4B/wgwhcGur0="
 									},
-									"name": "Remove item",
+									"name": "Remove Item",
+									"documentation": "Az adott tárgyhelyből eltűnik egy vagy több egységnyi egy tárgyból.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -59027,7 +59051,7 @@
 													"font": "Arial;13;0",
 													"left": 78.55908203125,
 													"top": 13,
-													"width": 77.578125,
+													"width": 70.67822265625,
 													"height": 13,
 													"text": "Remove item"
 												},
@@ -59429,9 +59453,9 @@
 														"$ref": "AAAAAAF4B/z3gxepXN0="
 													},
 													"font": "Arial;13;0",
-													"left": 123.578125,
+													"left": 122.11181640625,
 													"top": 133,
-													"width": 54.4599609375,
+													"width": 51.197265625,
 													"height": 13,
 													"text": "Find item"
 												},
@@ -59444,7 +59468,7 @@
 													"font": "Arial;13;1",
 													"left": 93,
 													"top": 133,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -59477,7 +59501,7 @@
 																	"font": "Arial;13;0",
 																	"left": 108,
 																	"top": 166,
-																	"width": 109.09716796875,
+																	"width": 102.5146484375,
 																	"height": 13,
 																	"text": "[for each i in items]"
 																}
@@ -59870,9 +59894,9 @@
 														"$ref": "AAAAAAF4B/9Q6hgcjnw="
 													},
 													"font": "Arial;13;0",
-													"left": 120.72998046875,
+													"left": 119.99365234375,
 													"top": 277,
-													"width": 123.1162109375,
+													"width": 111.4873046875,
 													"height": 13,
 													"text": "CombinedFragment1"
 												},
@@ -59885,7 +59909,7 @@
 													"font": "Arial;13;1",
 													"left": 101,
 													"top": 277,
-													"width": 14.72998046875,
+													"width": 13.99365234375,
 													"height": 13,
 													"text": "alt"
 												},
@@ -59918,7 +59942,7 @@
 																	"font": "Arial;13;0",
 																	"left": 116,
 																	"top": 310,
-																	"width": 143.431640625,
+																	"width": 133.6943359375,
 																	"height": 13,
 																	"text": "[i.amount > item.amount]"
 																}
@@ -59951,7 +59975,7 @@
 																	"font": "Arial;13;0",
 																	"left": 116,
 																	"top": 432,
-																	"width": 151.0234375,
+																	"width": 141.02587890625,
 																	"height": 13,
 																	"text": "[i.amount == item.amount]"
 																}
@@ -60720,7 +60744,7 @@
 							"_parent": {
 								"$ref": "AAAAAAF4DYaIEup3VZ8="
 							},
-							"name": "Interaction1",
+							"name": "Can Craft",
 							"ownedElements": [
 								{
 									"_type": "UMLSequenceDiagram",
@@ -60834,7 +60858,7 @@
 															"left": 578,
 															"width": 106.20263671875,
 															"height": 13,
-															"text": "(from Interaction1)"
+															"text": "(from Can Craft)"
 														},
 														{
 															"_type": "LabelView",
@@ -60965,7 +60989,7 @@
 															"left": 120,
 															"width": 106.20263671875,
 															"height": 13,
-															"text": "(from Interaction1)"
+															"text": "(from Can Craft)"
 														},
 														{
 															"_type": "LabelView",
@@ -61081,7 +61105,7 @@
 															"left": 346,
 															"width": 106.20263671875,
 															"height": 13,
-															"text": "(from Interaction1)"
+															"text": "(from Can Craft)"
 														},
 														{
 															"_type": "LabelView",
@@ -61531,7 +61555,7 @@
 															"left": 100,
 															"width": 106.20263671875,
 															"height": 13,
-															"text": "(from Interaction1)"
+															"text": "(from Can Craft)"
 														},
 														{
 															"_type": "LabelView",
@@ -62520,7 +62544,7 @@
 															"left": 90,
 															"width": 106.20263671875,
 															"height": 13,
-															"text": "(from Interaction1)"
+															"text": "(from Can Craft)"
 														},
 														{
 															"_type": "LabelView",
@@ -62636,7 +62660,7 @@
 															"left": 140,
 															"width": 106.20263671875,
 															"height": 13,
-															"text": "(from Interaction1)"
+															"text": "(from Can Craft)"
 														},
 														{
 															"_type": "LabelView",
