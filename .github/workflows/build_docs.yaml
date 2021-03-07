@@ -31,6 +31,13 @@ jobs:
           chmod +x ./.bin/UMLTemplater/UMLTemplater
           ./.bin/UMLTemplater/UMLTemplater --input ./DesignModel.mdj --output ./docs/2_Project/out.tex
 
+
+    - name: Generate diagram includes
+      run: |
+          chmod +x ./.bin/UMLTemplater/UMLTemplater
+          ./.bin/UMLTemplater/UMLTemplater svg ./docs/3_Project/svg ./DesignModel.mdj ./docs/3_Project/diagrams.tex
+
+
     - name: Compile Main docs
       uses: jheubuch/latex-action@2.2.1
       with:
@@ -49,7 +56,14 @@ jobs:
       with:
         working_directory: ./docs/2_Project
         root_file: Models.tex
-        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape        
+        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape  
+
+    - name: Compile 3. milestone
+      uses: jheubuch/latex-action@2.2.1
+      with:
+        working_directory: ./docs/3_Project
+        root_file: Models-2.tex
+        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape     
 
     - uses: actions/upload-artifact@v2
       with:
