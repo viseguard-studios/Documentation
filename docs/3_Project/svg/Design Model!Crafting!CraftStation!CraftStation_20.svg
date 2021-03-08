@@ -6,21 +6,21 @@
       <path fill="none" stroke="#000000" d="M 88 8 L 1456 8 L 1456 560 L 88 560 L 88 8" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-14,2) scale(1,1)">
-      <path fill="#ffffff" stroke="none" d="M 88 8 L 88 30 L 232.62255859375 30 L 243.62255859375 19 L 243.62255859375 8 L 88 8" />
+      <path fill="#ffffff" stroke="none" d="M 88 8 L 88 30 L 186.37353515625 30 L 197.37353515625 19 L 197.37353515625 8 L 88 8" />
     </g>
     <g transform="translate(-14,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 88 8 L 88 30 L 232.62255859375 30 L 243.62255859375 19 L 243.62255859375 8 L 88 8 L 88 8" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 88 8 L 88 30 L 186.37353515625 30 L 197.37353515625 19 L 197.37353515625 8 L 88 8 L 88 8" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-14,2) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="158.97900390625" y="25.5">CraftStation</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="112.72998046875" y="25.5">CraftStation</text>
       </g>
     </g>
     <g transform="translate(-14,2) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="93" y="25.5">interaction</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="93" y="25.5">sd</text>
       </g>
     </g>
     <g transform="translate(-14,2) scale(1,1)">
@@ -82,24 +82,6 @@
     </g>
     <g transform="translate(-14,2) scale(1,1)">
       <path fill="#000000" stroke="none" d="M 45 519.5 C 45 515.6340064 48.1340064 512.5 52 512.5 C 55.8659936 512.5 59 515.6340064 59 519.5 C 59 523.3659936 55.8659936 526.5 52 526.5 C 48.1340064 526.5 45 523.3659936 45 519.5 Z" />
-    </g>
-    <g transform="translate(-14,2) scale(1,1)">
-      <path fill="#ffffff" stroke="none" d="M 584 56 L 685 56 L 695 66 L 695 118 L 584 118 L 584 56" />
-    </g>
-    <g transform="translate(-14,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 584 56 L 685 56 L 695 66 L 695 118 L 584 118 L 584 56 L 584 56" stroke-miterlimit="10" />
-    </g>
-    <g transform="translate(-14,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 685 56 L 685 66 L 695 66 L 685 56" stroke-miterlimit="10" />
-    </g>
-    <g transform="translate(-14,2) scale(1,1)">
-      <g>
-        <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="589" y="74">Self message</text>
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="589" y="87">represents the</text>
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="589" y="100">constructors</text>
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="589" y="113">actions</text>
-      </g>
     </g>
     <g transform="translate(-14,2) scale(1,1)">
       <rect fill="#C0C0C0" stroke="none" x="943" y="47" width="117.97900390625" height="39" opacity="0.2" />
@@ -195,25 +177,25 @@
       </g>
     </g>
     <g transform="translate(-14,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 608 164 L 638 164 L 638 184 L 614 184" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 608 168 L 638 168 L 638 188 L 614 188" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-14,2) scale(1,1)">
-      <path fill="#000000" stroke="none" d="M 624.1626748576241 179.790482243984 L 614 184 L 624.1626748576241 188.209517756016" />
+      <path fill="#000000" stroke="none" d="M 624.1626748576241 183.790482243984 L 614 188 L 624.1626748576241 192.209517756016" />
     </g>
     <g transform="translate(-14,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 624.1626748576241 179.790482243984 L 614 184 L 624.1626748576241 188.209517756016 L 624.1626748576241 179.790482243984" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 624.1626748576241 183.790482243984 L 614 188 L 624.1626748576241 192.209517756016 L 624.1626748576241 183.790482243984" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-14,2) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="643.489501953125" y="180.5">3 : </text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="646.5" y="180.5">3 : SpaceStation(a: Asteroid)</text>
       </g>
     </g>
     <g transform="translate(-14,2) scale(1,1)">
-      <rect fill="#ffffff" stroke="none" x="601" y="184" width="13" height="320" />
+      <rect fill="#ffffff" stroke="none" x="601" y="188" width="13" height="316" />
     </g>
     <g transform="translate(-14,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 601 184 L 614 184 L 614 504 L 601 504 L 601 184 Z Z" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 601 188 L 614 188 L 614 504 L 601 504 L 601 188 Z Z" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-14,2) scale(1,1)">
       <path fill="none" stroke="#000000" d="M 614 224 L 812 224" stroke-miterlimit="10" />

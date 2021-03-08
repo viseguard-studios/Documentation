@@ -1,26 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="708" height="308">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="452" height="308">
   <defs />
   <g>
     <g transform="translate(-54,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 96 8 L 752 8 L 752 288 L 96 288 L 96 8" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 88 8 L 496 8 L 496 288 L 88 288 L 88 8" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-54,2) scale(1,1)">
-      <path fill="#ffffff" stroke="none" d="M 96 8 L 96 30 L 307.84423828125 30 L 318.84423828125 19 L 318.84423828125 8 L 96 8" />
+      <path fill="#ffffff" stroke="none" d="M 88 8 L 88 30 L 253.59521484375 30 L 264.59521484375 19 L 264.59521484375 8 L 88 8" />
     </g>
     <g transform="translate(-54,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 96 8 L 96 30 L 307.84423828125 30 L 318.84423828125 19 L 318.84423828125 8 L 96 8 L 96 8" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 88 8 L 88 30 L 253.59521484375 30 L 264.59521484375 19 L 264.59521484375 8 L 88 8 L 88 8" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-54,2) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="166.97900390625" y="25.5">Teleport gate destroyed</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="112.72998046875" y="25.5">Teleport gate destroyed</text>
       </g>
     </g>
     <g transform="translate(-54,2) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="101" y="25.5">interaction</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="93" y="25.5">sd</text>
       </g>
     </g>
     <g transform="translate(-54,2) scale(1,1)">
@@ -63,43 +63,7 @@
       <path fill="#000000" stroke="none" d="M 64 109.5 C 64 105.6340064 67.1340064 102.5 71 102.5 C 74.8659936 102.5 78 105.6340064 78 109.5 C 78 113.3659936 74.8659936 116.5 71 116.5 C 67.1340064 116.5 64 113.3659936 64 109.5 Z" />
     </g>
     <g transform="translate(-54,2) scale(1,1)">
-      <rect fill="#C0C0C0" stroke="none" x="535" y="47" width="86.90087890625" height="39" opacity="0.2" />
-    </g>
-    <g transform="translate(-54,2) scale(1,1)">
-      <rect fill="#ffffff" stroke="none" x="528" y="40" width="86.90087890625" height="39" />
-    </g>
-    <g transform="translate(-54,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 528 40 L 614.90087890625 40 L 614.90087890625 79 L 528 79 L 528 40 Z Z" stroke-miterlimit="10" />
-    </g>
-    <g transform="translate(-54,2) scale(1,1)">
-      <g>
-        <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="540.378662109375" y="59.5">a: Asteroid</text>
-      </g>
-    </g>
-    <g transform="translate(-54,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 572.5 80 L 572.5 288" stroke-miterlimit="10" stroke-dasharray="3" />
-    </g>
-    <g transform="translate(-54,2) scale(1,1)">
       <path fill="#000000" stroke="none" d="M 64 263.5 C 64 259.6340064 67.1340064 256.5 71 256.5 C 74.8659936 256.5 78 259.6340064 78 263.5 C 78 267.3659936 74.8659936 270.5 71 270.5 C 67.1340064 270.5 64 267.3659936 64 263.5 Z" />
-    </g>
-    <g transform="translate(-54,2) scale(1,1)">
-      <rect fill="#C0C0C0" stroke="none" x="639" y="47" width="94.130859375" height="39" opacity="0.2" />
-    </g>
-    <g transform="translate(-54,2) scale(1,1)">
-      <rect fill="#ffffff" stroke="none" x="632" y="40" width="94.130859375" height="39" />
-    </g>
-    <g transform="translate(-54,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 632 40 L 726.130859375 40 L 726.130859375 79 L 632 79 L 632 40 Z Z" stroke-miterlimit="10" />
-    </g>
-    <g transform="translate(-54,2) scale(1,1)">
-      <g>
-        <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="644.378662109375" y="59.5">a2: Asteroid</text>
-      </g>
-    </g>
-    <g transform="translate(-54,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 680.5 80 L 680.5 296" stroke-miterlimit="10" stroke-dasharray="3" />
     </g>
     <g transform="translate(-54,2) scale(1,1)">
       <path fill="none" stroke="#000000" d="M 78 110 L 224 110" stroke-miterlimit="10" />

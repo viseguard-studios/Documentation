@@ -43,6 +43,8 @@ A szekvenciadiagramokon a kötelező elemeken túl néhány helyen attribútumok
 \subsection{Craft Anything}
 A diagramon a receptért felelős osztály, a Recipe egy absztrakt ősosztályt jelöl. Az osztály nem példányosítható, viszont a Craft() függvént a leszármazottak ne írják felül, csak a recept típusa, illetve a hozzávalói változnak. Emiatt egy közös szekvenciadiagramon jelöltük ennek a műküdését.
 
+\subsection{Can craft szekvenvia}
+A diagramon két kilépési pontot is jelöltünk. Ennek az oka, hogy a program lefutása során az igazzal és hamissal való visszatérés során szinte ugyanazokat a lépéseket hajtjuk végre. Annyi különbséggel, hogy ha bármelyik loop során nem talál elég item-et a felépítéshez, kilép és hamissal tér vissza, viszont ha az összes loop-on sikeresen végigmegy ilyen visszatérés nélkül, igazzal fog visszatérni. Emiatt nem hoztunk létre két különböző diagramot, a működés a két esetben szinte teljesen ugyanaz lenne.
 
 \section{Napló}
 

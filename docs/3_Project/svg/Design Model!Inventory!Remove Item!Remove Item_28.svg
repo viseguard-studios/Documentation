@@ -6,21 +6,21 @@
       <path fill="none" stroke="#000000" d="M 56 8 L 838 8 L 838 602 L 56 602 L 56 8" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-15,2) scale(1,1)">
-      <path fill="#ffffff" stroke="none" d="M 56 8 L 56 30 L 209.28076171875 30 L 220.28076171875 19 L 220.28076171875 8 L 56 8" />
+      <path fill="#ffffff" stroke="none" d="M 56 8 L 56 30 L 163.03173828125 30 L 174.03173828125 19 L 174.03173828125 8 L 56 8" />
     </g>
     <g transform="translate(-15,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 56 8 L 56 30 L 209.28076171875 30 L 220.28076171875 19 L 220.28076171875 8 L 56 8 L 56 8" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 56 8 L 56 30 L 163.03173828125 30 L 174.03173828125 19 L 174.03173828125 8 L 56 8 L 56 8" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-15,2) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="126.97900390625" y="25.5">Remove Item</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="80.72998046875" y="25.5">Remove Item</text>
       </g>
     </g>
     <g transform="translate(-15,2) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="61" y="25.5">interaction</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="61" y="25.5">sd</text>
       </g>
     </g>
     <g transform="translate(-15,2) scale(1,1)">
@@ -46,6 +46,9 @@
     </g>
     <g transform="translate(-15,2) scale(1,1)">
       <rect fill="#C0C0C0" stroke="none" x="417" y="47" width="106.4072265625" height="39" opacity="0.2" />
+    </g>
+    <g transform="translate(-15,2) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 415 45 L 521.4072265625 45 L 521.4072265625 84 L 415 84 L 415 45 Z Z" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-15,2) scale(1,1)">
       <rect fill="#ffffff" stroke="none" x="410" y="40" width="106.4072265625" height="39" />
@@ -234,15 +237,15 @@
       <path fill="none" stroke="#000000" d="M 96 272 L 743 272 L 743 543 L 96 543 L 96 272" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-15,2) scale(1,1)">
-      <path fill="#ffffff" stroke="none" d="M 96 272 L 96 294 L 247.84619140625 294 L 258.84619140625 283 L 258.84619140625 272 L 96 272" />
+      <path fill="#ffffff" stroke="none" d="M 96 272 L 96 294 L 208.103515625 294 L 219.103515625 283 L 219.103515625 272 L 96 272" />
     </g>
     <g transform="translate(-15,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 96 272 L 96 294 L 247.84619140625 294 L 258.84619140625 283 L 258.84619140625 272 L 96 272 L 96 272" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 96 272 L 96 294 L 208.103515625 294 L 219.103515625 283 L 219.103515625 272 L 96 272 L 96 272" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-15,2) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="120.72998046875" y="289.5">CombinedFragment1</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="120.72998046875" y="289.5">Amount check</text>
       </g>
     </g>
     <g transform="translate(-15,2) scale(1,1)">

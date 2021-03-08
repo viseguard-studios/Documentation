@@ -6,21 +6,21 @@
       <path fill="none" stroke="#000000" d="M 80 24 L 1360 24 L 1360 880 L 80 880 L 80 24" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
-      <path fill="#ffffff" stroke="none" d="M 80 24 L 80 46 L 207.998046875 46 L 218.998046875 35 L 218.998046875 24 L 80 24" />
+      <path fill="#ffffff" stroke="none" d="M 80 24 L 80 46 L 161.7490234375 46 L 172.7490234375 35 L 172.7490234375 24 L 80 24" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 80 24 L 80 46 L 207.998046875 46 L 218.998046875 35 L 218.998046875 24 L 80 24 L 80 24" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 80 24 L 80 46 L 161.7490234375 46 L 172.7490234375 35 L 172.7490234375 24 L 80 24 L 80 24" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="150.97900390625" y="41.5">CanCraft</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="104.72998046875" y="41.5">CanCraft</text>
       </g>
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="85" y="41.5">interaction</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="85" y="41.5">sd</text>
       </g>
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
@@ -84,6 +84,9 @@
       <rect fill="#C0C0C0" stroke="none" x="735" y="47" width="106.4072265625" height="39" opacity="0.2" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 733 45 L 839.4072265625 45 L 839.4072265625 84 L 733 84 L 733 45 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-22,-14) scale(1,1)">
       <rect fill="#ffffff" stroke="none" x="728" y="40" width="106.4072265625" height="39" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
@@ -120,6 +123,9 @@
       <rect fill="#C0C0C0" stroke="none" x="1239" y="47" width="106.4072265625" height="39" opacity="0.2" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
+      <path fill="none" stroke="#000000" d="M 1237 45 L 1343.4072265625 45 L 1343.4072265625 84 L 1237 84 L 1237 45 Z Z" stroke-miterlimit="10" />
+    </g>
+    <g transform="translate(-22,-14) scale(1,1)">
       <rect fill="#ffffff" stroke="none" x="1232" y="40" width="106.4072265625" height="39" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
@@ -138,7 +144,7 @@
       <path fill="#000000" stroke="none" d="M 37 735.5 C 37 731.6340064 40.1340064 728.5 44 728.5 C 47.8659936 728.5 51 731.6340064 51 735.5 C 51 739.3659936 47.8659936 742.5 44 742.5 C 40.1340064 742.5 37 739.3659936 37 735.5 Z" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
-      <path fill="#000000" stroke="none" d="M 47 847.5 C 47 843.6340064 50.1340064 840.5 54 840.5 C 57.8659936 840.5 61 843.6340064 61 847.5 C 61 851.3659936 57.8659936 854.5 54 854.5 C 50.1340064 854.5 47 851.3659936 47 847.5 Z" />
+      <path fill="#000000" stroke="none" d="M 40 847.5 C 40 843.6340064 43.1340064 840.5 47 840.5 C 50.8659936 840.5 54 843.6340064 54 847.5 C 54 851.3659936 50.8659936 854.5 47 854.5 C 43.1340064 854.5 40 851.3659936 40 847.5 Z" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
       <path fill="none" stroke="#000000" d="M 46 112 L 415 112" stroke-miterlimit="10" />
@@ -339,15 +345,15 @@
       </g>
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 415 848 L 61 848" stroke-miterlimit="10" stroke-dasharray="3" />
+      <path fill="none" stroke="#000000" d="M 415 848 L 54 848" stroke-miterlimit="10" stroke-dasharray="3" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 71.16267485762415 843.790482243984 L 61 848 L 71.16267485762415 852.209517756016" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 64.16267485762415 843.790482243984 L 54 848 L 64.16267485762415 852.209517756016" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="189.5" y="864.5">13 : result = true</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="185.5" y="864.5">13 : result = true</text>
       </g>
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
@@ -381,15 +387,15 @@
       <path fill="none" stroke="#000000" d="M 128 312 L 1344 312 L 1344 816 L 128 816 L 128 312" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
-      <path fill="#ffffff" stroke="none" d="M 128 312 L 128 334 L 193.15625 334 L 204.15625 323 L 204.15625 312 L 128 312" />
+      <path fill="#ffffff" stroke="none" d="M 128 312 L 128 334 L 235.0634765625 334 L 246.0634765625 323 L 246.0634765625 312 L 128 312" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 128 312 L 128 334 L 193.15625 334 L 204.15625 323 L 204.15625 312 L 128 312 L 128 312" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 128 312 L 128 334 L 235.0634765625 334 L 246.0634765625 323 L 246.0634765625 312 L 128 312 L 128 312" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="163.578125" y="329.5">loop</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="163.578125" y="329.5">Input check</text>
       </g>
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
@@ -408,21 +414,21 @@
       <path fill="none" stroke="#000000" d="M 184 512 L 1327 512 L 1327 655 L 184 655 L 184 512" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
-      <path fill="#ffffff" stroke="none" d="M 184 512 L 184 534 L 245.5380859375 534 L 256.5380859375 523 L 256.5380859375 512 L 184 512" />
+      <path fill="#ffffff" stroke="none" d="M 184 512 L 184 534 L 249.15625 534 L 260.15625 523 L 260.15625 512 L 184 512" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 184 512 L 184 534 L 245.5380859375 534 L 256.5380859375 523 L 256.5380859375 512 L 184 512 L 184 512" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 184 512 L 184 534 L 249.15625 534 L 260.15625 523 L 260.15625 512 L 184 512 L 184 512" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="215.9599609375" y="529.5">loop</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="219.578125" y="529.5">loop</text>
       </g>
     </g>
     <g transform="translate(-22,-14) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="189" y="529.5">seq</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="189" y="529.5">loop</text>
       </g>
     </g>
     <g transform="translate(-22,-14) scale(1,1)">

@@ -6,21 +6,21 @@
       <path fill="none" stroke="#000000" d="M 80 5 L 512 5 L 512 272 L 80 272 L 80 5" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-30,5) scale(1,1)">
-      <path fill="#ffffff" stroke="none" d="M 80 5 L 80 27 L 218.83984375 27 L 229.83984375 16 L 229.83984375 5 L 80 5" />
+      <path fill="#ffffff" stroke="none" d="M 80 5 L 80 27 L 172.5908203125 27 L 183.5908203125 16 L 183.5908203125 5 L 80 5" />
     </g>
     <g transform="translate(-30,5) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 80 5 L 80 27 L 218.83984375 27 L 229.83984375 16 L 229.83984375 5 L 80 5 L 80 5" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 80 5 L 80 27 L 172.5908203125 27 L 183.5908203125 16 L 183.5908203125 5 L 80 5 L 80 5" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-30,5) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="150.97900390625" y="22.5">Ice melting</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="104.72998046875" y="22.5">Ice melting</text>
       </g>
     </g>
     <g transform="translate(-30,5) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="85" y="22.5">interaction</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="85" y="22.5">sd</text>
       </g>
     </g>
     <g transform="translate(-30,5) scale(1,1)">

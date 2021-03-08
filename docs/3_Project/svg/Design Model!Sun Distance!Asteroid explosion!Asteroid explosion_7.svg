@@ -6,21 +6,21 @@
       <path fill="none" stroke="#000000" d="M 112 8 L 806 8 L 806 488 L 112 488 L 112 8" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-46,2) scale(1,1)">
-      <path fill="#ffffff" stroke="none" d="M 112 8 L 112 30 L 294.20703125 30 L 305.20703125 19 L 305.20703125 8 L 112 8" />
+      <path fill="#ffffff" stroke="none" d="M 112 8 L 112 30 L 247.9580078125 30 L 258.9580078125 19 L 258.9580078125 8 L 112 8" />
     </g>
     <g transform="translate(-46,2) scale(1,1)">
-      <path fill="none" stroke="#000000" d="M 112 8 L 112 30 L 294.20703125 30 L 305.20703125 19 L 305.20703125 8 L 112 8 L 112 8" stroke-miterlimit="10" />
+      <path fill="none" stroke="#000000" d="M 112 8 L 112 30 L 247.9580078125 30 L 258.9580078125 19 L 258.9580078125 8 L 112 8 L 112 8" stroke-miterlimit="10" />
     </g>
     <g transform="translate(-46,2) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="182.97900390625" y="25.5">Asteroid explosion</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="normal" text-decoration="none" x="136.72998046875" y="25.5">Asteroid explosion</text>
       </g>
     </g>
     <g transform="translate(-46,2) scale(1,1)">
       <g>
         <path fill="none" stroke="none" />
-        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="117" y="25.5">interaction</text>
+        <text fill="#000000" stroke="none" font-family="Arial" font-size="13px" font-style="normal" font-weight="bold" text-decoration="none" x="117" y="25.5">sd</text>
       </g>
     </g>
     <g transform="translate(-46,2) scale(1,1)">
