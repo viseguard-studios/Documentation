@@ -130,7 +130,7 @@ $\emptyset$
 $\emptyset$
 \end{class-template-baseclass}
 \begin{class-template-attribute}
-\classitem{Not definedscene:Scene[1]}{A játéktér tárolója. }
+\classitem{#scene:Scene[1]}{A játéktér tárolója. }
 \end{class-template-attribute}
 \begin{class-template-method}
 \classitem{+RoundEnd()}{Akkor hívódik meg, ha az adott körben már minden játékos lépett. A robotok ezt használják például a mozgásra.}
@@ -302,7 +302,7 @@ $\emptyset$
 \end{class-template-baseclass}
 \begin{class-template-attribute}
 \classitem{-name:string}{A játékos neve.}
-\classitem{-searching\_for:Resource[1]}{}
+\classitem{-searching\_for:Resource[1]}{Az itt szereplő nyersanyagfajta után kutatnak a játékos robotjai.}
 \end{class-template-attribute}
 \begin{class-template-method}
 \item[] $\emptyset$
@@ -325,7 +325,7 @@ $\emptyset$
 \begin{class-template-method}
 \classitem{+CanCraft(inv:Inventory, a:Asteroid):bool}{Meghatározza, hogy egy adott raktárban és aszteroidán lévő kibányászott nyersanyagkészlet elegendő-e az adott recept elkészítéséhez. }
 \classitem{+Craft(inv:Inventory, a:Asteroid)}{Akkor hívódik meg ha ténylegesen le akarjuk gyártani ezt a receptet.}
-\classitem{Not definedMakeResult(inv:Inventory, a:Asteroid)}{Létrehozza a kívánt terméket a receptből.}
+\classitem{#MakeResult(inv:Inventory, a:Asteroid)}{Létrehozza a kívánt terméket a receptből.}
 \end{class-template-method}
 
 
@@ -397,7 +397,7 @@ $\emptyset$
 $\emptyset$
 \end{class-template-baseclass}
 \begin{class-template-attribute}
-\classitem{Not definedentities:Entity[1..*]}{A játékban szereplő összes entitás tárolója. }
+\classitem{#entities:Entity[1..*]}{A játékban szereplő összes entitás tárolója. }
 \classitem{-manager:GameManager}{Az aktuális játékmenet. }
 \end{class-template-attribute}
 \begin{class-template-method}
@@ -626,7 +626,7 @@ Entity
 \classitem{+Explode()}{Felrobban  a jármű (egy aszteroida robbanásának hatására). }
 \classitem{+ExitHiding()}{A jármű kibújik az aszteroida magjából, ha el volt bújva benne. Ha nem, nem történik művelet. }
 \classitem{+AsteroidExploded()}{A jelenlegi aszeroida ezen keresztül szól a telep/robot-nak, hogy felrobbant.}
-\classitem{+SolarFlare()}{}
+\classitem{+SolarFlare()}{Örökölt függvény. Napvihar esetén hívódik meg.}
 \end{class-template-method}
 
 

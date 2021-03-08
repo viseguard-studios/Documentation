@@ -19,7 +19,7 @@ Előfordulhat természetes formában, vagy kinyerve. Eszközöket és épületek
 Az az objektum, ami tárolja a már kinyert nyersanyagokat és egyéb tárgyakat. Minden telepesnek és üreges aszteroidának van. Egy raktárba kerülhetnek tárgyak, és onnan más raktárakba is áthelyezhetők. Készítéskor innen kerülnek levonásra a nyersanyagok.
 
 ## Robot:
-Egy a játékos által nem közvetlenül irányítható egység. Magától kutatja fel az aszteroidákat, és vizsgálja meg a tartalmukat a kéreg átfúrásával. Túlélik a robbanást, a napvihar elől el kell bújniuk. Egy aszeteroidában bárhány robot el tud bújni. Egy telepes üzenetet küldhet a játékos összes robotjának, hogy szüneteljék munkájukat, vagy folytassák a kutatás és jelezzenek, ha találtak egy adott nyersanyagot. Elkészítésükhöz kell egy egység vas, egy egység vízjég és egy egység urán.
+Egy a játékos által nem közvetlenül irányítható egység. Magától kutatja fel az aszteroidákat, és vizsgálja meg a tartalmukat a kéreg átfúrásával. Túlélik a robbanást, a napvihar elől el kell bújniuk. Egy aszeteroidában bárhány robot el tud bújni. Egy telepes üzenetet küldhet a játékos összes robotjának, hogy jelezzenek, ha találtak egy adott nyersanyagot. Elkészítésükhöz kell egy egység vas, egy egység vízjég és egy egység urán.
 
 ## Telepes:
 Egy játékos által irányítható entitás, egyben a játékos legfontosabb birtoka. Utazhat az aszteroidák között, fúrhat, bányászhat, készíthet dolgokat, cipelhet tárgyakat magával és adhat ki parancsokat a robotoknak. A raktárában 10 tárgyat tud vinni. El kell bújjon a napviharok elől, és meghal, ha felrobban az aszteroida, amin van. Ha egy játékos összes telepese meghal, akkor ő veszít.
