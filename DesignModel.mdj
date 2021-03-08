@@ -15864,7 +15864,8 @@
 							"_parent": {
 								"$ref": "AAAAAAF3049rXynEqe4="
 							},
-							"name": "SolarFlare"
+							"name": "SolarFlare",
+							"documentation": "Örökölt függvény. Napvihar esetén hívódik meg."
 						}
 					]
 				},
@@ -16414,6 +16415,7 @@
 									"$ref": "AAAAAAF396ofry+qO/Y="
 								},
 								"name": "searching_for",
+								"documentation": "Az itt szereplő nyersanyagfajta után kutatnak a játékos robotjai.",
 								"reference": {
 									"$ref": "AAAAAAF30OvB8kqghDU="
 								},
@@ -16452,6 +16454,7 @@
 								"$ref": "AAAAAAF36TwS2QH56RA="
 							},
 							"name": "AsteroidVisibility",
+							"documentation": "Az Asteroid osztály állapot-átmeneteinek leírása.",
 							"ownedViews": [
 								{
 									"_type": "UMLPseudostateView",
@@ -17879,6 +17882,7 @@
 								"$ref": "AAAAAAF36XukGRPRHkU="
 							},
 							"name": "Spaceship Hide",
+							"documentation": "A SpaceShip osztály állapot-átmeneteinek leírása.",
 							"ownedViews": [
 								{
 									"_type": "UMLPseudostateView",
@@ -36851,6 +36855,7 @@
 										"$ref": "AAAAAAF4DkrOHjP02L0="
 									},
 									"name": "Vessel solar storm",
+									"documentation": "Napvihar esetén történik a Vessel-el. (Az összes Vessel típusnál azonos viselkedést produkál)",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -36869,9 +36874,9 @@
 														"$ref": "AAAAAAF4DkrOHjP28nk="
 													},
 													"font": "Arial;13;0",
-													"left": 110.55908203125,
+													"left": 112.72998046875,
 													"top": 13,
-													"width": 95.59912109375,
+													"width": 107.20263671875,
 													"height": 13,
 													"text": "Vessel solar storm"
 												},
@@ -36884,7 +36889,7 @@
 													"font": "Arial;13;1",
 													"left": 93,
 													"top": 13,
-													"width": 12.55908203125,
+													"width": 14.72998046875,
 													"height": 13,
 													"text": "sd"
 												}
@@ -37160,9 +37165,9 @@
 														"$ref": "AAAAAAF4Dkv+PzR6UUQ="
 													},
 													"font": "Arial;13;0",
-													"left": 139.61181640625,
+													"left": 141.07177734375,
 													"top": 133,
-													"width": 111.4873046875,
+													"width": 123.1162109375,
 													"height": 13,
 													"text": "CombinedFragment1"
 												},
@@ -37175,7 +37180,7 @@
 													"font": "Arial;13;1",
 													"left": 117,
 													"top": 133,
-													"width": 17.61181640625,
+													"width": 19.07177734375,
 													"height": 13,
 													"text": "opt"
 												},
@@ -37208,7 +37213,7 @@
 																	"font": "Arial;13;0",
 																	"left": 132,
 																	"top": 166,
-																	"width": 136.322265625,
+																	"width": 148.13525390625,
 																	"height": 13,
 																	"text": "[vessel.isHidden == false]"
 																}
@@ -40392,9 +40397,9 @@
 														"$ref": "AAAAAAF37bzlbkCGJx8="
 													},
 													"font": "Arial;13;0",
-													"left": 112.72998046875,
+													"left": 110.55908203125,
 													"top": 13,
-													"width": 69.6435546875,
+													"width": 64.54638671875,
 													"height": 13,
 													"text": "CraftStation"
 												},
@@ -40407,7 +40412,7 @@
 													"font": "Arial;13;1",
 													"left": 93,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -43067,9 +43072,9 @@
 														"$ref": "AAAAAAF4AqQPL72CPqs="
 													},
 													"font": "Arial;13;0",
-													"left": 232.72998046875,
+													"left": 230.55908203125,
 													"top": 5,
-													"width": 62.41357421875,
+													"width": 58.40185546875,
 													"height": 13,
 													"text": "Craft robot"
 												},
@@ -43082,7 +43087,7 @@
 													"font": "Arial;13;1",
 													"left": 213,
 													"top": 5,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -44083,9 +44088,9 @@
 														"$ref": "AAAAAAF4B+XqXOU/cjk="
 													},
 													"font": "Arial;13;0",
-													"left": 88.72998046875,
+													"left": 86.55908203125,
 													"top": 21,
-													"width": 76.14990234375,
+													"width": 69.2119140625,
 													"height": 13,
 													"text": "Craft general"
 												},
@@ -44098,7 +44103,7 @@
 													"font": "Arial;13;1",
 													"left": 69,
 													"top": 21,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -44490,9 +44495,9 @@
 														"$ref": "AAAAAAF4B+dOReXkf5M="
 													},
 													"font": "Arial;13;0",
-													"left": 115.578125,
+													"left": 114.11181640625,
 													"top": 125,
-													"width": 123.1162109375,
+													"width": 111.4873046875,
 													"height": 13,
 													"text": "CombinedFragment1"
 												},
@@ -44505,7 +44510,7 @@
 													"font": "Arial;13;1",
 													"left": 85,
 													"top": 125,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -44538,7 +44543,7 @@
 																	"font": "Arial;13;0",
 																	"left": 100,
 																	"top": 158,
-																	"width": 78.0380859375,
+																	"width": 77.263671875,
 																	"height": 13,
 																	"text": "[for i in input ]"
 																}
@@ -45615,9 +45620,9 @@
 														"$ref": "AAAAAAF4B/cB9RYYVPE="
 													},
 													"font": "Arial;13;0",
-													"left": 109.07177734375,
+													"left": 107.61181640625,
 													"top": 309,
-													"width": 123.1162109375,
+													"width": 111.4873046875,
 													"height": 13,
 													"text": "CombinedFragment2"
 												},
@@ -45630,7 +45635,7 @@
 													"font": "Arial;13;1",
 													"left": 85,
 													"top": 309,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -45663,7 +45668,7 @@
 																	"font": "Arial;13;0",
 																	"left": 100,
 																	"top": 342,
-																	"width": 76.59716796875,
+																	"width": 71.8427734375,
 																	"height": 13,
 																	"text": "[not satisfied]"
 																}
@@ -45949,9 +45954,9 @@
 														"$ref": "AAAAAAF4B/q0tBbU5hQ="
 													},
 													"font": "Arial;13;0",
-													"left": 131.578125,
+													"left": 130.11181640625,
 													"top": 421,
-													"width": 123.1162109375,
+													"width": 111.4873046875,
 													"height": 13,
 													"text": "CombinedFragment3"
 												},
@@ -45964,7 +45969,7 @@
 													"font": "Arial;13;1",
 													"left": 101,
 													"top": 421,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -45997,7 +46002,7 @@
 																	"font": "Arial;13;0",
 																	"left": 116,
 																	"top": 454,
-																	"width": 142.3525390625,
+																	"width": 133.5546875,
 																	"height": 13,
 																	"text": "[for each i2 in remaining]"
 																}
@@ -59215,6 +59220,7 @@
 										"$ref": "AAAAAAF4DYaIEup4bEQ="
 									},
 									"name": "CanCraft",
+									"documentation": "Az adott tárgy előállításának ellenőrzése",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -59233,9 +59239,9 @@
 														"$ref": "AAAAAAF4DYaIEup6sI0="
 													},
 													"font": "Arial;13;0",
-													"left": 104.72998046875,
+													"left": 102.55908203125,
 													"top": 29,
-													"width": 53.01904296875,
+													"width": 48.65185546875,
 													"height": 13,
 													"text": "CanCraft"
 												},
@@ -59248,7 +59254,7 @@
 													"font": "Arial;13;1",
 													"left": 85,
 													"top": 29,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -60095,9 +60101,9 @@
 														"$ref": "AAAAAAF4DYzgzf8hX2k="
 													},
 													"font": "Arial;13;0",
-													"left": 219.578125,
+													"left": 218.11181640625,
 													"top": 389,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -60110,7 +60116,7 @@
 													"font": "Arial;13;1",
 													"left": 189,
 													"top": 389,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -60143,7 +60149,7 @@
 																	"font": "Arial;13;0",
 																	"left": 204,
 																	"top": 422,
-																	"width": 130.76806640625,
+																	"width": 122.00830078125,
 																	"height": 13,
 																	"text": "[for each item in items]"
 																}
@@ -60197,9 +60203,9 @@
 														"$ref": "AAAAAAF4DY6PJ/9YdRw="
 													},
 													"font": "Arial;13;0",
-													"left": 163.578125,
+													"left": 162.11181640625,
 													"top": 317,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -60212,7 +60218,7 @@
 													"font": "Arial;13;1",
 													"left": 133,
 													"top": 317,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -60245,7 +60251,7 @@
 																	"font": "Arial;13;0",
 																	"left": 148,
 																	"top": 350,
-																	"width": 106.22802734375,
+																	"width": 101.07373046875,
 																	"height": 13,
 																	"text": "[for each i in input]"
 																}
@@ -61423,9 +61429,9 @@
 														"$ref": "AAAAAAF4DZ493xHsgfc="
 													},
 													"font": "Arial;13;0",
-													"left": 215.9599609375,
+													"left": 212.3291015625,
 													"top": 517,
-													"width": 25.578125,
+													"width": 24.11181640625,
 													"height": 13,
 													"text": "loop"
 												},
@@ -61438,7 +61444,7 @@
 													"font": "Arial;13;1",
 													"left": 189,
 													"top": 517,
-													"width": 21.9599609375,
+													"width": 18.3291015625,
 													"height": 13,
 													"text": "seq"
 												},
@@ -61471,7 +61477,7 @@
 																	"font": "Arial;13;0",
 																	"left": 204,
 																	"top": 550,
-																	"width": 146.67529296875,
+																	"width": 134.98291015625,
 																	"height": 13,
 																	"text": "[for each aItem in aItems]"
 																}
@@ -61525,9 +61531,9 @@
 														"$ref": "AAAAAAF4DaAn4hIT1lk="
 													},
 													"font": "Arial;13;0",
-													"left": 197.07177734375,
+													"left": 195.61181640625,
 													"top": 661,
-													"width": 48.68994140625,
+													"width": 45.763671875,
 													"height": 13,
 													"text": "interrupt"
 												},
@@ -61540,7 +61546,7 @@
 													"font": "Arial;13;1",
 													"left": 173,
 													"top": 661,
-													"width": 19.07177734375,
+													"width": 17.61181640625,
 													"height": 13,
 													"text": "opt"
 												},
@@ -61573,7 +61579,7 @@
 																	"font": "Arial;13;0",
 																	"left": 188,
 																	"top": 694,
-																	"width": 211.70703125,
+																	"width": 197.0947265625,
 																	"height": 13,
 																	"text": "[if cant find item that Satisfies recipe]"
 																}
@@ -62354,6 +62360,7 @@
 										"$ref": "AAAAAAF4DjjnLskk55A="
 									},
 									"name": "Asteroid explode Robot",
+									"documentation": "A robotok más azteroidára kerülnek, ha az aktuális felrobban.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -64322,6 +64329,7 @@
 										"$ref": "AAAAAAF4DjkqNMwaIVA="
 									},
 									"name": "Asteroid explode SpaceShip",
+									"documentation": "SpaceShip viselkedése, ha az aktuális aszteroida felrobban.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -66021,6 +66029,7 @@
 										"$ref": "AAAAAAF4DpfzC4GDcAw="
 									},
 									"name": "Activate Teleport Gate",
+									"documentation": "A teleportkapu lehelyezése Invetory-ból.",
 									"ownedViews": [
 										{
 											"_type": "UMLFrameView",
@@ -66039,9 +66048,9 @@
 														"$ref": "AAAAAAF4DpfzC4GFVNE="
 													},
 													"font": "Arial;13;0",
-													"left": 120.72998046875,
+													"left": 118.55908203125,
 													"top": 13,
-													"width": 128.89892578125,
+													"width": 119.19970703125,
 													"height": 13,
 													"text": "Activate Teleport Gate"
 												},
@@ -66054,7 +66063,7 @@
 													"font": "Arial;13;1",
 													"left": 101,
 													"top": 13,
-													"width": 14.72998046875,
+													"width": 12.55908203125,
 													"height": 13,
 													"text": "sd"
 												}
@@ -67345,9 +67354,9 @@
 														"$ref": "AAAAAAF4Dp0xEqnK7To="
 													},
 													"font": "Arial;13;0",
-													"left": 128.72998046875,
+													"left": 127.99365234375,
 													"top": 373,
-													"width": 49.4072265625,
+													"width": 44.67822265625,
 													"height": 13,
 													"text": "Has pair"
 												},
@@ -67360,7 +67369,7 @@
 													"font": "Arial;13;1",
 													"left": 109,
 													"top": 373,
-													"width": 14.72998046875,
+													"width": 13.99365234375,
 													"height": 13,
 													"text": "alt"
 												},
@@ -67393,7 +67402,7 @@
 																	"font": "Arial;13;0",
 																	"left": 124,
 																	"top": 406,
-																	"width": 98.28076171875,
+																	"width": 92.6376953125,
 																	"height": 13,
 																	"text": "[lastGate == null]"
 																}
@@ -67426,7 +67435,7 @@
 																	"font": "Arial;13;0",
 																	"left": 124,
 																	"top": 488,
-																	"width": 94.30078125,
+																	"width": 89.63525390625,
 																	"height": 13,
 																	"text": "[lastGate != null]"
 																}
