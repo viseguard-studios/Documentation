@@ -3,7 +3,7 @@
 
 ## 2021.02.27. ; kezdet: 14:15 ; vége: 16:30
 
- - nehezen indul ez a meeting :/
+ - nehezen indul ez a meeting 
  - uml diagram finomítása
  - a naptávolságot a game manager tárolja
  - hogy indul el a játék?
@@ -13,5 +13,5 @@
  - megbeszéljük, hogy ki milyen szekvenciadiagrammot csinál
  - a pálya felfedezése - hogyan?
  - elbújás - hogyan? V2
- - beosztás vége :D
+ - beosztás vége 
  - további megbeszélés a chaten

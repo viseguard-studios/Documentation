@@ -10,14 +10,14 @@
 		-  kijavítottunk pár hibát a diagramokban
 	- diagram ellenőrzése: tárgy lehelyezése
 	- napközeli helyzet ellenőrzése, nyersanyagokra való hatása
-	- Titusz megjön
+	- Tatai Titusz megjön
 	- Userek helyett bogyók a szekvenciadiagramokon
 	- Létrehozása a dolgoknak - hogyan?
 	- Tárgyak kivétele a tárhelyekből
 	- Épületek lehelyezése
 	- Amiket még meg kell csinálni:
-		-  Recipe redraw - Titusz
-		-  Inventory add - Gao
-		-  Inventory try insert - Gao
-		-  Can craft - Titusz
+		-  Recipe redraw - Tatai Titusz
+		-  Inventory add - Gao Tong
+		-  Inventory try insert - Gao Tong
+		-  Can craft - Tatai Titusz
 		-  Teleport kapuk larakása
