@@ -1,0 +1,12 @@
+@startuml
+'autonumber "0:"
+skinparam linestyle ortho
+
+actor Tester as Tester
+rectangle "gm : GameManager" as gm
+
+Tester --> gm: "1 : -> Drill()" "2 : <-- m"
+
+
+
+@enduml

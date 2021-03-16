@@ -1,0 +1,22 @@
+@startuml
+hide footbox
+autonumber "0:"
+title SpaceShip drill when asteroid exploded
+
+actor Tester as Tester
+participant "v : Vessel" as v
+participant "currentAsteroid : Asteroid" as currentAsteroid
+
+Tester -> v : Drill()
+activate v
+
+v -> currentAsteroid : Drill()
+activate currentAsteroid
+
+currentAsteroid --> v 
+deactivate currentAsteroid
+
+v --> Tester
+deactivate v
+
+@enduml
