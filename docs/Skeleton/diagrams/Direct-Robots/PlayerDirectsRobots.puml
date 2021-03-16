@@ -1,0 +1,18 @@
+@startuml
+!include ../style.puml
+skinparam sequenceMessageAlign left
+
+title Player Directs Robots
+caption A játékos utasítást ad ki hogy mit keressenek a robotok
+
+actor Tester as Tester
+
+participant p as "p : Player"
+participant r as "r : Resource"
+
+Tester -> p ++ : SetSearchingForResource(r)
+
+p --> Tester --
+
+
+@enduml
