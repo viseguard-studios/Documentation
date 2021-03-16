@@ -1,0 +1,35 @@
+@startuml
+hide footbox
+title Ship mine from asteroid
+
+
+actor Tester as Tester
+
+
+participant ship as ship <<SpaceShip>>
+
+participant a as a <<Asteroid>>
+
+Tester -> ship : Mine()
+activate ship
+
+ship -> a ++: Mine(ship)
+
+a -> a :
+
+a --> ship: item:Item
+Tester -> ship ++: Move(b)
+
+ship -> a ++: Depart(ship)
+a --> ship
+deactivate a
+
+ship -> b ++ : Arrive(ship)
+
+b --> ship
+deactivate b
+
+ship --> Tester
+deactivate ship
+
+@enduml
