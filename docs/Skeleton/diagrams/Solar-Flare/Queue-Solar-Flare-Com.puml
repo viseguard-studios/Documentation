@@ -5,7 +5,7 @@ skinparam linestyle ortho
 actor Tester as Tester
 rectangle "gm : GameManager" as gm
 
-Tester --> gm: "1 : -> Drill()" "2 : <-- m"
+Tester --> gm: "1 : -> QueueSolarStorm()" "2 : <--"
 
 
 
