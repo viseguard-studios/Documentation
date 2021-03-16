@@ -1,6 +1,8 @@
 @startuml
 hide footbox
 autonumber "0:"
+skinparam sequenceMessageAlign center
+
 title SpaceShip drill when asteroid exploded
 
 actor Tester as Tester
