@@ -1,0 +1,19 @@
+@startuml
+!include ../../style.puml
+
+title Robot faills to drill asteroid
+
+actor Tester as Tester
+
+participant robot as "r: Robot"
+participant currAsteroid as "currentAsteroid: Asteroid"
+
+Tester -> robot ++ : Drill()
+
+robot -> currAsteroid ++ : Drill()
+
+return
+
+return
+
+@enduml

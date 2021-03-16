@@ -1,0 +1,31 @@
+@startuml
+!include ../../style.puml
+
+title Robot Move to Asteroid
+
+actor Tester as Tester
+
+participant robot as "r: Robot"
+participant currAsteroid as "currentAsteroid: Asteroid"
+
+
+participant to as "to: Asteroid"
+
+Tester -> robot ++ : Move(to)
+
+robot -> currAsteroid ++ : reachableAsteroids()
+robot <-- currAsteroid -- : neighbours = result
+
+opt neighbours has to
+
+robot -> currAsteroid ++ : Depart(r)
+robot <-- currAsteroid --
+
+robot -> to ++ : Arrive(r)
+robot <-- to --
+
+end
+
+Tester <-- robot --
+
+@enduml

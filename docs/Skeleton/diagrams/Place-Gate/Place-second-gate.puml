@@ -6,10 +6,10 @@ title Place second gate
 
 actor Tester as Tester
 
-participant tgItem as tgItem <<TeleportGateItem>>
-participant ship as ship <<SpaceShip>>
+participant tgItem as "tgItem: TeleportGateItem"
+participant ship as "ship: SpaceShip"
 
-participant tg as tg <<TeleportGate>>
+participant tg as "tg: TeleportGate"
 
 Tester -> tgItem : Activate(ship)
 activate tgItem

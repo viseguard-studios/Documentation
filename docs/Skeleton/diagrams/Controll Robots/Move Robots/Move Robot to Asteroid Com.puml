@@ -1,0 +1,19 @@
+@startuml
+skinparam linestyle ortho
+'title Robot Move to Asteroid
+
+actor "Tester" as Tester
+
+rectangle "r: Robot" as robot
+rectangle "currentAsteroid: Asteroid" as currAsteroid
+
+
+rectangle to as "to: Asteroid"
+
+Tester --> robot : 1: -> Move(to) \n8: <--
+
+robot --> currAsteroid : > 2 : reachableAsteroids() \n<-- 3: neighbours = result \n4: -> Depart(r) \n5: <--
+
+robot --> to : 6: Arrive(r) \n 7: <--
+
+@enduml
