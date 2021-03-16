@@ -1,0 +1,20 @@
+@startuml
+
+actor Tester as Tester
+participant s as s <<SpaceShip>>
+participant recipe as recipe <<TeleportGateRecipe>>
+
+
+title SpaceShip can't craft teleport gate
+
+Tester -> s++: Craft(recipe)
+
+s-> recipe++: CanCraft(s)
+recipe --> s --: false
+
+s--> Tester: false
+
+caption  A telepes szeretne létrehozni egy teleportkapu-párt a kibányászott nyersanyagokkal. \n A készítés előtti ellenőrzés során kiderült, hogy nem lehet előállítani a kapukat, \n ezért a készítést végző függvény meg sem hívódik. 
+
+
+@enduml

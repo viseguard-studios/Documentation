@@ -1,0 +1,30 @@
+@startuml
+rectangle "recipe: RobotRecipe" as recipe 
+rectangle "s: SpaceShip" as s 
+rectangle "inventory: Inventory" as inventory 
+rectangle "asteroid: Asteroid" as asteroid
+rectangle "inv:Inventory" as inv 
+rectangle "i: Item" as i
+rectangle "robot: Robot" as robot 
+
+title SpaceShip can craft robot \n 
+
+recipe -- s: 1. GetAsteroid() \n <---- \n 2. a \n - - -> \n 3. GetInventory() \n <---- \n 4. inv \n - - -> \n 12.1. GetOwner() \n <---- \n 12.2. p \n - - ->
+
+
+recipe -left- inventory: 5. RemoveItem(i) \n <---- \n 6. x \n - - -> 
+
+recipe -- i: 7.Reduce(x) \n ---->
+
+recipe -- asteroid: 8. GetInventory() \n <---- \n 9. inv \n - - -> 
+
+recipe -- inv: 10. RemoveItem(i) \n ----> \n 10. y \n <- - - 
+
+recipe -down- recipe: 12. MakeResult(s)\n | \nv
+
+recipe -- robot: 12.3 Robot(p,asteroid)\n ---->
+
+
+
+
+@enduml

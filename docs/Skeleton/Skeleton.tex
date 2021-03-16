@@ -1,0 +1,99 @@
+\documentclass[../../projlab]{subfiles}
+\begin{document}
+
+\makeatletter
+
+\ifSubfilesClassLoaded{
+	\coverpage{4. Leadás}
+	\def\filePath[#1]{./../../#1}
+}{}
+
+\makeatother
+
+\chapter{Szkeleton tervezése}
+
+
+\section{A szkeleton modell valóságos use-case-ei}
+
+\subsection{Use-case diagram}
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/skeleton-use-case.eps} 
+    \caption{} 
+\end{figure} 
+
+\subsection{Use-case leírások}
+\begin{use-case}
+    {Drill}
+    {Az aszteroida fúrásának tesztelése.}
+    {Tester} 
+    \textbf{A} A tester hívja meg a SpaceShip-nek Drill metódust, majd a SpaceShip objektum hívja meg currentAsteroid attribútumnak Drill metódust. Ha az aszteroida már felrobban, akkor a metódus nem fog csinálni semmit. \newline
+    \textbf{B} Ugyanúgy a helyzetben, ha a köpenye már teljesen át van fúrva, akkor a metódus nem csinál semmit. \newline
+    \textbf{C} Ugyanúgy a helyzetben, ha a köpenye még nincs átfúrva, akkor az currentAsteroid attribútumnak crustSize-t egyel levonási értéket ad vissza. \newline
+\end{use-case}
+
+\begin{use-case}
+    {Hide}
+    {A telepes elbújásának tesztelése.}
+    {Tester} 
+    \textbf{A} 1.	A tester hívja meg a SpaceShip-nek Hide metódust. Ha a telepes éppen meg van bújva, akkor visszahívja a metódus. \newline
+    \textbf{B} 2.	Ha a telepes nincs megbújva, akkor a fenti esetén még a SpaceShip objektum hívja meg currentAsteroid attribútumnak Hide metódust. Ha az aszteroida már felrobban, akkor a metódus nem fog csinálni semmit. \newline
+    \textbf{C} 3.	Ugyanaz a helyzetben, ha az aszteroida köpenye még nincs átfúrva, akkor a metódus nem fog csinálni semmit. \newline
+    \textbf{C} 4.	Más esetén az aszteroida Hide metódus felhívja a hidingVessel attribútumnak a GetHidingSpaceRequirement metódust, majd visszakapja egy lyukas hely mennyiségét, és megkérdezi a SpaceShip objektumnak GetHidingSpaceRequirement metódust, hogy mennyi helyet kell maradni lyukasan. Ha az első érték nagyobb mint a második, akkor a Hide metódus visszatér egy true értéket, és a SpaceShip innentől kezdődik megbújni. \newline
+    \textbf{C} 5.	A tester meghívja a SpaceShip-nek a ExitHiding metódust, ha éppen a telepes nincs megbújva, akkor a metódus nem csinál semmit. \newline
+    \textbf{C} 6.	Külön esetén a SpaceShip meghívja a currentAsteroid attribútumnak Hide metódust, ilyenkor kiszabadítja a aszteroida magja, és a SpaceShip végzik a megbújást. \newline
+\end{use-case}
+
+\begin{use-case}
+    {PlaceResource}
+    {A kinyert nyersanyag visszarakásának tesztelése.}
+    {Tester} 
+    \textbf{A} 1.	A tester hívja meg a SpaceShip-nek Hide metódust. Ha a telepes éppen meg van bújva, akkor visszahívja a metódus. \newline
+    \textbf{B} 2.	Ha a telepes nincs megbújva, akkor a fenti esetén még a SpaceShip objektum hívja meg currentAsteroid attribútumnak Hide metódust. Ha az aszteroida már felrobban, akkor a metódus nem fog csinálni semmit. \newline
+    \textbf{C} 3.	Ugyanaz a helyzetben, ha az aszteroida köpenye még nincs átfúrva, akkor a metódus nem fog csinálni semmit. \newline
+    \textbf{C} 4.	Más esetén az aszteroida Hide metódus felhívja a hidingVessel attribútumnak a GetHidingSpaceRequirement metódust, majd visszakapja egy lyukas hely mennyiségét, és megkérdezi a SpaceShip objektumnak GetHidingSpaceRequirement metódust, hogy mennyi helyet kell maradni lyukasan. Ha az első érték nagyobb mint a második, akkor a Hide metódus visszatér egy true értéket, és a SpaceShip innentől kezdődik megbújni. \newline
+    \textbf{C} 5.	A tester meghívja a SpaceShip-nek a ExitHiding metódust, ha éppen a telepes nincs megbújva, akkor a metódus nem csinál semmit. \newline
+    \textbf{C} 6.	Külön esetén a SpaceShip meghívja a currentAsteroid attribútumnak Hide metódust, ilyenkor kiszabadítja a aszteroida magja, és a SpaceShip végzik a megbújást. \newline
+\end{use-case}
+
+\section{A szkeleton kezelői felületének terve, dialógusok}
+\comment{A szkeleton által elfogadott bemenetek , valamint a szöveges konzolon megjelenő kimenetek. A kiemenet formátuma olyan kell legyen, ami alapján a működés összevethető a korábbi szekvencia-diagramokkal.}
+
+\comment{Konzol input/output szemléltetésre:}
+\begin{verbatim}
+    > move
+    get item
+\end{verbatim}
+
+\section{Szekvencia diagramok a belső működésre}
+%\comment{A szkeletonban implementált szekvenciadiagramok. Tipikusan egy use-case egy diagram. Ezek megegyezhetnek a korábban specifikált diagramokkal, de az egyes életvonalakat (lifeline) egyértelműen a szkeletonban példányosított objektumokhoz kell tudni kötni. Azt kell megjeleníteni, hogy a szkeletonban létrehozott objektumok egymással hogyan fognak kommunikálni.}
+
+\input{docs/Skeleton/seq.tex}
+
+\section{Kommunikációs diagramok}
+%\comment{A szkeletonban, az egyes szkeleton-use-case-ek futása során létrehozott objektumok és kapcsolataik bemutatására szolgáló diagramok. Ezek alapján valósítják meg a szkeleton fejlesztői az inicializáló kódrészleteket.}
+
+
+\section{Napló}
+
+\begin{naplo}
+
+	\naplotag{2021.03.10. 10:00 }{ 2 óra }{ Csapat }
+	{ 
+		Konzultáció és előző heti munkánk értékelése, feladatok kiosztása   
+        \newline
+		Részletesen: \ref{appendix:meeting9}
+	}
+
+    
+\end{naplo}
+
+\begin{toappendix}
+
+	\markdownInput[shiftHeadings=2]{\filePath[docs/meetings/task-breakdown-3.md]}
+
+    \markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-9.md]}
+	
+\end{toappendix}
+
+\end{document}

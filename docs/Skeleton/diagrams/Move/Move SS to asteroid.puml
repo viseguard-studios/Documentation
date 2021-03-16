@@ -1,0 +1,39 @@
+@startuml
+hide footbox
+title Move SpaceShip to Asteroid
+
+
+actor Tester as Tester
+
+
+participant ship as ship <<SpaceShip>>
+
+participant a as a <<Asteroid>>
+participant b as b <<Asteroid>>
+
+Tester -> ship ++ : GetCurrentAsteroid()
+ship --> Tester: a
+deactivate ship
+
+Tester -> a : GetReachableAsteroid()
+activate a
+
+a --> Tester : listofAsteroids
+deactivate a
+
+Tester -> ship : Move(b)
+activate ship
+
+ship -> a ++: Depart(ship)
+a --> ship
+deactivate a
+
+ship -> b ++ : Arrive(ship)
+
+b --> ship
+deactivate b
+
+ship --> Tester
+deactivate ship
+
+@enduml

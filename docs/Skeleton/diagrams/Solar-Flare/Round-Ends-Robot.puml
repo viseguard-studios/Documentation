@@ -1,0 +1,26 @@
+@startuml
+!include ../style.puml
+
+actor Tester
+
+participant "GM : GameManager" as GM
+participant "R : Robot" as R
+
+Tester -> GM : EndTurn()
+activate GM
+
+opt CreateStormOn = true
+
+GM -> GM : CreateStormOn = false;
+GM -> R ++ : SolarFlare()
+GM <-- R --
+
+end
+
+GM -> R ++ : RoundEnd(closeToSun: bool)
+GM <-- R --
+
+Tester <-- GM
+deactivate GM
+
+@enduml

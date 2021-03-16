@@ -1,0 +1,30 @@
+@startuml
+!include ../style.puml
+skinparam sequenceMessageAlign left
+
+title Place second gate
+
+actor Tester as Tester
+
+participant tgItem as "tgItem: TeleportGateItem"
+participant ship as "ship: SpaceShip"
+
+participant tg as "tg: TeleportGate"
+
+Tester -> tgItem : Activate(ship)
+activate tgItem
+
+tgItem -> ship ++ : GetCurrentAsteroid()
+
+ship --> tgItem -- : a = result
+
+create tg
+tgItem --> tg : p = TeleportGate(a)
+
+tgItem -> tg ++ : SetPair(pair)
+tgItem <-- tg -- : 
+
+tgItem --> Tester 
+deactivate tgItem
+
+@enduml

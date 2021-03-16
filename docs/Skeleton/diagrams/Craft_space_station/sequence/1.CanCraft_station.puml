@@ -1,0 +1,22 @@
+@startuml
+
+actor Tester as Tester
+participant s as s <<SpaceShip>>
+participant recipe as recipe <<SpaceStationRecipe>>
+
+
+title SpaceShip can craft space station
+
+Tester -> s++: Craft(recipe)
+
+s-> recipe++: CanCraft(s)
+recipe --> s --: true
+
+s-> recipe++: Craft(s) 
+recipe-->s--: 
+
+s--> Tester: true
+
+caption  A telepes szeretne létrehozni egy űrállomást a kibányászott nyersanyagokkal. \n Ellenőrizni kell, hogy ez lehetséges-e, majd létrehozni az állomást. 
+
+@enduml

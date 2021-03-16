@@ -1,0 +1,66 @@
+@startuml
+
+left to right direction
+
+actor Tester
+
+usecase "Player task" as UC01
+Tester --> UC01
+
+usecase "Move" as Move
+UC01 --> Move
+
+usecase "Use Gate" as UseGate
+Move --> UseGate
+
+usecase "Hide" as Hide
+UC01 --> Hide
+
+usecase "Drill" as Drill
+UC01 --> Drill
+
+usecase "Mine" as Mine
+UC01 --> Mine
+
+usecase "Direct Robots" as DirectRobots
+UC01 --> DirectRobots
+
+usecase "Place Teleport Gate" as PlaceTGate
+UC01 --> PlaceTGate
+
+usecase "Craft Robot" as CraftRobot
+UC01 --> CraftRobot
+
+usecase "Craft Teleport Gate" as CraftTGate
+UC01 --> CraftTGate
+
+usecase "Craft Space Station" as CraftStation
+UC01 --> CraftStation
+
+usecase "Place Resource" as PlaceResource
+UC01 --> PlaceResource
+
+
+
+usecase "Controller Tasks" as UC02
+Tester --> UC02
+
+usecase SolarFlare as "Solar Flare"
+UC02 --> SolarFlare
+
+usecase MoveField as "Move Asteroid Field"
+UC02 --> MoveField
+
+usecase ControlRobots as "Controll Robots"
+UC02 --> ControlRobots
+
+usecase ControlRobots_Move as "Move Robot"
+ControlRobots --> ControlRobots_Move
+
+usecase ControlRobots_Drill as "Drill with robot"
+ControlRobots --> ControlRobots_Drill
+
+usecase ControlRobots_Hide as "Hide with robot"
+ControlRobots --> ControlRobots_Hide
+
+@enduml

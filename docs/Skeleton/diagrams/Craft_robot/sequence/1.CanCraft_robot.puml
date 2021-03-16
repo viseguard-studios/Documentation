@@ -1,0 +1,21 @@
+@startuml
+
+actor Tester as Tester
+participant s as s <<SpaceShip>>
+participant recipe as recipe <<RobotRecipe>>
+
+
+title SpaceShip can craft robot
+
+Tester -> s++: Craft(recipe)
+
+s-> recipe++: CanCraft(s)
+recipe --> s --: true
+
+s-> recipe++: Craft(s) 
+recipe-->s--: 
+
+s--> Tester: true
+
+caption  A telepes szeretne létrehozni egy robotot a kibányászott nyersanyagokkal. \n Ellenőrizni kell, hogy ez lehetséges-e, majd létrehozni a robotot. 
+@enduml

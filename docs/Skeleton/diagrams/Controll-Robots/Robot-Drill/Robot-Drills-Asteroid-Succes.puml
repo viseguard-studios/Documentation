@@ -1,0 +1,21 @@
+@startuml
+!include ../../style.puml
+
+title Robot Drills asteroid succesfully
+
+actor Tester as Tester
+
+participant robot as "r: Robot"
+participant currAsteroid as "currentAsteroid: Asteroid"
+
+Tester -> robot ++ : Drill()
+
+robot -> currAsteroid ++ : Drill()
+
+currAsteroid -> currAsteroid : crustSize -= 1;
+
+return neighbours = result
+
+return
+
+@enduml

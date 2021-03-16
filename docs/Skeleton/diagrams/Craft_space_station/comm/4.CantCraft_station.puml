@@ -1,0 +1,10 @@
+@startuml
+rectangle “s: SpaceShip” as s
+rectangle “recipe: SpaceStationRecipe" as recipe
+
+title SpaceShip can't craft space station \n 
+
+s -right- recipe: 1: CanCraft(s) \n ----> \n 2: false \n <- - - -  
+
+
+@enduml

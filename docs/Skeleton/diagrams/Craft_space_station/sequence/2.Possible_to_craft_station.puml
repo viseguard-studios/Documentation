@@ -1,0 +1,54 @@
+@startuml
+actor Tester as Tester <<SpaceShip>>
+participant recipe as recipe <<SpaceStationRecipe>>
+participant s as s <<SpaceShip>>
+participant inv as inv <<Inventory>>
+participant a as a <<Asteroid>>
+participant inventory as inventory <<Inventory>>
+collections item as item <<Item>>
+collections aItem as aItem <<Item>>
+
+title SpaceShip can craft space station
+
+Tester-> recipe++: CanCraft(s)
+recipe -> s++: GetAsteroid()
+
+s --> recipe--: a
+recipe -> s++: GetInventory()
+
+s --> recipe--: inv
+
+recipe -> inv++: getItems()
+inv --> recipe--: items
+
+recipe -> a++: GetInventory()
+a --> recipe--: inventory
+
+recipe -> inventory++: getItems()
+inventory --> recipe--: aItems
+
+group loop: input check[for each i in recipe.input]
+
+    group loop [for each item in items]
+        recipe -> item++: Satisfies(i)
+        item --> recipe--: x
+    end
+
+    group loop [for each item in aItems]
+        recipe -> aItem++: Satisfies(i)
+        aItem --> recipe--: y
+    end
+end
+
+recipe --> Tester: true
+
+note right
+x+y can satify the recipe
+input amount for each item,
+the SpaceStation can be crafted
+end note
+
+caption Ellenőrzi, hogy a telepes, illetve az aszteroida raktárában lévő kibányászott nyersanyagok mennyisége összesen elegendő ahhoz, \n hogy előállítsuk az űrállomást. Minden szükséges nyersanyagnál ellenőrzi egymás után. 
+
+
+@enduml
