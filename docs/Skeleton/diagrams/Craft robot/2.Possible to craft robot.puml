@@ -1,0 +1,51 @@
+@startuml
+actor Tester as Tester <<SpaceShip>>
+participant recipe as recipe <<RobotRecipe>>
+participant s as s <<SpaceShip>>
+participant inv as inv <<Inventory>>
+participant a as a <<Asteroid>>
+participant inventory as inventory <<Inventory>>
+collections item as item <<Item>>
+collections aItem as aItem <<Item>>
+
+title SpaceShip can craft robot
+
+Tester-> recipe++: CanCraft(s)
+recipe -> s++: GetAsteroid()
+
+s --> recipe--: a
+recipe -> s++: GetInventory()
+
+s --> recipe--: inv
+
+recipe -> inv++: getItems()
+inv --> recipe--: items
+
+recipe -> a++: GetInventory()
+a --> recipe--: inventory
+
+recipe -> inventory++: getItems()
+inventory --> recipe--: aItems
+
+group loop: input check[for each i in recipe.input]
+
+    group loop [for each item in items]
+        recipe -> item++: Satisfies(i)
+        item --> recipe--: x
+    end
+
+    group loop [for each item in aItems]
+        recipe -> aItem++: Satisfies(i)
+        aItem --> recipe--: y
+    end
+end
+
+recipe --> Tester: true
+
+note right
+x+y can satify the recipe
+input amount for each item,
+the Robot can be crafted
+end note
+
+@enduml

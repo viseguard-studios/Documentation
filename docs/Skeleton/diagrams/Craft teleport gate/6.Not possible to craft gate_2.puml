@@ -1,0 +1,61 @@
+@startuml
+actor Tester as Tester <<SpaceShip>>
+participant recipe as recipe <<TeleportGateRecipe>>
+participant s as s <<SpaceShip>>
+participant inv as inv <<Inventory>>
+participant a as a <<Asteroid>>
+participant inventory as inventory <<Inventory>>
+collections item as item <<Item>>
+collections aItem as aItem <<Item>>
+
+title SpaceShip can't craft teleport gate because of the lack of space in inventory
+
+Tester-> recipe++: CanCraft(s)
+recipe -> s++: GetAsteroid()
+
+s --> recipe--: a
+recipe -> s++: GetInventory()
+
+s --> recipe--: inv
+
+recipe -> inv++: getItems()
+inv --> recipe--: items
+
+recipe -> a++: GetInventory()
+a --> recipe--: inventory
+
+recipe -> inventory++: getItems()
+inventory --> recipe--: aItems
+
+group loop: input check[for each i in recipe.input]
+
+    group loop [for each item in items]
+        recipe -> item++: Satisfies(i)
+        item --> recipe--: x
+    end
+
+    group loop [for each item in aItems]
+        recipe -> aItem++: Satisfies(i)
+        aItem --> recipe--: y
+    end
+end
+
+group loop check storage capacity [for each item in items]
+recipe -> item++: GetAmount()
+item-->recipe--: amount
+end
+
+recipe -> inv++: GetSize()
+inv-->recipe--: size
+
+note right
+after crafting, the available space in 
+spaceship's inventory is less than the 
+space needed to insert teleport gates, 
+so the gates can't be crafted
+end note
+
+recipe --> Tester: false
+
+
+@enduml
