@@ -14,4 +14,7 @@ recipe --> s --: false
 
 s--> Tester: false
 
+caption  A telepes szeretne létrehozni egy robotot a kibányászott nyersanyagokkal. \n A készítés előtti ellenőrzés során kiderült, hogy nem lehet előállítani a robotot, \n ezért a készítést végző függvény meg sem hívódik. 
+
+
 @enduml

@@ -17,4 +17,7 @@ recipe-->s--:
 
 s--> Tester: true
 
+caption  A telepes szeretne létrehozni egy teleportkapu-párt a kibányászott nyersanyagokkal. \n Ellenőrizni kell, hogy ez lehetséges-e, majd létrehozni a kapukat. 
+
+
 @enduml

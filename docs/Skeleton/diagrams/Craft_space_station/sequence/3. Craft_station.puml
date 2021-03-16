@@ -62,4 +62,7 @@ station-->recipe--:
 
 
 recipe --> Tester: 
+
+caption A recept levonja a nyersanyagokat a megfelelő helyekről (telepes vagy aszteroida raktárából, kapacitástól függően), \n majd elkészíti az űrállomást és elhelyezi a megfelelő aszteroidán. Az űrállomás konstruktora jelzi a játékmenedzsernek, hogy felépült az űrállomás, ami a játék végét jelenti. 
+
 @enduml

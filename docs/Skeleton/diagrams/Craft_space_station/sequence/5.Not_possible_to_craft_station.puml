@@ -8,7 +8,7 @@ participant inventory as inventory <<Inventory>>
 collections item as item <<Item>>
 collections aItem as aItem <<Item>>
 
-title SpaceShip can craft space station
+title SpaceShip can't craft space station
 
 Tester-> recipe++: CanCraft(s)
 recipe -> s++: GetAsteroid()
@@ -38,14 +38,17 @@ group loop: input check[for each i in recipe.input]
         recipe -> aItem++: Satisfies(i)
         aItem --> recipe--: y
     end
+
+    group opt interrupt [if (x+y) < i.amount]
+        recipe --> Tester: false
+    end
+    note right
+    x+y is not enough to satisfy recipe, it will happen in at least one of the items. 
+    When it's true, the function will not continue, and immediately return with false
+    end note
 end
 
-recipe --> Tester: true
+caption Ellenőrzi a készítéshez szükséges nyersanyagok meglétét a telepesnél, illetve aszteroidán, \n azonban legalább 1 item esetén ez nem teljesül, így a recept nem készíthető el.  
 
-note right
-x+y can satify the recipe
-input amount for each item,
-the SpaceStation can be crafted
-end note
 
 @enduml

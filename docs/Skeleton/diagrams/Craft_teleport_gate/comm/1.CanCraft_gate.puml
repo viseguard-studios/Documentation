@@ -1,0 +1,10 @@
+@startuml
+rectangle “s: SpaceShip” as s
+rectangle "recipe: TeleportGateRecipe" as recipe
+
+title SpaceShip can craft teleport gate \n 
+
+s -right- recipe: 1: CanCraft(s) \n ----> \n 2: true \n <- - - -  \n 3: Craft(s) \n ---->
+
+
+@enduml

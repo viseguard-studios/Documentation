@@ -1,0 +1,28 @@
+@startuml
+rectangle "recipe: TeleportGateRecipe" as recipe 
+rectangle "s: SpaceShip" as s 
+rectangle "inventory: Inventory" as inventory 
+rectangle "asteroid: Asteroid" as asteroid
+rectangle "inv:Inventory" as inv 
+rectangle "i: Item" as i
+
+title SpaceShip can craft teleport gate \n 
+
+recipe -- s: 1. GetAsteroid() \n <---- \n 2. a \n - - -> \n 3. GetInventory() \n <---- \n 4. inv \n - - -> 
+
+
+recipe -left- inventory: 5. RemoveItem(i) \n <---- \n 6. x \n - - -> \n 12.1. InsertItem(gate) \n <---- \n 12.2. true \n - - -> 
+
+recipe -- i: 7.Reduce(x) \n ---->
+
+recipe -- asteroid: 8. GetInventory() \n <---- \n 9. inv \n - - -> 
+
+recipe -- inv: 10. RemoveItem(i) \n ----> \n 11. y \n <- - - 
+
+recipe -down- recipe: 12. MakeResult(s)\n | \nv
+
+
+
+
+
+@enduml

@@ -1,6 +1,6 @@
 @startuml
 actor Tester as Tester <<SpaceShip>>
-participant recipe as recipe <<TeleportGateRecipe>>
+participant recipe as recipe <<RobotRecipe>>
 participant s as s <<SpaceShip>>
 participant inv as inv <<Inventory>>
 participant a as a <<Asteroid>>
@@ -8,7 +8,7 @@ participant inventory as inventory <<Inventory>>
 collections item as item <<Item>>
 collections aItem as aItem <<Item>>
 
-title SpaceShip can craft teleport gate
+title SpaceShip can craft robot
 
 Tester-> recipe++: CanCraft(s)
 recipe -> s++: GetAsteroid()
@@ -27,7 +27,7 @@ a --> recipe--: inventory
 recipe -> inventory++: getItems()
 inventory --> recipe--: aItems
 
-group loop input check[for each i in recipe.input]
+group loop: input check[for each i in recipe.input]
 
     group loop [for each item in items]
         recipe -> item++: Satisfies(i)
@@ -40,25 +40,14 @@ group loop input check[for each i in recipe.input]
     end
 end
 
-group loop check storage capacity [for each item in items]
-recipe -> item++: GetAmount()
-item-->recipe--: amount
-end
-
-recipe -> inv++: GetSize()
-inv-->recipe--: size
-
-note right
-check if spaceship has enough
-space to store gates after crafting
-end note
-
 recipe --> Tester: true
 
 note right
 x+y can satify the recipe
 input amount for each item,
-the Gates can be crafted
+the Robot can be crafted
 end note
+
+caption Ellenőrzi, hogy a telepes, illetve az aszteroida raktárában lévő kibányászott nyersanyagok mennyisége összesen \n elegendő ahhoz, hogy előállítsuk a robotot. Minden szükséges nyersanyagnál ellenőrzi egymás után. 
 
 @enduml

@@ -1,14 +1,15 @@
 @startuml
 actor Tester as Tester<<SpaceShip>>
-participant recipe as recipe <<TeleportGateRecipe>>
+participant recipe as recipe <<RobotRecipe>>
 participant s as s <<SpaceShip>>
 participant inventory as inventory <<Inventory>>
 participant asteroid as asteroid <<Asteroid>>
 participant inv as inv <<Inventory>>
 collections item as item <<Item>>
-participant gate as gate <<TeleportGateItem>>
+participant p as p <<Person>>
+participant robot as robot <<Robot>>
 
-title SpaceShip can craft teleport gate
+title SpaceShip can craft robot
 
 Tester-> recipe++: Craft(s)
 
@@ -35,11 +36,12 @@ group loop: input check[for each item in recipe.input]
     end
 end
 recipe -> recipe++: MakeResult(s)
+recipe -> s++: GetOwner()
 
-recipe --> gate: <<create>>
-
-recipe -> inventory++: InsertItem(gate)
-inventory --> recipe--: true
+s--> recipe--: p
+recipe --> robot--: <<create>> Robot(p,asteroid)
 
 recipe --> Tester: 
+
+caption A recept levonja a nyersanyagokat a megfelelő helyekről (telepes vagy aszteroida raktárából, kapacitástól függően), \n majd elkészíti a robotot és elhelyezi a megfelelő aszteroidán. 
 @enduml

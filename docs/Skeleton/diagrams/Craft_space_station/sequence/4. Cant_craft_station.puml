@@ -14,4 +14,7 @@ recipe --> s --: false
 
 s--> Tester: false
 
+caption  A telepes szeretne létrehozni egy űrállomást a kibányászott nyersanyagokkal. \n A készítés előtti ellenőrzés során kiderült, hogy nem lehet előállítani az állomást, \n ezért a készítést végző függvény meg sem hívódik. 
+
+
 @enduml

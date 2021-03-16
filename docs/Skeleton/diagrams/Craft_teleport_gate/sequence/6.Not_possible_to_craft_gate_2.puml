@@ -8,7 +8,7 @@ participant inventory as inventory <<Inventory>>
 collections item as item <<Item>>
 collections aItem as aItem <<Item>>
 
-title SpaceShip can't craft teleport gate because of the lack of items
+title SpaceShip can't craft teleport gate because of the lack of space in inventory
 
 Tester-> recipe++: CanCraft(s)
 recipe -> s++: GetAsteroid()
@@ -38,15 +38,26 @@ group loop: input check[for each i in recipe.input]
         recipe -> aItem++: Satisfies(i)
         aItem --> recipe--: y
     end
-
-    group opt interrupt [if (x+y) < i.amount]
-        recipe --> Tester: false
-    end
-    note right
-    x+y is not enough to satisfy recipe, it will happen in at least one of the items. 
-    When it's true, the function will not continue, and immediately return with false
-    end note
 end
 
+group loop check storage capacity [for each item in items]
+recipe -> item++: GetAmount()
+item-->recipe--: amount
+end
+
+recipe -> inv++: GetSize()
+inv-->recipe--: size
+
+note right
+after crafting, the available space in 
+spaceship's inventory is less than the 
+space needed to insert teleport gates, 
+so the gates can't be crafted
+end note
+
+recipe --> Tester: false
+
+
+caption Ebben az esetben azért nem készíthető el a recept, mert a telepes raktárában \n a készítés után nem lenne elegendő hely eltárolni a kapukat. 
 
 @enduml
