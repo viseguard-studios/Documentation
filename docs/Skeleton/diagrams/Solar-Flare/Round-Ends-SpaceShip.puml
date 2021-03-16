@@ -1,0 +1,26 @@
+@startuml
+!include ../style.puml
+
+actor Tester
+
+participant "GM : GameManager" as GM
+participant "C : SpaceShip" as C
+
+Tester -> GM : TakeTurn()
+activate GM
+
+opt CreateStormOn == true
+
+GM -> GM : CreateStormOn = false;
+GM -> C ++ : SolarFlare()
+GM <-- C --
+
+end
+
+GM -> C ++ : RoundEnd()
+GM <-- C --
+
+Tester <-- GM
+deactivate GM
+
+@enduml

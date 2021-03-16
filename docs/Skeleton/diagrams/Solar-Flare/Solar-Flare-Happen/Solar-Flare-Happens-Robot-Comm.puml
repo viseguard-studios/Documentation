@@ -1,0 +1,17 @@
+@startuml
+'autonumber "0:"
+skinparam linestyle ortho
+
+actor Tester
+
+rectangle "GM : GameManager" as GM
+rectangle "R : Robot" as R
+
+Tester --> GM: "1 : -> TakeTurn()" "6 : <--"
+
+GM --> R: "2 : -> Solar Flare()" "3 : <--"
+
+GM --> R: "4 : -> RoundEnd(closeToSun: bool)" "5 : <--"
+
+
+@enduml

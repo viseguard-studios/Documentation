@@ -1,0 +1,12 @@
+@startuml
+'autonumber "0:"
+skinparam linestyle ortho
+
+actor Tester
+
+rectangle "GM : GameManager" as GM
+
+Tester --> GM: "1 : -> ChangeAFDistance(distance: int)" "2 : <--"
+
+
+@enduml

@@ -1,0 +1,14 @@
+@startuml
+!include ../style.puml
+
+actor Tester
+
+participant "GM : GameManager" as GM
+
+Tester -> GM : ChangeAFDistance(distance: int)
+activate GM
+
+Tester <-- GM
+deactivate GM
+
+@enduml
