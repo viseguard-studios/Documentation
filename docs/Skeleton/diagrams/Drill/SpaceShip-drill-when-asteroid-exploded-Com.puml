@@ -1,6 +1,5 @@
 @startuml
-'autonumber "0:"
-'skinparam linestyle ortho
+
 actor Tester as Tester
 rectangle "v" as v
 rectangle "currentAsteroid" as currentAsteroid

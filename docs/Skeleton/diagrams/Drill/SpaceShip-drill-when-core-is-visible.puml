@@ -1,6 +1,6 @@
 @startuml
-hide footbox
-autonumber "0:"
+!include ../style.puml
+
 title SpaceShip drill when asteroid exploded
 
 actor Tester as Tester

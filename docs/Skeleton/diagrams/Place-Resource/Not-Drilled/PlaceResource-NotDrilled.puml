@@ -1,0 +1,16 @@
+@startuml
+!include ../../style.puml
+
+title SpaceShip place resource when core is not accesible
+
+actor Tester as Tester
+participant "s : SpaceShip" as s
+participant "item : Item" as item
+
+Tester -> s : PlaceItem()
+activate s
+
+s --> Tester : false
+deactivate s
+
+@enduml

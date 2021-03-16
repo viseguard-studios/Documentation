@@ -1,7 +1,5 @@
 @startuml
-hide footbox
-autonumber "0:"
-skinparam sequenceMessageAlign center
+!include ../style.puml
 
 title SpaceShip drill when asteroid exploded
 
