@@ -1,0 +1,20 @@
+@startuml
+
+actor Tester as Tester
+participant s as s <<SpaceShip>>
+participant recipe as recipe <<SpaceStationRecipe>>
+
+
+title SpaceShip can craft space station
+
+Tester -> s++: Craft(recipe)
+
+s-> recipe++: CanCraft(s)
+recipe --> s --: true
+
+s-> recipe++: Craft(s) 
+recipe-->s--: 
+
+s--> Tester: true
+
+@enduml

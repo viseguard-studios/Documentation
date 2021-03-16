@@ -1,0 +1,45 @@
+@startuml
+actor Tester as Tester<<SpaceShip>>
+participant recipe as recipe <<TeleportGateRecipe>>
+participant s as s <<SpaceShip>>
+participant inventory as inventory <<Inventory>>
+participant asteroid as asteroid <<Asteroid>>
+participant inv as inv <<Inventory>>
+collections item as item <<Item>>
+participant gate as gate <<TeleportGateItem>>
+
+title SpaceShip can craft teleport gate
+
+Tester-> recipe++: Craft(s)
+
+recipe -> s++: GetAsteroid()
+s --> recipe--: a
+
+recipe -> s++: GetInventory()
+s --> recipe--: inv
+
+group loop: input check[for each item in recipe.input]
+
+    recipe -> inventory++: RemoveItem(item)
+    inventory-->recipe--: x
+
+    recipe -> item++: Reduce(x)
+    item --> recipe--: 
+
+    group opt [not satisfied]
+        recipe -> asteroid++: GetInventory()
+        asteroid --> recipe--: inv
+
+        recipe -> inv++: RemoveItem(i)
+        inv--> recipe--: y
+    end
+end
+recipe -> recipe++: MakeResult(s)
+
+recipe --> gate: <<create>>
+
+recipe -> inventory++: InsertItem(gate)
+inventory --> recipe--: true
+
+recipe --> Tester: 
+@enduml
