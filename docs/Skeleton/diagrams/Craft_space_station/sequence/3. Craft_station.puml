@@ -3,9 +3,11 @@ actor Tester as Tester<<SpaceShip>>
 participant recipe as recipe <<SpaceStationRecipe>>
 participant s as s <<SpaceShip>>
 participant inventory as inventory <<Inventory>>
+collections item as item <<Item>>
 participant asteroid as asteroid <<Asteroid>>
 participant inv as inv <<Inventory>>
-collections item as item <<Item>>
+collections aItem as aItem <<Item>>
+collections rItem as rItem <<Item>>
 participant station as station <<SpaceStation>>
 participant scene as scene <<Scene>>
 participant mgr as mgr <<GameManager>>
@@ -21,19 +23,38 @@ s --> recipe--: a
 recipe -> s++: GetInventory()
 s --> recipe--: inv
 
-group loop: input check[for each item in recipe.input]
+group loop: input check[for each rItem in recipe.input]
 
-    recipe -> inventory++: RemoveItem(item)
+    recipe -> inventory++: RemoveItem(rItem)
+
+    group loop: satisfies check [for each item in items] 
+         inventory -> item++: Satisfies(rItem)
+         item --> inventory--: x
+        group opt [if x>0]
+            inventory -> item++: Reduce(x)
+            item --> inventory--:
+        end
+    end
+
     inventory-->recipe--: x
 
-    recipe -> item++: Reduce(x)
-    item --> recipe--: 
+    recipe -> rItem++: Reduce(x)
+    rItem --> recipe--: 
 
     group opt [not satisfied]
         recipe -> asteroid++: GetInventory()
         asteroid --> recipe--: inv
 
-        recipe -> inv++: RemoveItem(i)
+        recipe -> inv++: RemoveItem(rItem)
+
+            group loop: satisfies check [for each item in aItems] 
+                 inv -> aItem++: Satisfies(rItem)
+                 aItem --> inv--: y
+                group opt [if y>0]
+                      inv -> aItem++: Reduce(y)
+                      aItem --> inv--:
+                 end
+           end
         inv--> recipe--: y
     end
 end

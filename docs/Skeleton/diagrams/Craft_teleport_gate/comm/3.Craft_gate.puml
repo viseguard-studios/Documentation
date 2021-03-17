@@ -4,7 +4,10 @@ rectangle "s: SpaceShip" as s
 rectangle "inventory: Inventory" as inventory 
 rectangle "asteroid: Asteroid" as asteroid
 rectangle "inv:Inventory" as inv 
-rectangle "i: Item" as i
+rectangle "rItem: Item" as rItem
+rectangle "item: Item" as item
+rectangle "aItem: Item" as aItem
+
 
 title SpaceShip can craft teleport gate \n 
 
@@ -13,11 +16,16 @@ recipe -- s: 1. GetAsteroid() \n <---- \n 2. a \n - - -> \n 3. GetInventory() \n
 
 recipe -left- inventory: 5. RemoveItem(i) \n <---- \n 6. x \n - - -> \n 12.1. InsertItem(gate) \n <---- \n 12.2. true \n - - -> 
 
-recipe -- i: 7.Reduce(x) \n ---->
+inventory -- item: 5.1 Satisfies(rItem) \n <---- \n 5.2 x \n - - -> \n 5.3 Reduce(x) \n <---- \n 
+
+recipe -- rItem: 7.Reduce(x) \n ---->
 
 recipe -- asteroid: 8. GetInventory() \n <---- \n 9. inv \n - - -> 
 
-recipe -- inv: 10. RemoveItem(i) \n ----> \n 11. y \n <- - - 
+recipe -- inv: 10. RemoveItem(rItem) \n ----> \n 11. y \n <- - - 
+
+inv -- aItem: 10.1 Satisfies(rItem) \n <---- \n 10.2 x \n - - -> \n 10.3 Reduce(x) \n <---- \n 
+
 
 recipe -down- recipe: 12. MakeResult(s)\n | \nv
 
