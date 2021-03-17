@@ -58,6 +58,6 @@ end note
 recipe --> Tester: false
 
 
-caption Ebben az esetben azért nem készíthető el a recept, mert a telepes raktárában \n a készítés után nem lenne elegendő hely eltárolni a kapukat. 
+
 
 @enduml

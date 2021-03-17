@@ -66,6 +66,6 @@ inventory --> recipe--: true
 
 recipe --> Tester: 
 
-caption A recept levonja a nyersanyagokat a megfelelő helyekről (telepes vagy aszteroida raktárából, kapacitástól függően), \n majd elkészíti a teleportkapu-párt és elhelyezi a telepes raktárában.  
+ 
 
 @enduml

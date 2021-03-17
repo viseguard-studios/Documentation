@@ -7,7 +7,8 @@
 		-  *Bea*: tárgyak készítése
 		-  *Péter*: kapu lerakás, robotok vezérlése, robotok utasítása
 		-  *Ádám*: napvihar, mező mozgatása
-	- Szekvenciadiagramok újra -> minden példányosítható legyen, de elég egy osztályt megvalósítani azok közül, aminek közös a működése
+	- Szekvenciadiagramok újra -> minden példányosítható legyen, de elég egy 
+	  osztályt megvalósítani azok közül, aminek közös a működése
 		-  felbontás az UC alapján
 	- Kommunikációs diagramok -> célszerű a szekvenciák után
 		-  felbontás az UC alapján

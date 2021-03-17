@@ -68,14 +68,43 @@
 
 \begin{use-case}
     {Craft Robot}
-    {A kinyert nyersanyag visszarakásának tesztelése.}
+    {Egy robot sikertelen elkészítésének, vagy sikeres elkészítésének és inicializálásának a folyamata. }
     {Tester} 
-    \textbf{A} A tester hívja meg a SpaceShip-nek Hide metódust. Ha a telepes éppen meg van bújva, akkor visszahívja a metódus. \newline
-    \textbf{B} Ha a telepes nincs megbújva, akkor a fenti esetén még a SpaceShip objektum hívja meg currentAsteroid attribútumnak Hide metódust. Ha az aszteroida már felrobban, akkor a metódus nem fog csinálni semmit. \newline
-    \textbf{C} Ugyanaz a helyzetben, ha az aszteroida köpenye még nincs átfúrva, akkor a metódus nem fog csinálni semmit. \newline
-    \textbf{C} Más esetén az aszteroida Hide metódus felhívja a hidingVessel attribútumnak a GetHidingSpaceRequirement metódust, majd visszakapja egy lyukas hely mennyiségét, és megkérdezi a SpaceShip objektumnak GetHidingSpaceRequirement metódust, hogy mennyi helyet kell maradni lyukasan. Ha az első érték nagyobb mint a második, akkor a Hide metódus visszatér egy true értéket, és a SpaceShip innentől kezdődik megbújni. \newline
-    \textbf{C} A tester meghívja a SpaceShip-nek a ExitHiding metódust, ha éppen a telepes nincs megbújva, akkor a metódus nem csinál semmit. \newline
-    \textbf{C} Külön esetén a SpaceShip meghívja a currentAsteroid attribútumnak Hide metódust, ilyenkor kiszabadítja a aszteroida magja, és a SpaceShip végzik a megbújást. \newline
+    \textbf{A} Ellenőrizzük, hogy az adott robot elkészíthető a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A robot receptjében szereplő item-ekre először a telepes raktárát ellenőrizzük, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is. Az összes recepthez szükséges item-ből találunk elegendőt a két raktárban összesen, ezért elkészíthető a recept.  \newline
+    \textbf{A} Sikeres ellenőrzés után maga a készítés folyamata indul el.  \newline
+    \textbf{A} A készítés során, ha lehetséges, a recepthez szükséges item-eket a telepes raktárából távolítjuk el. Az itt nem megtalált item-eket pedig az aszteroida raktárából távolítjuk el.  \newline
+    \textbf{A} Új robot létrehozása, az adott aszteroidán elhelyezzük, illetve hozzárendeljük az aktuális játékost.  \newline
+    \textbf{B} Megnézzük, hogy az adott robot elkészíthető-e a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A robot receptjében szereplő item-ekre először a telepes raktárát nézzük meg, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is. Találunk legalább egy olyan item-et, amiből a két raktárban lévő mennyiség nem elegendő a készítéshez, így a recept nem készíthető el.  \newline
+    \textbf{B} A készítés tényleges folyamata nem indul el, a forgatókönyv sikertelen készítéssel zárul. \newline
+\end{use-case}
+
+\begin{use-case}
+    {Craft Teleport Gate}
+    {Egy teleportkapu-pár sikertelen elkészítésének, vagy sikeres elkészítésének és raktárba helyezésének a folyamata.  }
+    {Tester} 
+    \textbf{A} Ellenőrizzük, hogy az adott teleportkapu-pár elkészíthető a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A kapupár receptjében szereplő item-ekre először a telepes raktárát ellenőrizzük, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is.  Az összes recepthez szükséges item-ből találunk elegendőt a két raktárban összesen.   \newline
+    \textbf{A} Ellenőrizzük, hogy a készítés után a telepes raktárában lesz elegendő szabad hely a teleportkapuk tárolására. Ez is teljesül, tehát a teleportkapukat el tudjuk készíteni. \newline
+    \textbf{A} Sikeres ellenőrzés után maga a készítés folyamata indul el.  \newline
+    \textbf{A} A készítés során, ha lehetséges, a recepthez szükséges item-eket a telepes raktárából távolítjuk el. Az itt nem megtalált item-eket pedig az aszteroida raktárából távolítjuk el.  \newline
+    \textbf{A} Új teleportkapu-pár létrehozása, az aktuális telepes raktárába elhelyezzük őket. \newline
+    \textbf{B} Megnézzük, hogy az adott teleportkapu-pár elkészíthető-e a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A teleportkapuk receptjében szereplő item-ekre először a telepes raktárát nézzük meg, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is. Találunk legalább egy olyan item-et, amiből a két raktárban lévő mennyiség nem elegendő a készítéshez, így a recept nem készíthető el.  \newline
+    \textbf{B} A készítés tényleges folyamata nem indul el, a forgatókönyv sikertelen készítéssel zárul.  \newline
+    \textbf{C} Ellenőrizzük, hogy az adott teleportkapu-pár elkészíthető a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A kapupár receptjében szereplő item-ekre először a telepes raktárát ellenőrizzük, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is.  Az összes recepthez szükséges item-ből találunk elegendőt a két raktárban összesen.  \newline
+    \textbf{C} Megnézzük, hogy a készítés után a telepes raktárában lesz-e elegendő szabad hely a teleportkapuk tárolására. Ez nem teljesül, tehát a teleportkapukat nem tudjuk elkészíteni.  \newline
+    \textbf{C} A készítés tényleges folyamata nem indul el, a forgatókönyv sikertelen készítéssel zárul.  \newline
+\end{use-case}
+
+\begin{use-case}
+    {Craft Space Station}
+    {Egy űrállomás sikertelen elkészítésének, vagy sikeres elkészítésének és ezáltal a játék megnyerésének a folyamata. }
+    {Tester} 
+    \textbf{A} Ellenőrizzük, hogy az adott űrállomás elkészíthető az aszteroidán tartózkodó telepesek raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. Az űrállomás receptjében szereplő item-ekre először a telepesek raktárát ellenőrizzük, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is.  Az összes recepthez szükséges item-ből találunk elegendőt a két raktárban összesen.  \newline
+    \textbf{A} Sikeres ellenőrzés után maga a készítés folyamata indul el.  \newline
+    \textbf{A} A készítés során, ha lehetséges, a recepthez szükséges item-eket a telepes raktárából távolítjuk el. Az itt nem megtalált item-eket pedig az aszteroida raktárából távolítjuk el.  \newline
+    \textbf{A} Új űrállomás létrehozása, elhelyezése az aktuális aszteroidán.  \newline
+    \textbf{A} A játék automatikusan befejeződik, a telepesek megnyerték.  \newline
+    \textbf{B} Megnézzük, hogy az adott űrállomás elkészíthető-e a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. Az űrállomás receptjében szereplő item-ekre először a telepes raktárát nézzük meg, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is. Találunk legalább egy olyan item-et, amiből a két raktárban lévő mennyiség nem elegendő a készítéshez, így a recept nem készíthető el.  \newline
+    \textbf{B} A készítés tényleges folyamata nem indul el, a forgatókönyv sikertelen készítéssel zárul. \newline
 \end{use-case}
 
 \section{A szkeleton kezelői felületének terve, dialógusok}

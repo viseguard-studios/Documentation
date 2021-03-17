@@ -58,36 +58,36 @@
     \caption{Ellenőrzi a készítéshez szükséges nyersanyagok meglétét a telepesnél, illetve aszteroidán, azonban legalább 1 item esetén ez nem teljesül, így a recept nem készíthető el. } 
 \end{figure} 
 
-\subsection{Craft robots}
+\subsection{Craft space station}
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_space_station/sequence/1.CanCraft_station.eps} 
-    \caption{} 
+    \caption{ A telepes szeretne létrehozni egy űrállomást a kibányászott nyersanyagokkal. Ellenőrizni kell, hogy ez lehetséges-e, majd létrehozni az állomást. } 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_space_station/sequence/2.Possible_to_craft_station.eps} 
-    \caption{} 
+    \caption{ Ellenőrzi, hogy a telepes, illetve az aszteroida raktárában lévő kibányászott nyersanyagok mennyisége összesen elegendő ahhoz, hogy előállítsuk az űrállomást. Minden szükséges nyersanyagnál ellenőrzi egymás után. } 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_space_station/sequence/3.Craft_station.eps} 
-    \caption{} 
+    \caption{A recept levonja a nyersanyagokat a megfelelő helyekről (telepes vagy aszteroida raktárából, kapacitástól függően),  majd elkészíti az űrállomást és elhelyezi a megfelelő aszteroidán. Az űrállomás konstruktora jelzi a játékmenedzsernek, hogy felépült az űrállomás, ami a játék végét jelenti. } 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_space_station/sequence/4.Cant_craft_station.eps} 
-    \caption{} 
+    \caption{A telepes szeretne létrehozni egy űrállomást a kibányászott nyersanyagokkal.  A készítés előtti ellenőrzés során kiderült, hogy nem lehet előállítani az állomást, ezért a készítést végző függvény meg sem hívódik.} 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_space_station/sequence/5.Not_possible_to_craft_station.eps} 
-    \caption{} 
+    \caption{Ellenőrzi a készítéshez szükséges nyersanyagok meglétét a telepesnél, illetve aszteroidán, azonban legalább 1 item esetén ez nem teljesül, így a recept nem készíthető el.  } 
 \end{figure} 
 
 \subsection{Carft Teleport Gate}
@@ -95,37 +95,37 @@
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_teleport_gate/sequence/1.CanCraft_gate.eps} 
-    \caption{} 
+    \caption{A telepes szeretne létrehozni egy teleportkapu-párt a kibányászott nyersanyagokkal.  Ellenőrizni kell, hogy ez lehetséges-e, majd létrehozni a kapukat.} 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_teleport_gate/sequence/2.Possible_to_craft_gate.eps} 
-    \caption{} 
+    \caption{Ellenőrzi, hogy a telepes, illetve az aszteroida raktárában lévő kibányászott nyersanyagok mennyisége összesen elegendő ahhoz, hogy előállítsuk a teleportkapu-párt. Minden szükséges nyersanyagnál ellenőrzi egymás után, majd ezután megnézi, hogy a telepes raktárában a szükséges elemek kivétele után van elegendő hely a teleportkapuk elhelyezéséhez. } 
 \end{figure}
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_teleport_gate/sequence/3.Craft_gate.eps} 
-    \caption{} 
+    \caption{A recept levonja a nyersanyagokat a megfelelő helyekről (telepes vagy aszteroida raktárából, kapacitástól függően),  majd elkészíti a teleportkapu-párt és elhelyezi a telepes raktárában.  } 
 \end{figure}
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_teleport_gate/sequence/4.Cant_craft_gate.eps} 
-    \caption{} 
+    \caption{ A telepes szeretne létrehozni egy teleportkapu-párt a kibányászott nyersanyagokkal.  A készítés előtti ellenőrzés során kiderült, hogy nem lehet előállítani a kapukat, ezért a készítést végző függvény meg sem hívódik. } 
 \end{figure}
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_teleport_gate/sequence/5.Not_possible_to_craft_gate_1.eps} 
-    \caption{} 
+    \caption{Ellenőrzi a készítéshez szükséges nyersanyagok meglétét a telepesnél, illetve aszteroidán,  azonban legalább 1 item esetén ez nem teljesül, így a recept nem készíthető el.  } 
 \end{figure}
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_teleport_gate/sequence/6.Not_possible_to_craft_gate_2.eps} 
-    \caption{} 
+    \caption{Ebben az esetben azért nem készíthető el a recept, mert a telepes raktárában  a készítés után nem lenne elegendő hely eltárolni a kapukat. } 
 \end{figure}
 
 \subsection{Direct Robots}
