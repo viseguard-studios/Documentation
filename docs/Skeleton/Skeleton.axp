@@ -1,8 +1,0 @@
-\makeatletter \let \proof \axp@oldproof \let \endproof \endaxp@oldproof \let \section \axp@oldsection 
-\global \def \axp@protectref@v {\ref {axp@sv}}
-\axp@section {\appendixsectionformat {\protect \axp@protectref@v }{Napló}}
-
-        \markdownInput[shiftHeadings=2]{\filePath[docs/meetings/task-breakdown-3.md]}
-
-    \markdownInput[shiftHeadings=2]{\filePath[docs/meetings/meeting-9.md]}
-        
