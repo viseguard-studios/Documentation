@@ -6,7 +6,7 @@ actor Tester as Tester
 
 participant s as s <<SpaceShip>>
 participant currentAsteroid as currentAsteroid <<Asteroid>>
-participant currentAsteroid.inventory as currentAsteroid.inventory <<Inventory>>
+participant inventory as inventory <<Inventory>>
 participant item as item <<Item>>
 
 Tester -> s : PlaceItem(item)
@@ -14,9 +14,9 @@ activate s
 
 s -> currentAsteroid ++: PlaceItem(item)
 
-currentAsteroid -> currentAsteroid.inventory ++: TryInsertItem(item)
+currentAsteroid -> inventory ++: TryInsertItem(item)
 
-currentAsteroid.inventory --> currentAsteroid --: false
+inventory --> currentAsteroid --: false
 
 currentAsteroid --> s --: false
 
