@@ -18,3 +18,4 @@ currentAsteroid --> s --: false
 s--> Tester : false
 deactivate s
 
+@enduml

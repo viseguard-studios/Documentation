@@ -58,6 +58,7 @@ end
 
 recipe -> recipe++: MakeResult(s)
 
+create gate
 recipe --> gate: <<create>>
 
 recipe -> inventory++: InsertItem(gate)

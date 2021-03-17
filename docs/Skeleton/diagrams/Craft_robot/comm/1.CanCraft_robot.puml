@@ -1,8 +1,8 @@
 @startuml
-rectangle “s: SpaceShip” as s
-rectangle “recipe: RobotRecipe” as recipe
+rectangle "s: SpaceShip" as s
+rectangle "recipe: RobotRecipe" as recipe
 
-title SpaceShip can craft robot \n 
+title SpaceShip can craft robot 
 
 s -right- recipe: 1: CanCraft(s) \n ----> \n 2: true \n <- - - -  \n 3: Craft(s) \n ---->
 
