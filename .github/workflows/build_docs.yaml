@@ -24,7 +24,7 @@ jobs:
       uses: cloudbees/plantuml-github-action@master
       continue-on-error: true
       with:
-          args: -v -teps ${{ steps.getfile.outputs.files }}
+          args: -v -charset UTF-8 -teps ${{ steps.getfile.outputs.files }}
 
     - name: Generate latex from mdj
       run: |
