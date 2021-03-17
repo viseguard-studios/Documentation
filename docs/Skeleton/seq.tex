@@ -3,102 +3,227 @@
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=0.5\textwidth]{docs/Skeleton/diagrams/Controll-Robots/Move-Robots/Move-Robot-to-Asteroid.eps} 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Controll-Robots/Move-Robots/Move-Robot-to-Asteroid.eps} 
     \caption{} 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=0.5\textwidth]{docs/Skeleton/diagrams/Controll-Robots/Move-Robots/Move-Robot-Through-TG.eps} 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Controll-Robots/Move-Robots/Move-Robot-Through-TG.eps} 
     \caption{} 
 \end{figure} 
 
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=0.5\textwidth]{docs/Skeleton/diagrams/Controll-Robots/Robot-Drill/Robot-Drills-Asteroid-Succes.eps} 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Controll-Robots/Robot-Drill/Robot-Drills-Asteroid-Succes.eps} 
     \caption{} 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=0.5\textwidth]{docs/Skeleton/diagrams/Controll-Robots/Robot-Drill/Robot-Drills-Asteroid-Exploded.eps} 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Controll-Robots/Robot-Drill/Robot-Drills-Asteroid-Exploded.eps} 
     \caption{} 
 \end{figure} 
 
+\subsection{Craft Robot}
 
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_robot/sequence/1.CanCraft_robot.eps} 
+    \caption{A telepes szeretne létrehozni egy robotot a kibányászott nyersanyagokkal. Ellenőrizni kell, hogy ez lehetséges-e, majd létrehozni a robotot. } 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_robot/sequence/2.Possible_to_craft_robot.eps} 
+    \caption{Ellenőrzi, hogy a telepes, illetve az aszteroida raktárában lévő kibányászott nyersanyagok mennyisége összesen elegendő ahhoz, hogy előállítsuk a robotot. Minden szükséges nyersanyagnál ellenőrzi egymás után. } 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_robot/sequence/3.Craft_Robot.eps} 
+    \caption{A recept levonja a nyersanyagokat a megfelelő helyekről (telepes vagy aszteroida raktárából, kapacitástól függően), majd elkészíti a robotot és elhelyezi a megfelelő aszteroidán.} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_robot/sequence/4.Cant_craft_robot.eps} 
+    \caption{A telepes szeretne létrehozni egy robotot a kibányászott nyersanyagokkal. A készítés előtti ellenőrzés során kiderült, hogy nem lehet előállítani a robotot, ezért a készítést végző függvény meg sem hívódik. } 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_robot/sequence/5.Not_possible_to_craft_robot.eps} 
+    \caption{Ellenőrzi a készítéshez szükséges nyersanyagok meglétét a telepesnél, illetve aszteroidán, azonban legalább 1 item esetén ez nem teljesül, így a recept nem készíthető el. } 
+\end{figure} 
+
+\subsection{Craft space station}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_space_station/sequence/1.CanCraft_station.eps} 
+    \caption{ A telepes szeretne létrehozni egy űrállomást a kibányászott nyersanyagokkal. Ellenőrizni kell, hogy ez lehetséges-e, majd létrehozni az állomást. } 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_space_station/sequence/2.Possible_to_craft_station.eps} 
+    \caption{ Ellenőrzi, hogy a telepes, illetve az aszteroida raktárában lévő kibányászott nyersanyagok mennyisége összesen elegendő ahhoz, hogy előállítsuk az űrállomást. Minden szükséges nyersanyagnál ellenőrzi egymás után. } 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_space_station/sequence/3.Craft_station.eps} 
+    \caption{A recept levonja a nyersanyagokat a megfelelő helyekről (telepes vagy aszteroida raktárából, kapacitástól függően),  majd elkészíti az űrállomást és elhelyezi a megfelelő aszteroidán. Az űrállomás konstruktora jelzi a játékmenedzsernek, hogy felépült az űrállomás, ami a játék végét jelenti. } 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_space_station/sequence/4.Cant_craft_station.eps} 
+    \caption{A telepes szeretne létrehozni egy űrállomást a kibányászott nyersanyagokkal.  A készítés előtti ellenőrzés során kiderült, hogy nem lehet előállítani az állomást, ezért a készítést végző függvény meg sem hívódik.} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_space_station/sequence/5.Not_possible_to_craft_station.eps} 
+    \caption{Ellenőrzi a készítéshez szükséges nyersanyagok meglétét a telepesnél, illetve aszteroidán, azonban legalább 1 item esetén ez nem teljesül, így a recept nem készíthető el.  } 
+\end{figure} 
+
+\subsection{Carft Teleport Gate}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_teleport_gate/sequence/1.CanCraft_gate.eps} 
+    \caption{A telepes szeretne létrehozni egy teleportkapu-párt a kibányászott nyersanyagokkal.  Ellenőrizni kell, hogy ez lehetséges-e, majd létrehozni a kapukat.} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_teleport_gate/sequence/2.Possible_to_craft_gate.eps} 
+    \caption{Ellenőrzi, hogy a telepes, illetve az aszteroida raktárában lévő kibányászott nyersanyagok mennyisége összesen elegendő ahhoz, hogy előállítsuk a teleportkapu-párt. Minden szükséges nyersanyagnál ellenőrzi egymás után, majd ezután megnézi, hogy a telepes raktárában a szükséges elemek kivétele után van elegendő hely a teleportkapuk elhelyezéséhez. } 
+\end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_teleport_gate/sequence/3.Craft_gate.eps} 
+    \caption{A recept levonja a nyersanyagokat a megfelelő helyekről (telepes vagy aszteroida raktárából, kapacitástól függően),  majd elkészíti a teleportkapu-párt és elhelyezi a telepes raktárában.  } 
+\end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_teleport_gate/sequence/4.Cant_craft_gate.eps} 
+    \caption{ A telepes szeretne létrehozni egy teleportkapu-párt a kibányászott nyersanyagokkal.  A készítés előtti ellenőrzés során kiderült, hogy nem lehet előállítani a kapukat, ezért a készítést végző függvény meg sem hívódik. } 
+\end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_teleport_gate/sequence/5.Not_possible_to_craft_gate_1.eps} 
+    \caption{Ellenőrzi a készítéshez szükséges nyersanyagok meglétét a telepesnél, illetve aszteroidán,  azonban legalább 1 item esetén ez nem teljesül, így a recept nem készíthető el.  } 
+\end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Craft_teleport_gate/sequence/6.Not_possible_to_craft_gate_2.eps} 
+    \caption{Ebben az esetben azért nem készíthető el a recept, mert a telepes raktárában  a készítés után nem lenne elegendő hely eltárolni a kapukat. } 
+\end{figure}
+
+\subsection{Direct Robots}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Direct-Robots/PlayerDirectsRobots.eps} 
+    \caption{A játékos utasítást ad ki hogy mit keressenek a robotok} 
+\end{figure}
 
 \subsection{Drill}
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=1\textwidth]{docs/Skeleton/diagrams/Drill/SpaceShip-drill-succeed.eps} 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Drill/SpaceShip-drill-succeed.eps} 
     \caption{} 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=1\textwidth]{docs/Skeleton/diagrams/Drill/SpaceShip-drill-when-asteroid-exploded.eps} 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Drill/SpaceShip-drill-when-asteroid-exploded.eps} 
     \caption{} 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=1\textwidth]{docs/Skeleton/diagrams/Drill/SpaceShip-drill-when-core-is-visible.eps} 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Drill/SpaceShip-drill-when-core-is-visible.eps} 
     \caption{} 
 \end{figure} 
 
-\subsection{Solar Flare}
+\subsection{Hide}
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=1\textwidth]{docs/Skeleton/diagrams/Solar-Flare/Round-Ends-Robot.eps} 
-    \caption{Itt látható hogy mi történik egy robottal, ha a Teszter befejezi a kört. Robot eset} 
-\end{figure}
-
-\begin{figure}[H] 
-    \centering 
-    \includegraphics[width=1\textwidth]{docs/Skeleton/diagrams/Solar-Flare/Round-Ends-SpaceShip.eps} 
-    \caption{Itt látható hogy mi történik egy űrhajóval, ha a Teszter befejezi a kört.} 
-\end{figure}
-
-\begin{figure}[H] 
-    \centering 
-    \includegraphics[width=1\textwidth]{docs/Skeleton/diagrams/Solar-Flare/Solar-Flare-Happen/Solar-Flare-Happens-Robot-Comm.eps} 
-    \caption{A kör véget érésekor értesítünk minden entitást. Most történt napkitörés, ezért van a SolarFlare() meghívva.} 
-\end{figure}
-
-\begin{figure}[H] 
-    \centering 
-    \includegraphics[width=1\textwidth]{docs/Skeleton/diagrams/Solar-Flare/Solar-Flare-Happen/Solar-Flare-Happens-SpaceShip-Comm.eps} 
-    \caption{A kör véget érésekor értesítünk minden entitást. Most történt napkitörés, ezért van a SolarFlare() meghívva.} 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Hide/hide1.eps} 
+    \caption{} 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=1\textwidth]{docs/Skeleton/diagrams/Solar-Flare/Solar-Flare-Happen/No-Solar-Flare-Robot-Comm.eps} 
-    \caption{A kör véget érésekor értesítünk minden entitást. Most nem történt napkitörés, ezért nincs a SolarFlare() meghívva.} 
-\end{figure}
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Hide/hide2.eps} 
+    \caption{} 
+\end{figure} 
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=1\textwidth]{docs/Skeleton/diagrams/Solar-Flare/Solar-Flare-Happen/No-Solar-Flare-SpaceShip-Comm.eps} 
-    \caption{A kör véget érésekor értesítünk minden entitást. Most nem történt napkitörés, ezért nincs a SolarFlare() meghívva.} 
-\end{figure}
-
-\subsection{Move Asteroid Field}
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Hide/hide3.eps} 
+    \caption{} 
+\end{figure} 
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=1\textwidth]{docs/Skeleton/diagrams/Move-Asteroid-Field/Change-Asteroid-Field-Distance.eps} 
-    \caption{A tesztelő megváltoztatja az aszteroidamező távolságát} 
-\end{figure}
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Hide/hide4.eps} 
+    \caption{} 
+\end{figure} 
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=1\textwidth]{docs/Skeleton/diagrams/Move-Asteroid-Field/Change-Asteroid-Field-Distance-Comm.eps} 
-    \caption{A tesztelő megváltoztatja az aszteroidamező távolságát} 
-\end{figure}
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Hide/hide5.eps} 
+    \caption{} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Hide/hide6.eps} 
+    \caption{} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Hide/hide7.eps} 
+    \caption{} 
+\end{figure} 
+
+\subsection{Mine}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Mine/Ship-mine.eps} 
+    \caption{} 
+\end{figure} 
+
+\subsection{Move}
+
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Move/Move-SS-to-asteroid.eps} 
+    \caption{} 
+\end{figure} 
+
+\subsection{Move asteroid field}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/Skeleton/diagrams/Move-Asteroid-Field/Sun-Distance-Chage/Change-Asteroid-Field-Distance.eps} 
+    \caption{} 
+\end{figure} 
 
 \subsection{Place Gate}
 
@@ -115,7 +240,6 @@
 \end{figure} 
 
 
-
 \subsection{Place Resource}
 
 \begin{figure}[H] 
@@ -129,3 +253,33 @@
     \includegraphics[width=1\textwidth]{docs/Skeleton/diagrams/Place-Resource/Not-Drilled/PlaceResource-NotDrilled.eps} 
     \caption{} 
 \end{figure} 
+
+
+
+\subsection{Solar Flare}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.75\textwidth]{docs/Skeleton/diagrams/Solar-Flare/Queue-Solar-Flare.eps} 
+    \caption{Itt látható hogy mi történik egy robottal, ha a Teszter befejezi a kört. Robot eset} 
+\end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.75\textwidth]{docs/Skeleton/diagrams/Solar-Flare/Queue-Solar-Flare.eps} 
+    \caption{Itt látható hogy mi történik egy robottal, ha a Teszter befejezi a kört. Robot eset} 
+\end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.75\textwidth]{docs/Skeleton/diagrams/Solar-Flare/Round-Ends-Robot.eps} 
+    \caption{Itt látható hogy mi történik egy robottal, ha a Teszter befejezi a kört. Robot eset} 
+\end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.75\textwidth]{docs/Skeleton/diagrams/Solar-Flare/Round-Ends-SpaceShip.eps} 
+    \caption{Itt látható hogy mi történik egy űrhajóval, ha a Teszter befejezi a kört.} 
+\end{figure}
+
+

@@ -1,6 +1,6 @@
 @startuml
 rectangle "s: SpaceShip" as s
-rectangle “recipe: TeleportGateRecipe” as recipe
+rectangle "recipe: TeleportGateRecipe" as recipe
 
 title SpaceShip can't craft teleport gate \n 
 

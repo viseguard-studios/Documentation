@@ -23,46 +23,158 @@
 \end{figure} 
 
 \subsection{Use-case leírások}
+
+\begin{use-case}
+    {Control robots}
+    {A robotok irányításának lehetséges műveletei. }
+    {Tester} 
+    \textbf{A} Egy robotot az adott szomszédos aszteroidára átmozgat a tesztelő.  \newline
+    \textbf{B} Egy robotot az aktuális aszteroidán található teleportkapun keresztül, egy így elérhető aszteroidára átmozgat a tesztelő. \newline
+    \textbf{C} Egy robot fúrása sikeresen megy végbe, a köpeny 1 réteggel csökken. \newline
+    \textbf{D} Egy robot sikertelen fúrása, nem történik művelet az aszteroidán. \newline
+
+\end{use-case}
+
+\begin{use-case}
+    {Craft Robot}
+    {Egy robot sikertelen elkészítésének, vagy sikeres elkészítésének és inicializálásának a folyamata. }
+    {Tester} 
+    \textbf{A} Ellenőrizzük, hogy az adott robot elkészíthető a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A robot receptjében szereplő item-ekre először a telepes raktárát ellenőrizzük, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is. Az összes recepthez szükséges item-ből találunk elegendőt a két raktárban összesen, ezért elkészíthető a recept.  \newline
+    \textbf{A} Sikeres ellenőrzés után maga a készítés folyamata indul el.  \newline
+    \textbf{A} A készítés során, ha lehetséges, a recepthez szükséges item-eket a telepes raktárából távolítjuk el. Az itt nem megtalált item-eket pedig az aszteroida raktárából távolítjuk el.  \newline
+    \textbf{A} Új robot létrehozása, az adott aszteroidán elhelyezzük, illetve hozzárendeljük az aktuális játékost.  \newline
+    \textbf{B} Megnézzük, hogy az adott robot elkészíthető-e a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A robot receptjében szereplő item-ekre először a telepes raktárát nézzük meg, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is. Találunk legalább egy olyan item-et, amiből a két raktárban lévő mennyiség nem elegendő a készítéshez, így a recept nem készíthető el.  \newline
+    \textbf{B} A készítés tényleges folyamata nem indul el, a forgatókönyv sikertelen készítéssel zárul. \newline
+\end{use-case}
+
+\begin{use-case}
+    {Craft Teleport Gate}
+    {Egy teleportkapu-pár sikertelen elkészítésének, vagy sikeres elkészítésének és raktárba helyezésének a folyamata.  }
+    {Tester} 
+    \textbf{A} Ellenőrizzük, hogy az adott teleportkapu-pár elkészíthető a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A kapupár receptjében szereplő item-ekre először a telepes raktárát ellenőrizzük, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is.  Az összes recepthez szükséges item-ből találunk elegendőt a két raktárban összesen.   \newline
+    \textbf{A} Ellenőrizzük, hogy a készítés után a telepes raktárában lesz elegendő szabad hely a teleportkapuk tárolására. Ez is teljesül, tehát a teleportkapukat el tudjuk készíteni. \newline
+    \textbf{A} Sikeres ellenőrzés után maga a készítés folyamata indul el.  \newline
+    \textbf{A} A készítés során, ha lehetséges, a recepthez szükséges item-eket a telepes raktárából távolítjuk el. Az itt nem megtalált item-eket pedig az aszteroida raktárából távolítjuk el.  \newline
+    \textbf{A} Új teleportkapu-pár létrehozása, az aktuális telepes raktárába elhelyezzük őket. \newline
+    \textbf{B} Megnézzük, hogy az adott teleportkapu-pár elkészíthető-e a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A teleportkapuk receptjében szereplő item-ekre először a telepes raktárát nézzük meg, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is. Találunk legalább egy olyan item-et, amiből a két raktárban lévő mennyiség nem elegendő a készítéshez, így a recept nem készíthető el.  \newline
+    \textbf{B} A készítés tényleges folyamata nem indul el, a forgatókönyv sikertelen készítéssel zárul.  \newline
+    \textbf{C} Ellenőrizzük, hogy az adott teleportkapu-pár elkészíthető a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A kapupár receptjében szereplő item-ekre először a telepes raktárát ellenőrizzük, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is.  Az összes recepthez szükséges item-ből találunk elegendőt a két raktárban összesen.  \newline
+    \textbf{C} Megnézzük, hogy a készítés után a telepes raktárában lesz-e elegendő szabad hely a teleportkapuk tárolására. Ez nem teljesül, tehát a teleportkapukat nem tudjuk elkészíteni.  \newline
+    \textbf{C} A készítés tényleges folyamata nem indul el, a forgatókönyv sikertelen készítéssel zárul.  \newline
+\end{use-case}
+
+\begin{use-case}
+    {Craft Space Station}
+    {Egy űrállomás sikertelen elkészítésének, vagy sikeres elkészítésének és ezáltal a játék megnyerésének a folyamata. }
+    {Tester} 
+    \textbf{A} Ellenőrizzük, hogy az adott űrállomás elkészíthető az aszteroidán tartózkodó telepesek raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. Az űrállomás receptjében szereplő item-ekre először a telepesek raktárát ellenőrizzük, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is.  Az összes recepthez szükséges item-ből találunk elegendőt a két raktárban összesen.  \newline
+    \textbf{A} Sikeres ellenőrzés után maga a készítés folyamata indul el.  \newline
+    \textbf{A} A készítés során, ha lehetséges, a recepthez szükséges item-eket a telepes raktárából távolítjuk el. Az itt nem megtalált item-eket pedig az aszteroida raktárából távolítjuk el.  \newline
+    \textbf{A} Új űrállomás létrehozása, elhelyezése az aktuális aszteroidán.  \newline
+    \textbf{A} A játék automatikusan befejeződik, a telepesek megnyerték.  \newline
+    \textbf{B} Megnézzük, hogy az adott űrállomás elkészíthető-e a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. Az űrállomás receptjében szereplő item-ekre először a telepes raktárát nézzük meg, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is. Találunk legalább egy olyan item-et, amiből a két raktárban lévő mennyiség nem elegendő a készítéshez, így a recept nem készíthető el.  \newline
+    \textbf{B} A készítés tényleges folyamata nem indul el, a forgatókönyv sikertelen készítéssel zárul. \newline
+\end{use-case}
+
+\begin{use-case}
+    {Direct robots}
+    {A robotok egy adott nyersanyagért kutatnak. }
+    {Tester} 
+    \textbf{A} A tesztelő megmondja a robotoknak, hogy milyen nyersanyagért kutassanak.  \newline
+\end{use-case}
+
 \begin{use-case}
     {Drill}
     {Az aszteroida fúrásának tesztelése.}
     {Tester} 
-    \textbf{A} A tester hívja meg a SpaceShip-nek Drill metódust, majd a SpaceShip objektum hívja meg currentAsteroid attribútumnak Drill metódust. Ha az aszteroida már felrobban, akkor a metódus nem fog csinálni semmit. \newline
-    \textbf{B} Ugyanúgy a helyzetben, ha a köpenye már teljesen át van fúrva, akkor a metódus nem csinál semmit. \newline
-    \textbf{C} Ugyanúgy a helyzetben, ha a köpenye még nincs átfúrva, akkor az currentAsteroid attribútumnak crustSize-t egyel levonási értéket ad vissza. \newline
+    \textbf{A} A tester hívja meg a SpaceShip objektumon keresztül a köpeny méretét sikeresen csökkenti.  \newline
+    \textbf{B} Ha az aszteroida már felrobbant, akkor a metódus nem fog csinálni semmit. 
+    \textbf{C} Ha a köpeny már teljesen át van fúrva, akkor a metódus nem csinál semmit. \newline
 \end{use-case}
 
 \begin{use-case}
     {Hide}
     {A telepes elbújásának tesztelése.}
     {Tester} 
-    \textbf{A} 1.	A tester hívja meg a SpaceShip-nek Hide metódust. Ha a telepes éppen meg van bújva, akkor visszahívja a metódus. \newline
-    \textbf{B} 2.	Ha a telepes nincs megbújva, akkor a fenti esetén még a SpaceShip objektum hívja meg currentAsteroid attribútumnak Hide metódust. Ha az aszteroida már felrobban, akkor a metódus nem fog csinálni semmit. \newline
-    \textbf{C} 3.	Ugyanaz a helyzetben, ha az aszteroida köpenye még nincs átfúrva, akkor a metódus nem fog csinálni semmit. \newline
-    \textbf{C} 4.	Más esetén az aszteroida Hide metódus felhívja a hidingVessel attribútumnak a GetHidingSpaceRequirement metódust, majd visszakapja egy lyukas hely mennyiségét, és megkérdezi a SpaceShip objektumnak GetHidingSpaceRequirement metódust, hogy mennyi helyet kell maradni lyukasan. Ha az első érték nagyobb mint a második, akkor a Hide metódus visszatér egy true értéket, és a SpaceShip innentől kezdődik megbújni. \newline
-    \textbf{C} 5.	A tester meghívja a SpaceShip-nek a ExitHiding metódust, ha éppen a telepes nincs megbújva, akkor a metódus nem csinál semmit. \newline
-    \textbf{C} 6.	Külön esetén a SpaceShip meghívja a currentAsteroid attribútumnak Hide metódust, ilyenkor kiszabadítja a aszteroida magja, és a SpaceShip végzik a megbújást. \newline
+    \textbf{A} A tester hívja meg a SpaceShip-nek Hide metódusát. Ha a telepes éppen meg van bújva, akkor visszatér a metódus. \newline
+    \textbf{B} Ha a telepes nincs megbújva, akkor a SpaceShip objektum hívja meg currentAsteroid attribútumnak Hide metódusát. Ha az aszteroida már felrobbant, akkor a metódus nem fog csinálni semmit. \newline
+    \textbf{C} Ha az aszteroida köpenye még nincs átfúrva, akkor a metódus nem fog csinálni semmit. \newline
+    \textbf{D} Más esetén az aszteroida Hide metódusa lekérdezi, hogy mennyi helyet foglalnak az éppen ott tartózkodó telepesek, illetve robotok, majd megkérdezi az adott telepest, hogy neki mennyi helyre lenne szüksége. Ha nincs számára elegendő hely, nem bújhat meg.    \newline
+    \textbf{E} Más esetén az aszteroida Hide metódusa lekérdezi, hogy mennyi helyet foglalnak az éppen ott tartózkodó telepesek, illetve robotok, majd megkérdezi az adott telepest, hogy neki mennyi helyre lenne szüksége. Ha van számára elegendő hely, meg tud bújni.    \newline
+    \textbf{F} A tester meghívja a SpaceShip-nek a ExitHiding metódusát. Ha éppen a telepes nincs megbújva, akkor a metódus nem csinál semmit. \newline
+    \textbf{G} A tester meghívja a SpaceShip-nek a ExitHiding metódusát. Ha a telepes meg van bújva, akkor a metódus "kiszabadítja", kibújik az aszteroidából. \newline \newline
+\end{use-case}
+
+\begin{use-case}
+    {Mine}
+    {A telepesek bányászásának lehetséges műveletei. }
+    {Tester} 
+    \textbf{A}  \newline
+    \textbf{A}  \newline
+    \textbf{A}  \newline
+\end{use-case}
+
+\begin{use-case}
+    {Move}
+    {A telepesek mozgásának lehetséges műveletei. }
+    {Tester} 
+    \textbf{A}  Egy telepes sikeres mozgatása egy kiválasztott szomszédos aszteroidára. Az aktuális aszteroidáról eltávolítjuk, majd a kiválasztott aszteroidára áthelyezzük a telepest.\newline
+    \textbf{B}  \newline
+    \textbf{A}  \newline
+\end{use-case}
+
+\begin{use-case}
+    {Move asteroid field}
+    {Az aszteroidamező távolságának állítása a Naphoz képest.}
+    {Tester} 
+    \textbf{A} A tesztelő módosítja a Naptól mért távolságot. \newline
+\end{use-case}
+
+\begin{use-case}
+    {Place gate}
+    {A teleportkapu-párok lehelyezése. }
+    {Tester} 
+    \textbf{A}  Az aktuális aszteroidára a teleportkapu-pár első tagját elhelyezzük, létrehozunk egy objektumot. Majd a másik kapuhoz tartozó item-hez a párját beállítjuk. A második kaput hasonlóan helyezzük le, és véglegesítjük a párok lerakását. \newline
 \end{use-case}
 
 \begin{use-case}
     {PlaceResource}
     {A kinyert nyersanyag visszarakásának tesztelése.}
     {Tester} 
-    \textbf{A} 1.	A tester hívja meg a SpaceShip-nek Hide metódust. Ha a telepes éppen meg van bújva, akkor visszahívja a metódus. \newline
-    \textbf{B} 2.	Ha a telepes nincs megbújva, akkor a fenti esetén még a SpaceShip objektum hívja meg currentAsteroid attribútumnak Hide metódust. Ha az aszteroida már felrobban, akkor a metódus nem fog csinálni semmit. \newline
-    \textbf{C} 3.	Ugyanaz a helyzetben, ha az aszteroida köpenye még nincs átfúrva, akkor a metódus nem fog csinálni semmit. \newline
-    \textbf{C} 4.	Más esetén az aszteroida Hide metódus felhívja a hidingVessel attribútumnak a GetHidingSpaceRequirement metódust, majd visszakapja egy lyukas hely mennyiségét, és megkérdezi a SpaceShip objektumnak GetHidingSpaceRequirement metódust, hogy mennyi helyet kell maradni lyukasan. Ha az első érték nagyobb mint a második, akkor a Hide metódus visszatér egy true értéket, és a SpaceShip innentől kezdődik megbújni. \newline
-    \textbf{C} 5.	A tester meghívja a SpaceShip-nek a ExitHiding metódust, ha éppen a telepes nincs megbújva, akkor a metódus nem csinál semmit. \newline
-    \textbf{C} 6.	Külön esetén a SpaceShip meghívja a currentAsteroid attribútumnak Hide metódust, ilyenkor kiszabadítja a aszteroida magja, és a SpaceShip végzik a megbújást. \newline
+    \textbf{A}  \newline
 \end{use-case}
 
-\section{A szkeleton kezelői felületének terve, dialógusok}
-\comment{A szkeleton által elfogadott bemenetek , valamint a szöveges konzolon megjelenő kimenetek. A kiemenet formátuma olyan kell legyen, ami alapján a működés összevethető a korábbi szekvencia-diagramokkal.}
+\begin{use-case}
+    {Solar flare}
+    {A napkitörés előidézése. Hatással van az egész aszteroidamezőre.}
+    {Tester} 
+    \textbf{A} A tesztelő beállítja, hogy a kör végén legyen egy napkitörés, ami hatással van az ott tartózkodó telepesekre, illetve robotokra. \newline
+    \textbf{A} A kör végén létrejön a napkitörés, \newline
+\end{use-case}
 
-\comment{Konzol input/output szemléltetésre:}
+
+
+\section{A szkeleton kezelői felületének terve, dialógusok}
+%\comment{A szkeleton által elfogadott bemenetek , valamint a szöveges konzolon megjelenő kimenetek. A kiemenet formátuma olyan kell legyen, ami alapján a működés összevethető a korábbi szekvencia-diagramokkal.}
+
+A felhasználó egyszerű parancsokat tud kiadni a futó alkalmazás konzoljában, amik az eggyes teszt eseteket indítják el.
+Ez után a teszt esetek kérnek be extra adatokat a teszt eset paraméterezéséhez illetve az adott teszt környezet létrehozásához.
+
 \begin{verbatim}
-    > move
-    get item
+    > move ss
+    Szomszédos aszteroidák száma:
+    > 3
+    Aszteroida kiválasztása (sorszám):
+    > 2
+    Moving space ship to 2. neighbour
+    ss.Move(to);
+        currentAsteroid.GetNeighbours()
+            for b in buildings
+                b.GetRoutes()
+            end
+        end
+    ....
+
 \end{verbatim}
 
 \section{Szekvencia diagramok a belső működésre}
@@ -73,6 +185,7 @@
 \section{Kommunikációs diagramok}
 %\comment{A szkeletonban, az egyes szkeleton-use-case-ek futása során létrehozott objektumok és kapcsolataik bemutatására szolgáló diagramok. Ezek alapján valósítják meg a szkeleton fejlesztői az inicializáló kódrészleteket.}
 
+\input{docs/Skeleton/comm.tex}
 
 \section{Napló}
 
@@ -83,6 +196,50 @@
 		Konzultáció és előző heti munkánk értékelése, feladatok kiosztása   
         \newline
 		Részletesen: \ref{appendix:meeting9}
+	}
+
+    \naplotag{2021.03.13. 14:00 }{ 2 óra }{ Sike Ádám }
+	{ 
+		Diagramok létrehozása   
+	}
+    \naplotag{2021.03.13. 17:00 }{ 3 óra }{ Gao Tong }
+	{ 
+		Szekvenciadiagramok létrehozása   
+	}
+
+    \naplotag{2021.03.15. 20:00 }{ 2 óra }{ Gao Tong }
+	{ 
+		Kommunikációs diagramok létrehozása   
+	}
+
+    \naplotag{2021.03.15. 18:00 }{ 4 óra }{ Nagy Beáta }
+	{ 
+		Szekvenciadiagramok    
+	}
+
+    \naplotag{2021.03.16. 10:00 }{ 1 óra }{ Csapat }
+	{ 
+		Meeting a teendők átbeszélésére  
+	}
+
+    \naplotag{2021.03.16. 11:00 }{ 1 óra }{ Gao Tong }
+	{ 
+		Use case leírások  
+	}
+
+    \naplotag{2021.03.16. 16:00 }{ 2 óra }{ Sike Ádám }
+	{ 
+		Diagramok módosítása   
+	}
+
+    \naplotag{2021.03.16. 17:00 }{ 3 óra }{ Nagy Beáta }
+	{ 
+		Diagramok, leírások befejezése  
+	}
+
+    \naplotag{2021.03.17. 09:30 }{ 2 óra }{ Sike Ádám }
+	{ 
+		Leírások elkészítése   
 	}
 
     

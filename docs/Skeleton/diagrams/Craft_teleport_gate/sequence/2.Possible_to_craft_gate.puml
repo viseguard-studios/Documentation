@@ -61,7 +61,7 @@ input amount for each item,
 the Gates can be crafted
 end note
 
-caption  Ellenőrzi, hogy a telepes, illetve az aszteroida raktárában lévő kibányászott nyersanyagok mennyisége összesen elegendő ahhoz, \n hogy előállítsuk a teleportkapu-párt. Minden szükséges nyersanyagnál ellenőrzi egymás után, \n majd ezután megnézi, hogy a telepes raktárában a szükséges elemek kivétele után van elegendő hely a teleportkapuk elhelyezéséhez. 
+
 
 
 @enduml

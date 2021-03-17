@@ -3,7 +3,6 @@
 skinparam sequenceMessageAlign left
 
 title Player Directs Robots
-caption A játékos utasítást ad ki hogy mit keressenek a robotok
 
 actor Tester as Tester
 

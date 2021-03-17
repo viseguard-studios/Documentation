@@ -1,7 +1,7 @@
 @startuml
 !include ../style.puml
 
-title SpaceShip drill when asteroid exploded
+title SpaceShip drill when asteroid is not exploded
 
 actor Tester as Tester
 participant "v : Vessel" as v

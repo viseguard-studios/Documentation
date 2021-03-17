@@ -1,6 +1,6 @@
 @startuml
-rectangle “s: SpaceShip” as s
-rectangle “recipe: SpaceStationRecipe” as recipe
+rectangle "s: SpaceShip" as s
+rectangle "recipe: SpaceStationRecipe" as recipe
 
 title SpaceShip can craft space station \n 
 

@@ -1,0 +1,12 @@
+@startuml
+'autonumber "0:"
+skinparam linestyle ortho
+
+actor Tester as Tester
+rectangle "S : SpaceShip" as S
+
+Tester --> S: "1 : -> Hide()" "2 : <--"
+
+
+
+@enduml
