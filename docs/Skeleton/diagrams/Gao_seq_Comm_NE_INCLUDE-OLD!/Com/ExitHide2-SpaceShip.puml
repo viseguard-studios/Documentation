@@ -1,0 +1,13 @@
+@startuml
+'autonumber "0:"
+skinparam linestyle ortho
+
+actor Tester as Tester
+rectangle "S : SpaceShip" as S
+rectangle "currentAsteroid : Asteroid" as ca
+
+Tester --> S: "1 : -> ExitHiding()" "4 : <--"
+S --> ca: "2 : -> Exit(S)" "3 : <--"
+
+
+@enduml

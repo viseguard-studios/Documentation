@@ -1,0 +1,15 @@
+@startuml
+'autonumber "0:"
+skinparam linestyle ortho
+
+actor Tester as Tester
+rectangle "R : Robot" as S
+rectangle "currentAsteroid : Asteroid" as cA
+rectangle "hidingVessel : SpaceShip" as hV
+
+Tester --> S: "1 : -> Hide()" "8 : <--"
+S --> cA: "2 : -> Hide(R)" "7 : <-- true"
+cA --> hV: "3 : -> GetHidingSpaceRequirement()" "4 : <-- usedSpace"
+cA --> S: "5 : ->GetHidingSpaceRequirement()" "6 : <-- neededSpace"
+
+@enduml

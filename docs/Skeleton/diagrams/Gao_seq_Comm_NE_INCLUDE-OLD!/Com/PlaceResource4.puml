@@ -1,0 +1,16 @@
+@startuml
+'autonumber "0:"
+skinparam linestyle ortho
+
+actor Tester as Tester
+rectangle "S : SpaceShip" as S
+rectangle "currentAsteroid : Asteroid" as ca
+rectangle "item: Item"
+rectangle "invertory: Invertory" as inv
+
+Tester --> S: "1 : -> PlaceItem(item)" "6 : <-- false"
+S --> ca: "2 : -> PlaceItem(item)" "5 : <-- false"
+ca --> inv: "3 : -> TryInsertItem(item)" "4 : <-- false"
+
+
+@enduml
