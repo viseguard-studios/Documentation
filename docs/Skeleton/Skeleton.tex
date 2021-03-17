@@ -155,14 +155,26 @@
 
 
 \section{A szkeleton kezelői felületének terve, dialógusok}
-\comment{A szkeleton által elfogadott bemenetek , valamint a szöveges konzolon megjelenő kimenetek. A kimenet formátuma olyan kell legyen, ami alapján a működés összevethető a korábbi szekvencia-diagramokkal.}
+%\comment{A szkeleton által elfogadott bemenetek , valamint a szöveges konzolon megjelenő kimenetek. A kiemenet formátuma olyan kell legyen, ami alapján a működés összevethető a korábbi szekvencia-diagramokkal.}
 
+A felhasználó egyszerű parancsokat tud kiadni a futó alkalmazás konzoljában, amik az eggyes teszt eseteket indítják el.
+Ez után a teszt esetek kérnek be extra adatokat a teszt eset paraméterezéséhez illetve az adott teszt környezet létrehozásához.
 
-
-\comment{Konzol input/output szemléltetésre:}
 \begin{verbatim}
-    > move
-    get item
+    > move ss
+    Szomszédos aszteroidák száma:
+    > 3
+    Aszteroida kiválasztása (sorszám):
+    > 2
+    Moving space ship to 2. neighbour
+    ss.Move(to);
+        currentAsteroid.GetNeighbours()
+            for b in buildings
+                b.GetRoutes()
+            end
+        end
+    ....
+
 \end{verbatim}
 
 \section{Szekvencia diagramok a belső működésre}
