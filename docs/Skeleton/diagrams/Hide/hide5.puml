@@ -1,0 +1,30 @@
+@startuml
+hide footbox
+title SpaceShip hide when core has enough place
+
+actor Tester as Tester
+
+participant s as s <<SpaceShip>>
+participant currentAsteroid as currentAsteroid <<Asteroid>>
+participant hidingVessel as hidingVessel <<Vessel>>
+
+Tester -> s : Hide()
+activate s
+
+s -> currentAsteroid ++: Hide()
+
+currentAsteroid -> hidingVessel ++: GetHidingSpaceRequirement()
+
+hidingVessel --> currentAsteroid --: usedSpace
+
+currentAsteroid -> s ++: GetHidingSpaceRequirement()
+
+s --> currentAsteroid --: neededSpace
+
+currentAsteroid --> s --: true
+
+s -> s : isHidden = true
+
+s--> Tester
+deactivate s
+@enduml

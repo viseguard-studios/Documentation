@@ -1,0 +1,20 @@
+@startuml
+hide footbox
+title SpaceShip place resource when core has netral resource
+
+actor Tester as Tester
+
+participant s as s <<SpaceShip>>
+participant currentAsteroid as currentAsteroid <<Asteroid>>
+participant item as item <<Item>>
+
+Tester -> s : PlaceItem(item)
+activate s
+
+s -> currentAsteroid ++: PlaceItem(item)
+
+currentAsteroid --> s --: false
+
+s--> Tester : false
+deactivate s
+

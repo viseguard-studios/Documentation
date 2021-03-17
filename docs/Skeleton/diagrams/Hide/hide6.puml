@@ -1,0 +1,15 @@
+@startuml
+hide footbox
+title SpaceShip exitHiding  when is not hidden
+
+actor Tester as Tester
+
+participant s as s <<SpaceShip>>
+
+Tester -> s : ExitHiding()
+activate s
+
+s--> Tester
+deactivate s
+@enduml
+

@@ -1,0 +1,15 @@
+@startuml
+hide footbox
+title SpaceShip hide when is hidden
+
+actor Tester as Tester
+
+participant s as s <<SpaceShip>>
+
+Tester -> s : Hide()
+activate s
+
+s--> Tester
+deactivate s
+@enduml
+

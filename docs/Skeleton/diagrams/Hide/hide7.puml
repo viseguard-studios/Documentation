@@ -1,0 +1,24 @@
+@startuml
+hide footbox
+title SpaceShip exitHiding  when used space
+
+actor Tester as Tester
+
+participant s as s <<SpaceShip>>
+participant currentAsteroid as currentAsteroid <<Asteroid>>
+
+Tester -> s : ExitHiding()
+activate s
+
+s -> currentAsteroid ++: Exit()
+
+currentAsteroid -> currentAsteroid : hiddenVessel = null
+
+currentAsteroid --> s --
+
+s -> s : isHidden = false
+
+s--> Tester
+deactivate s
+@enduml
+

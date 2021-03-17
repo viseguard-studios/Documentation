@@ -1,0 +1,19 @@
+@startuml
+hide footbox
+title SpaceShip hide when core is invisible
+
+actor Tester as Tester
+
+participant s as s <<SpaceShip>>
+participant currentAsteroid as currentAsteroid <<Asteroid>>
+
+Tester -> s : Hide()
+activate s
+
+s -> currentAsteroid ++ : Hide()
+
+currentAsteroid --> s --
+
+s--> Tester
+deactivate s
+@enduml
