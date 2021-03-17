@@ -1,6 +1,6 @@
 @startuml
 hide footbox
-title SpaceShip place resource when core is full
+title SpaceShip place resource when core is not full
 
 actor Tester as Tester
 
