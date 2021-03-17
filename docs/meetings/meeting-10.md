@@ -5,9 +5,9 @@
 
 Kezdéskor Titusz még nem jött meg :(
 
-	- Ádám megmutatja a változtatásait
-	- Kitérő: számítógépes grafika házi
-	- Kitérő: szofvertechnikák
-	- Bea is megmutatja a változtatásait
-	- Gao megkérdez valamit
-	- Csodálkozunk a példamegoldás komplexitásán
+ - Ádám megmutatja a változtatásait
+ - Kitérő: számítógépes grafika házi
+ - Kitérő: szofvertechnikák
+ - Bea is megmutatja a változtatásait
+ - Gao megkérdez valamit
+ - Csodálkozunk a példamegoldás komplexitásán
