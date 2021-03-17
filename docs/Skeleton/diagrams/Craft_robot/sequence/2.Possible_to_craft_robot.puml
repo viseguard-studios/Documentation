@@ -48,6 +48,5 @@ input amount for each item,
 the Robot can be crafted
 end note
 
-caption Ellenőrzi, hogy a telepes, illetve az aszteroida raktárában lévő kibányászott nyersanyagok mennyisége összesen \n elegendő ahhoz, hogy előállítsuk a robotot. Minden szükséges nyersanyagnál ellenőrzi egymás után. 
 
 @enduml

@@ -65,6 +65,5 @@ create robot
 recipe --> robot--: <<create>> Robot(p,asteroid)
 
 recipe --> Tester: 
-
-caption A recept levonja a nyersanyagokat a megfelelő helyekről (telepes vagy aszteroida raktárából, kapacitástól függően), \n majd elkészíti a robotot és elhelyezi a megfelelő aszteroidán. 
+ 
 @enduml
