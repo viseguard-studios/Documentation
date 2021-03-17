@@ -124,6 +124,13 @@
 \end{use-case}
 
 \begin{use-case}
+    {Move asteroid field}
+    {Az aszteroidamező távolságának állítása a Naphoz képest.}
+    {Tester} 
+    \textbf{A} A tesztelő módosítja a Naptól mért távolságot. \newline
+\end{use-case}
+
+\begin{use-case}
     {Place gate}
     {A teleportkapu-párok lehelyezése. }
     {Tester} 
@@ -134,12 +141,7 @@
     {PlaceResource}
     {A kinyert nyersanyag visszarakásának tesztelése.}
     {Tester} 
-    \textbf{A} A tester hívja meg a SpaceShip-nek Hide metódusát. Ha a telepes éppen meg van bújva, akkor visszahívja a metódus. \newline
-    \textbf{B} Ha a telepes nincs megbújva, akkor a fenti esetén még a SpaceShip objektum hívja meg currentAsteroid attribútumnak Hide metódust. Ha az aszteroida már felrobban, akkor a metódus nem fog csinálni semmit. \newline
-    \textbf{C} Ugyanaz a helyzetben, ha az aszteroida köpenye még nincs átfúrva, akkor a metódus nem fog csinálni semmit. \newline
-    \textbf{C} Más esetén az aszteroida Hide metódus felhívja a hidingVessel attribútumnak a GetHidingSpaceRequirement metódust, majd visszakapja egy lyukas hely mennyiségét, és megkérdezi a SpaceShip objektumnak GetHidingSpaceRequirement metódust, hogy mennyi helyet kell maradni lyukasan. Ha az első érték nagyobb mint a második, akkor a Hide metódus visszatér egy true értéket, és a SpaceShip innentől kezdődik megbújni. \newline
-    \textbf{C} A tester meghívja a SpaceShip-nek a ExitHiding metódust, ha éppen a telepes nincs megbújva, akkor a metódus nem csinál semmit. \newline
-    \textbf{C} Külön esetén a SpaceShip meghívja a currentAsteroid attribútumnak Hide metódust, ilyenkor kiszabadítja a aszteroida magja, és a SpaceShip végzik a megbújást. \newline
+    \textbf{A}  \newline
 \end{use-case}
 
 \begin{use-case}
@@ -147,14 +149,9 @@
     {A napkitörés előidézése. Hatással van az egész aszteroidamezőre.}
     {Tester} 
     \textbf{A} A tesztelő beállítja, hogy a kör végén legyen egy napkitörés, ami hatással van az ott tartózkodó telepesekre, illetve robotokra. \newline
+    \textbf{A} A kör végén létrejön a napkitörés, \newline
 \end{use-case}
 
-\begin{use-case}
-    {Move asteroid field}
-    {Az aszteroidamező távolságának állítása a Naphoz képest.}
-    {Tester} 
-    \textbf{A} A tesztelő módosítja a Naptól mért távolságot. \newline
-\end{use-case}
 
 
 \begin{use-case}
