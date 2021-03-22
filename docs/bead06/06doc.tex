@@ -28,6 +28,9 @@
 \subsection{Fordítás}
 \comment{A fenti listában szereplő forrásfájlokból milyen műveletekkel lehet a bináris, futtatható kódot előállítani. Az előállításhoz csak a 2. Követelmények c. dokumentumban leírt környezetet szabad előírni.}
 
+A fenti fájlokból a javac parancs kiadásával fordítható a tesztelőprogram (az alábbi módon).
+Esetleg GUI-val rendelkező fejlesztőkörnyezetből, az annak megfelelő módon.
+
 \begin{verbatim}
     javac -d bin *.java
 \end{verbatim}
@@ -35,9 +38,10 @@
 \subsection{Futtatás}
 \comment{A futtatható kód elindításával kapcsolatos teendők leírása. Az indításhoz csak a 2. Követelmények c. dokumentumban leírt környezetet szabad előírni.}
 
+Futtatáshoz a következő parancsokat kell kiadni.
 \begin{verbatim}
     cd bin
-    java Main.java
+    java SkeletonEntry
 \end{verbatim}
 
 \clearpage
