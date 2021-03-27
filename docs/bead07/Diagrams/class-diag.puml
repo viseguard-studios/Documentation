@@ -1,0 +1,157 @@
+@startuml
+
+
+class Player{
+
+}
+Player "owner" -- Vessel
+
+
+
+class Item{
+    {abstract} void NearSun()
+    {abstract} bool Satisfies()
+    void Activate()
+}
+Item "inv" -- IInventory
+
+class TeleportGateItem{
+    void Activate()
+}
+TeleportGateItem --|> Item
+
+
+class Resource{
+
+}
+Resource --|> Item
+
+
+class Iron{
+    
+}
+Iron --|> Resource
+
+class Ice{
+    
+}
+Ice --|> Resource
+
+class Uranium{
+    int counter
+}
+Uranium --|> Resource
+
+class Coal{
+    
+}
+Coal --|> Resource
+
+class Titanium{
+    
+}
+Titanium --|> Resource
+
+
+'Inventory stuff
+
+interface IInventory{
+    List<Item> getItems()
+    bool tryInsertItem()
+    bool insertItem()
+    bool removeItem(Item i)
+}
+
+class InfiniteInvetory{
+
+}
+InfiniteInvetory --|> IInventory
+InfiniteInvetory "items" --* Item
+
+class AsteroidInventory{
+    
+}
+AsteroidInventory --|> IInventory
+AsteroidInventory "items" --* Item
+
+class SSInvetory{
+    
+    List<TeleportGateItem> tgs
+}
+SSInvetory --|> IInventory
+SSInvetory "items" --* Item
+SSInvetory "tgs" --* TeleportGateItem
+
+
+'Entities
+
+class Entity{
+    Vector2 pos
+}
+
+enum AsteroidPlaces{
+    Inside
+    Orbit
+    Vessel
+}
+
+class MovableEntity{
+    AsteroidPlaces getPlace()
+    ..
+    void move(Asteroid to)
+}
+MovableEntity --|> Entity
+AsteroidPlaces .. MovableEntity
+
+class Vessel{
+    {abstract} IInventory getInventory()
+    ..
+    void mine()
+    void drill()
+}
+Vessel --|> MovableEntity
+
+
+class UFO{
+    IInventory getInventory()
+}
+UFO --|> Vessel
+UFO *-- "1" InfiniteInvetory 
+
+class SpaceShip{
+    IInventory getInventory()
+}
+SpaceShip --|> Vessel
+SpaceShip *-- "1" SSInvetory 
+
+class Robot{
+    IInventory getInventory()
+}
+Robot --|> Vessel
+
+
+
+
+class Asteroid{
+
+}
+Asteroid *-- "1" AsteroidInventory 
+
+
+class Building{
+
+}
+Building --|> MovableEntity
+
+class TeleportGate{
+    int gateId
+}
+TeleportGate --|> Building
+
+class SpaceStation{
+
+}
+SpaceStation --|> Building
+
+
+@enduml

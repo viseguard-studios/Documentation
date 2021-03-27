@@ -1,0 +1,33 @@
+
+Teleport gate 
+- move   GAO
+- Solar flare (STATE) Peti
+
+
+MovableEntity
+- move   GAO
+
+Vessel
+- mine   GAO
+- drill  GAO
+
+Inventory s
+- infinite Titusz
+- Asteroid Titusz
+- teleport Titusz
+
+Recipe
+- craft Bea
+
+solar flare Peti
+
+Uranium
+- counter (STATE!) Peti
+- explosion GAO
+
+Asteroid
+- near sun Peti
+
+
+
+Change dscriptions : Ádám

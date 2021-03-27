@@ -1,0 +1,67 @@
+
+> move ss_001
+Neighbours:
+01 - Asteroid_1  - ?
+02 - Asteroid_34 - Iron
+03 - Asteroid_9  - Coal
+04 - Asteroid_11 - ?
+> 04
+
+> neighbours ss_001
+Neighbours:
+01 - Asteroid_1  - ?
+02 - Asteroid_34 - Iron
+03 - Asteroid_9  - Coal
+04 - Asteroid_11 - ?
+
+> rename Asteroid_1 Base_01
+
+> drill ss_001 
+Asteroid_42 crust = X
+-
+can't drill
+
+
+> mine ss_001
+Asteroid_35 mined
+* Item: Iron
+
+
+> status ss_001
+Asteroid: Asteroid_67 | Not hidden
+Resources:
+- Iron
+- Iron
+- Coal
+- etc....
+TG:
+- Tg_023
+- Tg_023
+- Tg_011
+
+> hide enter ss_001
+Can't hide
+--
+ss_001 hidden
+
+> hide exit ss_001
+
+> craft ss_001 <recipe>
+Can't craft .......
+--
+Succesful
+
+
+
+> palce Iron from ss_001 to Asteroid_11
+
+> pickup Coal from Asteroid_11 to ss_001
+
+
+
+>
+
+
+
+[Event] Asteroid_42 exploded
+[Event] ss_001 exploded

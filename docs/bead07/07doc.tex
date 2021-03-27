@@ -1,3 +1,7 @@
+\documentclass[../../projlab]{subfiles}
+\begin{document}
+
+
 \chapter{Prototípus koncepciója}
 \comment{A prototípus program célja annak demonstrálása, hogy a program elkészült, helyesen működik, valamennyi feladatát teljesíti. A prototípus változat egy elkészült program kivéve a kifejlett grafikus interfészt. Ez a program is parancssorból futtatható és karakteres ernyőkezelést alkalmaz. Az ütemezés, az aktív objektumok kezelése megoldott. A business objektumok -a megjelenítésre vonatkozó részeket kivéve -valamennyi metódusa a végleges algoritmusokat kell, hogy tartalmazza. A megjelenítés és működtetés egy alfanumerikus képernyőn vezérelhető és követhető, ugyanakkor a vezérlés fájlból is történhet és a megjelenítés fájlba is logolható, ezzel megteremtve a rendszer tesztelésének lehetőségét. Különös figyelmet kell fordítani a parancssori interfész logikájára, felépítésére, valamint arra, hogy az mennyiben tükrözi és teszi láthatóvá a program működését, a beavatkozások hatásait.}
 \comment{\hrule}
@@ -36,6 +40,8 @@
 \diagram{docs/img/BMElogo}{Megváltozott szekvenciák}{3cm}
 \comment{\hrule}
 
+
+
 \section{Prototípus interface-definíciója}
 \comment{Definiálni kell a teszteket leíró nyelvet. Külön figyelmet kell fordítani arra, hogy ha a rendszer véletlen elemeket is tartalmaz, akkor a véletlenszerűség ki-bekapcsolható legyen, és a program determinisztikusan is tesztelhető legyen.}
 
@@ -46,12 +52,16 @@
 \comment{Definiálni kell a teszteket leíró nyelvet. Külön figyelmet kell fordítani arra, hogy ha a rendszer véletlen elemeket is tartalmaz, akkor a véletlenszerűség ki-bekapcsolható legyen, és a program determinisztikusan is futtatható legyen. A szálkezelést is tesztelhető, irányítható módon kell megoldani. A programot egy adott konfigurációból is el kell tudni indítani, vagyis kell olyan parancs, amivel konkrét előre megadott állapotból indul a rendszer (pl. load).}
 
 \begin{itemize}
-    \item Parancs1
+    \item startgame
     \begin{itemize}
-        \item Leírás:
-        \item Opciók:
+        \item Leírás: 
+        \item Opciók: startgame <input | generate>
+        \begin{itemize}
+            \item input: A felhasználó adja meg a játéktér össeállítását
+            \item generate: A játéktér véletlen szerűen generlódik.
+        \end{itemize}
     \end{itemize}
-    \item Parancs2
+    \item move
     \begin{itemize}
         \item Leírás:
         \item Opciók:
@@ -73,15 +83,135 @@ Példák a bemeneti nyelvre:
 
 \section{Összes részletes use-case}
 \begin{use-case}
-    %név
-    {Use-case Neve}
-    %rövid leírás
-    {Az eset rövid leírása}
-    %aktorok
-    {Aktorok}
-    %forgatókönyv
-    Forgatókönyv \newline 
-    \textbf{A.1} Alternatíva
+    {Control robots}
+    {A robotok irányításának lehetséges műveletei. }
+    {Tester} 
+    \textbf{A} A tesztelő utasítást ad, hogy az adott robot mozogjon át a kért szomszédos aszteroidára.\newline
+    \textbf{B} Egy robotot az aktuális aszteroidán található teleportkapun keresztül, egy így elérhető aszteroidára átmozgat a tesztelő. \newline
+    \textbf{C} Egy robot fúrása sikeresen megy végbe, a köpeny 1 réteggel csökken. \newline
+    \textbf{D} Egy robot sikertelen fúrása, nem történik művelet az aszteroidán. \newline
+
+\end{use-case}
+
+\begin{use-case}
+    {Craft Robot}
+    {Egy robot sikertelen elkészítésének, vagy sikeres elkészítésének és inicializálásának a folyamata. }
+    {Tester} 
+    \textbf{A} Ellenőrizzük, hogy az adott robot elkészíthető a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A robot receptjében szereplő item-ekre először a telepes raktárát ellenőrizzük, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is. Az összes recepthez szükséges item-ből találunk elegendőt a két raktárban összesen, ezért elkészíthető a recept.  \newline
+    \textbf{A} Sikeres ellenőrzés után maga a készítés folyamata indul el.  \newline
+    \textbf{A} A készítés során, ha lehetséges, a recepthez szükséges item-eket a telepes raktárából távolítjuk el. Az itt nem megtalált item-eket pedig az aszteroida raktárából távolítjuk el.  \newline
+    \textbf{A} Új robot létrehozása, az adott aszteroidán elhelyezzük, illetve hozzárendeljük az aktuális játékost.  \newline
+    \textbf{B} Megnézzük, hogy az adott robot elkészíthető-e a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A robot receptjében szereplő item-ekre először a telepes raktárát nézzük meg, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is. Találunk legalább egy olyan item-et, amiből a két raktárban lévő mennyiség nem elegendő a készítéshez, így a recept nem készíthető el.  \newline
+    \textbf{B} A készítés tényleges folyamata nem indul el, a forgatókönyv sikertelen készítéssel zárul. \newline
+\end{use-case}
+
+\begin{use-case}
+    {Craft Teleport Gate}
+    {Egy teleportkapu-pár sikertelen elkészítésének, vagy sikeres elkészítésének és raktárba helyezésének a folyamata.  }
+    {Tester} 
+    \textbf{A} Ellenőrizzük, hogy az adott teleportkapu-pár elkészíthető a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A kapupár receptjében szereplő item-ekre először a telepes raktárát ellenőrizzük, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is.  Az összes recepthez szükséges item-ből találunk elegendőt a két raktárban összesen.   \newline
+    \textbf{A} Ellenőrizzük, hogy a készítés után a telepes raktárában lesz elegendő szabad hely a teleportkapuk tárolására. Ez is teljesül, tehát a teleportkapukat el tudjuk készíteni. \newline
+    \textbf{A} Sikeres ellenőrzés után maga a készítés folyamata indul el.  \newline
+    \textbf{A} A készítés során, ha lehetséges, a recepthez szükséges item-eket a telepes raktárából távolítjuk el. Az itt nem megtalált item-eket pedig az aszteroida raktárából távolítjuk el.  \newline
+    \textbf{A} Új teleportkapu-pár létrehozása, az aktuális telepes raktárába elhelyezzük őket. \newline
+    \textbf{B} Megnézzük, hogy az adott teleportkapu-pár elkészíthető-e a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A teleportkapuk receptjében szereplő item-ekre először a telepes raktárát nézzük meg, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is. Találunk legalább egy olyan item-et, amiből a két raktárban lévő mennyiség nem elegendő a készítéshez, így a recept nem készíthető el.  \newline
+    \textbf{B} A készítés tényleges folyamata nem indul el, a forgatókönyv sikertelen készítéssel zárul.  \newline
+    \textbf{C} Ellenőrizzük, hogy az adott teleportkapu-pár elkészíthető a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. A kapupár receptjében szereplő item-ekre először a telepes raktárát ellenőrizzük, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is.  Az összes recepthez szükséges item-ből találunk elegendőt a két raktárban összesen.  \newline
+    \textbf{C} Megnézzük, hogy a készítés után a telepes raktárában lesz-e elegendő szabad hely a teleportkapuk tárolására. Ez nem teljesül, tehát a teleportkapukat nem tudjuk elkészíteni.  \newline
+    \textbf{C} A készítés tényleges folyamata nem indul el, a forgatókönyv sikertelen készítéssel zárul.  \newline
+\end{use-case}
+
+\begin{use-case}
+    {Craft Space Station}
+    {Egy űrállomás sikertelen elkészítésének, vagy sikeres elkészítésének és ezáltal a játék megnyerésének a folyamata. }
+    {Tester} 
+    \textbf{A} Ellenőrizzük, hogy az adott űrállomás elkészíthető az aszteroidán tartózkodó telepesek raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. Az űrállomás receptjében szereplő item-ekre először a telepesek raktárát ellenőrizzük, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is.  Az összes recepthez szükséges item-ből találunk elegendőt a két raktárban összesen.  \newline
+    \textbf{A} Sikeres ellenőrzés után maga a készítés folyamata indul el.  \newline
+    \textbf{A} A készítés során, ha lehetséges, a recepthez szükséges item-eket a telepes raktárából távolítjuk el. Az itt nem megtalált item-eket pedig az aszteroida raktárából távolítjuk el.  \newline
+    \textbf{A} Új űrállomás létrehozása, elhelyezése az aktuális aszteroidán.  \newline
+    \textbf{A} A játék automatikusan befejeződik, a telepesek megnyerték.  \newline
+    \textbf{B} Megnézzük, hogy az adott űrállomás elkészíthető-e a telepes raktárában, illetve az aszteroida raktárában rendelkezésre álló kibányászott nyersanyagokból. Az űrállomás receptjében szereplő item-ekre először a telepes raktárát nézzük meg, majd, ha itt nem találunk megfelelőt, megnézzük az aszteroida raktárát is. Találunk legalább egy olyan item-et, amiből a két raktárban lévő mennyiség nem elegendő a készítéshez, így a recept nem készíthető el.  \newline
+    \textbf{B} A készítés tényleges folyamata nem indul el, a forgatókönyv sikertelen készítéssel zárul. \newline
+\end{use-case}
+
+\begin{use-case}
+    {Direct robots}
+    {A robotok egy adott nyersanyagért kutatnak. }
+    {Tester} 
+    \textbf{A} A tesztelő megmondja a robotoknak, hogy milyen nyersanyagért kutassanak.  \newline
+\end{use-case}
+
+\begin{use-case}
+    {Drill}
+    {Az aszteroida fúrásának tesztelése.}
+    {Tester} 
+    \textbf{A} A tester hívja meg a SpaceShip objektumon keresztül a köpeny méretét sikeresen csökkenti.  \newline
+    \textbf{B} Ha az aszteroida már felrobbant, akkor a metódus nem fog csinálni semmit. 
+    \textbf{C} Ha a köpeny már teljesen át van fúrva, akkor a metódus nem csinál semmit. \newline
+\end{use-case}
+
+\begin{use-case}
+    {Hide}
+    {A telepes elbújásának tesztelése.}
+    {Tester} 
+    \textbf{A} A tester hívja meg a SpaceShip-nek Hide metódusát. Ha a telepes éppen el van bújva, akkor visszatér a metódus. \newline
+    \textbf{B} Ha a telepes nincs megbújva, akkor a SpaceShip objektum hívja meg currentAsteroid attribútumnak Hide metódusát. Ha az aszteroida már felrobbant, akkor a metódus nem fog csinálni semmit. \newline
+    \textbf{C} Ha az aszteroida köpenye még nincs átfúrva, akkor a metódus nem fog csinálni semmit. \newline
+    \textbf{D} Más esetén az aszteroida Hide metódusa lekérdezi, hogy mennyi helyet foglalnak az éppen ott tartózkodó telepesek, illetve robotok, majd megkérdezi az adott telepest, hogy neki mennyi helyre lenne szüksége. Ha nincs számára elegendő hely, nem bújhat meg.    \newline
+    \textbf{E} Más esetén az aszteroida Hide metódusa lekérdezi, hogy mennyi helyet foglalnak az éppen ott tartózkodó telepesek, illetve robotok, majd megkérdezi az adott telepest, hogy neki mennyi helyre lenne szüksége. Ha van számára elegendő hely, meg tud bújni.    \newline
+    \textbf{F} A tester meghívja a SpaceShip-nek a ExitHiding metódusát. Ha éppen a telepes nincs megbújva, akkor a metódus nem csinál semmit. \newline
+    \textbf{G} A tester meghívja a SpaceShip-nek a ExitHiding metódusát. Ha a telepes meg van bújva, akkor a metódus "kiszabadítja", kibújik az aszteroidából. \newline \newline
+\end{use-case}
+
+\begin{use-case}
+    {Mine}
+    {A telepesek bányászásának lehetséges műveletei. }
+    {Tester} 
+    \textbf{A} Az aszteroida felrobbant, így nem lehet belőle bányászni.  \newline
+    \textbf{B} Az aszteroida magja üreges, így nem lehet belőle bányászni. \newline
+    \textbf{C} Az aszteroida magja még nem látható, így nem lehet belőle bányászni. \newline
+    \textbf{D} Az aszteroida bányászható, bányászat után az adott elemet sikeresen a raktárba helyezzük.  \newline
+
+\end{use-case}
+
+\begin{use-case}
+    {Move}
+    {A telepesek mozgásának lehetséges műveletei. }
+    {Tester} 
+    \textbf{A}  Egy telepes sikeres mozgatása egy kiválasztott szomszédos aszteroidára. Az aktuális aszteroidáról eltávolítjuk, majd a kiválasztott aszteroidára áthelyezzük a telepest.\newline
+\end{use-case}
+
+\begin{use-case}
+    {Move asteroid field}
+    {Az aszteroidamező távolságának állítása a Naphoz képest.}
+    {Tester} 
+    \textbf{A} A tesztelő módosítja a Naptól mért távolságot. \newline
+\end{use-case}
+
+\begin{use-case}
+    {Place gate}
+    {A teleportkapu-párok lehelyezése. }
+    {Tester} 
+    \textbf{A}  Az aktuális aszteroidára a teleportkapu-pár első tagját elhelyezzük, létrehozunk egy objektumot. Majd a másik kapuhoz tartozó item-hez a párját beállítjuk. A második kaput hasonlóan helyezzük le, és véglegesítjük a párok lerakását. \newline
+\end{use-case}
+
+\begin{use-case}
+    {PlaceResource}
+    {A kinyert nyersanyag visszarakásának tesztelése.}
+    {Tester} 
+    \textbf{A} Az aszteroida felrobbant, ezért nem hleyezhető bele a nyersanyag.  \newline
+    \textbf{B} Az aszteroida magja nem elérhető, ezért nem hleyezhető bele a nyersanyag.  \newline
+    \textbf{C} Az aszteroida raktára megtelt, ezért nem helyezhető bele a nyersanyag.  \newline
+    \textbf{D} Az aszteroida raktárában van elegendő hely, ezért belehelyezhető a nyersanyag. A telepes raktárából pedig el kell azt távolítani.  \newline
+
+\end{use-case}
+
+\begin{use-case}
+    {Solar flare}
+    {A napkitörés előidézése. Hatással van az egész aszteroidamezőre.}
+    {Tester} 
+    \textbf{A} A tesztelő beállítja, hogy a kör végén legyen egy napkitörés, ami hatással van az ott tartózkodó telepesekre, illetve robotokra. \newline
+    \textbf{A} A kör végén létrejön a napkitörés. \newline
 \end{use-case}
 
 \section{Tesztelési terv}
@@ -91,3 +221,6 @@ Példák a bemeneti nyelvre:
 
 \section{Tesztelést támogató segéd- és fordítóprogramok specifikálása}
 \comment{Specifikálni kell a tesztelést támogató segédprogramokat. Rövid bemutatással (elvárt funkcionalitás) specifikálni kell a tesztelést támogató segédprogramokat.}
+
+
+\end{document}
