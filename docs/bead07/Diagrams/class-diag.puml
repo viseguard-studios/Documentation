@@ -1,10 +1,50 @@
 @startuml
+'skinparam linetype ortho
 
+'skinparam style strictuml
+'skinparam groupInheritance 5
+
+
+class Engine{
+    +startApplication()
+    +startGame()
+    +endGame()
+}
+Engine o-- Scene
+
+class Scene{
+    +addEntity()
+    +roundEnded()
+    +getManager() : GameManager
+    +solarFlare()
+}
+Scene " #scene [1]" *-- "#entities [1..*]" Entity
+Scene "-scene" --* "-manager" GameManager
+
+class GameManager{
+    -selectedVessel:Vessel
+    -sunDistance: int
+    -allPLayers: Player[1..*]
+    -asteroids: Asteroid[1..*]
+    -gameEnded: bool
+    --
+    +initGame()
+    +addPlayer()
+    +startGame()
+    +takeTurn()
+    +endGame()
+    +isSunStormActive()
+    ..
+    -generateScene()
+    -generateAsteroids()
+    -generateNewResource()
+}
+GameManager -- "-currentPlayer [1]" Player
 
 class Player{
-
+    -name:string
 }
-Player "owner" -- Vessel
+Player "owner[1]" -- Vessel
 
 
 
@@ -87,6 +127,11 @@ SSInvetory "tgs" --* TeleportGateItem
 
 class Entity{
     Vector2 pos
+
+    +roundEnd()
+    +getScene():Scene
+    {abstract} +solarFlare()
+    {abstract} +explode()
 }
 
 enum AsteroidPlaces{
@@ -98,16 +143,26 @@ enum AsteroidPlaces{
 class MovableEntity{
     AsteroidPlaces getPlace()
     ..
-    void move(Asteroid to)
+    +void move(Asteroid to)
+    +void asteroidExploded()
 }
 MovableEntity --|> Entity
 AsteroidPlaces .. MovableEntity
+Asteroid "-curentAsteroid" --- MovableEntity
 
 class Vessel{
-    {abstract} IInventory getInventory()
+    -isHidden : bool
+    --
+    {abstract} #IInventory getInventory()
+    {abstract} +getHidingSpaceRequirement():int
     ..
-    void mine()
-    void drill()
+    +void Vessel(p:Player, a:Asteroid):Vessel
+    +void hide()
+    +void exitHiding()
+    +void drill()
+    +void mine()
+    +void explode()
+    +void solarFlare()
 }
 Vessel --|> MovableEntity
 
@@ -119,10 +174,16 @@ UFO --|> Vessel
 UFO *-- "1" InfiniteInvetory 
 
 class SpaceShip{
-    IInventory getInventory()
+    #IInventory getInventory()
+
+    +void SpaceShip(p:Player, a:Asteroid)
+    +getHidingSpaceRequirement():int
+    +craft(recipe:Recipe)
+    +placeItem(i:Item):bool
+    +activateItem(i:Item)
 }
-SpaceShip --|> Vessel
-SpaceShip *-- "1" SSInvetory 
+SpaceShip ---|> Vessel
+SpaceShip *--- "-inventory [1]" SSInvetory 
 
 class Robot{
     IInventory getInventory()
@@ -133,10 +194,37 @@ Robot --|> Vessel
 
 
 class Asteroid{
-
+    -exploded:bool
+    -coreSize:int
+    -maxHidingSpace:int
+    -crustSize:int
+    -revealed:bool
+    -visited:bool
+    -hidingVessel:Vessel
+    --
+    +Asteroid(r:Resource,amount:int)
+    +solarFlare()
+    +explode()
+    +reveale()
+    +reachableAsteroids():Asteroid[1..*]
+    +addNeighbour(a:Asteroid)
+    ..
+    +arrive(v:MovableVessel)
+    +depart(v:MovableVessel)
+    ..
+    +hide(v:Vessel):bool
+    +exit(v:Vessel)
+    +getAvailableHidingSpace():int
+    ..
+    +drill()
+    +mine():Item
+    ..
+    +addBuilding(b:Building)
+    +placeItem(i:Item)
+    +getInventory():IInventory
 }
 Asteroid *-- "1" AsteroidInventory 
-
+Asteroid --* "-neighbours [1..*]" Asteroid
 
 class Building{
 
