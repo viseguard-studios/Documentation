@@ -1,0 +1,70 @@
+@startuml
+actor Tester as Tester<<SpaceShip>>
+participant recipe as recipe <<TeleportGateRecipe>>
+participant s as s <<SpaceShip>>
+participant inventory as inventory <<Inventory>>
+collections item as item <<Item>>
+participant asteroid as asteroid <<Asteroid>>
+participant inv as inv <<Inventory>>
+collections aItem as aItem <<Item>>
+collections rItem as rItem <<Item>>
+participant gate1 as gate1 <<TeleportGateItem>>
+participant gate2 as gate2 <<TeleportGateItem>>
+
+title SpaceShip can craft teleport gate
+Tester-> recipe++: Craft(s)
+
+recipe -> s++: GetAsteroid()
+s --> recipe--: a
+
+recipe -> s++: GetInventory()
+s --> recipe--: inv
+
+group loop: input check[for each rItem in recipe.input]
+
+    recipe -> inventory++: RemoveItem(rItem)
+
+    group loop: satisfies check [for each item in items] 
+         inventory -> item++: Satisfies(rItem)
+         item --> inventory--: true/false
+         note right
+         break loop when true
+         end note
+    end
+
+    inventory-->recipe--: true/false
+
+
+    group opt [not satisfied]
+        recipe -> asteroid++: GetInventory()
+        asteroid --> recipe--: inv
+
+        recipe -> inv++: RemoveItem(rItem)
+
+            group loop: satisfies check [for each item in aItems] 
+                 inv -> aItem++: Satisfies(rItem)
+                 aItem --> inv--: true/false
+                    note right
+                    break loop when true
+                    end note
+           end
+        inv--> recipe--: true
+    end
+end
+recipe -> recipe++: MakeResult(s)
+
+create gate1
+recipe --> gate1: <<create>>
+create gate2
+recipe --> gate2: <<create>>
+
+recipe -> inventory++: InsertItem(gate1)
+inventory --> recipe--: true
+recipe -> inventory++: InsertItem(gate2)
+inventory --> recipe--: true
+
+recipe --> Tester: 
+
+ 
+
+@enduml
