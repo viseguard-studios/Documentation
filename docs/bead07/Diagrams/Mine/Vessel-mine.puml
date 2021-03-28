@@ -1,0 +1,47 @@
+@startuml
+hide footbox
+title Vessel mine from asteroid
+
+
+actor Tester as Tester
+
+
+participant v as v <<Vessel>>
+
+participant a as a <<Asteroid>>
+
+participant a_inv as a_inv<<AszteroidInventory>>
+
+participant v_inv as v_inv<<IInventory>>
+
+Tester -> v : Mine()
+activate v
+
+opt not hidden
+    v -> a ++: Mine(v)
+
+    opt not exploded
+    opt crust is 0
+    opt core is not empty
+
+    a -> a_inv++ : Mine()
+    a_inv --> a--: item
+
+    end
+    end
+    end
+
+    a --> v--: item
+
+    opt item is not null
+
+    v->v_inv++: InsertItem(item)
+    v_inv --> v--: true
+
+    end
+end
+
+v --> Tester
+deactivate v
+
+@enduml

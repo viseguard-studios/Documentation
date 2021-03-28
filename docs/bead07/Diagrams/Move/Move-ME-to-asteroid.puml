@@ -1,0 +1,60 @@
+@startuml
+hide footbox
+title Move MoveableEntity to Asteroid
+
+
+actor Tester as Tester
+
+
+participant me as me <<MoveableEntity>>
+
+participant a as a <<Asteroid>>
+participant b as b <<Asteroid>>
+
+Tester -> me ++ : GetCurrentAsteroid()
+me --> Tester: a
+deactivate me
+
+Tester -> a : GetReachableAsteroid()
+activate a
+
+a --> Tester : listofAsteroids
+deactivate a
+
+Tester -> me : Move(b)
+activate me
+
+me -> a ++: Depart(me)
+
+opt me's AsteroidPlace is Orbit
+
+a -> a : removeBuilding(me)
+activate a
+
+end
+deactivate a
+
+a --> me
+deactivate a
+
+me -> b ++ : Arrive(me)
+
+opt me's AsteroidPlace is Orbit
+
+b -> b : addBuilding(me)
+activate b
+
+end
+deactivate b
+
+b --> me
+deactivate b
+
+me -> me :setPoc(b.getPoc)
+activate me
+deactivate me
+
+me --> Tester
+deactivate me
+
+@enduml
