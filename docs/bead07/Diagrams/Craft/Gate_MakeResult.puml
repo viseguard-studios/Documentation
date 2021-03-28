@@ -1,0 +1,26 @@
+@startuml
+actor Tester as Tester<<SpaceShip>>
+participant recipe as recipe <<TeleportGateRecipe>>
+participant s as s <<SpaceShip>>
+participant inventory as inventory <<Inventory>>
+participant gate1 as gate1 <<TeleportGateItem>>
+participant gate2 as gate2 <<TeleportGateItem>>
+
+title Make teleport gate result
+Tester-> recipe++: MakeResult(s)
+
+create gate1
+recipe --> gate1: <<create>>
+create gate2
+recipe --> gate2: <<create>>
+
+recipe -> inventory++: InsertItem(gate1)
+inventory --> recipe--: true
+recipe -> inventory++: InsertItem(gate2)
+inventory --> recipe--: true
+
+recipe --> Tester: 
+
+ 
+
+@enduml

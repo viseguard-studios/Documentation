@@ -7,8 +7,9 @@ participant a as a <<Asteroid>>
 participant inventory as inventory <<Inventory>>
 collections item as item <<Item>>
 collections aItem as aItem <<Item>>
+participant gate as gate <<TeleportGateItem>>
 
-title SpaceShip can't craft teleport gate because of the lack of space in inventory
+title CanCraft teleport gate
 
 Tester-> recipe++: CanCraft(s)
 recipe -> s++: GetAsteroid()
@@ -64,21 +65,27 @@ group loop: input check[for each i in recipe.input]
             end
     end
 
-end
+    group opt interrupt [a recipe item is not satisfied]
+        recipe --> Tester: false
+    end
 
+end
 
 recipe -> inv++: GetSize()
 inv-->recipe--: size
 
+loop for each item in items
+recipe -> item++: Satisfies(gate)
+item --> recipe--: true/false
+end
+
 note right
-after crafting, the available space in 
-spaceship's inventory is less than the 
-space needed to insert teleport gates, 
-so the gates can't be crafted
+we have to check if we have 
+enough available space in the 
+SpaceShip inventory to craft the gates
 end note
 
-recipe --> Tester: false
-
+recipe --> Tester: true/false
 
 
 

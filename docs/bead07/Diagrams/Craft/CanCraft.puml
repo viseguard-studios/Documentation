@@ -1,6 +1,6 @@
 @startuml
 actor Tester as Tester <<SpaceShip>>
-participant recipe as recipe <<SpaceStationRecipe>>
+participant recipe as recipe <<Recipe>>
 participant s as s <<SpaceShip>>
 participant inv as inv <<Inventory>>
 participant a as a <<Asteroid>>
@@ -8,7 +8,7 @@ participant inventory as inventory <<Inventory>>
 collections item as item <<Item>>
 collections aItem as aItem <<Item>>
 
-title SpaceShip can't craft space station
+title CanCraft
 
 Tester-> recipe++: CanCraft(s)
 recipe -> s++: GetAsteroid()
@@ -69,6 +69,9 @@ group loop: input check[for each i in recipe.input]
     end
 
 end
+
+recipe --> Tester: true
  
+
 
 @enduml

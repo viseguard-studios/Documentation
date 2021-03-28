@@ -1,6 +1,6 @@
 @startuml
-actor Tester as Tester<<SpaceShip>>
-participant recipe as recipe <<SpaceStationRecipe>>
+participant Tester as Tester<<SpaceShip>>
+participant recipe as recipe <<Recipe>>
 participant s as s <<SpaceShip>>
 participant inventory as inventory <<Inventory>>
 collections item as item <<Item>>
@@ -8,12 +8,10 @@ participant asteroid as asteroid <<Asteroid>>
 participant inv as inv <<Inventory>>
 collections aItem as aItem <<Item>>
 collections rItem as rItem <<Item>>
-participant station as station <<SpaceStation>>
-participant scene as scene <<Scene>>
-participant mgr as mgr <<GameManager>>
 
 
-title SpaceShip can craft space station
+title Craft
+
 Tester-> recipe++: Craft(s)
 
 recipe -> s++: GetAsteroid()
@@ -55,30 +53,7 @@ group loop: input check[for each rItem in recipe.input]
 end
 recipe -> recipe++: MakeResult(s)
 
-create station
-recipe --> station: <<create>> SpaceStation(asteroid)
-station -> station++:  SpaceStation(asteroid)
-
-note right
-konstruktorhívás belseje
-end note
-
-station -> asteroid++: AddBuilding(station)
-asteroid --> station--: 
-
-station -> asteroid++: GetScene()
-asteroid --> station--: scene
-
-station -> scene++: GetManager()
-scene --> station--: mgr
-
-station -> mgr++: EndGame()
-mgr --> station--: 
-
-station-->recipe--:
-
 
 recipe --> Tester: 
-
-
+ 
 @enduml
