@@ -1,0 +1,119 @@
+SpaceShip
+	#getInvertory(): IInvertory 
+		Visszaadja a telepes által folyamatosan hordozott raktárat.
+	lastPLacedGate:
+		Törölve!
+TeleportGate
+	pair: TeleportGate
+		Törölve!
+	-gateID: int
+		A pair attribútum szerepét veszi át.
+Building
+	Új ősosztály: MovableEntity
+MovableEntity
+	Új osztály
+	Leírás:
+		Olyan entitás, amely képes aszteroidánál lenni és mozoghat.
+	Ős: Entity
+	-currentAsteroid: Asteroid
+		Melyik aszteroidánál vagyunk.
+	+getPlace(): AsteroidPlaces
+		Visszaadja, hogy az entitás hol helyezkedikel az aszteroidában/nál/ hozzá képest.
+	+Move(to: Asteroid): void 
+		Átlépés a megadott aszteroidára, ha az lehetséges.
+	+asteroidExploded(): void 
+		Mi történjen, ha felrobban az aszteroida, ahol voltunk.
+Entity
+	+explode(): void
+		Az adott entitás felrobban.
+BuildingPlace (enum)
+	Új név: AsteroidPlaces
+	Lehetséges értékek: Inside, Orbit, Vessel
+Asteroid
+	stationed: Vessel[0..*]
+		Törölve!
+Vessel
+	#getInvertory(): IInvertory 
+		Visszaadja az űrjármű által folyamatosan hordozott raktárat.
+	+mine(): void 
+		A függvény megegyezik a régen a SpaceShip osztályban lévővel, az aszteroidából fogunk tudni nyersanyagot kivenni.
+UFO
+	Új osztály
+	Leírás:
+		Az aszteroidaöv nyersanyagaira fáj a foga, azokat akarja eltulajdonítani, de nem tud fúrni. Éppen ezért a telepesek ellenségeinek tekinthető.
+	Ősosztály: Vessel
+	#getInvertory(): IInvertory 
+		Visszaadja az UFO által folyamatosan hordozott raktárat.
+Invertory
+	Törölve!
+IInvertory (interface)
+	Új interfész
+	Leírás: Az Invertory osztály szerepét veszi át, egy aszteroidán, telepesnél vagy ufónál található tárgyak tárolója.
+	+getItems(): List<Item>
+		Visszaadja a tárolt nyersanyagok listáját.
+	+tryInsertItem(i: Item): bool
+		Visszaadja, hogy az adott tárgy belehelyezhető-e a tárhelybe.
+	+insertItem(i: Item): bool
+		Az adott tárgyat belehelyezzük a tárhelybe.
+	+removeItem(i: Item): bool
+		Az adott tárgyat kiveszzük.
+AsteroidInvertory
+	Új osztály
+	Leírás:
+		Az aszteroida tárhelyének reprezentációja.
+	Megvalósítja: IInvertory 
+	+items: List<Item>
+		A tárolt nyersanyagok listája
+SSInvertory
+	Új osztály
+	Leírás:
+		Az aszteroida tárhelyének reprezentációja.
+	Megvalósítja: IInvertory
+	+items: List<Item>
+		A tárolt nyersanyagok listája
+	+tgs: List<TeleportGateItem>
+		A tárolt kapuk listája
+InfiniteInvertory
+	Új osztály
+	Leírás:
+		Az ufo tárhelyének reprezentációja. Bármennyi tárgy eltárolható benne.
+	Megvalósítja: IInvertory
+	+items: List<Item>
+		A tárolt nyersanyagok listája
+Item
+	amount: int
+		Törölve!
+	+nearSun(): void
+		Mi történjen, ha közel kerül a nyersanyag a naphoz, és napfény éri.
+Resource:
+	Új ősosztály: Item
+	amount: int
+		Törölve!
+Iron:
+	Új ősosztály: Resource
+Ice:
+	Új ősosztály: Resource		
+Coal:
+	Új ősosztály: Resource
+Titan:
+	Új név: Titanium
+	Új ősosztály: Resource
+Uranium:
+	Új ősosztály: Resource
+	+counter: int
+		Számolja, hogy hányszor lett kitéve napsugárzásnak az adott nyersanyag.
+IronResorce:
+	Törölve!
+IceResource:
+	Törölve!	
+CoalResource:
+	Törölve!
+TitaniumResorce:
+	Törölve!
+UraniumResource:
+	Törölve!
+TeleportGateRecipe:
+	+CanCraft(Invertory inv, Asteroid a): bool
+		Az ősosztály metódusát írjuk felül, mert ellenőrizni kell a telepes tárhelyében kévő teleportkapujainak számát.
+	amount: int
+		Törölve!
