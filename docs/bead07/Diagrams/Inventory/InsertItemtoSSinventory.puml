@@ -1,0 +1,23 @@
+@startuml
+
+
+title Insert Item to SSinventoryentory
+
+actor ss as "ss: SpaceShip"
+
+participant inventory as "ss.inventory:SSinventoryetory"
+participant item as "item:Item"
+
+ss -> inventory: insertItem(item)
+activate inventory
+
+opt if ss.inventory.count < 10
+    inventory -> inventory : Insert Item 
+    inventory --> ss : true
+end
+opt if ss.inventory.count >=10
+    inventory --> ss : false
+end
+deactivate inventory
+
+@enduml
