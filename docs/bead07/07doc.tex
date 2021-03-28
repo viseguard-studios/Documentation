@@ -45,8 +45,7 @@
 
 \subsection{Szekvencia-diagramok}
 \comment{Az analízis modell szekvenciadiagramjaiból a változás által érintett, előírt, módosítottdiagramok}
-%\diagram{docs/img/BMElogo}{Megváltozott szekvenciák}{3cm}
-%\comment{\hrule}
+
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\textwidth]{docs/bead07/Diagrams/TG-SolarFlare.eps} 
@@ -64,26 +63,218 @@
 \subsection{Bemeneti nyelv}
 \comment{Definiálni kell a teszteket leíró nyelvet. Külön figyelmet kell fordítani arra, hogy ha a rendszer véletlen elemeket is tartalmaz, akkor a véletlenszerűség ki-bekapcsolható legyen, és a program determinisztikusan is futtatható legyen. A szálkezelést is tesztelhető, irányítható módon kell megoldani. A programot egy adott konfigurációból is el kell tudni indítani, vagyis kell olyan parancs, amivel konkrét előre megadott állapotból indul a rendszer (pl. load).}
 
+\subsubsection{Bemeneti parancsok}
+
 \begin{itemize}
     \item startgame
     \begin{itemize}
         \item Leírás: 
-        \item Opciók: startgame <input | generate>
+        \item Opciók: startgame <seed> <input | generate>
         \begin{itemize}
+            \item seed: a véletlen szám generátor álltal hasznát kezdő érték.
             \item input: A felhasználó adja meg a játéktér össeállítását
             \item generate: A játéktér véletlen szerűen generlódik.
         \end{itemize}
     \end{itemize}
+
     \item move
     \begin{itemize}
-        \item Leírás: 
-        \item Opciók: 
+        \item Leírás: A játékos egy járművet akar mozgatni. \newline
+            A parancs megkérdezi a játékostól, hogy melyik aszeroidára akarja mozgatni a járművet.
+        \item Opciók: move <vessel>
+        \begin{itemize}
+            \item vessel: A jármű amit mozgatni akarunk
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> move ss_001
+Neighbours:
+01 - Asteroid_1  - ?
+02 - Asteroid_34 - Iron
+03 - Asteroid_9  - Coal
+04 - Asteroid_11 - ?
+> 04
+ss_001 Moved to Asteroid_11
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item neighbours
+    \begin{itemize}
+        \item Leírás: A játékos lekéri az aszteroida szomszédjait
+        \item Opciók: neighbours <asteroid>
+        \begin{itemize}
+            \item asteroid: Az aszteroida aminek a szomszédjait akarjuk lekérdezni.
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> neighbours ss_001
+Neighbours:
+01 - Asteroid_1  - ?
+02 - Asteroid_34 - Iron
+03 - Asteroid_9  - Coal
+04 - Asteroid_11 - ?
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item drill
+    \begin{itemize}
+        \item Leírás: A játékos a megadott járművel fúr azon az aszteroidán amin éppen van.
+        \item Opciók: drill <vessel>
+        \begin{itemize}
+            \item vessel: A jármű amivel fúrni akarunk.
+        \end{itemize}
+        \item Példa 1:
+            \begin{verbatim}
+> drill ss_001 
+Asteroid_42 crust = X
+            \end{verbatim}
+        \item Példa 2:
+            \begin{verbatim}
+> drill ss_001 
+can't drill
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item drill
+    \begin{itemize}
+        \item Leírás: A játékos a megadott járművel fúr azon az aszteroidán amin éppen van.
+        \item Opciók: drill <vessel>
+        \begin{itemize}
+            \item vessel: A jármű amivel fúrni akarunk.
+        \end{itemize}
+        \item Példa 1:
+            \begin{verbatim}
+> drill ss_001 
+Asteroid_42 crust = X
+            \end{verbatim}
+        \item Példa 2:
+            \begin{verbatim}
+> drill ss_001 
+can't drill
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item mine
+    \begin{itemize}
+        \item Leírás: A játékos a megadott járművel megpróbál bányászni azon az aszteroidán amin éppen van.
+        \item Opciók: mine <vessel>
+        \begin{itemize}
+            \item vessel: A jármű amivel bányászni akarunk.
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> mine ss_001
+Asteroid_35 mined
+* Item: Iron
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item status
+    \begin{itemize}
+        \item Leírás: A játékos a megadott jármű jelenlegi állapotát kérdezi le.
+        \item Opciók: status <vessel>
+        \begin{itemize}
+            \item vessel: A jármű aminek az állapotát kérdezzük le.
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> status ss_001
+Asteroid: Asteroid_67 | Not hidden
+Resources:
+- Iron
+- Iron
+- Coal
+- etc....
+TG:
+- Tg_023
+- Tg_023
+- Tg_011
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item hide
+    \begin{itemize}
+        \item Leírás: A játékos 
+        \item Opciók: hide <enter|exit> <vessel>
+        \begin{itemize}
+            \item vessel: A jármű aminek az állapotát kérdezzük le.
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> status ss_001
+Asteroid: Asteroid_67 | Not hidden
+Resources:
+- Iron
+- Iron
+- Coal
+- etc....
+TG:
+- Tg_023
+- Tg_023
+- Tg_011
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item craft
+    \begin{itemize}
+        \item Leírás: A játékos egy űrhajón legyárt egy adott receptet.
+        \item Opciók: craft <vessel> <recipe>
+        \begin{itemize}
+            \item vessel: A jármű amin akarunk gyártani
+            \item recipe: A recept amit le akarunk gyártani
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> craft ss_001 <recipe>
+Can't craft .......
+--
+Succesful
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item place
+    \begin{itemize}
+        \item Leírás: A játékos egy űrhajóból lerak egy nyersanyagot az aszteroidába amin van.
+        \item Opciók: place <resource> from <vessel>
+        \begin{itemize}
+            \item resource: a nyersanyag amit le akarunk rakni
+            \item vessel: A jármű amin akarunk gyártani
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> palce Iron from ss_001
+            \end{verbatim}
+    \end{itemize}
+
+    \item pickup
+    \begin{itemize}
+        \item Leírás: A játékos egy űrhajóból lerak egy nyersanyagot az aszteroidába amin van.
+        \item Opciók: pickup <resource> to <vessel>
+        \begin{itemize}
+            \item resource: a nyersanyag amit le akarunk rakni
+            \item vessel: A jármű amin akarunk gyártani
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> pickup Coal to ss_001
+            \end{verbatim}
     \end{itemize}
 \end{itemize}
-Példák a bemeneti nyelvre:
+
+\subsubsection{Események}
+Továbbá a program bizonyos események után lehet hogy eseményekről értesít minket.
+Például:
 \begin{verbatim}
-    parancs1 arg1 arg2 arg3
-    parancs2 arg1 arg2
+[Event] Asteroid_42 exploded
+[Event] ss_001 exploded
 \end{verbatim}
 
 \comment{Ha szükséges, meg kell adni a konfigurációs (pl. pályaképet megadó) fájlok nyelvtanát is.}

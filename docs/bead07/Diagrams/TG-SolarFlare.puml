@@ -13,9 +13,8 @@ state Crazy{
 }
 
 
-caption A teleport kapu-t ha napszél éri akkor elkezd mozogni.
- Minden körben egy véletlen segítségével dönti el, hogy fog e mozogni
-end caption
+caption A teleport kapu-t ha napszél éri akkor elkezd mozogni.\n Minden körben egy véletlen segítségével dönti el, hogy fog e mozogni
+
 
 
 @enduml
