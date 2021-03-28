@@ -1,6 +1,6 @@
 @startuml
 'skinparam linetype ortho
-'skinparam linetype polyline
+skinparam linetype polyline
 
 'skinparam style strictuml
 skinparam groupInheritance 1
@@ -19,7 +19,7 @@ class Scene{
     +getManager() : GameManager
     +solarFlare()
 }
-Scene " #scene [1]" *- "#entities [1..*]" Entity
+Scene " #scene [1]" *- " #entities [1..*]" Entity
 Scene "-scene" --* "-manager" GameManager
 
 class GameManager{
@@ -30,17 +30,18 @@ class GameManager{
     -gameEnded: bool
     --
     +initGame()
-    +addPlayer()
+    +addPlayer(p:Player)
     +startGame()
     +takeTurn()
     +endGame()
-    +isSunStormActive()
+    +isSunStormActive() : bool
     ..
     -generateScene()
     -generateAsteroids()
-    -generateNewResource()
+    -generateNewResource() : Resource
 }
 GameManager -- "-currentPlayer [1]" Player
+GameManager -- "-settlers [1..*]" SpaceShip
 
 class Player{
     -name:string
@@ -99,8 +100,8 @@ Titanium --|> Resource
 
 interface IInventory{
     List<Item> getItems()
-    bool tryInsertItem()
-    bool insertItem()
+    bool tryInsertItem(i:Item)
+    bool insertItem(i:Item)
     bool removeItem(Item i)
 }
 
@@ -118,11 +119,12 @@ AsteroidInventory "items" --* Item
 
 class SSInvetory{
     
-    List<TeleportGateItem> tgs
+    -tgs: List<TeleportGateItem>
+    -items: List<Item>
 }
 SSInvetory --|> IInventory
-SSInvetory "items" -* Item
-SSInvetory "tgs" -* TeleportGateItem
+'SSInvetory "items" -* Item
+'SSInvetory "tgs" -* TeleportGateItem
 
 
 'Entities
@@ -209,7 +211,7 @@ class Asteroid{
     +Asteroid(r:Resource,amount:int)
     +solarFlare()
     +explode()
-    +reveale()
+    +reveal()
     +reachableAsteroids():Asteroid[1..*]
     +addNeighbour(a:Asteroid)
     ..
@@ -231,12 +233,13 @@ Asteroid *-- "1" AsteroidInventory
 Asteroid -* "-neighbours [1..*]" Asteroid
 
 class Building{
-
+    +getRoutes():Asteroid[0..*]
 }
 Building --|> MovableEntity
 
 class TeleportGate{
-    int gateId
+    -int gateId
+    +PairDestroyed()
 }
 TeleportGate --|> Building
 
@@ -247,7 +250,27 @@ SpaceStation --|> Building
 
 
 
+class Recipe{
+    +canCraft(s: SpaceShip): bool
+    +craft(s: SpaceShip)
+    {abstract} #makeResult(s:SpaceShip)
+}
+Item "-input [1..*]" -- Recipe 
 
+class TeleportGateRecipe{
+    #makeResult(s:SpaceShip)
+}
+TeleportGateRecipe --|> Recipe
+
+class SpaceStationRecipe{
+    #makeResult(s:SpaceShip)
+}
+SpaceStationRecipe --|> Recipe
+
+class RobotRecipe{
+    #makeResult(s:SpaceShip)    
+}
+RobotRecipe --|> Recipe
 
 
 legend
@@ -259,6 +282,11 @@ legend
 |  <img:http://s.plantuml.com/public-field.png>     |   <img:http://s.plantuml.com/public-method.png>     | public |
 
 endlegend
+
+footer
+A diagrammon bizonyos kapcolatokat nem aggregációs vonallal hanem mezőzel jelöltük a könnyeb olvashatóság érdekében.
+
+endfooter
 
 
 @enduml

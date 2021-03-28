@@ -1,0 +1,15 @@
+@startuml
+hide empty description
+
+state Neutral
+[*] --> Neutral 
+
+state Heating
+Neutral -> Heating : [SolarFlare] count ++
+Heating -> Heating : [count < 3 && SolarFlare] count ++
+
+state Exploded
+Heating --> Exploded : [count >= 3]
+
+
+@enduml

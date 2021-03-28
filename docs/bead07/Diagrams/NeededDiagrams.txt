@@ -1,32 +1,32 @@
 
 Teleport gate 
-- move   GAO
-- Solar flare (STATE) Peti
+- move   GAO ✅
+- Solar flare (STATE) Peti ✅
 
 
 MovableEntity
-- move   GAO
+- move   GAO ✅
 
 Vessel
-- mine   GAO
-- drill  GAO
+- mine   GAO ✅
+- drill  GAO 
 
 Inventory s
-- infinite Titusz
+- infinite Titusz ✅
 - Asteroid Titusz
-- teleport Titusz
+- teleport Titusz ✅
 
 Recipe
-- craft Bea
+- craft Bea ✅
 
-solar flare Peti
+solar flare Peti 
 
 Uranium
-- counter (STATE!) Peti
+- counter (STATE!) Peti ✅
 - explosion GAO
 
 Asteroid
-- near sun Peti
+- near sun Peti 
 
 
 

@@ -4,13 +4,11 @@
 
 \chapter{Prototípus koncepciója}
 \comment{A prototípus program célja annak demonstrálása, hogy a program elkészült, helyesen működik, valamennyi feladatát teljesíti. A prototípus változat egy elkészült program kivéve a kifejlett grafikus interfészt. Ez a program is parancssorból futtatható és karakteres ernyőkezelést alkalmaz. Az ütemezés, az aktív objektumok kezelése megoldott. A business objektumok -a megjelenítésre vonatkozó részeket kivéve -valamennyi metódusa a végleges algoritmusokat kell, hogy tartalmazza. A megjelenítés és működtetés egy alfanumerikus képernyőn vezérelhető és követhető, ugyanakkor a vezérlés fájlból is történhet és a megjelenítés fájlba is logolható, ezzel megteremtve a rendszer tesztelésének lehetőségét. Különös figyelmet kell fordítani a parancssori interfész logikájára, felépítésére, valamint arra, hogy az mennyiben tükrözi és teszi láthatóvá a program működését, a beavatkozások hatásait.}
-\comment{\hrule}
-\comment{Amennyiben változott a modell:}
+%\comment{\hrule}
 \setcounter{section}{-1}
 
 \section{Változás hatása a modellre}
 \subsection{Módosult osztálydiagram}
-%\comment{Az analízis modell osztálydiagramja a változások figyelembevételével.}
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\textwidth]{docs/bead07/Diagrams/class-diag.eps} 
@@ -50,18 +48,59 @@
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/bead07/Diagrams/TG-SolarFlare.eps} 
     \caption{} 
-\end{figure} 
-
+\end{figure}
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=0.7\textwidth]{docs/bead07/Diagrams/Inventory/InsertItemtoInfinite} 
+    \includegraphics[width=0.7\textwidth]{docs/bead07/Diagrams/Uranium/uran-counter} 
+    \caption{} 
+\end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead07/Diagrams/Craft/CanCraft} 
     \caption{} 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=0.7\textwidth]{docs/bead07/Diagrams/Inventory/InsertItemtoSSinventory} 
+    \includegraphics[width=1\textwidth]{docs/bead07/Diagrams/Craft/CanCraftGate} 
+    \caption{} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead07/Diagrams/Craft/Craft} 
+    \caption{} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/bead07/Diagrams/Craft/Gate_MakeResult} 
+    \caption{} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.5\textwidth]{docs/bead07/Diagrams/Inventory/InsertItemtoInfinite} 
+    \caption{} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.5\textwidth]{docs/bead07/Diagrams/Inventory/InsertItemtoSSinventory} 
+    \caption{} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/bead07/Diagrams/Mine/Vessel-mine} 
+    \caption{} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.7\textwidth]{docs/bead07/Diagrams/Move/Move-ME-to-asteroid} 
     \caption{} 
 \end{figure} 
 
@@ -150,26 +189,6 @@ can't drill
     \end{itemize}
 
 
-    \item drill
-    \begin{itemize}
-        \item Leírás: A játékos a megadott járművel fúr azon az aszteroidán amin éppen van.
-        \item Opciók: drill <vessel>
-        \begin{itemize}
-            \item vessel: A jármű amivel fúrni akarunk.
-        \end{itemize}
-        \item Példa 1:
-            \begin{verbatim}
-> drill ss_001 
-Asteroid_42 crust = X
-            \end{verbatim}
-        \item Példa 2:
-            \begin{verbatim}
-> drill ss_001 
-can't drill
-            \end{verbatim}
-    \end{itemize}
-
-
     \item mine
     \begin{itemize}
         \item Leírás: A játékos a megadott járművel megpróbál bányászni azon az aszteroidán amin éppen van.
@@ -202,10 +221,10 @@ Resources:
 - Iron
 - Coal
 - etc....
-TG:
-- Tg_023
-- Tg_023
-- Tg_011
+Teleport Gates:
+- Tg_023 - 1
+- Tg_023 - 1
+- Tg_011 - 5
             \end{verbatim}
     \end{itemize}
 
@@ -219,18 +238,14 @@ TG:
         \end{itemize}
         \item Példa:
             \begin{verbatim}
-> status ss_001
-Asteroid: Asteroid_67 | Not hidden
-Resources:
-- Iron
-- Iron
-- Coal
-- etc....
-TG:
-- Tg_023
-- Tg_023
-- Tg_011
+> hide enter ss_001
+Can't hide
             \end{verbatim}
+        \item Példa:
+            \begin{verbatim}
+> hide enter ss_001
+ss_001 is hidden
+            \end{verbatim}            
     \end{itemize}
 
 
