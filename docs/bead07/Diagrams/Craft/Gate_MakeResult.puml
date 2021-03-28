@@ -10,9 +10,17 @@ title Make teleport gate result
 Tester-> recipe++: MakeResult(s)
 
 create gate1
-recipe --> gate1: <<create>>
+recipe --> gate1: <<create>> TeleportGateItem(id)
+
+note left
+generating an ID 
+that identifies the 
+members of the teleport
+gate pair
+end note
+
 create gate2
-recipe --> gate2: <<create>>
+recipe --> gate2: <<create>> TeleportGateItem(id)
 
 recipe -> inventory++: InsertItem(gate1)
 inventory --> recipe--: true
