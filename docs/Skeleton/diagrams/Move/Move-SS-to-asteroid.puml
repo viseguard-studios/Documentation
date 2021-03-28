@@ -33,6 +33,10 @@ ship -> b ++ : Arrive(ship)
 b --> ship
 deactivate b
 
+ship -> ship :setPoc(b.getPoc)
+activate ship
+deactivate ship
+
 ship --> Tester
 deactivate ship
 

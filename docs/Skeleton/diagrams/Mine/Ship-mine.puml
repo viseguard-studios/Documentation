@@ -10,22 +10,22 @@ participant ship as ship <<SpaceShip>>
 
 participant a as a <<Asteroid>>
 
-participant inv as inv<<Inventory>>
+participant a_inv as a_inv<<AszteroidInventory>>
 
-participant res as res<<Resource>>
+participant ship_inv as ship_inv<<SSInventory>>
 
 Tester -> ship : Mine()
 activate ship
 
 ship -> a ++: Mine(ship)
 
-a -> res++ : Mine()
-res --> a--: item
+a -> a_inv++ : Mine()
+a_inv --> a--: item
 
 a --> ship--: item
 
-ship->inv++: InsertItem(i)
-inv --> ship--: true
+ship->ship_inv++: InsertItem(i)
+ship_inv --> ship--: true
 
 ship --> Tester
 deactivate ship
