@@ -1,0 +1,43 @@
+@startuml
+hide footbox
+title Move Robot to Asteroid
+
+
+actor Tester as Tester
+
+
+participant robot as robot <<Robot>>
+
+participant a as a <<Asteroid>>
+participant b as b <<Asteroid>>
+
+Tester -> robot ++ : GetCurrentAsteroid()
+robot --> Tester: a
+deactivate robot
+
+Tester -> a ++: GetReachableAsteroid()
+
+
+a --> Tester : listofAsteroids
+deactivate a
+
+Tester -> robot : Move(b)
+activate robot
+
+robot -> a ++: Depart(robot)
+a --> robot
+deactivate a
+
+robot -> b ++ : Arrive(robot)
+
+b --> robot
+deactivate b
+
+robot -> robot :setPoc(b.getPoc)
+activate robot
+deactivate robot
+
+robot --> Tester
+deactivate robot
+
+@enduml
