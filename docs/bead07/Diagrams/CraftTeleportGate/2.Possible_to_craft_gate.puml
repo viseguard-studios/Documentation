@@ -27,23 +27,46 @@ a --> recipe--: inventory
 recipe -> inventory++: getItems()
 inventory --> recipe--: aItems
 
-group loop input check[for each i in recipe.input]
+note right
+create 2 new item lists containing 
+aItems and items 
+end note
+
+group loop: input check[for each i in recipe.input]
 
     group loop [for each item in items]
         recipe -> item++: Satisfies(i)
-        item --> recipe--: x
+        item --> recipe--: true/false
+        opt if satisfies
+        recipe -> item++: Remove(i)
+        item --> recipe--: true
+
+        note right
+        break loop after this function
+        end note
+
+        end
     end
 
-    group loop [for each item in aItems]
-        recipe -> aItem++: Satisfies(i)
-        aItem --> recipe--: y
+    opt if not satisfied
+            group loop [for each item in aItems]
+            recipe -> aItem++: Satisfies(i)
+            aItem --> recipe--: true/false
+                opt if satisfies
+                recipe -> aItem++: Remove(i)
+                aItem --> recipe--: true
+
+                note right
+                break loop after this function
+                end note
+
+                end
+            end
     end
+
 end
 
-group loop check storage capacity [for each item in items]
-recipe -> item++: GetAmount()
-item-->recipe--: amount
-end
+
 
 recipe -> inv++: GetSize()
 inv-->recipe--: size
@@ -54,14 +77,6 @@ space to store gates after crafting
 end note
 
 recipe --> Tester: true
-
-note right
-x+y can satify the recipe
-input amount for each item,
-the Gates can be crafted
-end note
-
-
 
 
 @enduml
