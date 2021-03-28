@@ -33,10 +33,6 @@ robot -> b ++ : Arrive(robot)
 b --> robot
 deactivate b
 
-robot -> robot :setPoc(b.getPoc)
-activate robot
-deactivate robot
-
 robot --> Tester
 deactivate robot
 
