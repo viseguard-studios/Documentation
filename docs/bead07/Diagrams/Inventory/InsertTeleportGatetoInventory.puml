@@ -9,18 +9,18 @@ participant inventory as "ss.inventory:SSinventoryetory"
 participant list as "ss.inventory.tgs:List<Item>"
 participant tg as "tg:TeleportGateItem"
 
-ss -> inventory: insertItem(item)
+ss -> inventory: insertItem(tg)
 activate inventory
 
-opt if ss.inventory.count < 10
-    inventory -> list : add(Item)
+opt if ss.inventory.tgs.count < 3
+    inventory -> list : add(tg)
     activate list
     list --> inventory
     deactivate
     inventory --> ss : true
 
 end
-opt if ss.inventory.count >=10
+opt if ss.inventory.tgs.count >=3
     inventory --> ss : false
 end
 deactivate
