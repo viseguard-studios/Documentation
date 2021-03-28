@@ -1,22 +1,63 @@
 @startuml
+'skinparam linetype ortho
+'skinparam linetype polyline
 
+'skinparam style strictuml
+skinparam groupInheritance 1
+
+
+class Engine{
+    +startApplication()
+    +startGame()
+    +endGame()
+}
+Engine o- Scene
+
+class Scene{
+    +addEntity()
+    +roundEnded()
+    +getManager() : GameManager
+    +solarFlare()
+}
+Scene " #scene [1]" *- "#entities [1..*]" Entity
+Scene "-scene" --* "-manager" GameManager
+
+class GameManager{
+    -selectedVessel:Vessel
+    -sunDistance: int
+    -allPLayers: Player[1..*]
+    -asteroids: Asteroid[1..*]
+    -gameEnded: bool
+    --
+    +initGame()
+    +addPlayer()
+    +startGame()
+    +takeTurn()
+    +endGame()
+    +isSunStormActive()
+    ..
+    -generateScene()
+    -generateAsteroids()
+    -generateNewResource()
+}
+GameManager -- "-currentPlayer [1]" Player
 
 class Player{
-
+    -name:string
 }
-Player "owner" -- Vessel
+Player "owner[1]" -- Vessel
 
 
 
 class Item{
-    {abstract} void NearSun()
-    {abstract} bool Satisfies()
-    void Activate()
+    {abstract} + NearSun()
+    {abstract} + Satisfies():bool
+    Activate()
 }
 Item "inv" -- IInventory
 
 class TeleportGateItem{
-    void Activate()
+    Activate()
 }
 TeleportGateItem --|> Item
 
@@ -28,27 +69,28 @@ Resource --|> Item
 
 
 class Iron{
-    
+    +Satisfies():bool
 }
-Iron --|> Resource
+Resource <|-- Iron
 
 class Ice{
-    
+    +Satisfies():bool
 }
-Ice --|> Resource
+Resource <|-- Ice
 
 class Uranium{
     int counter
+    +Satisfies():bool
 }
-Uranium --|> Resource
+Resource <|-- Uranium
 
 class Coal{
-    
+    +Satisfies():bool
 }
 Coal --|> Resource
 
 class Titanium{
-    
+    +Satisfies():bool
 }
 Titanium --|> Resource
 
@@ -79,14 +121,19 @@ class SSInvetory{
     List<TeleportGateItem> tgs
 }
 SSInvetory --|> IInventory
-SSInvetory "items" --* Item
-SSInvetory "tgs" --* TeleportGateItem
+SSInvetory "items" -* Item
+SSInvetory "tgs" -* TeleportGateItem
 
 
 'Entities
 
 class Entity{
     Vector2 pos
+
+    +roundEnd()
+    +getScene():Scene
+    {abstract} +solarFlare()
+    {abstract} +explode()
 }
 
 enum AsteroidPlaces{
@@ -98,16 +145,26 @@ enum AsteroidPlaces{
 class MovableEntity{
     AsteroidPlaces getPlace()
     ..
-    void move(Asteroid to)
+    +void move(Asteroid to)
+    +void asteroidExploded()
 }
 MovableEntity --|> Entity
-AsteroidPlaces .. MovableEntity
+AsteroidPlaces . MovableEntity
+Asteroid "-curentAsteroid" -- MovableEntity
 
 class Vessel{
-    {abstract} IInventory getInventory()
+    -isHidden : bool
+    --
+    {abstract} #IInventory getInventory()
+    {abstract} +getHidingSpaceRequirement():int
     ..
-    void mine()
-    void drill()
+    +void Vessel(p:Player, a:Asteroid):Vessel
+    +void hide()
+    +void exitHiding()
+    +void drill()
+    +void mine()
+    +void explode()
+    +void solarFlare()
 }
 Vessel --|> MovableEntity
 
@@ -119,13 +176,21 @@ UFO --|> Vessel
 UFO *-- "1" InfiniteInvetory 
 
 class SpaceShip{
-    IInventory getInventory()
+    #IInventory getInventory()
+
+    +void SpaceShip(p:Player, a:Asteroid)
+    +getHidingSpaceRequirement():int
+    +craft(recipe:Recipe)
+    +placeItem(i:Item):bool
+    +activateItem(i:Item)
 }
 SpaceShip --|> Vessel
-SpaceShip *-- "1" SSInvetory 
+SpaceShip *-- "-inventory [1]" SSInvetory 
 
 class Robot{
-    IInventory getInventory()
+
+    +Robot(p:Player,a:Asteroid)
+    +getInventory():IInventory 
 }
 Robot --|> Vessel
 
@@ -133,10 +198,37 @@ Robot --|> Vessel
 
 
 class Asteroid{
-
+    -exploded:bool
+    -coreSize:int
+    -maxHidingSpace:int
+    -crustSize:int
+    -revealed:bool
+    -visited:bool
+    -hidingVessel:Vessel
+    --
+    +Asteroid(r:Resource,amount:int)
+    +solarFlare()
+    +explode()
+    +reveale()
+    +reachableAsteroids():Asteroid[1..*]
+    +addNeighbour(a:Asteroid)
+    ..
+    +arrive(v:MovableVessel)
+    +depart(v:MovableVessel)
+    ..
+    +hide(v:Vessel):bool
+    +exit(v:Vessel)
+    +getAvailableHidingSpace():int
+    ..
+    +drill()
+    +mine():Item
+    ..
+    +addBuilding(b:Building)
+    +placeItem(i:Item)
+    +getInventory():IInventory
 }
 Asteroid *-- "1" AsteroidInventory 
-
+Asteroid -* "-neighbours [1..*]" Asteroid
 
 class Building{
 
@@ -152,6 +244,21 @@ class SpaceStation{
 
 }
 SpaceStation --|> Building
+
+
+
+
+
+
+legend
+
+|= field |= method |=  |
+|  <img:http://s.plantuml.com/private-field.png>     |   <img:http://s.plantuml.com/private-method.png>     | private |
+|  <img:http://s.plantuml.com/protected-field.png>   |   <img:http://s.plantuml.com/protected-method.png>   | protected |
+|  <img:http://s.plantuml.com/package-private-field.png>     |   <img:http://s.plantuml.com/package-private-method.png>    | package private |
+|  <img:http://s.plantuml.com/public-field.png>     |   <img:http://s.plantuml.com/public-method.png>     | public |
+
+endlegend
 
 
 @enduml

@@ -59,9 +59,5 @@ Succesful
 
 
 
->
-
-
-
 [Event] Asteroid_42 exploded
 [Event] ss_001 exploded
