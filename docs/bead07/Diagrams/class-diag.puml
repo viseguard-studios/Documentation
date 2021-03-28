@@ -3,7 +3,7 @@
 skinparam linetype polyline
 
 'skinparam style strictuml
-skinparam groupInheritance 1
+'skinparam groupInheritance 1
 
 
 class Engine{
@@ -46,7 +46,8 @@ GameManager -- "-settlers [1..*]" SpaceShip
 class Player{
     -name:string
 }
-Player "owner[1]" -- Vessel
+Player "-owner[1]" -- Vessel
+Player -- "-searchingFor [0..1]" Resource
 
 
 
@@ -55,9 +56,11 @@ class Item{
     {abstract} + Satisfies():bool
     Activate()
 }
-Item "inv" -- IInventory
+Item -- "-inventory [1]" IInventory
 
 class TeleportGateItem{
+    +Satisfies():bool
+    ..
     Activate()
 }
 TeleportGateItem --|> Item
@@ -229,8 +232,8 @@ class Asteroid{
     +placeItem(i:Item)
     +getInventory():IInventory
 }
-Asteroid *-- "1" AsteroidInventory 
-Asteroid -* "-neighbours [1..*]" Asteroid
+Asteroid *-- "-inventory [1]" AsteroidInventory 
+Asteroid --* "-neighbours [1..*]" Asteroid
 
 class Building{
     +getRoutes():Asteroid[0..*]

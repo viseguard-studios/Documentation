@@ -1,6 +1,23 @@
 @startuml
 
-actor a
+participant gm as gm <<GameManager>>
 
+participant sc as Scene <<Scene>>
+
+gm -> Scene ++ : solarFlare(pos, radius)
+
+loop for each ent in entities
+
+    Scene -> Entity ++ : getPos();
+    return : position
+
+    opt if position is inside circle(pos,radius)
+        Scene -> Entity ++ : solarFlare();
+        return
+    end
+
+end
+
+return
 
 @enduml
