@@ -1,13 +1,13 @@
 @startuml
 
 
-title Insert Item to SSinventory
+title Insert TeleportGate to SSinventory
 
 actor ss as "ss: SpaceShip"
 
 participant inventory as "ss.inventory:SSinventoryetory"
-participant list as "ss.inventory.items:List<Item>"
-participant item as "item:Item"
+participant list as "ss.inventory.tgs:List<Item>"
+participant tg as "tg:TeleportGateItem"
 
 ss -> inventory: insertItem(item)
 activate inventory

@@ -5,11 +5,16 @@ title Insert Item to InfiniteInventory
 
 actor ufo as "ufo: UFO"
 
-participant inv as "ufo.inv:InfiniteInvetory"
+participant inv as "ufo.inventory:InfiniteInvetory"
+participant list as "ufo.inventory.items:List<Item>"
 participant item as "item:Item"
 
 ufo -> inv: insertItem(item)
 
+inv -> list : add(Item)
+activate list
+list --> inv
+deactivate
 inv --> ufo : true
 
 @enduml
