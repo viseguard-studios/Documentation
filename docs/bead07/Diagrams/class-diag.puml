@@ -1,8 +1,9 @@
 @startuml
 'skinparam linetype ortho
+'skinparam linetype polyline
 
 'skinparam style strictuml
-'skinparam groupInheritance 5
+skinparam groupInheritance 1
 
 
 class Engine{
@@ -10,7 +11,7 @@ class Engine{
     +startGame()
     +endGame()
 }
-Engine o-- Scene
+Engine o- Scene
 
 class Scene{
     +addEntity()
@@ -18,7 +19,7 @@ class Scene{
     +getManager() : GameManager
     +solarFlare()
 }
-Scene " #scene [1]" *-- "#entities [1..*]" Entity
+Scene " #scene [1]" *- "#entities [1..*]" Entity
 Scene "-scene" --* "-manager" GameManager
 
 class GameManager{
@@ -49,14 +50,14 @@ Player "owner[1]" -- Vessel
 
 
 class Item{
-    {abstract} void NearSun()
-    {abstract} bool Satisfies()
-    void Activate()
+    {abstract} + NearSun()
+    {abstract} + Satisfies():bool
+    Activate()
 }
 Item "inv" -- IInventory
 
 class TeleportGateItem{
-    void Activate()
+    Activate()
 }
 TeleportGateItem --|> Item
 
@@ -68,27 +69,28 @@ Resource --|> Item
 
 
 class Iron{
-    
+    +Satisfies():bool
 }
-Iron --|> Resource
+Resource <|-- Iron
 
 class Ice{
-    
+    +Satisfies():bool
 }
-Ice --|> Resource
+Resource <|-- Ice
 
 class Uranium{
     int counter
+    +Satisfies():bool
 }
-Uranium --|> Resource
+Resource <|-- Uranium
 
 class Coal{
-    
+    +Satisfies():bool
 }
 Coal --|> Resource
 
 class Titanium{
-    
+    +Satisfies():bool
 }
 Titanium --|> Resource
 
@@ -119,8 +121,8 @@ class SSInvetory{
     List<TeleportGateItem> tgs
 }
 SSInvetory --|> IInventory
-SSInvetory "items" --* Item
-SSInvetory "tgs" --* TeleportGateItem
+SSInvetory "items" -* Item
+SSInvetory "tgs" -* TeleportGateItem
 
 
 'Entities
@@ -147,8 +149,8 @@ class MovableEntity{
     +void asteroidExploded()
 }
 MovableEntity --|> Entity
-AsteroidPlaces .. MovableEntity
-Asteroid "-curentAsteroid" --- MovableEntity
+AsteroidPlaces . MovableEntity
+Asteroid "-curentAsteroid" -- MovableEntity
 
 class Vessel{
     -isHidden : bool
@@ -182,11 +184,13 @@ class SpaceShip{
     +placeItem(i:Item):bool
     +activateItem(i:Item)
 }
-SpaceShip ---|> Vessel
-SpaceShip *--- "-inventory [1]" SSInvetory 
+SpaceShip --|> Vessel
+SpaceShip *-- "-inventory [1]" SSInvetory 
 
 class Robot{
-    IInventory getInventory()
+
+    +Robot(p:Player,a:Asteroid)
+    +getInventory():IInventory 
 }
 Robot --|> Vessel
 
@@ -224,7 +228,7 @@ class Asteroid{
     +getInventory():IInventory
 }
 Asteroid *-- "1" AsteroidInventory 
-Asteroid --* "-neighbours [1..*]" Asteroid
+Asteroid -* "-neighbours [1..*]" Asteroid
 
 class Building{
 
@@ -240,6 +244,21 @@ class SpaceStation{
 
 }
 SpaceStation --|> Building
+
+
+
+
+
+
+legend
+
+|= field |= method |=  |
+|  <img:http://s.plantuml.com/private-field.png>     |   <img:http://s.plantuml.com/private-method.png>     | private |
+|  <img:http://s.plantuml.com/protected-field.png>   |   <img:http://s.plantuml.com/protected-method.png>   | protected |
+|  <img:http://s.plantuml.com/package-private-field.png>     |   <img:http://s.plantuml.com/package-private-method.png>    | package private |
+|  <img:http://s.plantuml.com/public-field.png>     |   <img:http://s.plantuml.com/public-method.png>     | public |
+
+endlegend
 
 
 @enduml
