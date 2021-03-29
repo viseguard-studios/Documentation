@@ -12,6 +12,7 @@ participant tg as "tg:TeleportGateItem"
 ss -> inventory: insertItem(tg)
 activate inventory
 
+
 opt if ss.inventory.tgs.count < 3
     inventory -> list : add(tg)
     activate list

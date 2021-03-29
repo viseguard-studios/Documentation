@@ -8,9 +8,12 @@ actor ss as "ss: SpaceShip"
 participant inventory as "ss.inventory:SSinventoryetory"
 participant list as "ss.inventory.items:List<Item>"
 participant item as "item:Item"
+participant check as "tester: TeleportGateItem"
 
 ss -> inventory: insertItem(item)
 activate inventory
+
+opt if not item.satisfies(tester)
 
 opt if ss.inventory.count < 10
     inventory -> list : add(Item)
@@ -24,5 +27,5 @@ opt if ss.inventory.count >=10
     inventory --> ss : false
 end
 deactivate
-
+end
 @enduml
