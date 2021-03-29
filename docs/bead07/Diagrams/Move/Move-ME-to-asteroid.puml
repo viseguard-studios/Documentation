@@ -28,8 +28,8 @@ me -> a ++: Depart(me)
 
 opt me's AsteroidPlace is Orbit
 
-a -> a : removeBuilding(me)
-activate a
+a -> a ++: removeBuilding(me)
+a--
 
 end
 deactivate a
@@ -41,9 +41,8 @@ me -> b ++ : Arrive(me)
 
 opt me's AsteroidPlace is Orbit
 
-b -> b : addBuilding(me)
-activate b
-
+b -> b ++: addBuilding(me)
+b--
 end
 deactivate b
 
