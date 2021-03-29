@@ -333,7 +333,8 @@
 
 \subsection{Az interfész általános leírása}
 %\comment{A protó (karakteres) input és output felületeit úgy kell kialakítani, hogy az input fájlból is vehető legyen illetőleg az output fájlba menthető legyen, vagyis kommunikációra csak a szabványos be- és kimenet használható.}
-
+A program standard input-ot használva vezérelhető a megadott parancsok segítségével. Minden tesztesetet a tesztelő a meghatározott parancsok és paraméterek előre definiált sorrendben való kiadásával hajtja végre. Egyedi tesztesetek is létrehozhatóak, ezek ellenőrzésért a tesztelő felelős.
+Minden esetben a kimenet standard output-ra kerül kiíratásra.
 \subsection{Bemeneti nyelv}
 %\comment{Definiálni kell a teszteket leíró nyelvet. Külön figyelmet kell fordítani arra, hogy ha a rendszer véletlen elemeket is tartalmaz, akkor a véletlenszerűség ki-bekapcsolható legyen, és a program determinisztikusan is futtatható legyen. A szálkezelést is tesztelhető, irányítható módon kell megoldani. A programot egy adott konfigurációból is el kell tudni indítani, vagyis kell olyan parancs, amivel konkrét előre megadott állapotból indul a rendszer (pl. load).}
 
@@ -548,21 +549,21 @@ Például:
 \subsection{Kimeneti nyelv}
 \comment{Egyértelműen definiálni kell, hogy az egyes bemeneti parancsok végrehajtása után előálló állapot milyen formában jelenik meg a szabványos kimeneten. A program képes legyen olyan kimenetet előállítani, amellyel az objektumok állapota ellenőrizhető (pl. save). Ebben az alfejezetben is precízen definiálni kell, hogy a kimenet nyelve milyen elemekből és milyen szintakszissal áll elő.}
 
-A kimenet előállításához a szkeletonban is használt Logger osztályt használjuk.
+A kimeneten minden parancs végrehajtása után megjelenik a változtatott objektumok állapota. Ezen kívűl a futás közben is lekérdezhetőek ezek az adatok a status parancsot használva.
 Az így előállt kimenet a következő mintát követi:
 \begin{verbatim}
-objektumNeve.meghívottFV(átadottParaméter)
-\quad \quad belsőObjektum.meghívottFV()
-\quad \quad 	...
+...
+Osztály: Név
+Belső változók: értékek
+...
 \end{verbatim}
 
 Ezen kívűl az előző pontban is említett [Event]-el ellátott értesítések is kiírásra kerülnek.
 pl.:
 \begin{verbatim}
-asteroid.Explode()
-\quad \quad 	...
-\quad \quad 	[Event] asteroid exploded
-\quad \quad 	...
+...
+[Event] asteroid exploded
+...
 \end{verbatim}
 
 
@@ -706,7 +707,7 @@ asteroid.Explode()
 
 \section{Tesztelést támogató segéd- és fordítóprogramok specifikálása}
 \comment{Specifikálni kell a tesztelést támogató segédprogramokat. Rövid bemutatással (elvárt funkcionalitás) specifikálni kell a tesztelést támogató segédprogramokat.}
-
+Terveink szerint nem használunk ilyen programokat.
 \section{Napló}
 
 \begin{naplo}
