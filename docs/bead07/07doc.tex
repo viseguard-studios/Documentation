@@ -4,7 +4,7 @@
 \makeatletter
 
 \ifSubfilesClassLoaded{
-	\coverpage{2. Leadás}
+	\coverpage{7. Leadás}
 	%\renewcommand{\filePath}[1]{./../../ #1}
 	\def\filePath[#1]{./../../#1}
 }{}
@@ -536,17 +536,17 @@ A kimenet előállításához a szkeletonban is használt Logger osztályt haszn
 Az így előállt kimenet a következő mintát követi:
 \begin{verbatim}
 objektumNeve.meghívottFV(átadottParaméter)
-	belsőObjektum.meghívottFV()
-	...
+\quad \quad belsőObjektum.meghívottFV()
+\quad \quad 	...
 \end{verbatim}
 
 Ezen kívűl az előző pontban is említett [Event]-el ellátott értesítések is kiírásra kerülnek.
 pl.:
 \begin{verbatim}
 asteroid.Explode()
-	...
-	[Event] asteroid exploded
-	...
+\quad \quad 	...
+\quad \quad 	[Event] asteroid exploded
+\quad \quad 	...
 \end{verbatim}
 
 
@@ -676,14 +676,21 @@ asteroid.Explode()
 \section{Napló}
 
 \begin{naplo}
-	\naplotag{2021.03.27. 16:30 }{ 2 óra }{ Csapat }
+	\naplotag{2021.03.27. 16:30 }{ 4 óra }{ Csapat }
 	{ 
-		Meeting   
+		Meeting 
 	}
-
-    \naplotag{2021.03.28. 16:30 }{ 2 óra }{ Csapat }
+    \naplotag{2021.03.28. 18:30 }{ 3 óra }{ Csapat }
 	{ 
-		TBD
+		Közös feladatmegoldás
+	}
+	\naplotag{2021.03.28. 19:00 }{ 3 óra }{ Nagy }
+	{ 
+		Szekvenciák (Craft) + tesztesetek
+	}
+	\naplotag{2021.03.29. 10:30 }{ 0,5 óra }{ Tatai }
+	{ 
+		Kimenet leírása
 	}
 \end{naplo}
 
