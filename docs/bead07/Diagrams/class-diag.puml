@@ -246,6 +246,7 @@ Building --|> MovableEntity
 
 class TeleportGate{
     -int gateId
+    -pair: TeleportGate
     +PairDestroyed()
 }
 TeleportGate --|> Building
