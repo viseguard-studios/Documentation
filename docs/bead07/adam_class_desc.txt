@@ -36,19 +36,19 @@ BuildingPlace (enum) ✅
 	Új név: AsteroidPlaces
 	Lehetséges értékek: Inside, Orbit, Vessel
 
-Asteroid
+Asteroid ✅
 	stationed: Vessel[0..*]
 		Törölve!
 
 
-Vessel
+Vessel ✅
 	#getInvertory(): IInvertory 
 		Visszaadja az űrjármű által folyamatosan hordozott raktárat.
 	+mine(): void 
 		A függvény megegyezik a régen a SpaceShip osztályban lévővel, az aszteroidából fogunk tudni nyersanyagot kivenni.
 
 
-UFO
+UFO ✅
 	Új osztály
 	Leírás:
 		Az aszteroidaöv nyersanyagaira fáj a foga, azokat akarja eltulajdonítani, de nem tud fúrni. Éppen ezért a telepesek ellenségeinek tekinthető.
@@ -83,7 +83,7 @@ AsteroidInvertory ✅
 		A tárolt nyersanyagok listája
 
 
-SSInvertory
+SSInvertory ✅
 	Új osztály
 	Leírás:
 		Az aszteroida tárhelyének reprezentációja.
@@ -94,7 +94,7 @@ SSInvertory
 		A tárolt kapuk listája
 
 
-InfiniteInvertory
+InfiniteInvertory ✅
 	Új osztály
 	Leírás:
 		Az ufo tárhelyének reprezentációja. Bármennyi tárgy eltárolható benne.
@@ -103,14 +103,14 @@ InfiniteInvertory
 		A tárolt nyersanyagok listája
 
 
-Item
+Item ✅
 	amount: int
 		Törölve!
 	+nearSun(): void
 		Mi történjen, ha közel kerül a nyersanyag a naphoz, és napfény éri.
 
 
-Resource:
+Resource: ✅
 	Új ősosztály: Item
 	amount: int
 		Törölve!
@@ -129,6 +129,7 @@ Uranium:
 	Új ősosztály: Resource
 	+counter: int
 		Számolja, hogy hányszor lett kitéve napsugárzásnak az adott nyersanyag.
+
 IronResorce:
 	Törölve!
 IceResource:
