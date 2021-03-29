@@ -1,0 +1,32 @@
+@startuml
+hide footbox
+title Uranium explode
+
+actor Tester as Tester
+
+participant uran as uran <<Uranium>>
+
+participant inv as inv <<AsteroidIventory>>
+
+participant a as a <<Asteroid>>
+
+Tester -> uran ++: nearSun()
+
+alt count is 3
+
+uran -> inv ++: explode()
+
+inv -> a ++: explode()
+
+a --> inv --
+inv --> uran --
+
+else count is small than 3
+
+uran -> uran ++: count++
+uran--
+
+end
+uran --> Tester --
+
+@enduml
