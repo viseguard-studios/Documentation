@@ -75,25 +75,25 @@
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\textwidth]{docs/bead07/Diagrams/Craft/CanCraft} 
-    \caption{} 
+    \caption{A recepthez szükséges nyersanyagokat egyenként, és nem típusonként tároljuk, ezért megváltoztak az ellenőrzés lépései. A két raktár nyersanyagkészletét lemásoljuk, és ha megtaláljuk a keresett összetevőket, eltávolítjuk a lemásolt listákból, így az eredeti lista tartalma sikertelen készítés esetén sem fog változni. } 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\textwidth]{docs/bead07/Diagrams/Craft/CanCraftGate} 
-    \caption{} 
+    \caption{A teleportkapuk előállításának ellenőrzése speciális eset lesz, mert itt ellenőrizni kell, hogy elférnek-e a telepes raktárában a kapuk készítés után.} 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\textwidth]{docs/bead07/Diagrams/Craft/Craft} 
-    \caption{} 
+    \caption{A raktárak megváltozott elemkészlete miatt (minden nyersanyag külön van tárolva) az ellenőrzés, eltávolítás folyamata megváltozott, egyenként távolítjuk el az összetevőket. } 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=0.7\textwidth]{docs/bead07/Diagrams/Craft/Gate_MakeResult} 
-    \caption{} 
+    \caption{A teleportkapu-párok tagjait külön tároljuk, így 2 kaput hozunk létre, és hozzájuk rendelünk egy közös azonosítót.} 
 \end{figure} 
 
 \begin{figure}[H] 
@@ -144,16 +144,16 @@
         \item Leírás: 
         \item Opciók: startgame <seed> <input | generate>
         \begin{itemize}
-            \item seed: a véletlen szám generátor álltal hasznát kezdő érték.
-            \item input: A felhasználó adja meg a játéktér össeállítását
-            \item generate: A játéktér véletlen szerűen generlódik.
+            \item seed: a véletlen szám generátor által hasznát kezdőérték.
+            \item input: A felhasználó adja meg a játéktér összeállítását
+            \item generate: A játéktér véletlenszerűen generálódik.
         \end{itemize}
     \end{itemize}
 
     \item move
     \begin{itemize}
         \item Leírás: A játékos egy járművet akar mozgatni. \newline
-            A parancs megkérdezi a játékostól, hogy melyik aszeroidára akarja mozgatni a járművet.
+            A parancs megkérdezi a játékostól, hogy melyik aszteroidára akarja mozgatni a járművet.
         \item Opciók: move <vessel>
         \begin{itemize}
             \item vessel: A jármű amit mozgatni akarunk
@@ -470,11 +470,11 @@ Például:
 \section{Tesztelési terv}
 \comment{A tesztelési tervben definiálni kell, hogy a be- és kimeneti fájlok egybevetésével miként végezhető el a program tesztelése. Meg kell adni teszt forgatókönyveket. Az egyes teszteket elég informálisan, szabad szövegként leírni. Teszt-esetenként egy-öt mondatban. Minden teszthez meg kell adni, hogy mi a célja, a proto mely funkcionalitását, osztályait stb. teszteli. Az alábbi táblázat minden teszt-esethez külön-külön elkészítendő.}
 
-\test{Move robot}{Robot mozgatása egy szomszédos aszteroidára}{Robot sikeresen mozog a pályán}
-\test{Move robot through teleport gate}{Robot mozgatása egy szomszédos aszteroidára teleportkapun keresztül}{Robot is használni tudja a kapukat}
-\test{Robot drills}{Robot fúr az adott aszteroida köpenyébe, mélyíti azt.}{Robot segít átfúrni az aszteroidákat.}
-\test{Robot can't drill because of core size}{A robot próbál fúrni egy aszteroida köpenyébe, de nem lehetséges, mert át van fúrva.}{A robot lépése meghiúsul, egy átfúrt magú aszteroida nem fúrható tovább. }
-\test{Robot can't drill because of explosion}{A robot próbál fúrni egy aszteroida köpenyébe, de nem lehetséges, mert felrobbant az aszteroida.}{A robot lépése meghiúsul, egy felrobbant aszteroida nem fúrható tovább. }
+\test{Move movable entity}{Mozgatható entitás mozgatása egy szomszédos aszteroidára}{Sikeresen mozgás a pályán}
+\test{Vessel moves through teleport gate}{Járművek mozgása egy szomszédos aszteroidára teleportkapun keresztül}{Teleportkapuk szomszédossá tesznek két aszteroidát.}
+\test{Robot/SpaceShip drills}{Robot/Telepes fúr az adott aszteroida köpenyébe, mélyíti azt.}{Robot/Telepes segít átfúrni az aszteroidákat.}
+\test{Robot/SpaceShip can't drill because of core size}{A robot/telepes próbál fúrni egy aszteroida köpenyébe, de nem lehetséges, mert át van fúrva.}{A robot/telepes lépése meghiúsul, egy átfúrt magú aszteroida nem fúrható tovább. }
+\test{Robot/SpaceShip can't drill because of explosion}{A robot/telepes próbál fúrni egy aszteroida köpenyébe, de nem lehetséges, mert felrobbant az aszteroida.}{A robot/telepes lépése meghiúsul, egy felrobbant aszteroida nem fúrható tovább. }
 \test{Craft robot}{A telepes a szükséges nyersanyagokkal egy robotot készít el. }{Az adott nyersanyagokból elkészül egy robot, amit az adott játékos irányít. }
 \test{Can't craft robot}{A telepes egy robotot szeretne elkészíteni, de nincs elegendő nyersanyaga hozzá. }{Robot sikertelen készítése}
 \test{Craft space station}{A telepes a szükséges nyersanyagokkal egy űrállomást készít el, hogy megnyerje a játékot. }{Az adott nyersanyagokból elkészül egy űrállomás, ami a játék végét jelenti. }
@@ -482,10 +482,7 @@ Például:
 \test{Craft teleport gate}{A telepes a szükséges nyersanyagokkal egy teleportkapu-párt készít el. }{Az adott nyersanyagokból elkészül egy kapupár, amit az adott játékos elhelyez a tárhelyében. }
 \test{Can't craft teleport gate}{A telepes egy teleportkapu-párt szeretne elkészíteni, de nincs elegendő nyersanyaga hozzá. }{Teleportkapu-pár sikertelen készítése}
 \test{Not enough space to craft teleport gate}{A telepes raktárában nincs elég hely a teleportkapu-pár tárolására.}{Sikertelen teleportkapu-pár készítés, tárhely ellenőrzés sikeressége. }
-\test{Direct robots}{Robotoknak megadjuk, hogy milyen nyersanyag után kutassanak.} {Robotok célzott irányítása nyersanyagkutatás céljából, kért nyersanyag tárolása.}
-\test{SpaceShip drills}{A telepes fúr az adott aszteroida köpenyébe, mélyíti azt.}{A telepes képes fúrni egy nem teljesen átfúrt köpenyű aszteroidán. }
-\test{SpaceShip can't drill because of crust size}{A telepes próbál fúrni egy aszteroida köpenyébe, de nem lehetséges, mert át van fúrva.}{A telepes lépése meghiúsul, egy átfúrt magú aszteroida nem fúrható tovább. }
-\test{SpaceShip can't drill because of explosion}{A telepes próbál fúrni egy aszteroida köpenyébe, de nem lehetséges, mert felrobbant az aszteroida.}{A telepes lépése meghiúsul, egy felrobbant aszteroida nem fúrható tovább. }
+\test{Direct robots}{Robotoknak megadja a játékos, hogy milyen nyersanyag után kutassanak.} {Robotok célzott irányítása nyersanyagkutatás céljából, kért nyersanyag tárolása.}
 \test{SpaceShip remains hidden}{A telepes meg szeretne bújni, amikor már meg van bújva.}{A megbújás állapota mindaddig megmarad, amíg ki nem bújik. }
 \test{SpaceShip remains unhidden}{A telepes ki szeretne bújni, amikor már ki van bújva.}{A kibújás állapota mindaddig megmarad, amíg meg nem bújik. }
 \test{SpaceShip can't hide in exploded asteroid}{A telepes el szeretne bújni, de az aszteroida fel van robbanva.}{Sikertelen megbújás, felrobbant aszteroida magjába nem lehet megbújni. }
@@ -493,19 +490,19 @@ Például:
 \test{SpaceShip doesn't have space to hide}{Egy átfúrt magú aszteroidában meg szeretne bújni a telepes, de a mag "meg van telve".}{Sikertelen megbújás, egy átfúrt aszteroida magjában csak limitált számú telepes fér el. }
 \test{SpaceShip hides}{A telepes el szeretne, és el tud bújni. }{A telepes az adott körülmények ellenőrzése után sikeresen meg tud bújni egy aszteroida magjában.}
 \test{SpaceShip exits hiding}{A telepes meg van bújva, és kibújik az aszteroida magjából.}{Sikeres művelet, a telepesek ki tudnak bújni az aszteroidából és folytatni tevékenységeiket.}
-\test{SpaceShip mines}{A telepes egy átfúrt magú aszteroidából tud bányászni, ha van benne elérhető nyersanyag.}{Sikeres nyersanyagbányászat művelete, a nyersanyag a telepes raktárába kerül.}
-\test{SpaceShip can't mine because of explosion}{Egy felrobbant aszteroida magjában próbál bányászni a telepes.}{Sikertelen művelet, felrobbant aszteroidából nem lehet bányászni.}
-\test{SpaceShip can't mine because of empty core}{Egy telepes bányászni szeretne egy üres magú aszteroidából.}{Sikertelen művelet, üres magú aszteroidából nem lehet bányászni. }
-\test{SpaceShip can't mine because of crust size}{Egy telepes egy még nem átfúrt magú aszteroidából próbál bányászni. }{Sikertelen művelet, nem átfúrt magú aszteroidából nem lehet bányászni.}
+\test{SpaceShip mines/UFO}{A telepes/UFO egy átfúrt magú aszteroidából tud bányászni, ha van benne elérhető nyersanyag.}{Sikeres nyersanyagbányászat művelete, a nyersanyag a telepes/UFO raktárába kerül.}
+\test{SpaceShip/UFO can't mine because of explosion}{Egy felrobbant aszteroida magjában próbál bányászni a telepes.}{Sikertelen művelet, felrobbant aszteroidából nem lehet bányászni.}
+\test{SpaceShip/UFO can't mine because of empty core}{Egy telepes/UFO bányászni szeretne egy üres magú aszteroidából.}{Sikertelen művelet, üres magú aszteroidából nem lehet bányászni. }
+\test{SpaceShip/UFO can't mine because of crust size}{Egy telepes/UFO egy még nem átfúrt magú aszteroidából próbál bányászni. }{Sikertelen művelet, nem átfúrt magú aszteroidából nem lehet bányászni.}
 \test{SpaceShip can't mine because of full inventory}{A telepes ki tudja hozni a nyersanyagot a magból, de tele van a raktára.}{Sikertelen művelet, ha tele van a raktár, nem tud bányászni.}
-\test{SpaceShip moves}{A telepes mozogni szeretne egy szomszédos aszteroidára.}{Sikeresen mozog a telepes a pályán.}
 \test{Move asteroid field}{A Naptól mért távolság változik.}{Az aszteroidák napközeli és nem napközeli állapotokban lehetnek.}
 \test{Place gate}{A telepes a raktárában lévő teleportkapu-párt le szeretné helyezni.}{Egy teleportkapu-pár sikeres elhelyezése, szomszédságok beállítása, és raktárból való eltávolítása.}
-\test{Place resource in asteroid}{Az aszteroida raktárába kibányászott nyersanyagot szeretnénk elhelyezni.}{Sikeres elhelyezés, a nyersanyag áthelyezhető a telepes raktárából az aszteroidába. }
-\test{Can't place resource in exploded asteroid}{A felrobbant aszteroida raktárába kibányászott nyersanyagot szeretnénk elhelyezni.}{Sikertelen művelet, felrobbant aszteroidák raktára nem elérhető. }
-\test{Can't place resource in full inventory}{Az aszteroida raktára tele van, nyersanyagot szeretnénk elhelyezni benne. }{Sikertelen művelet, a raktárak kapacitása véges, ennek elérése után nem helyezhető bele semmi.}
-\test{Can't place resource in unavailable inventory}{Az aszteroida magja nincs teljesen átfúrva, nyersanyagot szeretnénk elhelyezni benne.}{Sikertelen művelet, egy nem átfúrt aszteroida raktára nem elérhető.}
+\test{Place resource in asteroid}{Az aszteroida raktárába a telepes kibányászott nyersanyagot szeretne elhelyezni.}{Sikeres elhelyezés, a nyersanyag áthelyezhető a telepes raktárából az aszteroidába. }
+\test{Can't place resource in exploded asteroid}{A felrobbant aszteroida raktárába a telepes kibányászott nyersanyagot szeretne elhelyezni.}{Sikertelen művelet, felrobbant aszteroidák raktára nem elérhető. }
+\test{Can't place resource in full inventory}{Az aszteroida raktára tele van, a telepes nyersanyagot szeretne elhelyezni benne. }{Sikertelen művelet, a raktárak kapacitása véges, ennek elérése után nem helyezhető bele semmi.}
+\test{Can't place resource in unavailable inventory}{Az aszteroida magja nincs teljesen átfúrva, a telepes nyersanyagot szeretne elhelyezni benne.}{Sikertelen művelet, egy nem átfúrt aszteroida raktára nem elérhető.}
 \test{SolarFlare}{Napkitörés indul a kör végén.}{Napkitörés hatással van az ott tartózkodó járművekre.}
+\test{}{}{}
 
 \section{Tesztelést támogató segéd- és fordítóprogramok specifikálása}
 \comment{Specifikálni kell a tesztelést támogató segédprogramokat. Rövid bemutatással (elvárt funkcionalitás) specifikálni kell a tesztelést támogató segédprogramokat.}
