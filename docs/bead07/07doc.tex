@@ -330,9 +330,25 @@ Például:
 
 \subsection{Kimeneti nyelv}
 \comment{Egyértelműen definiálni kell, hogy az egyes bemeneti parancsok végrehajtása után előálló állapot milyen formában jelenik meg a szabványos kimeneten. A program képes legyen olyan kimenetet előállítani, amellyel az objektumok állapota ellenőrizhető (pl. save). Ebben az alfejezetben is precízen definiálni kell, hogy a kimenet nyelve milyen elemekből és milyen szintakszissal áll elő.}
+
+A kimenet előállításához a szkeletonban is használt Logger osztályt használjuk.
+Az így előállt kimenet a következő mintát követi:
 \begin{verbatim}
-    kimeneti szintaktika
+objektumNeve.meghívottFV(átadottParaméter)
+	belsőObjektum.meghívottFV()
+	...
 \end{verbatim}
+
+Ezen kívűl az előző pontban is említett [Event]-el ellátott értesítések is kiírásra kerülnek.
+pl.:
+\begin{verbatim}
+asteroid.Explode()
+	...
+	[Event] asteroid exploded
+	...
+\end{verbatim}
+
+
 
 \section{Összes részletes use-case}
 \begin{use-case}

@@ -1,0 +1,13 @@
+A kimenet előállításához a szkeletonban is használt Logger osztályt használjuk.
+Az így előállt kimenet a következő mintát követi:
+
+objektumNeve.meghívottFV(átadottParaméter)
+	belsőObjektum.meghívottFV()
+	...
+
+Ezen kívűl az előző pontban is említett [Event]-el ellátott értesítések is kiírásra kerülnek.
+pl.:
+asteroid.Explode()
+	...
+	[Event] asteroid exploded
+	...
