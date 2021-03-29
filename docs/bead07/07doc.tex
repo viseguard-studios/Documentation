@@ -572,25 +572,33 @@ pl.:
 \section{Összes részletes use-case}
 \begin{use-case}
     {startgame}
-    { }
-    {} 
-    \textbf{A} \newline
+    {A játékos elindítja a játékot.}
+    {Játékos} 
+    \textbf{A} A játékos kiad egy startgame <seed> input parancsot\newline
+    \textbf{A.1} Az indítás sikeres \newline
+    \textbf{A.2} Az indítás sikertelen 
+    \textbf{B} A játékos kiad egy startgame <seed> generate parancsot\newline
+	\textbf{B.1} Az indítás sikeres \newline
+    \textbf{B.2} Az indítás sikertelen 
 
 \end{use-case}
 
 \begin{use-case}
     {move}
-    { }
-    {} 
-    \textbf{A} \newline
+    {A játékos mozgatja az egyik járművet.}
+    {Játékos} 
+    \textbf{A} A játékos kiadja a move <vessel> <to> parancsot \newline
+	\textbf{A.1} Az mozgatás sikeres \newline
+    \textbf{A.2} Az mozgatás sikertelen
 
 \end{use-case}
 
 \begin{use-case}
     {neighbours}
-    { }
-    {} 
-    \textbf{A} \newline
+    {A játékos megnézi egy aszteroida környezetét.}
+    {Játékos} 
+    \textbf{A} A játékos kiadja a neighbours <asteroid> parancsot \newline
+	\textbf{A.1} Az elérhető aszteroidák kiíratásra kerülnek
 
 \end{use-case}
 
