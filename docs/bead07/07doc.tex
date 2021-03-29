@@ -13,11 +13,10 @@
 
 
 \chapter{Prototípus koncepciója}
-%\comment{A prototípus program célja annak demonstrálása, hogy a program elkészült, helyesen működik, valamennyi feladatát teljesíti. A prototípus változat egy elkészült program kivéve a kifejlett grafikus interfészt. Ez a program is parancssorból futtatható és karakteres ernyőkezelést alkalmaz. Az ütemezés, az aktív objektumok kezelése megoldott. A business objektumok -a megjelenítésre vonatkozó részeket kivéve -valamennyi metódusa a végleges algoritmusokat kell, hogy tartalmazza. A megjelenítés és működtetés egy alfanumerikus képernyőn vezérelhető és követhető, ugyanakkor a vezérlés fájlból is történhet és a megjelenítés fájlba is logolható, ezzel megteremtve a rendszer tesztelésének lehetőségét. Különös figyelmet kell fordítani a parancssori interfész logikájára, felépítésére, valamint arra, hogy az mennyiben tükrözi és teszi láthatóvá a program működését, a beavatkozások hatásait.}
-%\comment{\hrule}
 \setcounter{section}{-1}
 
 \section{Változás hatása a modellre}
+
 \subsection{Módosult osztálydiagram}
 \begin{figure}[H] 
     \centering 
@@ -25,9 +24,8 @@
     \caption{} 
 \end{figure} 
 
-
 \subsection{Új vagy megváltozott metódusok}
-\comment{Az analízis modell osztályleírásaiból azon metódusok újbóli felsorolása leírással együtt, amelyek a változtatás miatt módosultak vagy újonnan be lettek vezetve}
+
 \textbf{A bevezetett új osztályok}
 \subsubsection{Osztály1}
 \begin{class-template-responsibility}
@@ -39,20 +37,115 @@
 \begin{class-template-method}
     \classitem{+B(A a) : void}{metódus B}
 \end{class-template-method}
+
+\subsubsection{IInvertory}
+\begin{class-template-responsibility}
+    A különböző tárolók közös interface-e
+\end{class-template-responsibility}
+\begin{class-template-method}
+    \classitem{+getItems(): List<Item>}
+                {Visszaadja a tárolt nyersanyagok listáját.}
+    \classitem{+tryInsertItem(i: Item): bool}
+                {Visszaadja, hogy az adott tárgy belehelyezhető-e a tárhelybe.}
+    \classitem{+insertItem(i: Item): bool}
+                {Az adott tárgyat belehelyezzük a tárhelybe.}
+    \classitem{+removeItem(i: Item): bool}
+                {Az adott tárgyat kiveszzük.}                
+\end{class-template-method}
+
+\subsubsection{AsteroidInvertory}
+\begin{class-template-responsibility}
+    Az aszteroida tárhelyének reprezentációja.
+\end{class-template-responsibility}
+\begin{class-template-baseclass}
+    IInventory
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \classitem{+items: List<Item>}{A tárolt nyersanyagok listája}
+\end{class-template-attribute}
+
+
 \textbf{A korábbi osztályokban történt módosítások}
-\subsubsection{Osztály2}
+
+\subsubsection{SpaceShip}
 \begin{class-template-responsibility}
     Felelősség leírása
 \end{class-template-responsibility}
 \begin{class-template-baseclass}
-    Ős-Ősosztály \baseclass Ősosztály... 
+    Entity \baseclass MovableEntity \baseclass Vessel
 \end{class-template-baseclass}
+\begin{class-template-attribute}
+    \classitem{\#lastPlacedGate}{Törölve}
+\end{class-template-attribute}
 \begin{class-template-method}
-    \classitem{+B(A a) : void}{metódus B}
+    \classitem{\#getInvertory(): IInvertory}{Visszaadja a telepes által folyamatosan hordozott raktárat.}
 \end{class-template-method}
 
+
+\subsubsection{TeleportGate}
+\begin{class-template-responsibility}
+    Felelősség leírása
+\end{class-template-responsibility}
+\begin{class-template-baseclass}
+    Entity \baseclass MovableEntity \baseclass Building
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \classitem{\-gateID: int}{A kapuk összekötéséhez használt ID}
+\end{class-template-attribute}
+
+\subsubsection{Building}
+\begin{class-template-responsibility}
+    Felelősség leírása
+\end{class-template-responsibility}
+\begin{class-template-baseclass}
+    Entity \baseclass MovableEntity  (Új ősosztály)
+\end{class-template-baseclass}
+
+\subsubsection{Entity}
+\begin{class-template-responsibility}
+    Felelősség leírása
+\end{class-template-responsibility}
+\begin{class-template-method}
+    \classitem{+explode(): void}{Az adott entitás felrobban.}
+\end{class-template-method}
+
+\subsubsection{AsteroidPlaces (enum)}
+\begin{class-template-responsibility}
+    Régi név: BuildingPlace
+\end{class-template-responsibility}
+\begin{class-template-attribute}
+    \classitem{+explode(): void}{Az adott entitás felrobban.}
+\end{class-template-attribute}
+
+\subsubsection{Asteroid}
+\begin{class-template-responsibility}
+    
+\end{class-template-responsibility}
+\begin{class-template-attribute}
+    \classitem{asd}{asd}
+\end{class-template-attribute}
+
+
+\subsubsection{Vessel}
+\begin{class-template-responsibility}
+    A bányászást is ebbe az osztályba mozgattuk.
+\end{class-template-responsibility}
+\begin{class-template-method}
+    \classitem{\#getInvertory(): IInvertory}{Visszaadja az űrjármű által folyamatosan hordozott raktárat.}
+    \classitem{+mine(): void}{A függvény megegyezik a régen a SpaceShip osztályban lévővel, az aszteroidából fogunk tudni nyersanyagot kivenni.}
+\end{class-template-method}
+
+
+\subsubsection{Invertory}
+\begin{class-template-responsibility}
+    Törölve
+\end{class-template-responsibility}
+
+
+
 \subsection{Szekvencia-diagramok}
-\comment{Az analízis modell szekvenciadiagramjaiból a változás által érintett, előírt, módosítottdiagramok}
+
+%\comment{Az analízis modell szekvenciadiagramjaiból a változás által érintett, előírt, módosítottdiagramok}
 
 \begin{figure}[H] 
     \centering 

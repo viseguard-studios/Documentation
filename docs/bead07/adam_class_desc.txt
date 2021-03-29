@@ -1,15 +1,18 @@
-SpaceShip
+SpaceShip ✅
 	#getInvertory(): IInvertory 
 		Visszaadja a telepes által folyamatosan hordozott raktárat.
 	lastPLacedGate:
 		Törölve!
-TeleportGate
+
+TeleportGate ✅
 	pair: TeleportGate
 		Törölve!
 	-gateID: int
 		A pair attribútum szerepét veszi át.
-Building
+
+Building ✅
 	Új ősosztály: MovableEntity
+
 MovableEntity
 	Új osztály
 	Leírás:
@@ -23,20 +26,28 @@ MovableEntity
 		Átlépés a megadott aszteroidára, ha az lehetséges.
 	+asteroidExploded(): void 
 		Mi történjen, ha felrobban az aszteroida, ahol voltunk.
-Entity
+
+Entity ✅
 	+explode(): void
 		Az adott entitás felrobban.
-BuildingPlace (enum)
+
+
+BuildingPlace (enum) ✅
 	Új név: AsteroidPlaces
 	Lehetséges értékek: Inside, Orbit, Vessel
+
 Asteroid
 	stationed: Vessel[0..*]
 		Törölve!
+
+
 Vessel
 	#getInvertory(): IInvertory 
 		Visszaadja az űrjármű által folyamatosan hordozott raktárat.
 	+mine(): void 
 		A függvény megegyezik a régen a SpaceShip osztályban lévővel, az aszteroidából fogunk tudni nyersanyagot kivenni.
+
+
 UFO
 	Új osztály
 	Leírás:
@@ -44,9 +55,13 @@ UFO
 	Ősosztály: Vessel
 	#getInvertory(): IInvertory 
 		Visszaadja az UFO által folyamatosan hordozott raktárat.
-Invertory
+
+
+Invertory ✅
 	Törölve!
-IInvertory (interface)
+
+
+IInvertory (interface) ✅
 	Új interfész
 	Leírás: Az Invertory osztály szerepét veszi át, egy aszteroidán, telepesnél vagy ufónál található tárgyak tárolója.
 	+getItems(): List<Item>
@@ -57,13 +72,17 @@ IInvertory (interface)
 		Az adott tárgyat belehelyezzük a tárhelybe.
 	+removeItem(i: Item): bool
 		Az adott tárgyat kiveszzük.
-AsteroidInvertory
+
+
+AsteroidInvertory ✅
 	Új osztály
 	Leírás:
 		Az aszteroida tárhelyének reprezentációja.
 	Megvalósítja: IInvertory 
 	+items: List<Item>
 		A tárolt nyersanyagok listája
+
+
 SSInvertory
 	Új osztály
 	Leírás:
@@ -73,6 +92,8 @@ SSInvertory
 		A tárolt nyersanyagok listája
 	+tgs: List<TeleportGateItem>
 		A tárolt kapuk listája
+
+
 InfiniteInvertory
 	Új osztály
 	Leírás:
@@ -80,15 +101,21 @@ InfiniteInvertory
 	Megvalósítja: IInvertory
 	+items: List<Item>
 		A tárolt nyersanyagok listája
+
+
 Item
 	amount: int
 		Törölve!
 	+nearSun(): void
 		Mi történjen, ha közel kerül a nyersanyag a naphoz, és napfény éri.
+
+
 Resource:
 	Új ősosztály: Item
 	amount: int
 		Törölve!
+
+
 Iron:
 	Új ősosztály: Resource
 Ice:
