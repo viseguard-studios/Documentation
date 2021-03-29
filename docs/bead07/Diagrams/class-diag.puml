@@ -211,6 +211,10 @@ class Asteroid{
     -visited:bool
     -hidingVessel:Vessel
     --
+    -stationed:Vessel[0..*]
+    -orbit:MovableEntity[0..*]
+    -inside:MovableEntity[0..*]
+    --
     +Asteroid(r:Resource,amount:int)
     +solarFlare()
     +explode()
