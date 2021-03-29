@@ -431,11 +431,12 @@ Asteroid_35 mined
     \item status
     \begin{itemize}
         \item Leírás: A játékos a megadott jármű jelenlegi állapotát kérdezi le.
-        \item Opciók: status <vessel>
+        \item Opciók: status <vessel|asteroid>
         \begin{itemize}
             \item vessel: A jármű aminek az állapotát kérdezzük le.
+            \item asteroid: Az aszteroida aminek az állapotát kérdezzük le.
         \end{itemize}
-        \item Példa:
+        \item Példa 1:
             \begin{verbatim}
 > status ss_001
 Asteroid: Asteroid_67 | Not hidden
@@ -449,6 +450,21 @@ Teleport Gates:
 - Tg_023 - 1
 - Tg_011 - 5
             \end{verbatim}
+        \item Példa 2:
+            \begin{verbatim}
+> status Asteroid_67
+Crust: 0
+Vessels:
+- SpaceShip_01
+- SpaceShip_23
+- Robot_4
+Resources:
+- Iron
+- Iron
+Teleport Gates:
+- Tg_023 - 1
+- Tg_011 - 5
+            \end{verbatim}        
     \end{itemize}
 
 
@@ -636,12 +652,30 @@ asteroid.Explode()
 \section{Tesztelési terv}
 \comment{A tesztelési tervben definiálni kell, hogy a be- és kimeneti fájlok egybevetésével miként végezhető el a program tesztelése. Meg kell adni teszt forgatókönyveket. Az egyes teszteket elég informálisan, szabad szövegként leírni. Teszt-esetenként egy-öt mondatban. Minden teszthez meg kell adni, hogy mi a célja, a proto mely funkcionalitását, osztályait stb. teszteli. Az alábbi táblázat minden teszt-esethez külön-külön elkészítendő.}
 
-\test{Move movable entity}{Mozgatható entitás mozgatása egy szomszédos aszteroidára}{Sikeresen mozgás a pályán}
-\test{Vessel moves through teleport gate}{Járművek mozgása egy szomszédos aszteroidára teleportkapun keresztül}{Teleportkapuk szomszédossá tesznek két aszteroidát.}
-\test{Robot/SpaceShip drills}{Robot/Telepes fúr az adott aszteroida köpenyébe, mélyíti azt.}{Robot/Telepes segít átfúrni az aszteroidákat.}
-\test{Robot/SpaceShip can't drill because of core size}{A robot/telepes próbál fúrni egy aszteroida köpenyébe, de nem lehetséges, mert át van fúrva.}{A robot/telepes lépése meghiúsul, egy átfúrt magú aszteroida nem fúrható tovább. }
-\test{Robot/SpaceShip can't drill because of explosion}{A robot/telepes próbál fúrni egy aszteroida köpenyébe, de nem lehetséges, mert felrobbant az aszteroida.}{A robot/telepes lépése meghiúsul, egy felrobbant aszteroida nem fúrható tovább. }
-\test{Craft robot}{A telepes a szükséges nyersanyagokkal egy robotot készít el. }{Az adott nyersanyagokból elkészül egy robot, amit az adott játékos irányít. }
+\test{Move movable entity}
+{Mozgatható entitás mozgatása egy szomszédos aszteroidára}
+{Sikeresen mozgás a pályán}
+
+\test{Vessel moves through teleport gate}
+{Járművek mozgása egy szomszédos aszteroidára teleportkapun keresztül}
+{Teleportkapuk szomszédossá tesznek két aszteroidát.}
+
+\test{Robot/SpaceShip drills}
+{Robot/Telepes fúr az adott aszteroida köpenyébe, mélyíti azt.}
+{Robot/Telepes segít átfúrni az aszteroidákat.}
+
+\test{Robot/SpaceShip can't drill because of core size}
+{A robot/telepes próbál fúrni egy aszteroida köpenyébe, de nem lehetséges, mert át van fúrva.}
+{A robot/telepes lépése meghiúsul, egy átfúrt magú aszteroida nem fúrható tovább. }
+
+\test{Robot/SpaceShip can't drill because of explosion}
+{A robot/telepes próbál fúrni egy aszteroida köpenyébe, de nem lehetséges, mert felrobbant az aszteroida.}
+{A robot/telepes lépése meghiúsul, egy felrobbant aszteroida nem fúrható tovább. }
+
+\test{Craft robot}
+{A telepes a szükséges nyersanyagokkal egy robotot készít el. }
+{Az adott nyersanyagokból elkészül egy robot, amit az adott játékos irányít. }
+
 \test{Can't craft robot}{A telepes egy robotot szeretne elkészíteni, de nincs elegendő nyersanyaga hozzá. }{Robot sikertelen készítése}
 \test{Craft space station}{A telepes a szükséges nyersanyagokkal egy űrállomást készít el, hogy megnyerje a játékot. }{Az adott nyersanyagokból elkészül egy űrállomás, ami a játék végét jelenti. }
 \test{Can't craft space station}{A telepes egy űrállomást szeretne elkészíteni, de nincs elegendő nyersanyaga hozzá. }{Űrállomás sikertelen készítése}
@@ -668,7 +702,7 @@ asteroid.Explode()
 \test{Can't place resource in full inventory}{Az aszteroida raktára tele van, a telepes nyersanyagot szeretne elhelyezni benne. }{Sikertelen művelet, a raktárak kapacitása véges, ennek elérése után nem helyezhető bele semmi.}
 \test{Can't place resource in unavailable inventory}{Az aszteroida magja nincs teljesen átfúrva, a telepes nyersanyagot szeretne elhelyezni benne.}{Sikertelen művelet, egy nem átfúrt aszteroida raktára nem elérhető.}
 \test{SolarFlare}{Napkitörés indul a kör végén.}{Napkitörés hatással van az ott tartózkodó járművekre.}
-\test{}{}{}
+
 
 \section{Tesztelést támogató segéd- és fordítóprogramok specifikálása}
 \comment{Specifikálni kell a tesztelést támogató segédprogramokat. Rövid bemutatással (elvárt funkcionalitás) specifikálni kell a tesztelést támogató segédprogramokat.}
