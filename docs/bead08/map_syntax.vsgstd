@@ -1,0 +1,115 @@
+# A pályaegy példafájlja, próbáljuk jóra csinálni:)
+# - azt jelenti, hogy a sor ki van kommentezve
+# Végül nagyon XML-szerű lett
+
+{típus attrib1="" attrib2=""} # például az elején a Game Manager
+
+{/típus}
+
+{player name="sajt"} #ne legyen 2 játékosnak ugyanaz a neve
+
+{player name="keksz"}
+
+{astList name="" sunDist="" gameEnded="" solarStormQueued=""} # Kvázi a GameManager
+
+	{asteroid name="a1" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}# aszteroida
+	
+		{asteroidInventory} # Mi van az aszteroidában, TPkapu nem lehet benne
+		
+			{coal} 				#Ha levél a függőségi fában, és nincs aggregáció/kompozíció akkor nem kell a {/...} jelző?
+		
+			{titanium}
+		
+			{ice}
+		
+			{iron}
+		
+		{uranium counter=""}
+		
+		{/asteroidInventory}
+		
+		{insideAsteroid} 	# aszteroidában lévők (inside, NEM elbújtak!)
+		
+			#{spaceStation name=""} nyílván megnyernénk a játékot
+		
+		{/insideAsteroid}
+		
+		{orbitAsteroid}	# orbit, hiba, ha ötnél több van???
+		
+			{telegate name="" teleId="1"}
+			
+			{telegate name="" teleId="2"}
+		
+		{/orbitAsteroid}
+		
+		{vesselsOnAsteroid} # űrjárművek
+		
+			{robot name="" ownerPlayer="keksz" isHidden=""} #nyílván több robot is el lehet bújva
+			
+			{ufo name=""}	#az UFO egy AI játékoshoz lesz rendelve?
+			
+				{ufoInventory}  #Egyáltalán kell-e?
+				
+					{coal}
+				
+					{titanium}
+					
+					{ice}
+					
+					{iron}
+					
+					{uranium counter=""}
+					
+				{/ufoInventory}
+			
+			{/ufo}
+			
+			{spaceShip name="" isHidden="" } #hiba, ha több mint egy van, vagy nem lehetne elbújni, de isHidden az igaz
+			
+				{spaceShipResInventory}  #természetesen legfeljebb 10 nyersanyag
+				
+				#...
+				
+				{/spaceShipResInventory}
+				
+				{spaceshipTeleInventory}
+				
+					{telegateItem name="" teleId="3"}
+					
+					{telegateItem name="" teleId="3"}
+				
+				{/spaceshipTeleInventory}
+			
+			{/spaceShip}
+		
+		{/vesselsOnAsteroid}
+	
+	{/asteroid}
+	
+	# ha nincsnek megadva a listák, akkor feltételezzük, hogy üres?
+	# ha minden aszteroida kap egyedi nevet, akkor meg lehet adni a szomszédságot listával
+	{asteroid name="a2" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
+	
+	{/asteroid}
+	
+	{asteroid name="a3" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
+	
+	{/asteroid}
+	
+	{asteroid name="a4" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
+	
+	{/asteroid}
+
+{/astList}
+
+{astRelations} #Szomszédsági lista, lehet mátrix jobb lenne?
+
+	{neighbours ast1="a1" ast2="a2"}
+	
+	{neighbours ast1="a1" ast2="a3"}
+	
+	{neighbours ast1="a3" ast2="a2"}
+	
+	{neighbours ast1="a3" ast2="a4"}
+
+{/astRelations}
