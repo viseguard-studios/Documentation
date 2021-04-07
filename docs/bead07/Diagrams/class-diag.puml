@@ -52,13 +52,15 @@ Player -- "-searchingFor [0..1]" Resource
 
 
 class Item{
-    {abstract} + NearSun()
+    + NearSun(a:Asteroid)
     {abstract} + Satisfies():bool
     Activate()
 }
 Item -- "-inventory [1]" IInventory
 
 class TeleportGateItem{
+    -id: int
+    --
     +Satisfies():bool
     ..
     Activate()
@@ -115,6 +117,7 @@ InfiniteInvetory --|> IInventory
 InfiniteInvetory "items" --* Item
 
 class AsteroidInventory{
+    -capacity:int
     
 }
 AsteroidInventory --|> IInventory
@@ -124,6 +127,8 @@ class SSInvetory{
     
     -tgs: List<TeleportGateItem>
     -items: List<Item>
+    -capacity:int
+    -tgCapacity:int
 }
 SSInvetory --|> IInventory
 'SSInvetory "items" -* Item
@@ -233,6 +238,7 @@ class Asteroid{
     +mine():Item
     ..
     +addBuilding(b:Building)
+    +removeBuilding(b:Building)
     +placeItem(i:Item)
     +getInventory():IInventory
 }
@@ -266,6 +272,7 @@ class Recipe{
 Item "-input [1..*]" -- Recipe 
 
 class TeleportGateRecipe{
+    +canCraft(s: SpaceShip): bool
     #makeResult(s:SpaceShip)
 }
 TeleportGateRecipe --|> Recipe

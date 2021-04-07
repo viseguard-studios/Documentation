@@ -28,6 +28,382 @@
     \diagram{docs/img/BMElogo}{Az osztály állapotváltozásai}{3cm}
 \end{class-template-statechart}
 
+\subsection{AsteroidInventory}
+\begin{class-template-responsibility}
+ Egy aszteroida raktáráért (visszahelyezett kibányászott nyersanyagok tárolásáért) felelős osztály. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+IInventory
+\end{class-template-interface}
+\begin{class-template-baseclass}
+$\emptyset$
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\classitem{-items:Item[0..*]}{A raktár elemeinek tárolója.}
+\classitem{-capacity:int}{A raktár kapacitása.}
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+insertItem(item:Item):bool}{Új elem hozzáadása a tárolóhoz. Az adott elemet hozzáadja az itemek listájához.}
+\classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból, amennyiben ez lehetséges. Az items listán addig iterál, amíg meg nem találja a keresett elemet (az item Satisfies metódusa igazzal tér vissza). Ha megtalálja, eltávolítja a listából, megszakítja az iterációt és igazzal tér vissza. Ha pedig az egész raktárban nem találta meg, hamissal tér vissza, nem sikerült eltávolítani semmit. }
+\classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. Ellenőrzi, hogy a raktár kapacitása nagyobb-e, mint az aktuális mérete. Ha nem nagyobb, nem helyezhető bele az elem, hamissal tér vissza. Ha pedig igen, igazzal tér vissza, sikeres lenne a művelet. }
+\classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
+\classitem{NearSun()}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja (ez csak urán esetén fejt ki hatást). Majd a listán iterálva vízjeget keres (Satisfies metódussal), és amennyiben talál, az első találatot eltávolítja a listáról, leáll az iteráció. Ha nem talál, nem történik több művelet.}    
+\end{class-template-method}
+
+\subsection{Building}
+\begin{class-template-responsibility}
+Az épülettípusok közös ősosztálya. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Entity \baseclass MovableEntity
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+$\emptyset$
+\end{class-template-method}
+
+\subsection{Coal}
+\begin{class-template-responsibility}
+ Egy egységnyi szén nyersanyagot reprezentál.
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Resource \baseclass Item
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett. Beépített típusellenőrző függvénnyel megállapítja, hogy megegyeznek-e a típusok, és ha igen, true-val, ha nem, false-al tér vissza.}
+\end{class-template-method}
+
+\subsection{Ice}
+\begin{class-template-responsibility}
+ Egy egységnyi vízjég nyersanyagot reprezentál.
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Resource \baseclass Item
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett. Beépített típusellenőrző függvénnyel megállapítja, hogy megegyeznek-e a típusok, és ha igen, true-val, ha nem, false-al tér vissza.}
+\end{class-template-method}
+
+\subsection{IInventory}
+\begin{class-template-responsibility}
+Interfész, ami a különböző raktártípusoktól elvárt megvalósítandó metódusokat gyűjti össze. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+$\emptyset$
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+insertItem(item:Item):bool}{Új elem hozzáadása a tárolóhoz, amennyiben van benne szabad hely (kapacitás).  Sikeres művelet esetén igaz, sikertelen művelet esetén hamis visszatérési értéke van. }
+\classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból, amennyiben ez lehetséges. }
+\classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. }
+\classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
+\classitem{NearSun()}{Napközelben hívódik meg, minden elem NearSun metódusát meghívja, majd eltávolít egy egység vízjeget, amennyiben lehetséges.}
+\end{class-template-method}
+
+\subsection{InfiniteInventory}
+\begin{class-template-responsibility}
+ Egy UFO végtelen tárhelyű raktáráért felelős osztály. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+IInventory
+\end{class-template-interface}
+\begin{class-template-baseclass}
+$\emptyset$
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\classitem{-items:Item[0..*]}{A raktár elemeinek tárolója.}
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+insertItem(item:Item):bool}{Új elem hozzáadása a tárolóhoz: az items listához hozzáadja a paraméterként megkapott elemet. Mindig igazzal tér vissza, hiszen nem kell méretet ellenőriznie, bármennyi elemet tud tárolni. }
+\classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból, amennyiben ez lehetséges. Az items listán addig iterál, amíg meg nem találja a keresett elemet (az item Satisfies metódusa igazzal tér vissza). Ha megtalálja, eltávolítja a listából, megszakítja az iterációt és igazzal tér vissza. Ha pedig az egész raktárban nem találta meg, hamissal tér vissza, nem sikerült eltávolítani semmit. }
+\classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. Nincs művelet, igazzal tér vissza, hiszen végtelen hely van a raktárban, mindig sikeres lesz az elemek felvétele. }
+\classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
+\classitem{NearSun()}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja (ez csak urán esetén fejt ki hatást). Majd a listán iterálva vízjeget keres (Satisfies metódussal), és amennyiben talál, az első találatot eltávolítja a listáról, leáll az iteráció. Ha nem talál, nem történik több művelet.}    
+\end{class-template-method}
+
+\subsection{Iron}
+\begin{class-template-responsibility}
+ Egy egységnyi vas nyersanyagot reprezentál.
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Resource \baseclass Item
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett. Beépített típusellenőrző függvénnyel megállapítja, hogy megegyeznek-e a típusok, és ha igen, true-val, ha nem, false-al tér vissza.}
+\end{class-template-method}
+
+\subsection{Item}
+\begin{class-template-responsibility}
+Raktárban tárolható elemtípusok gyűjtőosztálya. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+$\emptyset$
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\classitem{-inventory[1]: IInventory}{?}
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+NearSun(a:Asteroid)}{Napközelben a nyersanyag típusának megfelelő műveletet hajt végre. Alapértelmezetten üres metódus, különleges esetekben felüldefiniálható.}
+\classitem{+Satisfies(r:Resource):bool}{Absztrakt metódus, a leszármazottakban meghatározza, hogy az átadott Item használható-e a jelenlegi helyett.}
+\end{class-template-method}
+
+\subsection{Player}
+\begin{class-template-responsibility}
+Egy adott játékos reprezentációja. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+$\emptyset$
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\classitem{-name:string}{A játékos neve.}
+\classitem{-searching\_for:Resource[1]}{Az itt szereplő nyersanyagfajta után kutatnak a játékos robotjai.}
+\end{class-template-attribute}
+\begin{class-template-method}
+\item[] $\emptyset$
+\end{class-template-method}
+
+\subsection{Recipe}
+\begin{class-template-responsibility}
+A telepesek által elkészíthető receptekért felel. Egy recept adott számú kibányászott nyersanyag felhasználásával elkészített dolgok pontos hozzávalóit, és az elkészült eredmény típusát tárolja. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+$\emptyset$
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\classitem{-input:Item[1..*]}{Az aktuális recepthez szükséges hozzávalók tárolása. }
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+canCraft(s:SpaceShip):bool}{Meghatározza, hogy egy adott raktárban és aszteroidán lévő kibányászott nyersanyagkészlet elegendő-e az adott recept elkészítéséhez. Először lekéri a készítő telepes és az aktuális aszteroida raktárának elemkészletét, és lemásolja azokat egy-egy listába, hogy az eredeti tartalom ne változzon. Majd a recept input-jának minden elemét összehasonlítja a két lista elemeivel, először a telepesében keresve, és ha nem talál, az aszteroidáéban keresi tovább. Amikor megtalál egy elemet, eltávolítja a listából. Ha minden szükséges elemet megtalált a két listában összesen, elkészíthető a recept. Ha legalább egy hozzávalóhoz nem talál raktárkészletet egyik listában sem,azonnal befejezi a műveleteket, false-al tér vissza, nem készíthető el a recept.}
+\classitem{+craft(s:SpaceShip)}{Akkor hívódik meg ha ténylegesen le akarjuk gyártani ezt a receptet. Lekérdezi a telepes raktárát, illetve az aktuális aszteroidát, és annak raktárát. A recept minden elemét először megpróbálja eltávolítani a telepes raktárából (RemoveItem metódussal), ha sikertelen, megpróbálja ezt az elemet az aszteroida raktárából hasonlóképpen eltávolítani (valamelyiknek sikerülnie kell a kettő közül, különben nem hívódna meg a függvény). Az összes hozzávaló eltávolítása után a recept MakeResult metódusa hívódik meg, ami elkészíti magát a receptből előállított dolgot.}
+\classitem{\#makeResult(s:SpaceShip)}{Létrehozza a kívánt terméket a receptből a leszármazottak esetében, itt absztrakt metódus.}
+\end{class-template-method}
+
+\subsection{Resource}
+\begin{class-template-responsibility}
+Egy adott aszteroidában tárolt egy egységnyi, bányászással kinyerhető nyersanyagok alaposztálya. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Item
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+\item[] $\emptyset$
+\end{class-template-method}
+
+\subsection{RobotRecipe}
+\begin{class-template-responsibility}
+Egy robot elkészítéséhez szükséges speciális recept típus. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Recipe
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{\#makeResult(s:SpaceShip)}{Lekérdezi az aktuális telepeshez tartozó játékost, majd ezt, illetve az aktuális aszteroidát megadva a konstruktorban egy új robotot hoz létre. A robotot az aktuális aszteroidán helyezi el, az adott játékosé lesz.}
+\end{class-template-method}
+
+\subsection{SpaceStation}
+\begin{class-template-responsibility}
+A játékosok által megépítendő űrállomás épülettípust jelöli. Speciális tulajdonsága, hogy amikor megépül akkor a játék befejeződik.
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Entity \baseclass MovableEntity \baseclass Building 
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+SpaceStation(a:Asteroid)}{Az osztály konstruktora. Egy űrállomás felépítése a játék végével jár, ezért a konstruktor először hozzáadja önmagát, mint épületet az aktuális aszteroidához(addBuilding). Ezután a játéktet (scene) lekérdezi az aszteroidától, a játéktértől pedig a manager-t kérdezi le. A managernek az EndGame() metódusát meghívva jelzi, hogy a játék véget ért. } 
+\classitem{+explode()}{Üres metódus, miután felépült egy űrállomás, a játéknak vége, ezért ez a metódus sosem hívódik meg, nincs következménye.}
+\classitem{+solarFlare()}{Üres metódus, miután felépült egy űrállomás, a játéknak vége, ezért ez a metódus sosem hívódik meg, nincs következménye.}
+\end{class-template-method}
+
+\subsection{SpaceStationRecipe}
+\begin{class-template-responsibility}
+Űrállomás elkészítéséhez szükséges speciális recept típus. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Recipe
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{\#makeResult(s:SpaceShip)}{Létrehozza az űrállomást: meghívja az űrállomás konstruktorát. A konstruktor pedig befejezi a játékot (lásd:SpaceStation osztály, konstruktor leírás).}
+\end{class-template-method}
+
+\subsection{SSInventory}
+\begin{class-template-responsibility}
+ Egy egy telepes raktáráért felelős osztály. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+IInventory
+\end{class-template-interface}
+\begin{class-template-baseclass}
+$\emptyset$
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\classitem{-items:Item[0..*]}{A raktárban található kibányászott nyersanyagok tárolója.}
+\classitem{-tgs:TeleportGateItem[0..3]}{A raktárban lévő teleportkapuk tárolója.}
+\classitem{-capacity:int}{A raktár nem teleportkapu típusú item-einek kapacitása.}
+\classitem{-tgCapacity:int}{A raktár teleportkapuinak kapacitása.}
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+insertItem(item:Item):bool}{Új elem hozzáadása a tárolóhoz. Az adott elemet hozzáadja az itemek listájához, amennyiben nem teleportkapu (Satisfies metódussal ellenőrizve). Ha teleportkapu, a tg listához adja hozzá.}
+\classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból (itemek listájából, ha nem teleportkapu, tg listából, ha teleportkapu), amennyiben ez lehetséges. Az items/tg listán addig iterál, amíg meg nem találja a keresett elemet (az item Satisfies metódusa igazzal tér vissza). Ha megtalálja, eltávolítja a listából, megszakítja az iterációt és igazzal tér vissza. Ha pedig az egész listában nem találta meg, hamissal tér vissza, nem sikerült eltávolítani semmit. }
+\classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. Ellenőrzi, hogy a raktár kapacitása nagyobb-e, mint az aktuális mérete. Ha nem nagyobb, nem helyezhető bele az elem, hamissal tér vissza. Ha az elem teleportkapu (ellenőrizhető Satisfies metódussal), és a maximális teleportkapu-kapacitás ki van használva, nem helyezhető el az elem, hamissal tér vissza. Más esetben igazzal tér vissza, van hely elhelyezni. }
+\classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
+\classitem{NearSun()}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja (ez csak urán esetén fejt ki hatást). Majd a listán iterálva vízjeget keres (Satisfies metódussal), és amennyiben talál, az első találatot eltávolítja a listáról, leáll az iteráció. Ha nem talál, nem történik több művelet.}    
+\end{class-template-method}
+
+\subsection{TeleportGate}
+\begin{class-template-responsibility}
+A teleportkapukat reprezentáló osztály.
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Entity \baseclass MovableEntity \baseclass Building 
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\classitem{-gateId: int}{A teleportkapu azonosítója.}
+\classitem{-pair: TeleportGate}{A teleportkapu párját tárolja.}
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+setPair(t:TeleportGate)}{A teleportkapu párját beállítja (pair attribútum) a megadott objektumra.}
+\classitem{+getRoutes():Asteroid}{A teleportkapu lekérdezi a párjától, hogy melyik aszteroida tartozik hozzá. A párja visszaadja ezt az aszteroidát, így a metódus visszaadja, hogy melyik extra aszteroida érhető el a teleportkapun keresztül egy lépésben.}
+\classitem{+PairDestroyed()}{Ha az aszteroida párja megsemmisül, meghívódik ez a metódus, jelezve, hogy a teleportkapu már nem használható. A teleportkapu párja (pair attribútum értéke) törlődik, és mivel már le van rakva a teleportkapu, nem állítható be új pár számára.}
+\classitem{+explode()}{A teleportkapu felrobban: értesíti a szomszédját a PairDestroyed() metóduson keresztül, hogy megsemmisült, majd ő maga is használhatatlanná válik. A pair attribútum értéke törlődik, nem visszaállítható.}
+\classitem{+solarFlare()}{Napszél éri a kaput, aminek hatására véletlen időközönként egy véletlenszerű, szomszédos aszteroidára mozog át. Egy véletlenszám-generátor létrehozása, és az időköz beállítása után végignézi a szomszédai listáját (lekéri az aszteroidától a listát, amiben benne van a teleportkapu párjához tartozó aszteroida is). Ezután ezek közül egyet egy véletlenszerű választási algoritmussal kiválaszt, eltávolítja önmagát az aktuális aszteroidáról (removeBuilding() metódussal), majd hozzáadja magát az új aszteroida épületeihez (addBuilding() metódussal). }
+\end{class-template-method}
+
+\subsection{TeleportGateItem}
+\begin{class-template-responsibility}
+A még le nem rakott teleportkapukért felelős osztály, amiket a telepes a raktárában tárol. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Item
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\classitem{-id:int}{A teleportkapu-párok közös azonosítója.}
+\classitem{-pair:TeleportGate}{A kapu lehelyezett párja, ha már van ilyen.}
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett. Beépített típusellenőrző függvénnyel megállapítja, hogy megegyeznek-e a típusok, és ha igen, true-val, ha nem, false-al tér vissza.}
+\classitem{+Activate(s:SpaceShip)}{A teleportkapuk lehelyezését végző metódus. Lekérdezi a telepestől az aktuális aszteroidát, amire lehelyez egy új teleportkaput(TeleportGate típusú objektumot, a konstruktorában benne van a lehelyezés művelete). Ezután saját magát eltávolítja a raktárból (removeItem metódussal). Ha még nincs lehelyezett párja (pair attribútum null), akkor a telepes raktárából ID alapján lekérdezi az item párját (findPair metódussal), akinél beállítja a pair attribútumot a lerakott teleportkapura. Ha pedig le van már rakva a párja, akkor beállítja a most lerakott kaput párként nála is.}
+\end{class-template-method}
+
+\subsection{TeleportGateRecipe}
+\begin{class-template-responsibility}
+Teleportkapu-párok elkészítéséhez szükséges speciális recept típus. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Recipe
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{\#makeResult(s:SpaceShip)}{Generál egy azonosítót az új teleportkapu-párnak, majd ezt megadva a konstruktorban 2 teleportkapu elemet hoz létre, majd elhelyezi őket a telepes raktárában (insertItem).}
+\classitem{+canCraft(s:SpaceShip):bool}{Meghatározza, hogy egy adott raktárban és aszteroidán lévő kibányászott nyersanyagkészlet elegendő-e az teleportkapu-pár elkészítéséhez. Először lekéri a készítő telepes és az aktuális aszteroida raktárának elemkészletét, és lemásolja azokat egy-egy listába, hogy az eredeti tartalom ne változzon. Majd a recept input-jának minden elemét összehasonlítja a két lista elemeivel, először a telepesében keresve, és ha nem talál, az aszteroidáéban keresi tovább. Amikor megtalál egy elemet, eltávolítja a listából.  Ha legalább egy hozzávalóhoz nem talál raktárkészletet egyik listában sem,azonnal befejezi a műveleteket, false-al tér vissza, nem készíthető el a recept. Ha minden szükséges elemet megtalált a két listában összesen, ellenőrzi, van-e elég hely a teleportkapuk tárolására a telepes raktárában. Ehhez le kell kérdeznie a raktár teleportkapukat tároló listájának méretét. Ha van elegendő hely, a recept elkészíthető, ellenkező esetben nem (true, ill. false visszatérés).}
+\end{class-template-method}
+
+\subsection{Titanium}
+\begin{class-template-responsibility}
+ Egy egységnyi titán nyersanyagot reprezentál.
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Resource \baseclass Item
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett. Beépített típusellenőrző függvénnyel megállapítja, hogy megegyeznek-e a típusok, és ha igen, true-val, ha nem, false-al tér vissza.}
+\end{class-template-method}
+
+\subsection{Uranium}
+\begin{class-template-responsibility}
+ Egy egységnyi urán nyersanyagot reprezentál.
+\end{class-template-responsibility}
+\begin{class-template-interface}
+$\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+Resource \baseclass Item
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+\classitem{-counter: int}{Számolja, hogy urán hányszor volt eddig napközelben, ettől függően robban fel.}
+\end{class-template-attribute}
+\begin{class-template-method}
+\classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett. Beépített típusellenőrző függvénnyel megállapítja, hogy megegyeznek-e a típusok, és ha igen, true-val, ha nem, false-al tér vissza.}
+\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, a számlálót növeli 1-el. Ha az eléri a 3-at, felrobban az urán. Ez azt jelenti, hogy a megadott aszteroida explode() metódusa meghívódik, felrobbantva vele az aszteroidát.}
+\end{class-template-method}
+
+
 \section{A tesztek részletes tervei, leírásuk a teszt nyelvén}
 \comment{A tesztek részletes tervei alatt meg kell adni azokat a bemeneti adatsorozatokat, amelyekkel a program működése ellenőrizhető. Minden bemenő adatsorozathoz definiálni kell, hogy az adatsorozat végrehajtásától a program mely részeinek, funkcióinak ellenőrzését várjuk és konkrétan milyen eredményekre számítunk, ezek az eredmények hogyan vethetők össze a bemenetekkel.A tesztek leírásakor az előző dokumentumban (proto koncepciója) megadott szintakszist kell használni.}
 
