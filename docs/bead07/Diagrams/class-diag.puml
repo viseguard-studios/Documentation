@@ -129,6 +129,11 @@ class SSInvetory{
     -items: List<Item>
     -capacity:int
     -tgCapacity:int
+    --
+    +insertGate(tg:TeleportGateItem):bool
+    +removeGate(tg:TeleportGateItem):bool
+    +tryInsertGate(tg:TeleportGateItem):bool
+
 }
 SSInvetory --|> IInventory
 'SSInvetory "items" -* Item
@@ -251,9 +256,13 @@ class Building{
 Building --|> MovableEntity
 
 class TeleportGate{
+    -Map<TeleportGate,int> idList
     -int gateId
     -pair: TeleportGate
     +PairDestroyed()
+    +getIdPair(id:int):TeleportGate
+    +setPair(t:TeleportGate)
+    +addIdListItem(t:TeleportGate,id:int)
 }
 TeleportGate --|> Building
 

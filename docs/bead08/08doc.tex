@@ -47,7 +47,7 @@ $\emptyset$
 \classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból, amennyiben ez lehetséges. Az items listán addig iterál, amíg meg nem találja a keresett elemet (az item Satisfies metódusa igazzal tér vissza). Ha megtalálja, eltávolítja a listából, megszakítja az iterációt és igazzal tér vissza. Ha pedig az egész raktárban nem találta meg, hamissal tér vissza, nem sikerült eltávolítani semmit. }
 \classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. Ellenőrzi, hogy a raktár kapacitása nagyobb-e, mint az aktuális mérete. Ha nem nagyobb, nem helyezhető bele az elem, hamissal tér vissza. Ha pedig igen, igazzal tér vissza, sikeres lenne a művelet. }
 \classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
-\classitem{NearSun()}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja (ez csak urán esetén fejt ki hatást). Majd a listán iterálva vízjeget keres (Satisfies metódussal), és amennyiben talál, az első találatot eltávolítja a listáról, leáll az iteráció. Ha nem talál, nem történik több művelet.}    
+\classitem{NearSun()}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja (ez csak urán esetén fejt ki hatást).}    
 \end{class-template-method}
 
 \subsection{Building}
@@ -64,7 +64,7 @@ Entity \baseclass MovableEntity
 \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-$\emptyset$
+\classitem{+getRoutes():Asteroid[0..*]}{Üres metódus, a teleportkapuk fogják felüldefiniálni a belőlük elérhető extra aszteroidákkal.}
 \end{class-template-method}
 
 \subsection{Coal}
@@ -119,7 +119,7 @@ $\emptyset$
 \classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból, amennyiben ez lehetséges. }
 \classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. }
 \classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
-\classitem{NearSun()}{Napközelben hívódik meg, minden elem NearSun metódusát meghívja, majd eltávolít egy egység vízjeget, amennyiben lehetséges.}
+\classitem{NearSun()}{Napközelben hívódik meg, minden elem NearSun metódusát meghívja.}
 \end{class-template-method}
 
 \subsection{InfiniteInventory}
@@ -140,7 +140,7 @@ $\emptyset$
 \classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból, amennyiben ez lehetséges. Az items listán addig iterál, amíg meg nem találja a keresett elemet (az item Satisfies metódusa igazzal tér vissza). Ha megtalálja, eltávolítja a listából, megszakítja az iterációt és igazzal tér vissza. Ha pedig az egész raktárban nem találta meg, hamissal tér vissza, nem sikerült eltávolítani semmit. }
 \classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. Nincs művelet, igazzal tér vissza, hiszen végtelen hely van a raktárban, mindig sikeres lesz az elemek felvétele. }
 \classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
-\classitem{NearSun()}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja (ez csak urán esetén fejt ki hatást). Majd a listán iterálva vízjeget keres (Satisfies metódussal), és amennyiben talál, az első találatot eltávolítja a listáról, leáll az iteráció. Ha nem talál, nem történik több művelet.}    
+\classitem{NearSun()}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja (ez csak urán esetén fejt ki hatást).}    
 \end{class-template-method}
 
 \subsection{Iron}
@@ -174,6 +174,7 @@ $\emptyset$
 \classitem{-inventory[1]: IInventory}{?}
 \end{class-template-attribute}
 \begin{class-template-method}
+\classitem{+Activate()}{Üres metódus, a TeleportGateItem fogja felüldefiniálni a teleportkapuk lerakásakor végrehajtandó műveletekkel.}
 \classitem{+NearSun(a:Asteroid)}{Napközelben a nyersanyag típusának megfelelő műveletet hajt végre. Alapértelmezetten üres metódus, különleges esetekben felüldefiniálható.}
 \classitem{+Satisfies(r:Resource):bool}{Absztrakt metódus, a leszármazottakban meghatározza, hogy az átadott Item használható-e a jelenlegi helyett.}
 \end{class-template-method}
@@ -302,11 +303,14 @@ $\emptyset$
 \classitem{-tgCapacity:int}{A raktár teleportkapuinak kapacitása.}
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+insertItem(item:Item):bool}{Új elem hozzáadása a tárolóhoz. Az adott elemet hozzáadja az itemek listájához, amennyiben nem teleportkapu (Satisfies metódussal ellenőrizve). Ha teleportkapu, a tg listához adja hozzá.}
-\classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból (itemek listájából, ha nem teleportkapu, tg listából, ha teleportkapu), amennyiben ez lehetséges. Az items/tg listán addig iterál, amíg meg nem találja a keresett elemet (az item Satisfies metódusa igazzal tér vissza). Ha megtalálja, eltávolítja a listából, megszakítja az iterációt és igazzal tér vissza. Ha pedig az egész listában nem találta meg, hamissal tér vissza, nem sikerült eltávolítani semmit. }
-\classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. Ellenőrzi, hogy a raktár kapacitása nagyobb-e, mint az aktuális mérete. Ha nem nagyobb, nem helyezhető bele az elem, hamissal tér vissza. Ha az elem teleportkapu (ellenőrizhető Satisfies metódussal), és a maximális teleportkapu-kapacitás ki van használva, nem helyezhető el az elem, hamissal tér vissza. Más esetben igazzal tér vissza, van hely elhelyezni. }
+\classitem{+insertItem(item:Item):bool}{Új elem hozzáadása a tárolóhoz. Az adott elemet hozzáadja az itemek listájához.}
+\classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból (itemek listájából), amennyiben ez lehetséges. A listán addig iterál, amíg meg nem találja a keresett elemet (az item Satisfies metódusa igazzal tér vissza). Ha megtalálja, eltávolítja a listából, megszakítja az iterációt és igazzal tér vissza. Ha pedig az egész listában nem találta meg, hamissal tér vissza, nem sikerült eltávolítani semmit. }
+\classitem{+insertGate(tg:TeleportGateItem):bool}{Új teleportkapu hozzáadása a tgs listához, amennyiben van hely. Ha van hely, igazzal, ha nincs, hamissal tér vissza.}
+\classitem{+removeGate(tg:TeleportGateItem):bool}{Teleportkapu eltávolítása a tgs listából, amennyiben megtalálja (a listán végigiterálva, Satisfies metódussal). Amint megtalálja, kilép a ciklusból, eltávolítja és igazzal tér vissza. Ha az egész listában nem találta, sikertelen a művelet, hamissal tér vissza.}
+\classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. Ellenőrzi, hogy a raktár kapacitása nagyobb-e, mint az aktuális mérete. Ha nem nagyobb, nem helyezhető bele az elem, hamissal tér vissza. Más esetben igazzal tér vissza, van hely elhelyezni. }
+\classitem{+tryInsertGate(tg:TeleportGateItem):bool}{Ellenőrzi, hogy az adott teleportkapu elméletileg belehelyezhető-e a raktárba. Ellenőrzi, hogy a raktár kapacitása nagyobb-e, mint az aktuális mérete. Ha nem nagyobb, nem helyezhető bele a kapu, hamissal tér vissza. Más esetben igazzal tér vissza, van hely elhelyezni. }
 \classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
-\classitem{NearSun()}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja (ez csak urán esetén fejt ki hatást). Majd a listán iterálva vízjeget keres (Satisfies metódussal), és amennyiben talál, az első találatot eltávolítja a listáról, leáll az iteráció. Ha nem talál, nem történik több művelet.}    
+\classitem{+NearSun()}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja (ez csak urán esetén fejt ki hatást).}    
 \end{class-template-method}
 
 \subsection{TeleportGate}
@@ -320,15 +324,18 @@ $\emptyset$
 Entity \baseclass MovableEntity \baseclass Building 
 \end{class-template-baseclass}
 \begin{class-template-attribute}
-\classitem{-gateId: int}{A teleportkapu azonosítója.}
-\classitem{-pair: TeleportGate}{A teleportkapu párját tárolja.}
+\classitem{-idList:Map<TeleportGate,int>}{Egy statikus lista, ami tartalmazza az eddig lerakott teleportkapukat azonosítókkal párosítva.}
+\classitem{-gateId:int}{A teleportkapu azonosítója.}
+\classitem{-pair:TeleportGate}{A teleportkapu párját tárolja.}
 \end{class-template-attribute}
 \begin{class-template-method}
-\classitem{+setPair(t:TeleportGate)}{A teleportkapu párját beállítja (pair attribútum) a megadott objektumra.}
+\classitem{+getIdPair(id:int):TeleportGate}{Megkeresi az idList-ben az adott id-hez tartozó teleportkaput, ha van ilyen, és visszatér vele. Ha nincs találat, null-al tér vissza.}
 \classitem{+getRoutes():Asteroid}{A teleportkapu lekérdezi a párjától, hogy melyik aszteroida tartozik hozzá. A párja visszaadja ezt az aszteroidát, így a metódus visszaadja, hogy melyik extra aszteroida érhető el a teleportkapun keresztül egy lépésben.}
 \classitem{+PairDestroyed()}{Ha az aszteroida párja megsemmisül, meghívódik ez a metódus, jelezve, hogy a teleportkapu már nem használható. A teleportkapu párja (pair attribútum értéke) törlődik, és mivel már le van rakva a teleportkapu, nem állítható be új pár számára.}
 \classitem{+explode()}{A teleportkapu felrobban: értesíti a szomszédját a PairDestroyed() metóduson keresztül, hogy megsemmisült, majd ő maga is használhatatlanná válik. A pair attribútum értéke törlődik, nem visszaállítható.}
 \classitem{+solarFlare()}{Napszél éri a kaput, aminek hatására véletlen időközönként egy véletlenszerű, szomszédos aszteroidára mozog át. Egy véletlenszám-generátor létrehozása, és az időköz beállítása után végignézi a szomszédai listáját (lekéri az aszteroidától a listát, amiben benne van a teleportkapu párjához tartozó aszteroida is). Ezután ezek közül egyet egy véletlenszerű választási algoritmussal kiválaszt, eltávolítja önmagát az aktuális aszteroidáról (removeBuilding() metódussal), majd hozzáadja magát az új aszteroida épületeihez (addBuilding() metódussal). }
+\classitem{+setPair(t:TeleportGate)}{A pair attribútum setter-e.}
+\classitem{+addIdListItem(t:TeleportGate,id:int)}{Az idList-hez hozzáad egy új elemet, beállítva a TeleportGate és id tulajdonságait.}
 \end{class-template-method}
 
 \subsection{TeleportGateItem}
@@ -343,11 +350,10 @@ Item
 \end{class-template-baseclass}
 \begin{class-template-attribute}
 \classitem{-id:int}{A teleportkapu-párok közös azonosítója.}
-\classitem{-pair:TeleportGate}{A kapu lehelyezett párja, ha már van ilyen.}
 \end{class-template-attribute}
 \begin{class-template-method}
 \classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett. Beépített típusellenőrző függvénnyel megállapítja, hogy megegyeznek-e a típusok, és ha igen, true-val, ha nem, false-al tér vissza.}
-\classitem{+Activate(s:SpaceShip)}{A teleportkapuk lehelyezését végző metódus. Lekérdezi a telepestől az aktuális aszteroidát, amire lehelyez egy új teleportkaput(TeleportGate típusú objektumot, a konstruktorában benne van a lehelyezés művelete). Ezután saját magát eltávolítja a raktárból (removeItem metódussal). Ha még nincs lehelyezett párja (pair attribútum null), akkor a telepes raktárából ID alapján lekérdezi az item párját (findPair metódussal), akinél beállítja a pair attribútumot a lerakott teleportkapura. Ha pedig le van már rakva a párja, akkor beállítja a most lerakott kaput párként nála is.}
+\classitem{+Activate()}{Teleportkapuk lerakásáért felel. Eltávolítja magát a raktárból. Ezután a teleportkapu osztály statikus idList listájából megkeresi, hogy a hozzá tartozó id-hez tartozik-e már teleportkapu (getIdPair metódus), és ha igen, megtalálta a párját, ami már el van helyezve. Ekkor létrehoz egy új teleportkaput, aminek a párját beállítja az id alapján megtalált kapura, aminél pedig beállítja saját magát párnak (setPair metódussal). Ha pedig nem találja a listában az id-t (null-al tér vissza a metódus),akkor létrehoz egy új teleportkaput, pár beállítás nélkül. Mindkét opció esetén végül elhelyezi magát az idListben (addIdListItem metódussal)}
 \end{class-template-method}
 
 \subsection{TeleportGateRecipe}
