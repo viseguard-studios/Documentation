@@ -15,7 +15,7 @@ jobs:
     - name: Remove old artifacts
       uses: c-hive/gha-remove-artifacts@v1
       with:
-        age: '10 days'
+        age: '7 days'
         # Optional inputs
         # skip-tags: true
-        skip-recent: 5
+        skip-recent: 10
