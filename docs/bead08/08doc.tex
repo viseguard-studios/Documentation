@@ -13,17 +13,25 @@
 
 \chapter{Pontosítások}
 
+\subsection{Bemeneti nyelv}
+
 \subsubsection{Bemeneti parancsok}
 
 \begin{itemize}
+    \item help
+    \begin{itemize}
+        \item Leírás: Kilistázza az összes lehetséges parancsot
+        \item Opciók: help
+    \end{itemize}
+
+
     \item startgame
     \begin{itemize}
         \item Leírás: 
-        \item Opciók: startgame <seed> <input | generate>
+        \item Opciók: startgame <seed> <file name>
         \begin{itemize}
             \item seed: a véletlen szám generátor által hasznát kezdőérték.
-            \item input: A felhasználó adja meg a játéktér összeállítását
-            \item generate: A játéktér véletlenszerűen generálódik.
+            \item file name: A felhasználó adja meg a játéktér leírását tartalmazó file-t
         \end{itemize}
     \end{itemize}
 
@@ -115,6 +123,7 @@ Asteroid_35 mined
         \item Példa 1:
             \begin{verbatim}
 > status ss_001
+Turn used: false
 Asteroid: Asteroid_67 | Not hidden
 Resources:
 - Iron
@@ -209,6 +218,48 @@ Succesful
 > pickup Coal to ss_001
             \end{verbatim}
     \end{itemize}
+
+
+    \item endturn
+    \begin{itemize}
+        \item Leírás: A játékos befejezi a kört, ezzel a következő játékosnak adja át a kört.
+        \item Opciók: endturn
+        \item Példa:
+            \begin{verbatim}
+> endturn
+Next player: player_2 
+            \end{verbatim}
+    \end{itemize}
+
+    \item solarFlare
+    \begin{itemize}
+        \item Leírás: Beütemez egy napvihart a kör végére.
+        \item Opciók: solarFlare <pos>
+            \begin{itemize}
+                \item pos: A napvihar pozíciója.
+            \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> solarFlare 
+            \end{verbatim}
+    \end{itemize}
+
+    \item solarDistance
+    \begin{itemize}
+        \item Leírás: Módosítja a naptól való távolságot.
+        \item Opciók: solarFlare <pos>
+            \begin{itemize}
+                \item pos: A napvihar pozíciója.
+            \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> solarFlare 20 10
+A solar flare will happen at 20,10
+            \end{verbatim}
+    \end{itemize}
+
+    \item 
+
 \end{itemize}
 
 \chapter{Részletes tervek}
