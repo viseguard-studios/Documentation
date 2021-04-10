@@ -1,3 +1,216 @@
+\documentclass[../../projlab]{subfiles}
+\begin{document}
+
+\makeatletter
+
+\ifSubfilesClassLoaded{
+	\coverpage{7. Leadás}
+	%\renewcommand{\filePath}[1]{./../../ #1}
+	\def\filePath[#1]{./../../#1}
+}{}
+
+\makeatother
+
+\chapter{Pontosítások}
+
+\subsubsection{Bemeneti parancsok}
+
+\begin{itemize}
+    \item startgame
+    \begin{itemize}
+        \item Leírás: 
+        \item Opciók: startgame <seed> <input | generate>
+        \begin{itemize}
+            \item seed: a véletlen szám generátor által hasznát kezdőérték.
+            \item input: A felhasználó adja meg a játéktér összeállítását
+            \item generate: A játéktér véletlenszerűen generálódik.
+        \end{itemize}
+    \end{itemize}
+
+    \item move
+    \begin{itemize}
+        \item Leírás: A játékos egy járművet akar mozgatni. \newline
+            A parancs megkérdezi a játékostól, hogy melyik aszteroidára akarja mozgatni a járművet.
+        \item Opciók: move <vessel>
+        \begin{itemize}
+            \item vessel: A jármű amit mozgatni akarunk
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> move ss_001
+Neighbours:
+01 - Asteroid_1  - ?
+02 - Asteroid_34 - Iron
+03 - Asteroid_9  - Coal
+04 - Asteroid_11 - ?
+> 04
+ss_001 Moved to Asteroid_11
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item neighbours
+    \begin{itemize}
+        \item Leírás: A játékos lekéri az aszteroida szomszédjait
+        \item Opciók: neighbours <asteroid>
+        \begin{itemize}
+            \item asteroid: Az aszteroida aminek a szomszédjait akarjuk lekérdezni.
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> neighbours ss_001
+Neighbours:
+01 - Asteroid_1  - ?
+02 - Asteroid_34 - Iron
+03 - Asteroid_9  - Coal
+04 - Asteroid_11 - ?
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item drill
+    \begin{itemize}
+        \item Leírás: A játékos a megadott járművel fúr azon az aszteroidán amin éppen van.
+        \item Opciók: drill <vessel>
+        \begin{itemize}
+            \item vessel: A jármű amivel fúrni akarunk.
+        \end{itemize}
+        \item Példa 1:
+            \begin{verbatim}
+> drill ss_001 
+Asteroid_42 crust = X
+            \end{verbatim}
+        \item Példa 2:
+            \begin{verbatim}
+> drill ss_001 
+can't drill
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item mine
+    \begin{itemize}
+        \item Leírás: A játékos a megadott járművel megpróbál bányászni azon az aszteroidán amin éppen van.
+        \item Opciók: mine <vessel>
+        \begin{itemize}
+            \item vessel: A jármű amivel bányászni akarunk.
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> mine ss_001
+Asteroid_35 mined
+* Item: Iron
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item status
+    \begin{itemize}
+        \item Leírás: A játékos a megadott jármű jelenlegi állapotát kérdezi le.
+        \item Opciók: status <vessel|asteroid>
+        \begin{itemize}
+            \item vessel: A jármű aminek az állapotát kérdezzük le.
+            \item asteroid: Az aszteroida aminek az állapotát kérdezzük le.
+        \end{itemize}
+        \item Példa 1:
+            \begin{verbatim}
+> status ss_001
+Asteroid: Asteroid_67 | Not hidden
+Resources:
+- Iron
+- Iron
+- Coal
+- etc....
+Teleport Gates:
+- Tg_023 - 1
+- Tg_023 - 1
+- Tg_011 - 5
+            \end{verbatim}
+        \item Példa 2:
+            \begin{verbatim}
+> status Asteroid_67
+Crust: 0
+Vessels:
+- SpaceShip_01
+- SpaceShip_23
+- Robot_4
+Resources:
+- Iron
+- Iron
+Teleport Gates:
+- Tg_023 - 1
+- Tg_011 - 5
+            \end{verbatim}        
+    \end{itemize}
+
+
+    \item hide
+    \begin{itemize}
+        \item Leírás: A játékos 
+        \item Opciók: hide <enter|exit> <vessel>
+        \begin{itemize}
+            \item vessel: A jármű aminek az állapotát kérdezzük le.
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> hide enter ss_001
+Can't hide
+            \end{verbatim}
+        \item Példa:
+            \begin{verbatim}
+> hide enter ss_001
+ss_001 is hidden
+            \end{verbatim}            
+    \end{itemize}
+
+
+    \item craft
+    \begin{itemize}
+        \item Leírás: A játékos egy űrhajón legyárt egy adott receptet.
+        \item Opciók: craft <vessel> <recipe>
+        \begin{itemize}
+            \item vessel: A jármű amin akarunk gyártani
+            \item recipe: A recept amit le akarunk gyártani
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> craft ss_001 <recipe>
+Can't craft .......
+--
+Succesful
+            \end{verbatim}
+    \end{itemize}
+
+
+    \item place
+    \begin{itemize}
+        \item Leírás: A játékos egy űrhajóból lerak egy nyersanyagot az aszteroidába amin van.
+        \item Opciók: place <resource> from <vessel>
+        \begin{itemize}
+            \item resource: a nyersanyag amit le akarunk rakni
+            \item vessel: A jármű amin akarunk gyártani
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> palce Iron from ss_001
+            \end{verbatim}
+    \end{itemize}
+
+    \item pickup
+    \begin{itemize}
+        \item Leírás: A játékos egy űrhajóból lerak egy nyersanyagot az aszteroidába amin van.
+        \item Opciók: pickup <resource> to <vessel>
+        \begin{itemize}
+            \item resource: a nyersanyag amit le akarunk rakni
+            \item vessel: A jármű amin akarunk gyártani
+        \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> pickup Coal to ss_001
+            \end{verbatim}
+    \end{itemize}
+\end{itemize}
+
 \chapter{Részletes tervek}
 \comment{A dokumentum célja, hogy pontosan specifikálja az implementálandó osztályokat, beleértve a privát attribútumokat és metódusokat, ezek definícióját is.A dokumentum második fele részletesen be kell mutassa a korábban definiált be-és kimeneti nyelv szintakszisát felhasználva, hogy mely tesztekkel lesz a prototípus ellenőrizve.}
 \section{Osztályok és metódusok tervei}
@@ -440,3 +653,5 @@ Resource \baseclass Item
 
 \section{A tesztelést támogató programok tervei}
 \comment{A tesztadatok előállítására, a tesztek eredményeinek kiértékelésére szolgáló segédprogramok részletes terveit kell elkészíteni.}
+
+\end{document}
