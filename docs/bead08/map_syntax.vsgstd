@@ -16,7 +16,7 @@
 {player name="keksz"}
 
 
-
+# Igaz-hamis étékeknél y/yes/t/true és n/no/f/false is elfogadott!
 {astList name="" sunDist="" gameEnded="" solarStormQueued=""} # A GameManager és a Scene létrehozásáért felelős. Minden lehetséges attribútum bele van írva.
 
 	{asteroid name="a1" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}# Egy aszteroida leírása.
@@ -73,7 +73,7 @@
 			
 			{spaceShip name="" ownerPlayer="keksz" isHidden="" } # Hiba, ha több mint egy van elbújva, vagy nem lehetne elbújni, de isHidden az igaz!
 			
-				{spaceShipResInventory}  # Egy űrjóhajós nyersanyag tárhelye. Természetesen legfeljebb 10 nyersanyag és 3 kapu lehet benne!
+				{spaceShipInventory}  # Egy űrjóhajós nyersanyag tárhelye. Természetesen legfeljebb 10 nyersanyag és 3 kapu lehet benne!
 				
 					{resources} # Nyersanyagok
 					#...
@@ -87,7 +87,7 @@
 
 					{/telegates}
 				
-				{/spaceShipResInventory}
+				{/spaceShipInventory}
 			
 			{/spaceShip}
 		
