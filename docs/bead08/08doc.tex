@@ -30,7 +30,8 @@
         \item Leírás: 
         \item Opciók: startgame <seed> <file name>
         \begin{itemize}
-            \item seed: a véletlen szám generátor által hasznát kezdőérték.
+            \item seed: a véletlen szám generátor által hasznát kezdőérték. \newline
+Ha 0-t adnak meg a seednek akkor a játék semmilyen véletlenszerű tevékenységet nem fog végezni
             \item file name: A felhasználó adja meg a játéktér leírását tartalmazó file-t
         \end{itemize}
     \end{itemize}
@@ -240,26 +241,36 @@ Next player: player_2
             \end{itemize}
         \item Példa:
             \begin{verbatim}
-> solarFlare 
+> solarFlare 20 10
+A solar flare will happen at 20,10
             \end{verbatim}
     \end{itemize}
 
     \item solarDistance
     \begin{itemize}
         \item Leírás: Módosítja a naptól való távolságot.
-        \item Opciók: solarFlare <pos>
+        \item Opciók: solarDistance <distance>
             \begin{itemize}
-                \item pos: A napvihar pozíciója.
+                \item distance: A napvihar pozíciója.
             \end{itemize}
         \item Példa:
             \begin{verbatim}
-> solarFlare 20 10
-A solar flare will happen at 20,10
+> solarDistance 10
             \end{verbatim}
     \end{itemize}
 
-    \item 
+\end{itemize}
 
+A robotok és UFOk irányítására az álltaluk végezhető parancsok használhatóak:
+Robotok
+\begin{itemize}
+    \item move
+    \item drill
+\end{itemize}
+UFO
+\begin{itemize}
+    \item move
+    \item mine
 \end{itemize}
 
 \chapter{Részletes tervek}
