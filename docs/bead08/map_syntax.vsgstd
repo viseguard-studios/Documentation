@@ -1,42 +1,49 @@
-# A pályaegy példafájlja, próbáljuk jóra csinálni:)
-# - azt jelenti, hogy a sor ki van kommentezve
-# Végül nagyon XML-szerű lett
+# A pályaegy példa
+# - azt jelenti, hogy a sor továbi része ki van kommentezve
+# A fájl formátuma hasonlít az XML-éhez 
 
-{típus attrib1="" attrib2=""} # például az elején a Game Manager
+#{típus attrib1="" attrib2=""} például az elején a Game Manager
+#
+#{/típus}
 
-{/típus}
+# Vannak olyan objektumok, amelyeknek csak attribútumai lehetnek, más alobjektumai nem, vagy névvel hivatkozva vannak. Ezeket nem kell lezárni {\típus}-sal.
+#
+#{levél név=""}
 
-{player name="sajt"} #ne legyen 2 játékosnak ugyanaz a neve
+{player name="sajt"} # Játékos létrehozása, name - név
+# Fontos, hogy ne adjunk meg ugyanolyan nevet az objektumainknak, minden objektum egyedi nevet kapjon
 
 {player name="keksz"}
 
-{astList name="" sunDist="" gameEnded="" solarStormQueued=""} # Kvázi a GameManager
 
-	{asteroid name="a1" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}# aszteroida
+
+{astList name="" sunDist="" gameEnded="" solarStormQueued=""} # A GameManager és a Scene létrehozásáért felelős. Minden lehetséges attribútum bele van írva.
+
+	{asteroid name="a1" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}# Egy aszteroida leírása.
 	
-		{asteroidInventory} # Mi van az aszteroidában, TPkapu nem lehet benne
+		{asteroidInventory} # Mi van az aszteroidában, TP kapu nem lehet benne!
 		
-			{coal} 				#Ha levél a függőségi fában, és nincs aggregáció/kompozíció akkor nem kell a {/...} jelző?
+			{coal} # Egy szén nyersanyag.
 		
-			{titanium}
+			{titanium} # Egy titanium.
 		
-			{ice}
+			{ice} # Egy jég nyersanyag.
 		
-			{iron}
+			{iron} # Egy vas nyersanyag.
 		
-		{uranium counter=""}
+		{uranium counter=""} # Egy uránium nyersanyag. A counter a hevültséget méri, értéke 0-2.
 		
 		{/asteroidInventory}
 		
-		{insideAsteroid} 	# aszteroidában lévők (inside, NEM elbújtak!)
+		{insideAsteroid} 	# Az aszteroida belsejében lévők (inside, NEM elbújtak!)
 		
-			#{spaceStation name=""} nyílván megnyernénk a játékot
+			#{spaceStation name=""} Nyílván megnyernénk a játékot, ha magától le lenne helyezve.
 		
 		{/insideAsteroid}
 		
-		{orbitAsteroid}	# orbit, hiba, ha ötnél több van???
+		{orbitAsteroid}	# Orbit, legfeljebb öt elem lehet itt
 		
-			{telegate name="" teleId="1"}
+			{telegate name="" teleId="1"} # Teleportkapu. Hiba ha 3 vagy több olyan kapu van - akár tárgyként vagy lehelyezve -, aminek ugyanaz ai id-je!
 			
 			{telegate name="" teleId="2"}
 		
@@ -44,11 +51,11 @@
 		
 		{vesselsOnAsteroid} # űrjárművek
 		
-			{robot name="" ownerPlayer="keksz" isHidden=""} #nyílván több robot is el lehet bújva
+			{robot name="" ownerPlayer="keksz" isHidden=""} # Nyílván több robot is el lehet bújva
 			
-			{ufo name=""}	#az UFO egy AI játékoshoz lesz rendelve?
+			{ufo name=""}	# Az UFO leírása; egy AI játékoshoz lesz rendelve.
 			
-				{ufoInventory}  #Egyáltalán kell-e?
+				{ufoInventory}  # Egy UFO tárhelye
 				
 					{coal}
 				
@@ -64,21 +71,23 @@
 			
 			{/ufo}
 			
-			{spaceShip name="" isHidden="" } #hiba, ha több mint egy van, vagy nem lehetne elbújni, de isHidden az igaz
+			{spaceShip name="" ownerPlayer="keksz" isHidden="" } # Hiba, ha több mint egy van elbújva, vagy nem lehetne elbújni, de isHidden az igaz!
 			
-				{spaceShipResInventory}  #természetesen legfeljebb 10 nyersanyag
+				{spaceShipResInventory}  # Egy űrjóhajós nyersanyag tárhelye. Természetesen legfeljebb 10 nyersanyag és 3 kapu lehet benne!
 				
-				#...
+					{resources} # Nyersanyagok
+					#...
+					{/resources}
+
+					{telegates} # Kapuk
+
+						{telegateItem name="" teleId="3"}
+					
+						{telegateItem name="" teleId="3"}
+
+					{/telegates}
 				
 				{/spaceShipResInventory}
-				
-				{spaceshipTeleInventory}
-				
-					{telegateItem name="" teleId="3"}
-					
-					{telegateItem name="" teleId="3"}
-				
-				{/spaceshipTeleInventory}
 			
 			{/spaceShip}
 		
@@ -86,8 +95,7 @@
 	
 	{/asteroid}
 	
-	# ha nincsnek megadva a listák, akkor feltételezzük, hogy üres?
-	# ha minden aszteroida kap egyedi nevet, akkor meg lehet adni a szomszédságot listával
+	# Ha nincsnek megadva a tárhely listák, akkor feltételezzük, hogy üresek.
 	{asteroid name="a2" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
 	
 	{/asteroid}
@@ -102,9 +110,9 @@
 
 {/astList}
 
-{astRelations} #Szomszédsági lista, lehet mátrix jobb lenne?
+{astRelations} # Szomszédsági listája az aszteroidáknak.
 
-	{neighbours ast1="a1" ast2="a2"}
+	{neighbours ast1="a1" ast2="a2"} # a1 aszteroida szomszédos legyen a2-val. Ne adjunk meg többszörös éleket!
 	
 	{neighbours ast1="a1" ast2="a3"}
 	
