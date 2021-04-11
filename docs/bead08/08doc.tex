@@ -13,7 +13,18 @@
 
 \chapter{Pontosítások}
 
-\subsection{Bemeneti nyelv}
+\section{Teleport kapuk}
+A teleport kapuk miután megkergülnek csak a fizikailag szomszédos aszteroidákra tud átmenni.
+Másik teleport kaput nem tud használni illetve saját magát sem tud keresztül menni.
+Ehhez az Aszteroidának kell egy új medódust adni, \verb"GetPhisycalNeighbours()" ami a fizikalilag szomszédos aszteroidákat adja vissza
+
+\section{Aszteroidák}
+Szükség van egy \verb"bool" változóra annak eltárolására, hogy ki volt-e bányászva. 
+Így miután ki van báynászva lehet más dolgokat is eltárolni benne.
+
+
+
+\section{Bemeneti nyelv}
 
 \subsubsection{Bemeneti parancsok}
 
@@ -115,7 +126,7 @@ Asteroid_35 mined
 
     \item status
     \begin{itemize}
-        \item Leírás: A játékos a megadott jármű jelenlegi állapotát kérdezi le.
+        \item Leírás: A játékos a megadott entitás jelenlegi állapotát kérdezi le.
         \item Opciók: status <vessel|asteroid>
         \begin{itemize}
             \item vessel: A jármű aminek az állapotát kérdezzük le.
@@ -156,7 +167,7 @@ Teleport Gates:
 
     \item hide
     \begin{itemize}
-        \item Leírás: A játékos 
+        \item Leírás: A játékos a megadott járművet elbjutatja az aszteroidában anin tartózkodik.
         \item Opciók: hide <enter|exit> <vessel>
         \begin{itemize}
             \item vessel: A jármű aminek az állapotát kérdezzük le.
@@ -177,9 +188,9 @@ ss_001 is hidden
     \item craft
     \begin{itemize}
         \item Leírás: A játékos egy űrhajón legyárt egy adott receptet.
-        \item Opciók: craft <vessel> <recipe>
+        \item Opciók: craft <spaceShip> <recipe>
         \begin{itemize}
-            \item vessel: A jármű amin akarunk gyártani
+            \item spaceShip: Az űrhajó amin akarunk gyártani
             \item recipe: A recept amit le akarunk gyártani
         \end{itemize}
         \item Példa:
@@ -235,9 +246,10 @@ Next player: player_2
     \item solarFlare
     \begin{itemize}
         \item Leírás: Beütemez egy napvihart a kör végére.
-        \item Opciók: solarFlare <pos>
+        \item Opciók: solarFlare <pos> <radius>
             \begin{itemize}
                 \item pos: A napvihar pozíciója.
+                \item radius: A napvihar ebben a körben hat.
             \end{itemize}
         \item Példa:
             \begin{verbatim}
@@ -261,7 +273,7 @@ A solar flare will happen at 20,10
 
 \end{itemize}
 
-A robotok és UFOk irányítására az álltaluk végezhető parancsok használhatóak:
+A robotok és UFOk irányítására az álltaluk végezhető parancsok használhatóak: \newline
 Robotok
 \begin{itemize}
     \item move
@@ -275,33 +287,8 @@ UFO
 
 \chapter{Részletes tervek}
 \comment{A dokumentum célja, hogy pontosan specifikálja az implementálandó osztályokat, beleértve a privát attribútumokat és metódusokat, ezek definícióját is.A dokumentum második fele részletesen be kell mutassa a korábban definiált be-és kimeneti nyelv szintakszisát felhasználva, hogy mely tesztekkel lesz a prototípus ellenőrizve.}
-\section{Osztályok és metódusok tervei}
-\subsection{Osztály1}
-\begin{class-template-responsibility}
-    Felelősség leírása
-\end{class-template-responsibility}
-\begin{class-template-interface}
-    Megvalósított interfészek felsorolása
-\end{class-template-interface}
-\begin{class-template-baseclass}
-    Ős-Ősosztály \baseclass Ősosztály... 
-\end{class-template-baseclass}
-\begin{class-template-attribute}
-    \classitem{+A [0..*]}{adattag A}
-\end{class-template-attribute}
-\comment{Milyen publikus, protected és privát  metódusokkal rendelkezik. Metódusonként precíz leírás, ha szükséges, activity diagram is a metódusban megvalósítandó algoritmusról. Minden olyan metódusnak szerepelnie kell, amelyiket az osztály megvalósít vagy felüldefiniál.}
-\begin{class-template-method}
-    \classitem{+B(A a) : void}{metódus B}
-\end{class-template-method}
 
-\subsection{Osztály2}
-\begin{class-template-responsibility}
-    Felelősség leírása
-\end{class-template-responsibility}
-\begin{class-template-statechart}
-    A belső működéshez tartozó állapotgép
-    \diagram{docs/img/BMElogo}{Az osztály állapotváltozásai}{3cm}
-\end{class-template-statechart}
+\section{Osztályok és metódusok tervei}
 
 \subsection{AsteroidInventory}
 \begin{class-template-responsibility}
@@ -714,6 +701,20 @@ Resource \baseclass Item
 \end{test-case-output}
 
 \section{A tesztelést támogató programok tervei}
-\comment{A tesztadatok előállítására, a tesztek eredményeinek kiértékelésére szolgáló segédprogramok részletes terveit kell elkészíteni.}
+%\comment{A tesztadatok előállítására, a tesztek eredményeinek kiértékelésére szolgáló segédprogramok részletes terveit kell elkészíteni.}
+A program teszteléséhez a PowerShell parancssori értelmezőt javasoljuk használni.
+Ehhez a PS stream átirányítás funkcióját illetve a különbség kijelzőt lehet felhasználni.
+Egy példa a PS használatára:
+
+\begin{adjustwidth}{-30pt}{0pt}
+\begin{verbatim}
+>Get-Content input.txt | java -jar asteroidMiner.jar > output.txt
+>Compare-Object $(Get-Content "sample.txt") $(Get-Content "output.txt") -IncludeEqual
+\end{verbatim}
+\end{adjustwidth}
+
+A példában a program egy előre elkészített bemenetet olvas be ( \verb"input.txt" )
+és egy file ba ( \verb"output.txt" ) írja ki a program kimenetét.
+Ezután azt összehasonlítja a minta kimenettel a \verb"Compare-Object" használatával.
 
 \end{document}
