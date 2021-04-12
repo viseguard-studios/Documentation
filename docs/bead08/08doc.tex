@@ -1241,6 +1241,55 @@ S1 lerakja az uránt
 
 \end{test-case-output}
 
+\subsection{UFO/Robot Moving and Drilling/Mining}
+\begin{test-case-description}
+    A jáékosok által NEM vezérelt repülő tárgyak képességeinek ellenőrzése.
+\end{test-case-description}
+\begin{test-case-function}
+    Egy aszteroidán tartózkodó UFO és Robot egy kapun keresztül ellátogat egy másik aszteroidára és ott a robot fúrni az UFO pedig bányászni kezd. \newline
+    Működés nagyban függ a felhasználó által választott értékeken, így bizonyos lépések ismétlése szükséges a várt eredmény eléréséhez.
+\end{test-case-function}
+\begin{test-case-input}
+
+    A világ betöltése: 
+    \begin{verbatim}
+    >startgame 0 UFO_test.vsgstd
+    \end{verbatim}
+    U1 megnézi a szomszédokat:
+    \begin{verbatim}
+    >neighbors U1
+    Neighbours:
+    01 - Asteroid_1  - ?
+    \end{verbatim}
+    U1 és R1 kiválasztja a mozgás végpontját:
+    \begin{verbatim}
+    >move U1
+    01 - Asteroid_1
+    >1
+    >move R1
+    01 - Asteroid_1
+    >1
+    \end{verbatim}
+    R1 fúrni kezd:
+    \begin{verbatim}
+    >drill R1
+    A1 crust = 0
+    >endturn
+    Next Player: player_1
+    \end{verbatim}
+    U1 bányászni kezd:
+    \begin{verbatim}
+    >mine U1
+    A1 mined
+    * Item: Iron
+    >endturn
+    Next Player: player_1
+    \end{verbatim}
+\end{test-case-input}
+\begin{test-case-output}
+
+\end{test-case-output}
+
 \section{A tesztelést támogató programok tervei}
 %\comment{A tesztadatok előállítására, a tesztek eredményeinek kiértékelésére szolgáló segédprogramok részletes terveit kell elkészíteni.}
 A program teszteléséhez a PowerShell parancssori értelmezőt javasoljuk használni.
