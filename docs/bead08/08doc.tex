@@ -361,7 +361,7 @@ $\emptyset$
 \classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból, amennyiben ez lehetséges. Az items listán addig iterál, amíg meg nem találja a keresett elemet (az item Satisfies metódusa igazzal tér vissza). Ha megtalálja, eltávolítja a listából, megszakítja az iterációt és igazzal tér vissza. Ha pedig az egész raktárban nem találta meg, hamissal tér vissza, nem sikerült eltávolítani semmit. }
 \classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. Ellenőrzi, hogy a raktár kapacitása nagyobb-e, mint az aktuális mérete. Ha nem nagyobb, nem helyezhető bele az elem, hamissal tér vissza. Ha pedig igen, igazzal tér vissza, sikeres lenne a művelet. }
 \classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
-\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja (ez csak urán esetén fejt ki hatást).}    
+\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja.}    
 \end{class-template-method}
 
 \subsection{Building}
@@ -492,10 +492,12 @@ Item \baseclass Resource
 \end{class-template-attribute}
 \begin{class-template-method}
 \classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett. Beépített típusellenőrző függvénnyel megállapítja, hogy megegyeznek-e a típusok, és ha igen, true-val, ha nem, false-al tér vissza.}
-\classitem{+NearSun(a:Asteroid)}{Napközelben a vízjég párolog, körönként 1 egységgel. A Satisfies() metódussal ellenőrzi az }
+\classitem{+NearSun(a:Asteroid)}{Napközelben a vízjég párolog, körönként 1 egységgel. Ha még nem párolgott (evaporated false), akkor a Satisfies() metódussal ellenőrzi az aszteroida raktárának (a.getInventory) elemkészletét, és ha vízjeget talál, az evaporated attribútumát igazzá teszi, így jelzi, hogy már megtörtént a párolgás. Ezután megsemmisül, vagyis a.getInventory raktárból kikerül (removeItem(this)). Ha az evaporated true, nem történik művelet, és ha az aszteroida null, akkor sem.}
+\classitem{+getEvaporated():bool}{Az evaporated attribútum gettere.}
+\classitem{+setEvaporated(e:bool)}{Az evaporated attribútum settere.}
 \end{class-template-method}
 
-\subsection{IInventory}
+\subsection{IInventory (interface)}
 \begin{class-template-responsibility}
 Interfész, ami a különböző raktártípusoktól elvárt megvalósítandó metódusokat gyűjti össze. 
 \end{class-template-responsibility}
@@ -513,7 +515,7 @@ $\emptyset$
 \classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból, amennyiben ez lehetséges. }
 \classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. }
 \classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
-\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, minden elem NearSun metódusát meghívja.}
+\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, minden elem NearSun metódusát meghívja. }
 \end{class-template-method}
 
 \subsection{InfiniteInventory}
@@ -534,7 +536,7 @@ $\emptyset$
 \classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból, amennyiben ez lehetséges. Az items listán addig iterál, amíg meg nem találja a keresett elemet (az item Satisfies metódusa igazzal tér vissza). Ha megtalálja, eltávolítja a listából, megszakítja az iterációt és igazzal tér vissza. Ha pedig az egész raktárban nem találta meg, hamissal tér vissza, nem sikerült eltávolítani semmit. }
 \classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. Nincs művelet, igazzal tér vissza, hiszen végtelen hely van a raktárban, mindig sikeres lesz az elemek felvétele. }
 \classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
-\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja (ez csak urán esetén fejt ki hatást).}    
+\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja. A paraméter itt null, nincs szükség aszteroidára, mert nem fog robbanni az urán itt.}    
 \end{class-template-method}
 
 \subsection{Iron}
@@ -663,6 +665,7 @@ Entity \baseclass MovableEntity \baseclass Vessel
 \classitem{+Robot(p:Player, a:Asteroid):Robot}{Az osztály konstruktora, beállítja az őt kezelő játékost (owner) illetve aszteroidát (currentAsteroid). }
 \classitem{+GetHidingSpaceRequirement():int}{A robotok által az aszteroida magjában elfoglalt hely nagyságát adja vissza. Korlátlan mennyiségű robot elfér, tehát 0 az értéke. }
 \classitem{+getInventory():IInventory}{Robot nem rendelkezik raktárral, null-al tér vissza.}
+\classitem{+mine()}{Üres metódus, robot nem tud bányászni.}
 \end{class-template-method}
 
 
@@ -744,6 +747,7 @@ Entity \baseclass MovableEntity \baseclass Building
 \classitem{+SpaceStation(a:Asteroid)}{Az osztály konstruktora. Egy űrállomás felépítése a játék végével jár, ezért a konstruktor először hozzáadja önmagát, mint épületet az aktuális aszteroidához(addBuilding). Ezután a játéktet (scene) lekérdezi az aszteroidától, a játéktértől pedig a manager-t kérdezi le. A managernek az EndGame() metódusát meghívva jelzi, hogy a játék véget ért. } 
 \classitem{+explode()}{Üres metódus, miután felépült egy űrállomás, a játéknak vége, ezért ez a metódus sosem hívódik meg, nincs következménye.}
 \classitem{+solarFlare()}{Üres metódus, miután felépült egy űrállomás, a játéknak vége, ezért ez a metódus sosem hívódik meg, nincs következménye.}
+\classitem{+getPlace():AsteroidPlaces}{Visszatér az AsteroidPlaces.Inside enummal, hiszen az aszteroida felszínén van az űrállomás.}
 \end{class-template-method}
 
 \subsection{SpaceStationRecipe}
@@ -787,7 +791,7 @@ $\emptyset$
 \classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. Ellenőrzi, hogy a raktár kapacitása nagyobb-e, mint az aktuális mérete. Ha nem nagyobb, nem helyezhető bele az elem, hamissal tér vissza. Más esetben igazzal tér vissza, van hely elhelyezni. }
 \classitem{+tryInsertGate(tg:TeleportGateItem):bool}{Ellenőrzi, hogy az adott teleportkapu elméletileg belehelyezhető-e a raktárba. Ellenőrzi, hogy a raktár kapacitása nagyobb-e, mint az aktuális mérete. Ha nem nagyobb, nem helyezhető bele a kapu, hamissal tér vissza. Más esetben igazzal tér vissza, van hely elhelyezni. }
 \classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
-\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja (ez csak urán esetén fejt ki hatást).}    
+\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja. A paraméter itt null, nincs szükség aszteroidára, mert nem fog robbanni az urán itt.}    
 \end{class-template-method}
 
 \subsection{TeleportGate}
@@ -813,6 +817,7 @@ Entity \baseclass MovableEntity \baseclass Building
 \classitem{+solarFlare()}{Napszél éri a kaput, aminek hatására véletlen időközönként egy véletlenszerű, szomszédos aszteroidára mozog át. Egy véletlenszám-generátor létrehozása, és az időköz beállítása után végignézi a szomszédai listáját (lekéri az aszteroidától a listát, amiben benne van a teleportkapu párjához tartozó aszteroida is). Ezután ezek közül egyet egy véletlenszerű választási algoritmussal kiválaszt, eltávolítja önmagát az aktuális aszteroidáról (removeBuilding() metódussal), majd hozzáadja magát az új aszteroida épületeihez (addBuilding() metódussal). }
 \classitem{+setPair(t:TeleportGate)}{A pair attribútum setter-e.}
 \classitem{+addIdListItem(t:TeleportGate,id:int)}{Az idList-hez hozzáad egy új elemet, beállítva a TeleportGate és id tulajdonságait.}
+\classitem{+getPlace():AsteroidPlaces}{Visszatér az AsteroidPlaces.Orbit enummal, hiszen az aszteroida körül kering a kapu.}
 \end{class-template-method}
 
 \subsection{TeleportGateItem}
@@ -884,6 +889,7 @@ Entity \baseclass MovableEntity \baseclass Vessel
 \end{class-template-attribute}
 \begin{class-template-method}
 \classitem{+getInventory():IInventory}{Az inventory-t visszaadja.}
+\classitem{+drill()}{Üres metódus, UFO nem tud fúrni.}
 \end{class-template-method}
 
 
@@ -902,7 +908,7 @@ Item \baseclass Resource
 \end{class-template-attribute}
 \begin{class-template-method}
 \classitem{+Satisfies(i:Item):bool}{Meghatározza, hogy az átadott Item használható-e a jelenlegi helyett. Beépített típusellenőrző függvénnyel megállapítja, hogy megegyeznek-e a típusok, és ha igen, true-val, ha nem, false-al tér vissza.}
-\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, a számlálót növeli 1-el. Ha az eléri a 3-at, felrobban az urán. Ez azt jelenti, hogy a megadott aszteroida explode() metódusa meghívódik, felrobbantva vele az aszteroidát.}
+\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, a számlálót növeli 1-el. Ha az eléri a 3-at, felrobban az urán. Ez azt jelenti, hogy a megadott aszteroida (ha az értéke nem null) explode() metódusa meghívódik, felrobbantva vele az aszteroidát.}
 \end{class-template-method}
 
 \subsection{Vessel}
@@ -929,6 +935,7 @@ Entity \baseclass MovableEntity
 \classitem{+mine()}{A  vessel egy egységet kibányászik az ott található nyersanyagból. Ha az isHidden attribútum értéke false, akkor meghívja a currentAsteroid attribútum mine() metódusát, majd ha a visszatérési érték null, sikertelen a bányászat, a metódus véget ér. Ha viszont nem, akkor meghívja az inventory attribútum insertItem(i) metódusát, a paraméter az mine() metódus visszatérési értékeként megkapott Item típusú objektum lesz.}
 \classitem{+explode()}{Felrobban  a jármű (egy aszteroida robbanásának hatására), megsemmisíti. }
 \classitem{+solarFlare()}{Örökölt függvény. Napvihar esetén hívódik meg. Ha az isHidden attribútum éppen false, akkor meghívja a explode() metódust.}
+\classitem{+getPlace():AsteroidPlaces}{Visszatér az AsteroidPlaces.Vessel enummal.}
 \end{class-template-method}
 
 

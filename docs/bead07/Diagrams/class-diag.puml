@@ -83,6 +83,7 @@ class Ice{
     -evaporated:bool
     --
     +Satisfies():bool
+    +NearSun(a:Asteroid)
 }
 Resource <|-- Ice
 
