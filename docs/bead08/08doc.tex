@@ -1026,6 +1026,7 @@ S1 lerakja az uránt
     >drill S1
     A1 crust = 0
     >endturn
+    Next Player: player_1
     \end{verbatim}
     S1 elkezdi a bányászatot: 
     \begin{verbatim}
@@ -1033,15 +1034,11 @@ S1 lerakja az uránt
     A1 mined
     * Item: Iron
     >endturn
+    Next Player: player_1
     \end{verbatim}
 \end{test-case-input}
 \begin{test-case-output}
-\begin{verbatim}
-    Asteroid_1 crust = X //optimális esetben X=0
-    Next Player: player_1
-    Asteroid_1 mined
-    Next Player: player_1
-\end{verbatim}
+
 \end{test-case-output}
 
 \subsection{Craft Win condition}
@@ -1061,14 +1058,16 @@ S1 lerakja az uránt
     S1 elkezdi az állomás építését:
     \begin{verbatim}
     >craft S1 Base
+    [Event] Win condition completed
+    Succesful
     >endturn
     \end{verbatim}
 \end{test-case-input}
 \begin{test-case-output}
 \begin{verbatim}
-    [Event] Win condition completed,
-    Succesful
-    Next Player: player_1
+    
+    
+    
 \end{verbatim}
 \end{test-case-output}
 
@@ -1090,24 +1089,23 @@ S1 lerakja az uránt
     S1 megnézi a szomszédokat:
     \begin{verbatim}
     >neighbors S1
+    Neighbours:
+    01 - Asteroid_1  - Empty
     \end{verbatim}
     S1 kiválasztja a mozgás végpontját:
     \begin{verbatim}
     >move S1
+    01 - Asteroid_1
     >1
     \end{verbatim}
     S1 elbújik a helyen:
     \begin{verbatim}
     >hide S1
+    S1 hidden
     \end{verbatim}
 \end{test-case-input}
 \begin{test-case-output}
-\begin{verbatim}
-    Neighbours:
-    01 - Asteroid_1  - Empty
-    01 - Asteroid_1
-    S1 hidden
-\end{verbatim}
+
 \end{test-case-output}
 
 \section{A tesztelést támogató programok tervei}
