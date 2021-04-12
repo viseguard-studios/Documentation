@@ -225,7 +225,7 @@ Placed uranium Exp:1
 
     \item pickup
     \begin{itemize}
-        \item Leírás: A játékos egy űrhajóból lerak egy nyersanyagot az aszteroidába amin van.
+        \item Leírás: A játékos egy űrhajóból Felvesz egy nyersanyagot az aszteroidába amin van.
         \item Opciók: pickup <resource> to <vessel>
         \begin{itemize}
             \item resource: a nyersanyag amit le akarunk rakni
@@ -991,15 +991,106 @@ S1 lerakja az uránt
 [Event] G1 has exploded
 [Event] R1 moved to A2        
     \end{verbatim}
+\end{test-case-input}
 
+\subsection{Drilling and Mining}
+\begin{test-case-description}
+    A bányászás mozzanatainak tesztelésére.
+\end{test-case-description}
+\begin{test-case-function}
+    Egy aszteroidán tartózkodó SpaceShip megfúrja azt és kibányássza a nyersanyagot. \newline
+    Működés nagyban függ a felhasználó által választott értékeken, így bizonyos lépések ismétlése szükséges a várt eredmény eléréséhez.
+\end{test-case-function}
+\begin{test-case-input}
+
+    A világ betöltése: 
+    \begin{verbatim}
+    >startgame 0 mining_test.vsgstd
+    \end{verbatim}
+    S1 elkezdi a fúrást: 
+    \begin{verbatim}
+    >drill S1
+    >endturn
+    \end{verbatim}
+    S1 elkezdi a bányászatot: 
+    \begin{verbatim}
+    >mine S1
+    >endturn
+    \end{verbatim}
 \end{test-case-input}
 \begin{test-case-output}
-    A poro kimeneti nyelvén megadva, pl.:
+\begin{verbatim}
+    Asteroid_1 crust = X //optimális esetben X=0
+    Next Player: player_1
+    Asteroid_1 mined
+    Next Player: player_1
+\end{verbatim}
+\end{test-case-output}
+
+\subsection{Craft Win condition}
+\begin{test-case-description}
+    A tárgyak előállításának tesztelésére.
+\end{test-case-description}
+\begin{test-case-function}
+    Egy aszteroidán tartózkodó SpaceShip megépít egy Űrállomást. \newline
+    Működés nagyban függ a felhasználó által választott értékeken, így bizonyos lépések ismétlése szükséges a várt eredmény eléréséhez.
+\end{test-case-function}
+\begin{test-case-input}
+
+    A világ betöltése: 
     \begin{verbatim}
-    worlddata
-    ...
-    creatures 0
+    >startgame 0 crafting_test.vsgstd
     \end{verbatim}
+    S1 elkezdi az állomás építését:
+    \begin{verbatim}
+    >craft S1 Base
+    >endturn
+    \end{verbatim}
+\end{test-case-input}
+\begin{test-case-output}
+\begin{verbatim}
+    [Event] Win condition completed,
+    Succesful
+    Next Player: player_1
+\end{verbatim}
+\end{test-case-output}
+
+
+\subsection{Move and Hide}
+\begin{test-case-description}
+    A tárgyak előállításának tesztelésére.
+\end{test-case-description}
+\begin{test-case-function}
+    Egy aszteroidán tartózkodó SpaceShip egy kapun keresztül ellátogat egy másik aszteroidára és ott elbújik. \newline
+    Működés nagyban függ a felhasználó által választott értékeken, így bizonyos lépések ismétlése szükséges a várt eredmény eléréséhez.
+\end{test-case-function}
+\begin{test-case-input}
+
+    A világ betöltése: 
+    \begin{verbatim}
+    >startgame 0 teleport_test.vsgstd
+    \end{verbatim}
+    S1 megnézi a szomszédokat:
+    \begin{verbatim}
+    >neighbors S1
+    \end{verbatim}
+    S1 kiválasztja a mozgás végpontját:
+    \begin{verbatim}
+    >move S1
+    >1
+    \end{verbatim}
+    S1 elbújik a helyen:
+    \begin{verbatim}
+    >hide S1
+    \end{verbatim}
+\end{test-case-input}
+\begin{test-case-output}
+\begin{verbatim}
+    Neighbours:
+    01 - Asteroid_1  - Empty
+    01 - Asteroid_1
+    S1 hidden
+\end{verbatim}
 \end{test-case-output}
 
 \section{A tesztelést támogató programok tervei}
