@@ -335,10 +335,10 @@ Entity
 \classitem{+exit(v:Vessel)}{Az adott jármű előbújik az aszteroidából. Ha éppen a v pont a hidingVessel, akkor a hidingVessel értéke állítja be null-ra, más esetén nem csinál semmit.}
 \classitem{+getAvailableHidingSpace():int}{Visszaadja, hogy hány telepes számára van még hely elbújásra jelenleg az aszteroidában. Ha a HidingVessel attribútum null, akkor 1 értéket, más esetén pedig 0-át adja vissza. }
 \classitem{+drill()}{Akkor hívódik meg, amikor az aszteroida kérgén lévő lyukat akarják mélyíteni. Ha az exploded attribútum éppen false, és a crustSize attribútum nem 0, akkor a crustSize értéket 1-el csökkenti, más esetén nem csinál semmit.}
-\classitem{+mine():Item}{Akkor hívódik meg, amikor az aszteroidából akarnak nyersanyagot kibányászni. Ha az exploded attribútum éppen false, és a crustSize attribútum értéke 0, és az inventory attribútum getItems értéke nem null-t ad vissza, akkor meghívja az inventory removeItem(item) metódusát, és ezt az item objektumot visszatérési értékként adja vissza. Más esetén nem csinál semmit, és null értéket adja vissza.}
+\classitem{+mine():Item}{Akkor hívódik meg, amikor az aszteroidából akarnak nyersanyagot kibányászni. Ha az exploded attribútum éppen false, és a crustSize attribútum értéke 0, és az inventory attribútum getItems értéke nem null-t ad vissza, akkor meghívja az inventory removeItem(item) metódusát, és ezt az item objektumot visszatérési értékként adja vissza. Ha a metódus végén az inventory lista üres, akkor beállítja a mined érték true-ra. Más esetén nem csinál semmit, és null értéket adja vissza.}
 \classitem{+addBuilding(b:Building)}{Hozzáad egy új épületet az aszteroidához, a paraméterként kapott épület getPlace() metódusából kideríti az épület AsteroidPlaces értékét, ha ez Inside, akkor az inside attribútum listájához, ha pedig Orbit, akkor az orbit attribútum listájához adja hozzá.}
 \classitem{+removeBuilding(b:Building)}{Eltávolít egy épületet az aszteroidából, a paraméterként kapott épület getPlace() metódusából kideríti az épület AsteroidPlaces értékét, ha ez Inside, akkor az inside attribútum listájából, ha pedig Orbit, akkor az orbit attribútum listájából veszi ki (amennyiben megtalálja ott). Más esetben nem történik semmi.}
-\classitem{+placeItem(i:Item):bool}{Elem belehelyezése a raktárba. Meghívja az inventory attribútum tryInsertItem(i) metódusát, ha true értéket kap vissza, akkor hívja meg a insertItem(i) metódust, és true értéket ad vissza a metódus. Más esetben false-ot ad vissza. }
+\classitem{+placeItem(i:Item):bool}{Elem belehelyezése a raktárba, amennyiben mined értéke true (különben nem történik semmi). Meghívja az inventory attribútum tryInsertItem(i) metódusát, ha true értéket kap vissza, akkor hívja meg a insertItem(i) metódust, és true értéket ad vissza a metódus. Más esetben false-ot ad vissza. }
 \classitem{+getInventory():IInventory}{Visszaadja az aszteroida raktárát,vagyis az inventory attribútumot. }
 \classitem{+getPhysicalNeighbours():Asteroid[]}{Csak azokat az aszteroidákat adja vissza, amik valós szomszédok (neighbours attribútum értéke). A teleportkapukon keresztül elérhető aszteroidákkal nem tér vissza.}
 \end{class-template-method}
@@ -363,7 +363,8 @@ $\emptyset$
 \classitem{+removeItem(item:Item):bool}{Elem eltávolítása a tárolóból, amennyiben ez lehetséges. Az items listán addig iterál, amíg meg nem találja a keresett elemet (az item Satisfies metódusa igazzal tér vissza). Ha megtalálja, eltávolítja a listából, megszakítja az iterációt és igazzal tér vissza. Ha pedig az egész raktárban nem találta meg, hamissal tér vissza, nem sikerült eltávolítani semmit. }
 \classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. Ellenőrzi, hogy a raktár kapacitása nagyobb-e, mint az aktuális mérete. Ha nem nagyobb, nem helyezhető bele az elem, hamissal tér vissza. Ha pedig igen, igazzal tér vissza, sikeres lenne a művelet. }
 \classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
-\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja.}    
+\classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja.}   
+\classitem{+explode()}{Felrobban a raktár, el kell távolítani az összes elemet.(removeitem metódussal végigiterálva az items listán).} 
 \end{class-template-method}
 
 \subsection{Building}
@@ -462,7 +463,7 @@ $\emptyset$
 \classitem{-allPlayers:Player[1..*]}{A játék játékosainak listája. }
 \classitem{-asteroids:Asteroid[1..*]}{A játékban szereplő aszteroidák listája. }
 \classitem{-gameEnded:bool}{Jelzi, hogy a játék befejeződött-e már.}
-\classitem{-settlers:SpaceShip}{A játék telepeseinek tárolója. }
+\classitem{-settlers:SpaceShip[1..*]}{A játék telepeseinek tárolója. }
 \classitem{-scene:Scene}{Az adott játékhoz tartozó játéktér. }
 \classitem{-engine:Engine}{Az adott program fő ablakja.}
 \end{class-template-attribute}
@@ -473,6 +474,7 @@ $\emptyset$
 \classitem{+takeTurn()}{Egy játékos aktuális köre - ekkor van lehetősége irányítani a járműveit egyesével a UI segítségével. }
 \classitem{+endGame()}{Aktuális játék befejezése, meghívja a engine attribútum endGame() metódusát.}
 \classitem{+isSunStormActive():bool}{Visszaadja, hogy jelenleg napvihar van-e az aszteroidamezőn.}
+\classitem{+removeSettler(s:SpaceShip)}{A paraméterként megadott objektumot eltávolítja a settlers attribútum listából, amennyiben benne van.}
 \classitem{-generateScene()}{Játék inicializálás során a játéktér elemeinek inicializálása. Ciklusosan generál minden allPlayers listaelemnek 3 db SpaceShip objektumot, majd az addEntity(entity) metódus segítségével beteszi a scene attribútum entities listájába ezeket.}
 \classitem{-generateNewResource():Resource[]}{Új nyersanyag generálása, inicializálás folyamata során használjuk fel. Véletlenszerűen kiválaszt egy nyersanyagtípust és mennyiségét, belepakolja ezeket egy listába, és ezzel tér vissza.}
 \classitem{-generateAsteroids()}{Az aszteroidamező inicializálása, játék inicializálás során hozzuk létre. Egy random szám alapján ciklikusan generál valamennyi Asteroid objektumot, majd minden objektumnál meghívja a generateNewResource(a) metódust, és beteszi a visszatérési értéket a inventory-ba a insertItem(item) metódus ciklikus ismétlésével.}
@@ -518,6 +520,7 @@ $\emptyset$
 \classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. }
 \classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
 \classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, minden elem NearSun metódusát meghívja. }
+\classitem{+explode()}{Felrobban a raktár, el kell távolítani az összes elemet (removeitem metódussal végigiterálva az items listán).} 
 \end{class-template-method}
 
 \subsection{InfiniteInventory}
@@ -539,6 +542,7 @@ $\emptyset$
 \classitem{+tryInsertItem(item:Item):bool}{Ellenőrzi, hogy az adott elem elméletileg belehelyezhető-e a raktárba. Nincs művelet, igazzal tér vissza, hiszen végtelen hely van a raktárban, mindig sikeres lesz az elemek felvétele. }
 \classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
 \classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja. A paraméter itt null, nincs szükség aszteroidára, mert nem fog robbanni az urán itt.}    
+\classitem{+explode()}{Felrobban a raktár, el kell távolítani az összes elemet.(removeitem metódussal végigiterálva az items listán).} 
 \end{class-template-method}
 
 \subsection{Iron}
@@ -569,7 +573,7 @@ $\emptyset$
 $\emptyset$
 \end{class-template-baseclass}
 \begin{class-template-attribute}
-\classitem{-inventory[1]: IInventory}{?}
+\classitem{-inventory[1]: IInventory}{Az aszteroidából még ki nem bányászott itemeket ebben az attribútumban gyűjtjük.}
 \end{class-template-attribute}
 \begin{class-template-method}
 \classitem{+Activate()}{Üres metódus, a TeleportGateItem fogja felüldefiniálni a teleportkapuk lerakásakor végrehajtandó műveletekkel.}
@@ -593,7 +597,7 @@ Entity
 \begin{class-template-method}
 \classitem{+getPlace():AsteroidPlace}{Megadja a entitáshoz tartozó aszteroida helyszínt. Itt nem csinál semmit, a leszármazottja majd felül fogja írni a megfelelő kategóriával.}
 \classitem{+move(to:Asteroid):}{Az entitás mozgása. Az ősből örökölt currentAsteroid attribútum értéke "a". Meghívja a-nak depart(this) metódusát, kiveszi saját magát az a-ból. Utána meghívja to-nak (vagyis a paraméternek) arrive(this) metódusát, beteszi saját magát a b-be. Végül meghívja a setPos(to.getPos) metódust, és állítja be a saját pozíciót a to pozíciójára.}
-\classitem{+asteroidExploded()}{Az aktuális aszteroida felrobbanásakor hívódik meg, a leszármazott osztályoknál különbözően fog visekedni, itt nem történik semmi.}
+\classitem{+asteroidExploded()}{Az aktuális aszteroida felrobbanásakor hívódik meg. Meghívja az explode() függvényt, ha nincs máshogy felüldefiniálva.}
 \end{class-template-method}
 
 \subsection{Player}
@@ -668,6 +672,7 @@ Entity \baseclass MovableEntity \baseclass Vessel
 \classitem{+GetHidingSpaceRequirement():int}{A robotok által az aszteroida magjában elfoglalt hely nagyságát adja vissza. Korlátlan mennyiségű robot elfér, tehát 0 az értéke. }
 \classitem{+getInventory():IInventory}{Robot nem rendelkezik raktárral, null-al tér vissza.}
 \classitem{+mine()}{Üres metódus, robot nem tud bányászni.}
+\classitem{+asteroidExploded()}{A robot aszteroidájának szomszédait lekéri (neighbours attribútum értéke), majd ezek közül egy véletlen algoritmussal választ egyet, ahova átkerül a robot. Meghívja a move(to) metódust, aminek paramétere a véletlenszerű aszteroida.}
 \end{class-template-method}
 
 
@@ -704,6 +709,7 @@ $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
 \classitem{+addEntity(e:Entity)}{Új entitás hozzáadása a játékmenethez, beteszi az adott paramétert az entities attribútumtömbbe.}
+\classitem{+removeEntity(e:Entity)}{Entitás eltávolítása az entities attribútumtömbből, robbanás esetén hívódik meg.}
 \classitem{+roundEnded()}{Az entities attribútum összes eleme RoundEnd() metódusát meghívja, befejezi az adott kört.}
 \classitem{+getManager():GameManager}{Visszatérési értékként megadja a manager attribútumot.}
 \classitem{+solarFlare()}{A napviharról szóló értesítés. Ciklusosan meghívja az entities attribútum összes elemének solarFlare() metódusát.}
@@ -729,6 +735,7 @@ Entity \baseclass MovableEntity \baseclass Vessel
 \classitem{+craft(recipe:Recipe)}{A telepes az aktuálisan rendelkezésére álló elemekből egy "receptet" készít. Meghívja a recipe paraméter canCraft(inventory, currentAsteroid) metódusát (a két paraméter az objektumnak inventory és currentAsteroid attribútuma lesz), ha true-t kap meg visszatérési értékként, akkor meghívja a craft(inventory, currentAsteroid) metódust, ekkor sikeres a készítés. Ha false, sikertelen a készítés, nem hívódik meg a második metódus.}
 \classitem{+placeItem(i:Item):bool}{Elem belehelyezése az aktuális aszteroidába, amin tartózkodik. Meghívja a currentAsteroid attribútum placeItem() metódusát, majd ha true-t kap visszatérési értékként (más esetben nem csinál semmit), akkor felhívja az inventory attribútum removeItem(i) metódusát, ami kiveszi az itemet a saját raktárából.}
 \classitem{+activateItem(i:Item)}{A megadott tárgyon hív egy activate()-et.}
+\classitem{+explode()}{Felrobban a telepes (egy aszteroida robbanásának hatására). A scene attribútumának removeEntity(this) metódusát meghívja, ami eltávolítja őt az entitások közül. Az inventoryján is meghívja az explode() metódust, ami eltávolítja az összes elemet a raktárból. Továbbá a scenen keresztül elért gameManager (getManager()) settlers listájából is eltávolítja magát (removeSettler(this)).}
 \end{class-template-method}
 
 
@@ -794,6 +801,7 @@ $\emptyset$
 \classitem{+tryInsertGate(tg:TeleportGateItem):bool}{Ellenőrzi, hogy az adott teleportkapu elméletileg belehelyezhető-e a raktárba. Ellenőrzi, hogy a raktár kapacitása nagyobb-e, mint az aktuális mérete. Ha nem nagyobb, nem helyezhető bele a kapu, hamissal tér vissza. Más esetben igazzal tér vissza, van hely elhelyezni. }
 \classitem{+getItems():List<Item>}{Visszatér az inventory-ban található item-ek listájával.}
 \classitem{+NearSun(a:Asteroid)}{Napközelben hívódik meg, az items minden elemének NearSun metódusát meghívja. A paraméter itt null, nincs szükség aszteroidára, mert nem fog robbanni az urán itt.}    
+\classitem{+explode()}{Felrobban a raktár, el kell távolítani az összes elemet.(removeitem metódussal végigiterálva az items listán).} 
 \end{class-template-method}
 
 \subsection{TeleportGate}
@@ -892,6 +900,7 @@ Entity \baseclass MovableEntity \baseclass Vessel
 \begin{class-template-method}
 \classitem{+getInventory():IInventory}{Az inventory-t visszaadja.}
 \classitem{+drill()}{Üres metódus, UFO nem tud fúrni.}
+\classitem{+explode()}{Felrobban az UFO (egy aszteroida robbanásának hatására). A scene attribútumának removeEntity(this) metódusát meghívja, ami eltávolítja őt az entitások közül. Az inventoryján is meghívja az explode() metódust, ami eltávolítja az összes elemet a raktárból.}
 \end{class-template-method}
 
 
@@ -935,7 +944,7 @@ Entity \baseclass MovableEntity
 \classitem{+exitHiding()}{A jármű kibújik az aszteroida magjából, ha el volt bújva benne. Ha az isHidden attribútum true, akkor meghívja a currentAsteroid attribútum exitHiding(this) metódusát, majd beállítja a isHidden értéket false-ra. Ha nincs megbújva, nem történik semmi. }
 \classitem{+drill()}{Fúr egy egységnyit az aszteroida köpenyéből, ha még nincs teljesen átfúrva: meghívja a currentAsteroid attribútum drill() metódusát, ami ezt a feltételt ellenőrzi. Ha át van fúrva, nem történik művelet.}
 \classitem{+mine()}{A  vessel egy egységet kibányászik az ott található nyersanyagból. Ha az isHidden attribútum értéke false, akkor meghívja a currentAsteroid attribútum mine() metódusát, majd ha a visszatérési érték null, sikertelen a bányászat, a metódus véget ér. Ha viszont nem, akkor meghívja az inventory attribútum insertItem(i) metódusát, a paraméter az mine() metódus visszatérési értékeként megkapott Item típusú objektum lesz.}
-\classitem{+explode()}{Felrobban  a jármű (egy aszteroida robbanásának hatására), megsemmisíti. }
+\classitem{+explode()}{Felrobban  a jármű (egy aszteroida robbanásának hatására). A scene attribútumának removeEntity(this) metódusát meghívja, ami eltávolítja őt az entitások közül. }
 \classitem{+solarFlare()}{Örökölt függvény. Napvihar esetén hívódik meg. Ha az isHidden attribútum éppen false, akkor meghívja a explode() metódust.}
 \classitem{+getPlace():AsteroidPlaces}{Visszatér az AsteroidPlaces.Vessel enummal.}
 \end{class-template-method}

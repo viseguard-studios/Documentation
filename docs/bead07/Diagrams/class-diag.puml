@@ -15,6 +15,7 @@ Engine o- Scene
 
 class Scene{
     +addEntity()
+    +removeEntity()
     +roundEnded()
     +getManager() : GameManager
     +solarFlare()
@@ -35,6 +36,7 @@ class GameManager{
     +takeTurn()
     +endGame()
     +isSunStormActive() : bool
+    +removeSettler(s:SpaceShip)
     ..
     -generateScene()
     -generateAsteroids()
@@ -192,6 +194,7 @@ Vessel --|> MovableEntity
 
 class UFO{
     IInventory getInventory()
+    +explode()
 }
 UFO --|> Vessel
 UFO *-- "1" InfiniteInvetory 
@@ -204,6 +207,7 @@ class SpaceShip{
     +craft(recipe:Recipe)
     +placeItem(i:Item):bool
     +activateItem(i:Item)
+    +explode()
 }
 SpaceShip --|> Vessel
 SpaceShip *-- "-inventory [1]" SSInvetory 
@@ -212,6 +216,7 @@ class Robot{
 
     +Robot(p:Player,a:Asteroid)
     +getInventory():IInventory 
+    +asteroidExploded()
 }
 Robot --|> Vessel
 
