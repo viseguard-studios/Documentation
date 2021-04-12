@@ -226,6 +226,7 @@ class Asteroid{
     -revealed:bool
     -visited:bool
     -hidingVessel:Vessel
+    -mined:bool
     --
     -stationed:Vessel[0..*]
     -orbit:MovableEntity[0..*]
@@ -252,6 +253,7 @@ class Asteroid{
     +removeBuilding(b:Building)
     +placeItem(i:Item)
     +getInventory():IInventory
+    +getPhysicalNeighbours():Asteroid[]
 }
 Asteroid *-- "-inventory [1]" AsteroidInventory 
 Asteroid --* "-neighbours [1..*]" Asteroid

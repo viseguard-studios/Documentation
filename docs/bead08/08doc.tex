@@ -320,6 +320,7 @@ Entity
 \classitem{-orbit:MovableEntity[0..*]}{Az aszteroida körül keringő mozgásra képes entitások tárolója (AsteroidPlaces értékük orbit).}
 \classitem{-inside:MovableEntity[0..*]}{Az aszteroida területén elhelyezkedő mozgásra képes entitások tárolója (AsteroidPlaces értékük inside).}
 \classitem{-inventory:AsteroidInventory}{Az aszteroida raktára, ami a magba belehelyezett és jelenleg ott tárolt elemeket tartalmazza. }
+\classitem{-mined:bool}{Tárolja, hogy ki van-e már bányászva az aszteroida.}
 \end{class-template-attribute}
 \begin{class-template-method}
 \classitem{+Asteroid(r:Resource, amount:int)}{Az osztály konstruktora. A paraméterként megadott nyersanyagtípussal feltölti a resource attribútum listáját, annyi darabot rak bele, amennyit megadtunk neki paraméterként.}
@@ -339,6 +340,7 @@ Entity
 \classitem{+removeBuilding(b:Building)}{Eltávolít egy épületet az aszteroidából, a paraméterként kapott épület getPlace() metódusából kideríti az épület AsteroidPlaces értékét, ha ez Inside, akkor az inside attribútum listájából, ha pedig Orbit, akkor az orbit attribútum listájából veszi ki (amennyiben megtalálja ott). Más esetben nem történik semmi.}
 \classitem{+placeItem(i:Item):bool}{Elem belehelyezése a raktárba. Meghívja az inventory attribútum tryInsertItem(i) metódusát, ha true értéket kap vissza, akkor hívja meg a insertItem(i) metódust, és true értéket ad vissza a metódus. Más esetben false-ot ad vissza. }
 \classitem{+getInventory():IInventory}{Visszaadja az aszteroida raktárát,vagyis az inventory attribútumot. }
+\classitem{+getPhysicalNeighbours():Asteroid[]}{Csak azokat az aszteroidákat adja vissza, amik valós szomszédok (neighbours attribútum értéke). A teleportkapukon keresztül elérhető aszteroidákkal nem tér vissza.}
 \end{class-template-method}
 
 
