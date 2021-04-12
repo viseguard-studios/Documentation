@@ -38,7 +38,7 @@ class GameManager{
     ..
     -generateScene()
     -generateAsteroids()
-    -generateNewResource() : Resource
+    -generateNewResource() : Resource[]
 }
 GameManager -- "-currentPlayer [1]" Player
 GameManager -- "-settlers [1..*]" SpaceShip
@@ -80,6 +80,8 @@ class Iron{
 Resource <|-- Iron
 
 class Ice{
+    -evaporated:bool
+    --
     +Satisfies():bool
 }
 Resource <|-- Ice
@@ -149,6 +151,9 @@ class Entity{
     +getScene():Scene
     {abstract} +solarFlare()
     {abstract} +explode()
+    +getCurrentAsteroid():Asteroid
+    +setPos(p:Vector2)
+    +getPos():Vector2
 }
 
 enum AsteroidPlaces{
@@ -160,12 +165,12 @@ enum AsteroidPlaces{
 class MovableEntity{
     AsteroidPlaces getPlace()
     ..
-    +void move(Asteroid to)
+    +void move(to:Asteroid)
     +void asteroidExploded()
 }
 MovableEntity --|> Entity
 AsteroidPlaces . MovableEntity
-Asteroid "-curentAsteroid" -- MovableEntity
+Asteroid "#currentAsteroid" -- MovableEntity
 
 class Vessel{
     -isHidden : bool
