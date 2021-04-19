@@ -19,7 +19,7 @@
 # Igaz-hamis étékeknél y/yes/t/true és n/no/f/false is elfogadott!
 {astList name="" sunDist="" gameEnded="" solarStormQueued=""} # A GameManager és a Scene létrehozásáért felelős. Minden lehetséges attribútum bele van írva.
 
-	{asteroid name="a1" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}# Egy aszteroida leírása.
+	{asteroid position="10,01" name="a1" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}# Egy aszteroida leírása.
 	
 		{asteroidInventory} # Mi van az aszteroidában, TP kapu nem lehet benne!
 		
@@ -31,7 +31,7 @@
 		
 			{iron} # Egy vas nyersanyag.
 		
-		{uranium counter=""} # Egy uránium nyersanyag. A counter a hevültséget méri, értéke 0-2.
+			{uranium counter=""} # Egy uránium nyersanyag. A counter a hevültséget méri, értéke 0-2.
 		
 		{/asteroidInventory}
 		
@@ -96,15 +96,15 @@
 	{/asteroid}
 	
 	# Ha nincsnek megadva a tárhely listák, akkor feltételezzük, hogy üresek.
-	{asteroid name="a2" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
+	{asteroid position="14,2" name="a2" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
 	
 	{/asteroid}
 	
-	{asteroid name="a3" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
+	{asteroid position="12,33" name="a3" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
 	
 	{/asteroid}
 	
-	{asteroid name="a4" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
+	{asteroid position="15,-4" name="a4" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
 	
 	{/asteroid}
 
