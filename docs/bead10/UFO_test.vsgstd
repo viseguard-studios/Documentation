@@ -1,0 +1,59 @@
+# Az összetett teszthez egy pályafájl.
+
+
+{player name="player_1"}
+
+
+{astList name="Komplex Test"}
+
+	{asteroid position="10,331" name="A0" exploded="false" coreSize="1" maxHidingSpace="1" crustSize="1" revealed="yes" visited="yes"}
+	
+		{orbitAsteroid}
+
+		{telegate name="G1" teleId="1"}
+
+		{/orbitAsteroid}
+		
+		{vesselsOnAsteroid}
+			
+			{spaceShip name="S1" ownerPlayer="player_1" isHidden="no" }
+
+			
+			{/spaceShip}
+
+			{ufo name="UFO1"}
+
+			{/ufo}
+
+			{robot name="R1" ownerPlayer="player_1" isHidden="no"}
+		
+		{/vesselsOnAsteroid}
+	
+	{/asteroid}
+	
+	{asteroid position="110,100" name="Asteroid_1" exploded="no" coreSize="3" maxHidingSpace="1" crustSize="1" revealed="yes" visited="no"}
+
+		{orbitAsteroid}
+
+			{telegate name="G2" teleId="1"}
+
+		{/orbitAsteroid}
+
+		{asteroidInventory} # Mi van az aszteroidában, TP kapu nem lehet benne!
+
+			{iron}
+
+			{iron}
+
+			{iron}
+	
+	{/asteroid}
+	
+	
+
+{/astList}
+
+{astRelations} # Szomszédsági listája az aszteroidáknak.
+
+
+{/astRelations}

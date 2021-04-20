@@ -1,0 +1,32 @@
+# A Drilling and Mining teszthez egy pályafájl.
+
+
+{player name="tester"}
+
+
+{astList name="Komplex Test"}
+
+	{asteroid position="10,331" name="A1" exploded="false" coreSize="1" maxHidingSpace="1" crustSize="1" revealed="yes" visited="yes"}
+	
+		{asteroidInventory}
+		
+		{iron}
+		
+		{/asteroidInventory}
+		
+		{vesselsOnAsteroid}
+			
+			{spaceShip name="S1" ownerPlayer="tester" isHidden="no" }
+			
+			{/spaceShip}
+		
+		{/vesselsOnAsteroid}
+	
+	{/asteroid}
+	
+
+{/astList}
+
+{astRelations} # Szomszédsági listája az aszteroidáknak.
+
+{/astRelations}

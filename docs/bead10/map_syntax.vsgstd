@@ -1,0 +1,123 @@
+# A pályafájl példa
+# - azt jelenti, hogy a sor továbi része ki van kommentezve
+# A fájl formátuma hasonlít az XML-éhez 
+
+#{típus attrib1="" attrib2=""} például az elején a Game Manager
+#
+#{/típus}
+
+# Vannak olyan objektumok, amelyeknek csak attribútumai lehetnek, más alobjektumai nem, vagy névvel hivatkozva vannak. Ezeket nem kell lezárni {\típus}-sal.
+#
+#{levél név=""}
+
+{player name="sajt"} # Játékos létrehozása, name - név
+# Fontos, hogy ne adjunk meg ugyanolyan nevet az objektumainknak, minden objektum egyedi nevet kapjon
+
+{player name="keksz"}
+
+
+# Igaz-hamis étékeknél y/yes/t/true és n/no/f/false is elfogadott!
+{astList name="" sunDist="" gameEnded="" solarStormQueued=""} # A GameManager és a Scene létrehozásáért felelős. Minden lehetséges attribútum bele van írva.
+
+	{asteroid position="10,01" name="a1" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited="" mined=""}# Egy aszteroida leírása.
+	
+		{asteroidInventory} # Mi van az aszteroidában, TP kapu nem lehet benne!
+		
+			{coal} # Egy szén nyersanyag.
+		
+			{titanium} # Egy titanium.
+		
+			{ice} # Egy jég nyersanyag.
+		
+			{iron} # Egy vas nyersanyag.
+		
+			{uranium counter=""} # Egy uránium nyersanyag. A counter a hevültséget méri, értéke 0-2.
+		
+		{/asteroidInventory}
+		
+		{insideAsteroid} 	# Az aszteroida belsejében lévők (inside, NEM elbújtak!)
+		
+			#{spaceStation name=""} Nyílván megnyernénk a játékot, ha magától le lenne helyezve.
+		
+		{/insideAsteroid}
+		
+		{orbitAsteroid}	# Orbit, legfeljebb öt elem lehet itt
+		
+			{telegate name="" teleId="1"} # Teleportkapu. Hiba ha 3 vagy több olyan kapu van - akár tárgyként vagy lehelyezve -, aminek ugyanaz ai id-je!
+			
+			{telegate name="" teleId="2"}
+		
+		{/orbitAsteroid}
+		
+		{vesselsOnAsteroid} # űrjárművek
+		
+			{robot name="" ownerPlayer="keksz" isHidden=""} # Nyílván több robot is el lehet bújva
+			
+			{ufo name=""}	# Az UFO leírása; egy AI játékoshoz lesz rendelve.
+			
+				{ufoInventory}  # Egy UFO tárhelye
+				
+					{coal}
+				
+					{titanium}
+					
+					{ice}
+					
+					{iron}
+					
+					{uranium counter=""}
+					
+				{/ufoInventory}
+			
+			{/ufo}
+			
+			{spaceShip name="" ownerPlayer="keksz" isHidden="" } # Hiba, ha több mint egy van elbújva, vagy nem lehetne elbújni, de isHidden az igaz!
+			
+				{spaceShipInventory}  # Egy űrjóhajós nyersanyag tárhelye. Természetesen legfeljebb 10 nyersanyag és 3 kapu lehet benne!
+				
+					{resources} # Nyersanyagok
+					#...
+					{/resources}
+
+					{telegates} # Kapuk
+
+						{telegateItem name="" teleId="3"}
+					
+						{telegateItem name="" teleId="3"}
+
+					{/telegates}
+				
+				{/spaceShipInventory}
+			
+			{/spaceShip}
+		
+		{/vesselsOnAsteroid}
+	
+	{/asteroid}
+	
+	# Ha nincsnek megadva a tárhely listák, akkor feltételezzük, hogy üresek.
+	{asteroid position="14,2" name="a2" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
+	
+	{/asteroid}
+	
+	{asteroid position="12,33" name="a3" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
+	
+	{/asteroid}
+	
+	{asteroid position="15,-4" name="a4" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
+	
+	{/asteroid}
+
+{/astList}
+
+{astRelations} # Szomszédsági listája az aszteroidáknak.
+
+	{neighbours ast1="a1" ast2="a2"} # a1 aszteroida szomszédos legyen a2-val. Ne adjunk meg többszörös éleket!
+	
+	{neighbours ast1="a1" ast2="a3"}
+	
+	{neighbours ast1="a3" ast2="a2"}
+	
+	{neighbours ast1="a3" ast2="a4"}
+
+{/astRelations}

@@ -1,0 +1,66 @@
+# Az összetett teszthez egy pályafájl.
+
+
+{player name="tester"}
+
+
+{astList name="Komplex Test"}
+
+	{asteroid position="10,331" name="A1" exploded="false" coreSize="1" maxHidingSpace="1" crustSize="0" revealed="yes" visited="yes" mined="yes"}
+	
+		{asteroidInventory}
+
+		{coal}
+		
+		{coal}
+
+		{coal}
+		
+		{uranium counter="0"}
+
+		{uranium counter="0"}
+
+		{uranium counter="0"}
+		
+		{/asteroidInventory}
+
+		
+		{vesselsOnAsteroid}
+			
+			{spaceShip name="S1" ownerPlayer="tester" isHidden="no" }
+
+				{spaceShipInventory}
+
+				{titanium}
+		
+				{ice}
+		
+				{iron}
+
+				{titanium}
+		
+				{ice}
+		
+				{iron}
+
+				{titanium}
+		
+				{ice}
+		
+				{iron}
+				
+				{/spaceShipInventory}
+			
+			{/spaceShip}
+		
+		{/vesselsOnAsteroid}
+	
+	{/asteroid}
+	
+
+{/astList}
+
+{astRelations} # Szomszédsági listája az aszteroidáknak.
+
+
+{/astRelations}

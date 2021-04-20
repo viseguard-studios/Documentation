@@ -40,7 +40,7 @@
 	
 	{/asteroid}
 	
-	{asteroid name="A2" exploded="no" coreSize="" maxHidingSpace="1" crustSize="2" revealed="yes" visited="yes"}
+	{asteroid position="110,100" name="A2" exploded="no" coreSize="0" maxHidingSpace="1" crustSize="2" revealed="yes" visited="yes"}
 
 		{orbitAsteroid}
 
@@ -50,7 +50,7 @@
 	
 	{/asteroid}
 	
-	{asteroid name="A3" exploded="no" coreSize="1" maxHidingSpace="1" crustSize="0" revealed="yes" visited="yes"}
+	{asteroid position="200,33" name="A3" exploded="no" coreSize="1" maxHidingSpace="1" crustSize="0" revealed="yes" visited="yes"}
 
 		{orbitAsteroid}
 
