@@ -402,12 +402,194 @@ Futtatáshoz a következő parancsokat kell kiadni.
 
 \section{Tesztek jegyzőkönyvei}
 
-\subsection{Teszteset1}
-%\comment{Az alábbi táblázatot a megismételt (hibás) tesztek esetén kell kitölteni minden ismétléshez egyszer. Ha szükséges, akkor a valós kimenet is mellékelhető mint a teszt eredménye}
-\testFAIL{????}{Ápr. 25. 13:50}{ A teszt eredménye}{A teszt hibás futásának okai}{Változtatások}
-\comment{Az alábbi táblázatot az utolsó, sikeres tesztfuttatáshoz kell kitölteni}
-\testOK{????}{Ápr. 25. 14:00}
+\subsection{Complex test}
+\begin{test-case-description}
+    Ez a teszt a Teamses labor csatornában lévő példa alapján készült el.
+\end{test-case-description}
+\begin{test-case-function}
+    Egy összetetteb teszteset vizsgálata
+\end{test-case-function}
+\begin{test-case-input}
+A pálya betöltése:
+    \begin{verbatim}
+startgame 0 komplex_test.vsgstd 1
+mine s1
+endturn
+move s1
+1
+endturn
+place from s1
+1
+solarDistance 1
+endturn
+    \end{verbatim}
 
+
+\end{test-case-input}
+\begin{test-case-output}
+\begin{verbatim}
+Starting game
+Deterministic game
+
+a1 mined 
+* Item: Uranium Exp:2
+
+Neighbours:
+0 - a2
+1 - a3
+
+Items:
+1. Uranium Exp:2
+
+Placed Uranium Exp:2
+
+Solar distance changed to 1
+
+[EVENT] a3 exploded
+[EVENT] s1 exploded
+[EVENT] g2 exploded
+\end{verbatim}
+\end{test-case-output}
+
+\subsection{Drilling and Mining}
+\begin{test-case-description}
+    A bányászás mozzanatainak tesztelésére.
+\end{test-case-description}
+\begin{test-case-function}
+    Egy aszteroidán tartózkodó SpaceShip megfúrja azt és kibányássza a nyersanyagot. \newline
+    Működés nagyban függ a felhasználó által választott értékeken, így bizonyos lépések ismétlése szükséges a várt eredmény eléréséhez.
+\end{test-case-function}
+\begin{test-case-input}
+\begin{verbatim}
+startgame 0 test_files/mining_test.vsgstd 1
+drill s1
+endturn
+mine s1
+endturn
+\end{verbatim}
+\end{test-case-input}
+\begin{test-case-output}
+
+\begin{verbatim}
+Created Engine
+Application started
+
+Starting game
+Deterministic game
+
+a1 crust = 0
+
+a1 mined 
+* Item: Iron
+\end{verbatim}
+\end{test-case-output}
+\testOK {Csapat}{Ápr. 21. 13:00}
+
+
+
+\subsection{Craft Win condition}
+\begin{test-case-description}
+    A tárgyak előállításának tesztelésére.
+\end{test-case-description}
+\begin{test-case-function}
+    Egy aszteroidán tartózkodó SpaceShip megépít egy Űrállomást. \newline
+    Működés nagyban függ a felhasználó által választott értékeken, így bizonyos lépések ismétlése szükséges a várt eredmény eléréséhez.
+\end{test-case-function}
+\begin{test-case-input}
+   
+    \begin{verbatim}
+    startgame 0 crafting_test.vsgstd 1
+craft s1 Base
+endturn
+    \end{verbatim}
+\end{test-case-input}
+\begin{test-case-output}
+\begin{verbatim}
+    
+    Created Engine
+Application started
+
+Starting game
+Deterministic game
+
+Current game is over
+You successfully crafted a Base
+Congratulations, you won the game!
+
+    
+\end{verbatim}
+\end{test-case-output}
+\testOK {Csapat}{Ápr. 21. 13:00}
+
+\subsection{Move and Hide}
+\begin{test-case-description}
+    A tárgyak előállításának tesztelésére.
+\end{test-case-description}
+\begin{test-case-function}
+    Egy aszteroidán tartózkodó SpaceShip egy kapun keresztül ellátogat egy másik aszteroidára és ott elbújik. \newline
+    Működés nagyban függ a felhasználó által választott értékeken, így bizonyos lépések ismétlése szükséges a várt eredmény eléréséhez.
+\end{test-case-function}
+\begin{test-case-input}
+
+    
+    \begin{verbatim}
+    
+    \end{verbatim}
+\end{test-case-input}
+\begin{test-case-output}
+
+\end{test-case-output}
+\testOK {Csapat}{Ápr. 21. 13:00}
+
+\subsection{UFO/Robot Moving and Drilling/Mining}
+\begin{test-case-description}
+    A jáékosok által NEM vezérelt repülő tárgyak képességeinek ellenőrzése.
+\end{test-case-description}
+\begin{test-case-function}
+    Egy aszteroidán tartózkodó UFO és Robot egy kapun keresztül ellátogat egy másik aszteroidára és ott a robot fúrni az UFO pedig bányászni kezd. \newline
+    Működés nagyban függ a felhasználó által választott értékeken, így bizonyos lépések ismétlése szükséges a várt eredmény eléréséhez.
+\end{test-case-function}
+\begin{test-case-input}
+
+    A világ betöltése: 
+    \begin{verbatim}
+    >startgame 0 UFO_test.vsgstd
+    \end{verbatim}
+    U1 megnézi a szomszédokat:
+    \begin{verbatim}
+    >neighbors U1
+    Neighbours:
+    01 - Asteroid_1  - ?
+    \end{verbatim}
+    U1 és R1 kiválasztja a mozgás végpontját:
+    \begin{verbatim}
+    >move U1
+    01 - Asteroid_1
+    >1
+    >move R1
+    01 - Asteroid_1
+    >1
+    \end{verbatim}
+    R1 fúrni kezd:
+    \begin{verbatim}
+    >drill R1
+    A1 crust = 0
+    >endturn
+    Next Player: player_1
+    \end{verbatim}
+    U1 bányászni kezd:
+    \begin{verbatim}
+    >mine U1
+    A1 mined
+    * Item: Iron
+    >endturn
+    Next Player: player_1
+    \end{verbatim}
+\end{test-case-input}
+\begin{test-case-output}
+
+\end{test-case-output}
+\testOK {Csapat}{Ápr. 21. 13:00}
 
 
 \section{Értékelés}
