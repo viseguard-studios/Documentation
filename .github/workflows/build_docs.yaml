@@ -93,6 +93,13 @@ jobs:
         root_file: 08doc.tex
         args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
 
+    - name: Compile 8. milestone
+      uses: jheubuch/latex-action@2.2.1
+      with:
+        working_directory: ./docs/bead10
+        root_file: 10doc.tex
+        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
+
     - uses: actions/upload-artifact@v2
       with:
         name: documentation
