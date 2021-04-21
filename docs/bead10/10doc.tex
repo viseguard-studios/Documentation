@@ -383,18 +383,21 @@
 \end{fajllista}
 
 \subsection{Fordítás}
-\comment{A fenti listában szereplő forrásfájlokból milyen műveletekkel lehet a bináris, futtatható kódot előállítani. Az előállításhoz csak a 2. Követelmények c. dokumentumban leírt környezetet szabad előírni.}
+%\comment{A fenti listában szereplő forrásfájlokból milyen műveletekkel lehet a bináris, futtatható kódot előállítani. Az előállításhoz csak a 2. Követelmények c. dokumentumban leírt környezetet szabad előírni.}
+A fenti fájlokból a javac parancs kiadásával fordítható a tesztelőprogram (az alábbi módon).
+Esetleg GUI-val rendelkező fejlesztőkörnyezetből, az annak megfelelő módon.
 
 \begin{verbatim}
-javac -d bin *.java
+    javac -d bin *.java
 \end{verbatim}
 
 \subsection{Futtatás}
-\comment{A futtatható kód elindításával kapcsolatos teendők leírása. Az indításhoz csak a 2. Követelmények c. dokumentumban leírt környezetet szabad előírni.}
+%\comment{A futtatható kód elindításával kapcsolatos teendők leírása. Az indításhoz csak a 2. Követelmények c. dokumentumban leírt környezetet szabad előírni.}
 
+Futtatáshoz a következő parancsokat kell kiadni.
 \begin{verbatim}
-cd bin
-java Main.java
+    cd bin
+    java SkeletonEntry
 \end{verbatim}
 
 \section{Tesztek jegyzőkönyvei}
@@ -405,10 +408,16 @@ java Main.java
 \comment{Az alábbi táblázatot az utolsó, sikeres tesztfuttatáshoz kell kitölteni}
 \testOK{????}{Ápr. 25. 14:00}
 
+
+
 \section{Értékelés}
 \comment{A projekt kezdete óta az értékelésig eltelt időben tagokra bontva, százalékban.}
 \begin{ertekeles}
-    \ertekelestag{Teszt János}{ ?????? }{100\%}
+    \ertekelestag{Sike Ádám}{ E8Z277 }{18\%}
+    \ertekelestag{Dömötör Péter}{ G2Y5TI }{28\%}
+    \ertekelestag{Gao Tong}{ I2SVOS }{18\%}
+    \ertekelestag{Nagy Beáta}{ GPOGC5 }{18\%}
+    \ertekelestag{Tatai Titusz Miklós}{ IJHLYX }{18\%}
 \end{ertekeles}
 
 
@@ -476,4 +485,7 @@ java Main.java
 	{ 
 		Befejező lépések
 	}
+
+\end{naplo}
+
 \end{document}
