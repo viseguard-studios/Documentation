@@ -44,47 +44,47 @@ jobs:
 #        root_file: "projlab.tex"
 #        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
         
-    - name: Compile 1. milestone
-      uses: jheubuch/latex-action@2.2.1
-      with:
-        working_directory: ./docs/1_Project
-        root_file: Project_desc.tex
-        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
+#    - name: Compile 1. milestone
+#      uses: jheubuch/latex-action@2.2.1
+#      with:
+#        working_directory: ./docs/1_Project
+#        root_file: Project_desc.tex
+#        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
 
-    - name: Compile 2. milestone
-      uses: jheubuch/latex-action@2.2.1
-      with:
-        working_directory: ./docs/2_Project
-        root_file: Models.tex
-        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape  
+#    - name: Compile 2. milestone
+#      uses: jheubuch/latex-action@2.2.1
+#      with:
+#        working_directory: ./docs/2_Project
+#        root_file: Models.tex
+#        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape  
 
-    - name: Compile 3. milestone
-      uses: jheubuch/latex-action@2.2.1
-      with:
-        working_directory: ./docs/3_Project
-        root_file: Models-2.tex
-        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape     
+#    - name: Compile 3. milestone
+#      uses: jheubuch/latex-action@2.2.1
+#      with:
+#        working_directory: ./docs/3_Project
+#        root_file: Models-2.tex
+#        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape     
 
-    - name: Compile 4. milestone
-      uses: jheubuch/latex-action@2.2.1
-      with:
-        working_directory: ./docs/Skeleton
-        root_file: Skeleton.tex
-        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
+#    - name: Compile 4. milestone
+#      uses: jheubuch/latex-action@2.2.1
+#      with:
+#        working_directory: ./docs/Skeleton
+#        root_file: Skeleton.tex
+#        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
 
-    - name: Compile 5. milestone
-      uses: jheubuch/latex-action@2.2.1
-      with:
-        working_directory: ./docs/bead06
-        root_file: 06doc.tex
-        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
+#    - name: Compile 5. milestone
+#      uses: jheubuch/latex-action@2.2.1
+#      with:
+#        working_directory: ./docs/bead06
+#        root_file: 06doc.tex
+#        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
 
-    - name: Compile 6. milestone
-      uses: jheubuch/latex-action@2.2.1
-      with:
-        working_directory: ./docs/bead07
-        root_file: 07doc.tex
-        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
+#    - name: Compile 6. milestone
+#      uses: jheubuch/latex-action@2.2.1
+#      with:
+#        working_directory: ./docs/bead07
+#        root_file: 07doc.tex
+#        args: -pdf -latexoption=-file-line-error -latexoption=-interaction=nonstopmode -output-directory=build --shell-escape
 
     - name: Compile 7. milestone
       uses: jheubuch/latex-action@2.2.1
