@@ -533,11 +533,31 @@ Congratulations, you won the game!
 
     
     \begin{verbatim}
-    
+    startgame 0 teleport_test.vsgstd 1
+neighbors s1
+move s1
+1
+endturn
+hide s1
+endturn
     \end{verbatim}
 \end{test-case-input}
 \begin{test-case-output}
+\begin{verbatim}
+Created Engine
+Application started
 
+Starting game
+Deterministic game
+
+Neighbours:
+01 - asteroid_1 - Empty
+
+Neighbours:
+0 - asteroid_1
+
+s1 is hidden
+\end{verbatim}
 \end{test-case-output}
 \testOK {Csapat}{Ápr. 21. 13:00}
 
