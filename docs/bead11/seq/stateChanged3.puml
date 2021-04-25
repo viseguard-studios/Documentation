@@ -1,0 +1,39 @@
+@startuml
+hide footbox
+title State changed on MainWindow
+
+actor Player as player
+participant "main : MainWindow" as main
+participant "eng : Engine" as eng
+participant "state: State" as state
+participant "active: JPanel" as active
+participant "menu: MainMenu" as menu
+participant "gui: InGameGUI" as gui
+
+
+
+
+player -> main++: stateChanged()
+main -> eng++: getGameState()
+eng-->main--: state
+
+alt state == MainMenu
+    main -> main: remove(active)
+    create menu
+    main -> menu: <<create>> 
+    main -> main: add(menu)
+    main -> main: active = menu
+else state == InGame
+    main -> main: remove(active)
+    create gui
+    main -> gui: <<create>> 
+    main -> main: add(gui)
+    main -> main: active = gui
+end
+
+main --> player--: return
+note right
+További ablakmegjelenítési beállítások
+end note
+
+@enduml

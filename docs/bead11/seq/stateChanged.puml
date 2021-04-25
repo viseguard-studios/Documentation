@@ -1,5 +1,8 @@
 @startuml
 
+title State changed on SelectionInspectorPanel
+
+
 participant "S : Scene" as S
 
 participant "Inspector : SelectionInspectorPanel" as I

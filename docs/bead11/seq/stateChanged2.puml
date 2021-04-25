@@ -1,0 +1,12 @@
+@startuml
+hide footbox
+title State changed on MapViewPanel
+
+actor Player as player
+participant "mapview : MapViewPanel" as mapview
+
+player -> mapview++: stateChanged()
+mapview -> mapview++: this.repaint()
+mapview --> player--: return
+
+@enduml
