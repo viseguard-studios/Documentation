@@ -14,8 +14,8 @@
 \chapter{Grafikus felület specifikációja}
 
 \section{A grafikus interfész}
-\comment{A menürendszer, a kezelői felület grafikus képe. A grafikus felület megjelenését, a használt ikonokat, stb screenshot-szerű képekkel kell bemutatni. Az építészetben ez a homlokzati terv.}
-\diagram{docs/img/BMElogo}{Példa kép}{3cm}
+%\comment{A menürendszer, a kezelői felület grafikus képe. A grafikus felület megjelenését, a használt ikonokat, stb screenshot-szerű képekkel kell bemutatni. Az építészetben ez a homlokzati terv.}
+\diagram{docs/bead11/img/InGame.png}{Példa kép}{15cm}
 
 \section{A grafikus rendszer architektúrája}
 \comment{A felület működésének elve, a grafikus rendszer architektúrája (struktúra diagramok). A struktúra diagramokon a prototípus azon és csak azon osztályainak is szerepelnie kell, amelyekhez a grafikus felületet létrehozó osztályok kapcsolódnak.}
@@ -24,8 +24,11 @@
 \comment{Le kell írni, hogy a grafikai megjelenésért felelős osztályok, objektumok hogyan kapcsolódnak a meglevő rendszerhez, a megjelenítés során mi volt az alapelv. Törekedni kell az MVC megvalósításra. Alapelvek lehetnek: \textbf{push} alapú: a modell értesíti a felületet, hogy változott; \textbf{pull} alapú: a felület kérdezi le a modellt, hogy változott-e; \textbf{kevert}: a kettő kombinációja.}
 
 \subsection{A felület osztály-struktúrája}
-\comment{Osztálydiagram. Minden új osztály, és azon régiek, akik az újakhoz közvetlenül kapcsolódnak.}
-\diagram{docs/img/BMElogo}{Példa kép}{3cm}
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/class_diag} 
+    \caption{Class diagram} 
+\end{figure} 
 
 \section{A grafikus objektumok felsorolása}
 \comment{Az új osztályok felsorolása. Az régi osztályok közül azoknak a felsorolása, ahol változás volt. Ezek esetén csak a változásokat kell leírni.}
@@ -70,7 +73,68 @@
 
 \section{Kapcsolat az alkalmazói rendszerrel}
 \comment{Szekvencia-diagramokon ábrázolni kell a grafikus rendszer működését. Konzisztens kell legyen az előző alfejezetekkel. Minden metódus, ami ott szerepel, fel kell tűnjön valamelyik szekvenciában. Minden metódusnak, ami szekvenciában szerepel, szereplnie kell a valamelyik osztálydiagramon.}
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/addlistener} 
+    \caption{Class diagram} 
+\end{figure} 
 
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/notifylisteners} 
+    \caption{Class diagram} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/notifylistenersEngine} 
+    \caption{Class diagram} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/notifylistenersManager} 
+    \caption{Class diagram} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/paint} 
+    \caption{Class diagram} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/removelistener} 
+    \caption{Class diagram} 
+\end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/selectionChanged} 
+    \caption{Class diagram} 
+\end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/stateChanged} 
+    \caption{Class diagram} 
+\end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=0.5\textwidth]{docs/bead11/seq/stateChanged2} 
+    \caption{Class diagram} 
+\end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/stateChanged3} 
+    \caption{Class diagram} 
+\end{figure}
+
+
+\newpage
 \section{Napló}
 
 \begin{naplo}

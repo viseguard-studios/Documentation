@@ -11,12 +11,12 @@ package "javax.swing"#DDDDDD{
 
 interface INotifyPropertyChanged {
 
-    +  addListener(l:StateChangedListener);
-    +  removeListener(l:StateChangedListener);
+    +  addListener(l:StateChangedListener)
+    +  removeListener(l:StateChangedListener)
 }
 
 interface StateChangedListener{
-    +  stateChanged();
+    +  stateChanged()
 }
 
 class MainWindow{
@@ -57,24 +57,17 @@ class SelectionInspectorPanel  {
 SelectionInspectorPanel --|> StateChangedListener
 SelectionInspectorPanel --|> JPanel
 
-
-
-
-
 class GameManager {
     -  selectedEntity: Entity
     - listeners: StateChangedListener[0..*] 
 
     + getSelectedEntity():Entity
     + setSelectedEntity(e:Entity)
-
-    
     +  addListener(l:StateChangedListener ) 
     +  removeListener(l:StateChangedListener)
     +  notifyListeners()
 }
 GameManager --|> INotifyPropertyChanged
-
 
 
 enum State{
@@ -89,13 +82,9 @@ class Engine  {
     - listeners: StateChangedListener[0..*] 
 
     + getGameState():State 
-
     + setGameState(gameState:State) 
-
     + addListener(l:StateChangedListener) 
-
     + removeListener(l:StateChangedListener) 
-
     + notifyListeners()
 }
 Engine --|> INotifyPropertyChanged
@@ -103,5 +92,6 @@ Engine --|> INotifyPropertyChanged
 abstract class Entity {
     + printStatus():String
 }
+
 
 @enduml

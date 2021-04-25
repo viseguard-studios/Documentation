@@ -2,12 +2,12 @@
 hide footbox
 title Remove Listener
 
-actor Player as player
+actor Tester as tester
 participant "notify: INotifyPropertyChanged" as notify
 participant "statechanged: StateChangedListener" as statechanged
 
-player -> notify++: removeListener(statechanged)
+tester -> notify++: removeListener(statechanged)
 notify -> notify++: listeners.remove(statechanged)
-notify --> player--: return
+notify --> tester--: return
 
 @enduml
