@@ -1,0 +1,13 @@
+@startuml
+hide footbox
+title Remove Listener
+
+actor Tester as tester
+participant "notify: INotifyPropertyChanged" as notify
+participant "statechanged: StateChangedListener" as statechanged
+
+tester -> notify++: removeListener(statechanged)
+notify -> notify++: listeners.remove(statechanged)
+notify --> tester--: return
+
+@enduml
