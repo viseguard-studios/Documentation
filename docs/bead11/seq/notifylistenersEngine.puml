@@ -1,9 +1,9 @@
 @startuml
 hide footbox
-title Notify Listeners
+title Engine notifies Listeners
 
 actor Tester as tester
-participant "notify: INotifyPropertyChanged" as notify
+participant "notify: Engine" as notify
 collections "listener: StateChangedListener" as listener
 
 tester -> notify++: notifyListeners()
@@ -12,5 +12,6 @@ group loop: [for each listener in listeners]
     listener --> notify--: return
 end
 notify --> tester--: return
+
 
 @enduml
