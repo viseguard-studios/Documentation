@@ -1,0 +1,40 @@
+@startuml
+
+participant "S : Scene" as S
+
+participant "Inspector : SelectionInspectorPanel" as I
+
+activate S
+
+S-> I : stateChanged()
+activate I
+
+I->S : getManager().getSelectedEntity()
+activate S
+
+I <-- S : Selected
+deactivate S
+
+alt Selected != null
+    participant "Selected : Entity" as E
+
+    I -> E : printStatus() : String
+    activate E
+
+    I <-- E : text 
+    deactivate E
+
+    participant "T2 : JTextArea" as T
+
+    I -> T : setText(text)
+    activate T
+
+    I <-- T
+    deactivate T
+
+end
+
+S <-- I 
+deactivate I
+
+@enduml

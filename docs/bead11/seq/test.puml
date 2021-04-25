@@ -1,0 +1,27 @@
+@startuml
+
+actor Tester
+
+participant "M  : Main" as M
+
+Tester -> M : main()
+activate M
+
+participant "E : Engine" as E
+Create E 
+note over E : A Main hozza létre
+M -> E : StartApplicantion()
+activate E
+
+participant "MainWindow : Window" as W
+create W
+E -> W 
+note over W : Az Engine hozza létre
+
+M <-- E
+deactivate E
+
+Tester <-- M
+deactivate M
+
+@enduml

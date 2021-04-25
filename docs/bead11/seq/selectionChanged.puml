@@ -1,0 +1,46 @@
+@startuml
+
+actor Player
+
+participant "Inspector : SelectionInspectorPanel" as I
+
+Player -> I : selectionChanged(index: int)
+activate I
+
+participant "S : Scene" as S
+
+participant "E : Entity" as E
+
+I -> S : getEntities().get(index)
+activate S
+
+I <-- S : E
+deactivate S
+
+I -> S : getManager().setSelectedEntity(E)
+activate S
+
+S->S :notifyListeners();
+activate S
+
+collections "L : StateChangedListener" as L
+
+group For each L
+S->L :stateChanged();
+activate L
+
+S<--L
+deactivate L
+end 
+
+S<--S
+deactivate S
+
+I <-- S
+deactivate S
+
+Player <-- I
+deactivate I
+
+
+@enduml
