@@ -1,0 +1,32 @@
+@startuml
+hide footbox
+title Paint MapViewPanel 
+
+actor Player as player
+participant "mapview: MapViewPanel" as mapview
+participant "g: Graphics" as g
+participant "scene: Scene" as scene
+collections "entity: Entity" as entity
+
+
+player -> mapview++: paint(g)
+
+mapview -> mapview: super.paint(g)
+mapview -> g++: setColor(<<Preferred background color>>)
+g --> mapview--: return
+mapview -> g++: fillRect(<<Preferred background size>>)
+g --> mapview--: return 
+mapview -> scene++: getEntities()
+scene -->mapview--: entity
+loop for each e in entity 
+    mapview -> e++: getPos()
+    e-->mapview--: pos
+    mapview -> g++: setColor(<<Preferred entity color>>)
+    g--> mapview--: return
+    mapview -> g++: fillOval(pos,<<Preferred entity size>>)
+    g--> mapview--: return
+end
+
+mapview --> player--: return
+
+@enduml
