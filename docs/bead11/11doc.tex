@@ -293,11 +293,11 @@
     Entity \baseclass MovableEntity \baseclass Vessel
 \end{class-template-baseclass}
 \begin{class-template-attribute}
-    \classitem{-actions:String[0..*]}{A robottal végrehajtható műveletek listája (move, hide, drill).}
+    \classitem{-actions:String[0..*]}{A robottal végrehajtható műveletek listája.}
 \end{class-template-attribute}
 \begin{class-template-method}
     \classitem{+getActions():List<String>}{Visszaadja az actions attribútum értékét.}
-    \classitem{+doAction(name:String)}{A paraméterként megadott Stringet megkeresi az actions listában, és ha megtalálja, az értékének megfelelő műveletet hajt végre. Gyakorlatilag meghívja a move, hide vagy drill metódust. }
+    \classitem{+doAction(name:String)}{A paraméterként megadott Stringet megkeresi az actions listában, és ha megtalálja, az értékének megfelelő műveletet hajt végre. }
 \end{class-template-method}
 
 \subsubsection{SpaceShip}
@@ -311,11 +311,11 @@
     Entity \baseclass MovableEntity \baseclass Vessel
 \end{class-template-baseclass}
 \begin{class-template-attribute}
-    \classitem{-actions:String[0..*]}{A telepessel végrehajtható műveletek listája (move, hide, drill, mine, activate, create, stash).}
+    \classitem{-actions:String[0..*]}{A telepessel végrehajtható műveletek listája.}
 \end{class-template-attribute}
 \begin{class-template-method}
     \classitem{+getActions():List<String>}{Visszaadja az actions attribútum értékét.}
-    \classitem{+doAction(name:String)}{A paraméterként megadott Stringet megkeresi az actions listában, és ha megtalálja, az értékének megfelelő műveletet hajt végre. Gyakorlatilag meghívja a hozzá tartozó metódust, és megadja az esetleges paramétereket. }
+    \classitem{+doAction(name:String)}{A paraméterként megadott Stringet megkeresi az actions listában, és ha megtalálja, az értékének megfelelő műveletet hajt végre. }
 \end{class-template-method}
 
 \subsubsection{UFO}
@@ -329,11 +329,11 @@
     Entity \baseclass MovableEntity \baseclass Vessel
 \end{class-template-baseclass}
 \begin{class-template-attribute}
-    \classitem{-actions:String[0..*]}{Az UFOval végrehajtható műveletek listája (move, mine).}
+    \classitem{-actions:String[0..*]}{Az UFOval végrehajtható műveletek listája.}
 \end{class-template-attribute}
 \begin{class-template-method}
     \classitem{+getActions():List<String>}{Visszaadja az actions attribútum értékét.}
-    \classitem{+doAction(name:String)}{A paraméterként megadott Stringet megkeresi az actions listában, és ha megtalálja, az értékének megfelelő műveletet hajt végre. Gyakorlatilag meghívja a move vagy mine metódust. }
+    \classitem{+doAction(name:String)}{A paraméterként megadott Stringet megkeresi az actions listában, és ha megtalálja, az értékének megfelelő műveletet hajt végre. }
 \end{class-template-method}
 
 \section{Kapcsolat az alkalmazói rendszerrel}
@@ -343,6 +343,12 @@
     \includegraphics[width=1\textwidth]{docs/bead11/seq/addlistener} 
     \caption{Az addListener-t az interfészen hívjuk meg, mert a két megvalósításnál (GameManager,Engine) ugyanez a műveletsor megy végbe, így két külön diagram nem készült róla.} 
 \end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/doAction} 
+    \caption{Class diagram} 
+\end{figure}
 
 \begin{figure}[H] 
     \centering 
