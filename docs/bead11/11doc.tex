@@ -66,8 +66,8 @@
     \classitem{-log:String[0..*]}{Az aktuális log (konzolos műveletek stringekben tárolva).}
 \end{class-template-attribute}
 \begin{class-template-method}
-    \classitem{+ConsoleLogPanel()}{Konstruktor. A panel megjelenítési tulajdonságait beállítja.}
-    \classitem{+stateChanged()}{}
+    \classitem{+ConsoleLogPanel()}{Konstruktor. A panel megjelenítési tulajdonságait beállítja, inicializálja a kirajzoló területet.}
+    \classitem{+stateChanged()}{A konzol tartalma frissült, ezért a log attribútum értékét (a konzol aktuális tartalmát) kiírja a felületére.}
 \end{class-template-method}
 
 \subsubsection{InGameGUI}
@@ -174,9 +174,9 @@
     \item[] $\emptyset$
 \end{class-template-attribute}
 \begin{class-template-method}
-    \classitem{+PlayerList()}{Konstruktor. A panel megjelenítési tulajdonságait beállítja, meghívja a doPlayerList metódust.}
+    \classitem{+PlayerList()}{Konstruktor. A panel megjelenítési tulajdonságait beállítja, meghívja a doPlayerList metódust, és beállítja magán a listener tulajdonságot.}
     \classitem{+doPlayerList()}{Lekérdezi a játék managert, majd tőle az összes játékost. Mindegyikhez létrehoz egy új labelt, és a címkét beállítja a játékos nevére, így megjelenik a játékosok listája.}
-    \classitem{+stateChanged()}{}
+    \classitem{+stateChanged()}{Ha az aktuális játékos megváltozik, akkor hívódik meg. A listában vizuálisan jelöli, hogy melyik játékos van éppen soron (pl. átszínezi a labelt). A játékost le tudja kérdezni a játék managertől a getCurrentPlayer metódussal.}
 \end{class-template-method}
 
 \subsubsection{SelectionInspectorPanel}
