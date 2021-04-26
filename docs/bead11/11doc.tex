@@ -22,7 +22,7 @@
 
 \subsection{A felület működési elve}
 \comment{Le kell írni, hogy a grafikai megjelenésért felelős osztályok, objektumok hogyan kapcsolódnak a meglevő rendszerhez, a megjelenítés során mi volt az alapelv. Törekedni kell az MVC megvalósításra. Alapelvek lehetnek: \textbf{push} alapú: a modell értesíti a felületet, hogy változott; \textbf{pull} alapú: a felület kérdezi le a modellt, hogy változott-e; \textbf{kevert}: a kettő kombinációja.}
-
+        Mi alapvetően a push modell használata mellett döntöttük, vagyis a modell értesíti a kezelői felületet a változásról. Ez azt jelenti, hogy a változásokra az Engine és a GameManager elsüti az INotifyPropertyChanged eseményt, amelyre a kezelői felület osztályai fel vannak iratkozva a StateChangedListener-ből implementált eseménykezelőjükkel. Ekkor lekérdezik a modell állapotát, majd a változásoknak megfelelően reagálnak (pl.: újrarajzolja a térképet a MapViewPanel).
 \subsection{A felület osztály-struktúrája}
 \begin{figure}[H] 
     \centering 
