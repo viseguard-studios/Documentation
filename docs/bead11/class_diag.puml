@@ -19,7 +19,8 @@ interface StateChangedListener{
     +  stateChanged()
 }
 
-class MainWindow{
+class MainWindow implements StateChangedListener
+{
     - eng : Engine
     - active : JPanel
 
@@ -27,7 +28,6 @@ class MainWindow{
     + stateChanged()    
 }
 MainWindow --|> JFrame
-MainWindow --|> StateChangedListener
 
 class InGameGUI {
     + InGameGUI()
@@ -35,16 +35,17 @@ class InGameGUI {
 InGameGUI --|> JPanel
 
 
-class MapViewPanel {
+class MapViewPanel implements StateChangedListener
+{
     -scene:Scene
     +MapViewPanel()
     +paint(g:Graphics)
     +stateChanged()
 }
-MapViewPanel --|> StateChangedListener
 MapViewPanel --|> JPanel
 
-class SelectionInspectorPanel  {
+class SelectionInspectorPanel implements StateChangedListener
+{
     - scene: Scene
     - selected:Entity 
     - t2:JTextArea 
@@ -53,7 +54,6 @@ class SelectionInspectorPanel  {
     + selectionChanged(index:int)
     + stateChanged() 
 }
-SelectionInspectorPanel --|> StateChangedListener
 SelectionInspectorPanel --|> JPanel
 
 class ActionBar{
@@ -61,24 +61,24 @@ class ActionBar{
 }
 ActionBar --|>JPanel
 
-class ConsoleLogPanel{
+class ConsoleLogPanel implements StateChangedListener
+{
     - log:String[0..*] 
 
     + ConsoleLogPanel()
     + stateChanged()
 }
 ConsoleLogPanel --|>JPanel
-ConsoleLogPanel --|>StateChangedListener
 
 
-class PlayerList {
+class PlayerList implements StateChangedListener
+{
 
     +PlayerList()
     +doPlayerList()
     +stateChanged()
 }
 PlayerList --|>JPanel
-PlayerList --|>StateChangedListener
 
 
  class MainMenu{
@@ -88,7 +88,8 @@ PlayerList --|>StateChangedListener
 MainMenu--|>JPanel
 
 
-class GameManager {
+class GameManager  implements INotifyPropertyChanged
+{
     - selectedEntity: Entity
     - listeners: StateChangedListener[0..*] 
 
@@ -98,7 +99,6 @@ class GameManager {
     + removeListener(l:StateChangedListener)
     + notifyListeners()
 }
-GameManager --|> INotifyPropertyChanged
 
 
 enum State{
@@ -108,7 +108,8 @@ enum State{
     Lost
 }
 
-class Engine  {
+class Engine implements INotifyPropertyChanged
+{
     - gameState:State 
     - listeners: StateChangedListener[0..*] 
 
@@ -118,7 +119,7 @@ class Engine  {
     + removeListener(l:StateChangedListener) 
     + notifyListeners()
 }
-Engine --|> INotifyPropertyChanged
+
 
 abstract class Entity {
     + printStatus():String
