@@ -21,10 +21,10 @@ interface StateChangedListener{
 
 class MainWindow{
     - eng : Engine
-    - activate : JPanel
+    - active : JPanel
 
     + MainWindow()
-    +  stateChanged()    
+    + stateChanged()    
 }
 MainWindow --|> JFrame
 MainWindow --|> StateChangedListener
@@ -36,6 +36,7 @@ InGameGUI --|> JPanel
 
 
 class MapViewPanel {
+    -scene:Scene
     +MapViewPanel()
     +paint(g:Graphics)
     +stateChanged()
@@ -44,8 +45,6 @@ MapViewPanel --|> StateChangedListener
 MapViewPanel --|> JPanel
 
 class SelectionInspectorPanel  {
-
-
     - scene: Scene
     - selected:Entity 
     - t2:JTextArea 
@@ -57,15 +56,47 @@ class SelectionInspectorPanel  {
 SelectionInspectorPanel --|> StateChangedListener
 SelectionInspectorPanel --|> JPanel
 
+class ActionBar{
+    +ActionBar()
+}
+ActionBar --|>JPanel
+
+class ConsoleLogPanel{
+    - log:String[0..*] 
+
+    + ConsoleLogPanel()
+    + stateChanged()
+}
+ConsoleLogPanel --|>JPanel
+ConsoleLogPanel --|>StateChangedListener
+
+
+class PlayerList {
+
+    +PlayerList()
+    +doPlayerList()
+    +stateChanged()
+}
+PlayerList --|>JPanel
+PlayerList --|>StateChangedListener
+
+
+ class MainMenu{
+
+    + MainMenu()
+}
+MainMenu--|>JPanel
+
+
 class GameManager {
-    -  selectedEntity: Entity
+    - selectedEntity: Entity
     - listeners: StateChangedListener[0..*] 
 
     + getSelectedEntity():Entity
     + setSelectedEntity(e:Entity)
-    +  addListener(l:StateChangedListener ) 
-    +  removeListener(l:StateChangedListener)
-    +  notifyListeners()
+    + addListener(l:StateChangedListener) 
+    + removeListener(l:StateChangedListener)
+    + notifyListeners()
 }
 GameManager --|> INotifyPropertyChanged
 
@@ -91,7 +122,32 @@ Engine --|> INotifyPropertyChanged
 
 abstract class Entity {
     + printStatus():String
+    + getActions():List<String>
+    + doAction(name: String)
 }
+
+ class Robot {
+    -actions:String[0..*]
+    + getActions():List<String>
+    + doAction(name: String)
+}
+Robot --|> Entity
+
+ class SpaceShip {
+    -actions:String[0..*]
+    + getActions():List<String>
+    + doAction(name: String)
+}
+ SpaceShip--|> Entity
+
+class UFO {
+    -actions:String[0..*]
+    + getActions():List<String>
+    + doAction(name: String)
+}
+ UFO--|> Entity
+
+
 
 
 @enduml

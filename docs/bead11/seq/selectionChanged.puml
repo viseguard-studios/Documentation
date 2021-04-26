@@ -1,5 +1,7 @@
 @startuml
 
+title Selection changed on SelectionInspectorPanel
+
 actor Player
 
 participant "Inspector : SelectionInspectorPanel" as I

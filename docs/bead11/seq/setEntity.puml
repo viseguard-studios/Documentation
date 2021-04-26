@@ -1,0 +1,14 @@
+@startuml
+hide footbox
+title Selected entity changes
+
+actor Player as player
+participant "entity: Entity" as entity
+participant "mgr: GameManager" as mgr
+
+player -> mgr++: setSelectedEntity(entity)
+mgr -> mgr: this.selectedEntity=entity
+mgr -> mgr: notifyListeners()
+mgr --> player--: return
+
+@enduml

@@ -18,7 +18,7 @@
 \diagram{docs/bead11/img/InGame.png}{Példa kép}{15cm}
 
 \section{A grafikus rendszer architektúrája}
-\comment{A felület működésének elve, a grafikus rendszer architektúrája (struktúra diagramok). A struktúra diagramokon a prototípus azon és csak azon osztályainak is szerepelnie kell, amelyekhez a grafikus felületet létrehozó osztályok kapcsolódnak.}
+%\comment{A felület működésének elve, a grafikus rendszer architektúrája (struktúra diagramok). A struktúra diagramokon a prototípus azon és csak azon osztályainak is szerepelnie kell, amelyekhez a grafikus felületet létrehozó osztályok kapcsolódnak.}
 
 \subsection{A felület működési elve}
 \comment{Le kell írni, hogy a grafikai megjelenésért felelős osztályok, objektumok hogyan kapcsolódnak a meglevő rendszerhez, a megjelenítés során mi volt az alapelv. Törekedni kell az MVC megvalósításra. Alapelvek lehetnek: \textbf{push} alapú: a modell értesíti a felületet, hogy változott; \textbf{pull} alapú: a felület kérdezi le a modellt, hogy változott-e; \textbf{kevert}: a kettő kombinációja.}
@@ -31,59 +31,325 @@
 \end{figure} 
 
 \section{A grafikus objektumok felsorolása}
-\comment{Az új osztályok felsorolása. Az régi osztályok közül azoknak a felsorolása, ahol változás volt. Ezek esetén csak a változásokat kell leírni.}
+%\comment{Az új osztályok felsorolása. Az régi osztályok közül azoknak a felsorolása, ahol változás volt. Ezek esetén csak a változásokat kell leírni.}
 
 \subsection{Új osztályok}
-\subsubsection{Osztály1}
+
+\subsubsection{ActionBar}
 \begin{class-template-responsibility}
-    Felelősség leírása
+    Ha aktív játékmenet van, ez a panel gyűjti össze az aktuálisan kiválasztott entitáson végrehajtható műveleteket.  
 \end{class-template-responsibility}
 \begin{class-template-interface}
-    Megvalósított interfészek felsorolása
+    $\emptyset$
 \end{class-template-interface}
 \begin{class-template-baseclass}
-    Ős-Ősosztály \baseclass Ősosztály... 
+    JPanel
 \end{class-template-baseclass}
 \begin{class-template-attribute}
-    \classitem{+A [0..*]}{adattag A}
-\end{class-template-attribute}
-\comment{Milyen publikus, protected és privát  metódusokkal rendelkezik. Metódusonként precíz leírás, ha szükséges, activity diagram is a metódusban megvalósítandó algoritmusról. Minden olyan metódusnak szerepelnie kell, amelyiket az osztály megvalósít vagy felüldefiniál.}
+    \item[] $\emptyset$
+\end{class-template-attribute} 
 \begin{class-template-method}
-    \classitem{+B(A a) : void}{metódus B}
+    \classitem{+ActionBar()}{Konstruktor. A panel megjelenítési tulajdonságait beállítja. Lekérdezi a kiválasztott entitást (getSelectedEntity), és a hozzá tartozó lehetséges parancsokat (getActions), minden parancsnak egy gombot létrehoz a felületen. A gombokhoz action listenereket rendel hozzá, akik a parancsok tényleges végrehajtásáért felelnek, meghívják a megfelelő metódust (doAction). }
+\end{class-template-method}
+
+\subsubsection{ConsoleLogPanel}
+\begin{class-template-responsibility}
+    A játékmenet konzolos logolásáért felelős panel.  
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    StateChangedListener
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    JPanel
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \classitem{-log:String[0..*]}{Az aktuális log (konzolos műveletek stringekben tárolva).}
+\end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{+ConsoleLogPanel()}{Konstruktor. A panel megjelenítési tulajdonságait beállítja.}
+    \classitem{+stateChanged()}{}
+\end{class-template-method}
+
+\subsubsection{InGameGUI}
+\begin{class-template-responsibility}
+    Ha aktív játékmenet van, ez a panel gyűjti össze a játékot kirajzoló ablak komponenseit.  
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    $\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    JPanel
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \item[] $\emptyset$
+\end{class-template-attribute} 
+\begin{class-template-method}
+    \classitem{+InGameGUI()}{Konstruktor. A panel megjelenítési tulajdonságait beállítja. Létrehoz egy SelectionInspectorPanel, MapViewPanel, ActionBar, ConsoleLogPanel, PlayerList objektumot, és elhelyezi ezeket megfelelően az ablakon.}
+\end{class-template-method}
+
+\subsubsection{INotifyPropertyChanged}
+\begin{class-template-responsibility}
+    Interfész: a modellnek azok az elemei valósítják meg, amik értesítik a viewt a modellben létrejövő változásokról. A rájuk feliratkozó listener osztályok majd ennek megfelelően változtatják a view különböző elemeit.
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    $\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    $\emptyset$
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{+addListener(l:StateChangedListener)}{Rá feliratkozó listener osztály hozzáadásáért felel. }
+    \classitem{+removeListener(l:StateChangedListener)}{Rá feliratkozó listener osztály eltávolításáért felel. }
+\end{class-template-method}
+
+\subsubsection{MainMenu}
+\begin{class-template-responsibility}
+    A játék indulása előtt ez a panel jelenik meg, itt lehet ténylegesen elindítani egy játékmenetet.
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    $\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    JPanel
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{+MainMenu()}{Konstruktor. A panel megjelenítési tulajdonságait beállítja. Létrehoz egy "new game" gombot, amihez egy action listenert rendel, aki egy új játékmenet elindításáért felelős: az enginen keresztül beállítja a játékosok számát (setPlayerCount), beceneveiket, és elindít egy új játékot (StartGame). }
+\end{class-template-method}
+
+\subsubsection{MainWindow}
+\begin{class-template-responsibility}
+    A programot kirajzoló főablak. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    StateChangedListener
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    JFrame
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \classitem{-eng:Engine}{Az aktuális játékfolyamot tárolja.}
+    \classitem{-active:JPanel}{A jelenleg aktív panel, a játék állapotától függ.}
+\end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{+MainWindow()}{Konstruktor. Az ablak megjelenítési tulajdonságait beállítja. Inicializálja a scene és active változókat (az active alapértelmezetten egy újonnan létrehozott MainMenu, hiszen menüvel kezdődik a játék). Az engine-hez hozzáadja magát, mint listenert, hogy értesüljön a játék állapotának változásairól.}
+    \classitem{+stateChanged()}{Modell állapotváltozása esetén hívódik meg. Lekérdezi, hogy az engine állapota mire változott, és ettől függően hajt végre műveletet. MainMenu állapotnál létrehoz és aktívvá tesz egy új MainMenu objektumot, ezt fogja kirajzolni az ablakban. InGame esetén létrehoz és aktívvá tesz egy új InGameGUI objektumot, ezt fogja kirajzolni. Won és Lost esetén vége a játéknak, nem történik változás.}
+\end{class-template-method}
+
+\subsubsection{MapViewPanel}
+\begin{class-template-responsibility}
+    Az aktív játék aktuális állapotát kirajzoló osztály.  
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    StateChangedListener
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    JPanel
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \classitem{-scene:Scene}{Az entitásokat összefogó osztályra hivatkozó attribútum.}
+\end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{+MapViewPanel()}{Konstruktor. A panel megjelenítési tulajdonságait beállítja. Inicializálja a scene attribútumot. Az enginen keresztül elért GameManager-hez hozzáadja magát, mint listenert, hogy értesüljön az aktuális entitás megváltozásáról.}
+    \classitem{+paint(g:Graphics)}{Az ablakot kirajzolja grafikus felületre. Az ősét kirajzolja, beállítja a hátteret, kirajzolja az összes entitást a megadott színnel és mérettel, és az aszteroidák közti kapcsolatokat vonalakkal. Az aktuálisan kijelölt entitást kiemeli külön színnel.}
+    \classitem{+stateChanged()}{Újrarajzolja az ablakot, hogy az aktuálisan kijelölt entitás színe megváltozzon, és a játékmenet modelljének egyéb változásait kövesse a view is.}
+\end{class-template-method}
+
+\subsubsection{PlayerList}
+\begin{class-template-responsibility}
+    A játékosok neveinek felsorolásáért, az aktuális játékos kiemeléséért felelős panel.  
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    StateChangedListener
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    JPanel
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{+PlayerList()}{Konstruktor. A panel megjelenítési tulajdonságait beállítja, meghívja a doPlayerList metódust.}
+    \classitem{+doPlayerList()}{Lekérdezi a játék managert, majd tőle az összes játékost. Mindegyikhez létrehoz egy új labelt, és a címkét beállítja a játékos nevére, így megjelenik a játékosok listája.}
+    \classitem{+stateChanged()}{}
+\end{class-template-method}
+
+\subsubsection{SelectionInspectorPanel}
+\begin{class-template-responsibility}
+    Az entitások listáját kirajzoló, és aktuális entitást grafikusan kiválasztó panel.  
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    StateChangedListener
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    JPanel
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \classitem{-scene:Scene}{Az entitásokat összefogó osztályra hivatkozó attribútum.}
+    \classitem{-selected:Entity}{A jelenleg kiválasztott entitás}
+    \classitem{-t2:JTextArea}{A kiválasztott entitás részletesebb státuszát tárolja szövegesen.}
+\end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{+SelectionInspectorPanel()}{Konstruktor. A panel megjelenítési tulajdonságait beállítja. Inicializálja a scene attribútumot. Az enginen keresztül elért GameManager-hez hozzáadja magát, mint listenert, hogy értesüljön az aktuális entitás megváltozásáról. A scene-től lekérdezi az összes entitást, amiket egy listában eltárol (JList), ennek az elemeit rajzolja ki. A listához hozzáad egy listenert, akit a kijelölt elem változásáról értesít. A listener meghívja a selectionChanged metódust, átadva a kijelölt elem indexét.}
+    \classitem{+selectionChanged(index:int)}{A kijelölt entitás megváltozásakor hívódik meg. A scene-től lekérdezi a paraméterként megkapott indexhez tartozó entitást, majd beállítja ezt aktuális entitásnak (setSelectedEntity).}
+    \classitem{+stateChanged()}{Ha a kijelölt entitás megváltozik, lekérdezi a részletes információit (printStatus metódusa), és ezzel frissíti a t2 attribútum tartalmát.}
+\end{class-template-method}
+
+\subsubsection{StateChangedListener}
+\begin{class-template-responsibility}
+    Interfész: A modell állapotváltozásaira feliratkozó listenerek valósítják meg. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    $\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    $\emptyset$
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \item[] $\emptyset$
+\end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{+stateChanged()}{Az állapotváltozás hatására az osztályban végbement változásokat hajtja végre.}
 \end{class-template-method}
 
 \subsection{Megváltozott osztályok}
-\subsubsection{Osztály2}
+
+\subsubsection{Engine}
 \begin{class-template-responsibility}
-    Felelősség leírása
+    A program indításáért, egy játékfolyam bezárásáért felelős osztály.
 \end{class-template-responsibility}
 \begin{class-template-interface}
-    Megvalósított interfészek felsorolása
+    INotifyPropertyChanged 
 \end{class-template-interface}
 \begin{class-template-baseclass}
-    Ős-Ősosztály \baseclass Ősosztály... 
+    $\emptyset$
 \end{class-template-baseclass}
 \begin{class-template-attribute}
-    \classitem{+A [0..*]}{adattag A}
+    \classitem{-gameState:State}{A játék aktuális állapotát jelzi egy enumban. Lehetséges értékei: MainMenu (játék még nem indult el, menüben vagyunk), InGame (a játék jelenleg folyik), Won (a játéknak vége, nyertek a játékosok). Lost(a játéknak vége, vesztettek a játékosok)}
+    \classitem{-listeners:StateChangedListener[0..*] }{Az osztályok listája, akik fel vannak iratkozva az Engine eseményeire. Őket értesíti, ha megváltozik a játék állapota.}
 \end{class-template-attribute}
-\comment{Milyen publikus, protected és privát  metódusokkal rendelkezik. Metódusonként precíz leírás, ha szükséges, activity diagram is a metódusban megvalósítandó algoritmusról. Minden olyan metódusnak szerepelnie kell, amelyiket az osztály megvalósít vagy felüldefiniál.}
 \begin{class-template-method}
-    \classitem{+B(A a) : void}{metódus B}
+    \classitem{+getGameState():State}{Aktuális játékállapot gettere}
+    \classitem{+setGameState(gameState:State)}{Aktuális játékállapot settere. Értesíti a listenereket az állapotváltozásról, ha ez bekövetkezik. }
+    \classitem{+addListener(l:StateChangedListener) }{Feliratkozás az Engine eseményeire. A paraméterként megadott osztály feliratkozik: hozzáadja a listeners listához az elemet.}
+    \classitem{+removeListener(l:StateChangedListener) }{Leiratkozás az Engine eseményeiről. A paraméterként megadott osztály leiratkozik: eltávolítja a listeners listából az elemet.}
+    \classitem{+notifyListeners()}{Értesíti az összes listenert a listán, hogy változás történt a modellben. Végigiterál a listenerek listáján, mindenkinek meghívja a stateChanged metódusát.}
+\end{class-template-method}
+
+\subsubsection{Entity}
+\begin{class-template-responsibility}
+    Egy adott entitás (vizuális megjelenítéssel rendelkező játékelem) osztálya. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    $\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    $\emptyset$
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \item[] $\emptyset$
+\end{class-template-attribute} 
+\begin{class-template-method}
+    \classitem{+printStatus():String}{Egy adott entitáshoz tartozó státuszinformációk. A leszármazottjai felüldefiniálják a náluk releváns információkkal. Pl. egy aszteroida kiírja a kéreg mélységét, a rajta állomásozó járművek listáját, a benne található itemeket, rajta lévő teleportkapukat stb. Gyakorlatilag csak stringeket illesztünk benne össze információkiíráshoz, ezért nem szükséges a működéséről szekvenciadiagramot készíteni. Az átláthatóság miatt az összes leszármazottat nem jelöltük aki megvalósítja a metódust, mindegyiknél a számára releváns információkkal definiálódik felül a metódus, más stringet ad vissza. }
+    \classitem{+getActions():List<String>}{Visszaadja az actions attribútum értékét azoknál a leszármazottaknál, ahol ez releváns, máshol null-t ad vissza, jelezve, hogy nincs ilyen attribútum.}
+    \classitem{+doAction(name:String)}{A paraméterként megadott Stringet megkeresi az actions listában, és ha megtalálja, az értékének megfelelő műveletet hajt végre. Az ActionBar osztályban kijelölt műveletek így hajthatók végre.}
+\end{class-template-method}
+
+\subsubsection{GameManager}
+\begin{class-template-responsibility}
+    A játék menetének irányításáért felelős osztály. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    INotifyPropertyChanged 
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    $\emptyset$
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \classitem{-selectedEntity:Entity}{Aktuálisan kiválasztott entitás}
+    \classitem{-listeners:StateChangedListener[0..*] }{Az osztályok listája, akik fel vannak iratkozva a GameManager eseményeire. Ha változik a kiválasztott játékos, ők fognak értesítést kapni erről.}
+\end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{+getSelectedEntity():Entity}{Aktuálisan kiválasztott entitás gettere}
+    \classitem{+setSelectedEntity(e:Entity)}{Aktuálisan kiválasztott entitás settere. Értesíti a listenereket a kiválasztott entitás megváltozásáról, ha ez ténylegesen változik. }
+    \classitem{+addListener(l:StateChangedListener) }{Feliratkozás a GameManager eseményeire. A paraméterként megadott osztály feliratkozik: hozzáadja a listeners listához az elemet.}
+    \classitem{+removeListener(l:StateChangedListener) }{Leiratkozás a GameManager eseményeiről. A paraméterként megadott osztály leiratkozik: eltávolítja a listeners listából az elemet.}
+    \classitem{+notifyListeners()}{Értesíti az összes listenert a listán, hogy változás történt a modellben. Végigiterál a listenerek listáján, mindenkinek meghívja a stateChanged metódusát.}
+\end{class-template-method}
+
+\subsubsection{Robot}
+\begin{class-template-responsibility}
+    Egy robot osztálya. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    $\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    Entity \baseclass MovableEntity \baseclass Vessel
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \classitem{-actions:String[0..*]}{A robottal végrehajtható műveletek listája (move, hide, drill).}
+\end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{+getActions():List<String>}{Visszaadja az actions attribútum értékét.}
+    \classitem{+doAction(name:String)}{A paraméterként megadott Stringet megkeresi az actions listában, és ha megtalálja, az értékének megfelelő műveletet hajt végre. Gyakorlatilag meghívja a move, hide vagy drill metódust. }
+\end{class-template-method}
+
+\subsubsection{SpaceShip}
+\begin{class-template-responsibility}
+    Egy telepes osztálya. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    $\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    Entity \baseclass MovableEntity \baseclass Vessel
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \classitem{-actions:String[0..*]}{A telepessel végrehajtható műveletek listája (move, hide, drill, mine, activate, create, stash).}
+\end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{+getActions():List<String>}{Visszaadja az actions attribútum értékét.}
+    \classitem{+doAction(name:String)}{A paraméterként megadott Stringet megkeresi az actions listában, és ha megtalálja, az értékének megfelelő műveletet hajt végre. Gyakorlatilag meghívja a hozzá tartozó metódust, és megadja az esetleges paramétereket. }
+\end{class-template-method}
+
+\subsubsection{UFO}
+\begin{class-template-responsibility}
+    Egy UFO osztálya. 
+\end{class-template-responsibility}
+\begin{class-template-interface}
+    $\emptyset$
+\end{class-template-interface}
+\begin{class-template-baseclass}
+    Entity \baseclass MovableEntity \baseclass Vessel
+\end{class-template-baseclass}
+\begin{class-template-attribute}
+    \classitem{-actions:String[0..*]}{Az UFOval végrehajtható műveletek listája (move, mine).}
+\end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{+getActions():List<String>}{Visszaadja az actions attribútum értékét.}
+    \classitem{+doAction(name:String)}{A paraméterként megadott Stringet megkeresi az actions listában, és ha megtalálja, az értékének megfelelő műveletet hajt végre. Gyakorlatilag meghívja a move vagy mine metódust. }
 \end{class-template-method}
 
 \section{Kapcsolat az alkalmazói rendszerrel}
-\comment{Szekvencia-diagramokon ábrázolni kell a grafikus rendszer működését. Konzisztens kell legyen az előző alfejezetekkel. Minden metódus, ami ott szerepel, fel kell tűnjön valamelyik szekvenciában. Minden metódusnak, ami szekvenciában szerepel, szereplnie kell a valamelyik osztálydiagramon.}
+%\comment{Szekvencia-diagramokon ábrázolni kell a grafikus rendszer működését. Konzisztens kell legyen az előző alfejezetekkel. Minden metódus, ami ott szerepel, fel kell tűnjön valamelyik szekvenciában. Minden metódusnak, ami szekvenciában szerepel, szereplnie kell a valamelyik osztálydiagramon.}
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\textwidth]{docs/bead11/seq/addlistener} 
-    \caption{Class diagram} 
+    \caption{Az addListener-t az interfészen hívjuk meg, mert a két megvalósításnál (GameManager,Engine) ugyanez a műveletsor megy végbe, így két külön diagram nem készült róla.} 
 \end{figure} 
 
 \begin{figure}[H] 
     \centering 
-    \includegraphics[width=1\textwidth]{docs/bead11/seq/notifylisteners} 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/doPlayerList} 
     \caption{Class diagram} 
 \end{figure} 
+
 
 \begin{figure}[H] 
     \centering 
@@ -106,7 +372,7 @@
 \begin{figure}[H] 
     \centering 
     \includegraphics[width=1\textwidth]{docs/bead11/seq/removelistener} 
-    \caption{Class diagram} 
+    \caption{A removeListener-t az interfészen hívjuk meg, mert a két megvalósításnál (GameManager,Engine) ugyanez a műveletsor megy végbe, így két külön diagram nem készült róla.} 
 \end{figure}
 
 \begin{figure}[H] 
@@ -114,6 +380,18 @@
     \includegraphics[width=1\textwidth]{docs/bead11/seq/selectionChanged} 
     \caption{Class diagram} 
 \end{figure}
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/setEntity} 
+    \caption{Class diagram} 
+\end{figure} 
+
+\begin{figure}[H] 
+    \centering 
+    \includegraphics[width=1\textwidth]{docs/bead11/seq/setGameState} 
+    \caption{Class diagram} 
+\end{figure} 
 
 \begin{figure}[H] 
     \centering 
@@ -138,26 +416,32 @@
 \section{Napló}
 
 \begin{naplo}
-    \naplotag{2021.04.25. 16:00}{ 2 óra }{ Péter }{
+    \naplotag{2021.04.24. 20:00}{ 1 óra }{ Csapat }{
+        GUI tervezés
+         }
+    \naplotag{2021.04.25. 16:00}{ 2 óra }{ Dömötör Péter }{
         Grafikus interfész prototípus
          }
-    \naplotag{2021.04.25. 17:00}{ 1 óra }{ Ádám }{
+    \naplotag{2021.04.25. 17:00}{ 1 óra }{ Sike Ádám }{
         Szekvencia diagramok
          }
-    \naplotag{2021.04.25. 18:00}{ 1 óra }{ Gao }{
+    \naplotag{2021.04.25. 18:00}{ 1 óra }{ Gao Tong}{
         Szekvencia diagramok
          }
-    \naplotag{2021.04.25. 18:00}{ 1 óra }{ Titusz }{
+    \naplotag{2021.04.25. 18:00}{ 1 óra }{ Tatai Titusz }{
         Grafikus interfész  javítása
          }
-    \naplotag{2021.04.25. 18:00}{ 1 óra }{ Bea }{
+    \naplotag{2021.04.25. 18:00}{ 1 óra }{ Nagy Beáta }{
         Szekvencia diagramok
          }
     \naplotag{2021.04.25. 19:00}{ 1 óra }{ Csapat }{
         Apróságok és pár dolog finomítása
          }
+
+    \naplotag{2021.04.26. 07:00}{2 óra}{Nagy Beáta}{
+        Osztályleírások
+        }
        
 \end{naplo}
-
 
 \end{document}

@@ -2,16 +2,16 @@
 hide footbox
 title Engine notifies Listeners
 
-actor Tester as tester
+actor Player as player
 participant "notify: Engine" as notify
 collections "listener: StateChangedListener" as listener
 
-tester -> notify++: notifyListeners()
+player -> notify++: notifyListeners()
 group loop: [for each listener in listeners]
     notify -> listener++: statechanged()
     listener --> notify--: return
 end
-notify --> tester--: return
+notify --> player--: return
 
 
 @enduml

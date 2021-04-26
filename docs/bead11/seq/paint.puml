@@ -7,6 +7,8 @@ participant "mapview: MapViewPanel" as mapview
 participant "g: Graphics" as g
 participant "scene: Scene" as scene
 collections "entity: Entity" as entity
+collections "asteroid: Asteroid" as asteroid
+
 
 
 player -> mapview++: paint(g)
@@ -19,12 +21,24 @@ g --> mapview--: return
 mapview -> scene++: getEntities()
 scene -->mapview--: entity
 loop for each e in entity 
-    mapview -> e++: getPos()
-    e-->mapview--: pos
+    mapview -> entity++: getPos()
+    entity-->mapview--: pos
     mapview -> g++: setColor(<<Preferred entity color>>)
     g--> mapview--: return
     mapview -> g++: fillOval(pos,<<Preferred entity size>>)
     g--> mapview--: return
+
+    loop for each Asteroid in entity
+    mapview->asteroid++: getPhysicalNeighbours()
+    asteroid-->mapview--: neighbours:Asteroid[0..*]
+        loop for each n in neighbours
+        mapview -> g++: drawLine(<<Asteroid position>>, <<Neighbour position>>)
+        g-->mapview--: return
+        end
+        note right
+        Szomszédságok összekötése
+        end note
+    end
 end
 
 mapview --> player--: return

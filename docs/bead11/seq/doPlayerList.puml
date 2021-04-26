@@ -1,0 +1,25 @@
+@startuml
+hide footbox
+title Make players list panel
+
+actor Player as player
+participant "list: PlayerList" as list
+participant "mgr: GameManager" as mgr
+collections "players: Player" as p
+
+
+player -> list++: doPlayersList()
+list -> mgr++: getAllPlayers()
+mgr-->list--: players
+loop for each p in players
+    list->list: add(label)
+    note right
+        egy olyan labelt ad hozzá a panelhez,
+        amin a játékos neve szerepel
+    end note
+end
+list-->player--: return
+
+
+
+@enduml

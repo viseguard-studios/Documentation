@@ -2,12 +2,12 @@
 hide footbox
 title Add Listener
 
-actor Tester as tester
+actor Player as player
 participant "notify: INotifyPropertyChanged" as notify
 participant "statechanged: StateChangedListener" as statechanged
 
-tester -> notify++: addListener(statechanged)
+player -> notify++: addListener(statechanged)
 notify -> notify++: listeners.add(statechanged)
-notify --> tester--: return
+notify --> player--: return
 
 @enduml

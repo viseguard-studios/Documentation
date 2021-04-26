@@ -1,0 +1,14 @@
+@startuml
+hide footbox
+title Selected game state changes
+
+actor Player as player
+participant "state: GameState" as state
+participant "engine: Engine" as engine
+
+player -> engine++: setGameState(state)
+engine -> engine: this.gameState=state
+engine -> engine: notifyListeners()
+engine --> player--: return
+
+@enduml
