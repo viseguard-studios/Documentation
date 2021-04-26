@@ -1,0 +1,32 @@
+@startuml
+hide footbox
+title Selected Entitiy doing Action
+actor Player as player
+participant "selectedEntity: Entity" as selected
+participant "actionList: List<String>" as actionList
+participant "action: String" as action
+
+player -> selected++: getActions()
+selected --> player : actionList
+
+group Player select an action to perform
+player -> selected : doAction(action)
+alt if action == "move"
+selected -> selected : move()
+end
+alt if action == "hide"
+selected -> selected : hide()
+end
+alt if action == "drill"
+selected -> selected : drill()
+end
+alt if action == "mine"
+selected -> selected : mine()
+end
+alt if action == "activate"
+selected -> selected : activate()
+end
+selected --> player : return
+end
+
+@enduml
