@@ -149,10 +149,15 @@
     Egy aszteroidát jelöl. Minden példányának létrejöttekor beállítódnak a generátor által a tulajdonságai.
 \end{class-template-responsibility}
 \begin{class-template-attribute}
-    \classitem{stationed: Vessel[0..*]}{A jelenleg itt lévő Vesselek}
-    \classitem{orbit: MovableEntity[0..*]}{A jelenleg itt pályán lévő dolgok}
-    \classitem{inside: MovableEntity[0..*]}{A jelenleg ebben az aszetoidában lévő dolgok}
+    \classitem{-stationed: Vessel[0..*]}{A jelenleg itt lévő Vesselek}
+    \classitem{-orbit: MovableEntity[0..*]}{A jelenleg itt pályán lévő dolgok}
+    \classitem{-inside: MovableEntity[0..*]}{A jelenleg ebben az aszetoidában lévő dolgok}
+    \classitem{-mined:bool}{Azt tárolja, hogy ki volt-e bányászva az aszteroida. }
 \end{class-template-attribute}
+\begin{class-template-method}
+    \classitem{GetPhysicalNeighbours():Asteroid[1..*]}{A fizikailag szomszédos aszteroidákat adja vissza.}
+\end{class-template-method}
+
 
 
 \subsubsection{Vessel}
@@ -161,12 +166,12 @@
     A bányászást is ebbe az osztályba mozgattuk.
 \end{class-template-responsibility}
 \begin{class-template-method}
-    \classitem{\#getInvertory(): IInvertory}{Visszaadja az űrjármű által folyamatosan hordozott raktárat.}
+    \classitem{\#getInventory(): IInvertory}{Visszaadja az űrjármű által folyamatosan hordozott raktárat.}
     \classitem{+mine(): void}{A függvény megegyezik a régen a SpaceShip osztályban lévővel, az aszteroidából fogunk tudni nyersanyagot kivenni.}
 \end{class-template-method}
 
 
-\subsubsection{Invertory}
+\subsubsection{Inventory}
 \begin{class-template-responsibility}
     Törölve
 \end{class-template-responsibility}
@@ -346,18 +351,24 @@ A program standard input-ot használva vezérelhető a megadott parancsok segít
 Minden esetben a kimenet standard output-ra kerül kiíratásra.
 \subsection{Bemeneti nyelv}
 
-
 \subsubsection{Bemeneti parancsok}
 
 \begin{itemize}
+    \item help
+    \begin{itemize}
+        \item Leírás: Kilistázza az összes lehetséges parancsot
+        \item Opciók: help
+    \end{itemize}
+
+
     \item startgame
     \begin{itemize}
         \item Leírás: 
-        \item Opciók: startgame <seed> <input | generate>
+        \item Opciók: startgame <seed> <file name>
         \begin{itemize}
-            \item seed: a véletlen szám generátor által hasznát kezdőérték.
-            \item input: A felhasználó adja meg a játéktér összeállítását
-            \item generate: A játéktér véletlenszerűen generálódik.
+            \item seed: a véletlen szám generátor által hasznát kezdőérték. \newline
+Ha 0-t adnak meg a seednek akkor a játék semmilyen véletlenszerű tevékenységet nem fog végezni
+            \item file name: A felhasználó adja meg a játéktér leírását tartalmazó file-t
         \end{itemize}
     \end{itemize}
 
@@ -440,7 +451,7 @@ Asteroid_35 mined
 
     \item status
     \begin{itemize}
-        \item Leírás: A játékos a megadott jármű jelenlegi állapotát kérdezi le.
+        \item Leírás: A játékos a megadott entitás jelenlegi állapotát kérdezi le.
         \item Opciók: status <vessel|asteroid>
         \begin{itemize}
             \item vessel: A jármű aminek az állapotát kérdezzük le.
@@ -449,12 +460,13 @@ Asteroid_35 mined
         \item Példa 1:
             \begin{verbatim}
 > status ss_001
+Turn used: false
 Asteroid: Asteroid_67 | Not hidden
 Resources:
 - Iron
 - Iron
 - Coal
-- etc....
+- Uranium Exp:2
 Teleport Gates:
 - Tg_023 - 1
 - Tg_023 - 1
@@ -480,7 +492,7 @@ Teleport Gates:
 
     \item hide
     \begin{itemize}
-        \item Leírás: A játékos 
+        \item Leírás: A játékos a megadott járművet elbújtatja az aszteroidában amin tartózkodik.
         \item Opciók: hide <enter|exit> <vessel>
         \begin{itemize}
             \item vessel: A jármű aminek az állapotát kérdezzük le.
@@ -501,9 +513,9 @@ ss_001 is hidden
     \item craft
     \begin{itemize}
         \item Leírás: A játékos egy űrhajón legyárt egy adott receptet.
-        \item Opciók: craft <vessel> <recipe>
+        \item Opciók: craft <spaceShip> <recipe>
         \begin{itemize}
-            \item vessel: A jármű amin akarunk gyártani
+            \item spaceShip: Az űrhajó amin akarunk gyártani
             \item recipe: A recept amit le akarunk gyártani
         \end{itemize}
         \item Példa:
@@ -526,13 +538,19 @@ Succesful
         \end{itemize}
         \item Példa:
             \begin{verbatim}
-> palce Iron from ss_001
+> place from ss_001
+Items:
+1. Iron
+2. Uranium Exp:1
+3. Uranium Exp:2
+> 2
+Placed Uranium Exp:1
             \end{verbatim}
     \end{itemize}
 
     \item pickup
     \begin{itemize}
-        \item Leírás: A játékos egy űrhajóból lerak egy nyersanyagot az aszteroidába amin van.
+        \item Leírás: A játékos egy űrhajóból Felvesz egy nyersanyagot az aszteroidába amin van.
         \item Opciók: pickup <resource> to <vessel>
         \begin{itemize}
             \item resource: a nyersanyag amit le akarunk rakni
@@ -543,7 +561,189 @@ Succesful
 > pickup Coal to ss_001
             \end{verbatim}
     \end{itemize}
+
+
+    \item endturn
+    \begin{itemize}
+        \item Leírás: A játékos befejezi a kört, ezzel a következő játékosnak adja át a kört.
+        \item Opciók: endturn
+        \item Példa:
+            \begin{verbatim}
+> endturn
+Next player: player_2 
+            \end{verbatim}
+    \end{itemize}
+
+    \item solarFlare
+    \begin{itemize}
+        \item Leírás: Beütemez egy napvihart a kör végére.
+        \item Opciók: solarFlare <pos> <radius>
+            \begin{itemize}
+                \item pos: A napvihar pozíciója.
+                \item radius: A napvihar ebben a körben hat.
+            \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> solarFlare 20 10 5
+A solar flare will happen at 20,10 with radius 5
+            \end{verbatim}
+    \end{itemize}
+
+    \item solarDistance
+    \begin{itemize}
+        \item Leírás: Módosítja a naptól való távolságot.
+        \item Opciók: solarDistance <distance>
+            \begin{itemize}
+                \item distance: A napvihar pozíciója.
+            \end{itemize}
+        \item Példa:
+            \begin{verbatim}
+> solarDistance 10
+            \end{verbatim}
+    \end{itemize}
+
 \end{itemize}
+
+A robotok és UFOk irányítására az álltaluk végezhető parancsok használhatóak: \newline
+Robotok
+\begin{itemize}
+    \item move
+    \item drill
+\end{itemize}
+UFO
+\begin{itemize}
+    \item move
+    \item mine
+\end{itemize}
+
+\subsubsection{Pályfájl (mentés) formátuma}
+Az alább található példa egy pályafájlra ("map\_syntax.vsgstd"). A kommentelt részben olvashatók leírások az adott elemekhez.
+\begin{verbatim}
+# A pályafájl példa
+# - azt jelenti, hogy a sor továbi része ki van kommentezve
+# A fájl formátuma hasonlít az XML-éhez 
+
+#{típus attrib1="" attrib2=""} például az elején a Game Manager
+#
+#{/típus}
+
+# Vannak olyan objektumok, amelyeknek csak attribútumai lehetnek, más alobjektumai nem, vagy névvel hivatkozva vannak. Ezeket nem kell lezárni {\típus}-sal.
+#
+#{levél név=""}
+
+{player name="sajt"} # Játékos létrehozása, name - név
+# Fontos, hogy ne adjunk meg ugyanolyan nevet az objektumainknak, minden objektum egyedi nevet kapjon
+
+{player name="keksz"}
+
+
+# Igaz-hamis étékeknél y/yes/t/true és n/no/f/false is elfogadott!
+{astList name="" sunDist="" gameEnded="" solarStormQueued=""} # A GameManager és a Scene létrehozásáért felelős. Minden lehetséges attribútum bele van írva.
+
+	{asteroid name="a1" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}# Egy aszteroida leírása.
+	
+		{asteroidInventory} # Mi van az aszteroidában, TP kapu nem lehet benne!
+		
+			{coal} # Egy szén nyersanyag.
+		
+			{titanium} # Egy titanium.
+		
+			{ice} # Egy jég nyersanyag.
+		
+			{iron} # Egy vas nyersanyag.
+		
+		{uranium counter=""} # Egy uránium nyersanyag. A counter a hevültséget méri, értéke 0-2.
+		
+		{/asteroidInventory}
+		
+		{insideAsteroid} 	# Az aszteroida belsejében lévők (inside, NEM elbújtak!)
+		
+			#{spaceStation name=""} Nyílván megnyernénk a játékot, ha magától le lenne helyezve.
+		
+		{/insideAsteroid}
+		
+		{orbitAsteroid}	# Orbit, legfeljebb öt elem lehet itt
+		
+			{telegate name="" teleId="1"} # Teleportkapu. Hiba ha 3 vagy több olyan kapu van - akár tárgyként vagy lehelyezve -, aminek ugyanaz ai id-je!
+			
+			{telegate name="" teleId="2"}
+		
+		{/orbitAsteroid}
+		
+		{vesselsOnAsteroid} # űrjárművek
+		
+			{robot name="" ownerPlayer="keksz" isHidden=""} # Nyílván több robot is el lehet bújva
+			
+			{ufo name=""}	# Az UFO leírása; egy AI játékoshoz lesz rendelve.
+			
+				{ufoInventory}  # Egy UFO tárhelye
+				
+					{coal}
+				
+					{titanium}
+					
+					{ice}
+					
+					{iron}
+					
+					{uranium counter=""}
+					
+				{/ufoInventory}
+			
+			{/ufo}
+			
+			{spaceShip name="" ownerPlayer="keksz" isHidden="" } # Hiba, ha több mint egy van elbújva, vagy nem lehetne elbújni, de isHidden az igaz!
+			
+				{spaceShipInventory}  # Egy űrjóhajós nyersanyag tárhelye. Természetesen legfeljebb 10 nyersanyag és 3 kapu lehet benne!
+				
+					{resources} # Nyersanyagok
+					#...
+					{/resources}
+
+					{telegates} # Kapuk
+
+						{telegateItem name="" teleId="3"}
+					
+						{telegateItem name="" teleId="3"}
+
+					{/telegates}
+				
+				{/spaceShipInventory}
+			
+			{/spaceShip}
+		
+		{/vesselsOnAsteroid}
+	
+	{/asteroid}
+	
+	# Ha nincsnek megadva a tárhely listák, akkor feltételezzük, hogy üresek.
+	{asteroid name="a2" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
+	
+	{/asteroid}
+	
+	{asteroid name="a3" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
+	
+	{/asteroid}
+	
+	{asteroid name="a4" exploded="" coreSize="" maxHidingSpace="1" crustSize="" revealed="" visited=""}
+	
+	{/asteroid}
+
+{/astList}
+
+{astRelations} # Szomszédsági listája az aszteroidáknak.
+
+	{neighbours ast1="a1" ast2="a2"} # a1 aszteroida szomszédos legyen a2-val. Ne adjunk meg többszörös éleket!
+	
+	{neighbours ast1="a1" ast2="a3"}
+	
+	{neighbours ast1="a3" ast2="a2"}
+	
+	{neighbours ast1="a3" ast2="a4"}
+
+{/astRelations}
+\end{verbatim}
+
 
 \subsubsection{Események}
 Továbbá a program bizonyos események után lehet hogy eseményekről értesít minket.
