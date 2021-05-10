@@ -1,3 +1,17 @@
+\documentclass[../../projlab]{subfiles}
+\begin{document}
+
+\makeatletter
+
+\ifSubfilesClassLoaded{
+	\coverpage{13. Leadás}
+	%\renewcommand{\filePath}[1]{./../../ #1}
+	\def\filePath[#1]{./../../#1}
+}{}
+
+\makeatother
+
+
 \chapter{Grafikus felület specifikációja}
 
 \section{Fordítási és futtatási útmutató}
@@ -10,18 +24,17 @@
 \end{fajllista}
 
 \subsection{Fordítás}
-\comment{A fenti listában szereplő forrásfájlokból milyen műveletekkel lehet a bináris, futtatható kódot előállítani. Az előállításhoz csak a 2. Követelmények c. dokumentumban leírt környezetet szabad előírni.}
+A fenti fájlokból az álltalunk készített compile.bat segítségével lehet jar file-t készíteni.
 
 \begin{verbatim}
-javac -d bin *.java
+    .\compile.bat
 \end{verbatim}
 
 \subsection{Futtatás}
-\comment{A futtatható kód elindításával kapcsolatos teendők leírása. Az indításhoz csak a 2. Követelmények c. dokumentumban leírt környezetet szabad előírni.}
 
+Futtatáshoz a következő parancsokat kell kiadni.
 \begin{verbatim}
-cd bin
-java Main.java
+    java -jar .\AsteroidMiner.jar
 \end{verbatim}
 
 \clearpage
@@ -35,3 +48,11 @@ java Main.java
     \ertekelestag{Tatai Titusz Miklós}{ IJHLYX }{\%}
 \end{ertekeles}
 
+
+\section{Napló}
+
+\begin{naplo}
+    \naplotag{feb. 18. 16h }{ 1 óra }{ Csapat }{ Értekezlet  \newline Döntés: Segédeszközök kiválasztása (git, trello, drive)}
+\end{naplo}
+
+\end{document}

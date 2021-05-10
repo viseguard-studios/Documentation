@@ -1,3 +1,17 @@
+\documentclass[../../projlab]{subfiles}
+\begin{document}
+
+\makeatletter
+
+\ifSubfilesClassLoaded{
+	\coverpage{10. Leadás}
+	%\renewcommand{\filePath}[1]{./../../ #1}
+	\def\filePath[#1]{./../../#1}
+}{}
+
+\makeatother
+
+
 \chapter{Összefoglalás}
 \section{A projektre fordított összes munkaidő}
 \comment{Személyenként és összesen}
@@ -41,10 +55,11 @@
 \item \textit{Milyen feladatot ajánlanának a projektre?} \newline
     -Egy grafikusan kirajzolt sakkjáték (pl. 5D chess w/ multiverse time travel)
     -Egy négyzethálón játszódó kolóniaszimuláció: a pályán emberek mozognak, akikhez feladatokat rendelhetünk (pl. favágás, bányászás), amihez a pályán elhelyezünk alapanyagokat, ezeket kell összeszedniük a tevékenység elvégzéséhez. Bizonyos tevékenységek elvégzése után házakat tudnak építeni maguknak (Rimworld játékhoz hasonló konstrukció)
-    -További játékötleteink: Civilization IV, C&C (régebbiek), Warcraft, Factorio játékok  
+    -További játékötleteink: Civilization IV, C\&C (régebbiek), Warcraft, Factorio játékok  
 \item \textit{Egyéb kritika és javaslat} \newline
     -A tárgyfelelős, Goldschmidt Tanár Úr is tudna esetleg segíteni a projekt sikeres elkészítése érdekében: adhatna ötleteket a megvalósításhoz, írhatna esetleg gyakoribb hibákról és elkerülésükről, arról, hogy mire figyeljünk oda egy-egy beadás során stb. 
     -A projekt során a verziókezelés egy fontos tényező, amit sajnos az eddigi tárgyakban nem tanultunk. Ezért a tárgy első hetén hasznos lenne egy összefoglaló előadás a git használatáról. Elsősorban nem command line megvalósításra gondoltunk, hanem kezdők számára egyszerűbb és átláthatóbb GUI-s megvalósításokra. Ajánljuk a GitKraken, és a SourceTree programokat a verziókezeléshez.
 \end{itemize}
 
 
+\end{document}
